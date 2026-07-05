@@ -1,0 +1,20 @@
+{
+    "name": "MarsSim.Editor",
+    "rootNamespace": "MarsSim.EditorTools",
+    "references": [
+        "MarsSim.Core",
+        "MarsSim.Unity",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

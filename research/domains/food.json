@@ -1,0 +1,426 @@
+{
+  "domain": "food",
+  "parameters": [
+    {
+      "id": "food.crew_energy_requirement",
+      "name": "Crew metabolic energy requirement",
+      "value": 3037,
+      "unit": "kcal/CM-day",
+      "range_min": 2500,
+      "range_max": 3100,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2, Eq. 3-2 (EER) and Tables 4-57/4-61 (12.707 MJ/CM-d)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "12.707 MJ/CM-day for the average astronaut via the Estimated Energy Requirement equation. Older CELSS studies use 2500-3000 kcal."
+    },
+    {
+      "id": "food.packaged_food_asshipped_mass",
+      "name": "Prepackaged food mass, as-shipped (incl. intrinsic water, incl. packaging)",
+      "value": 1.83,
+      "unit": "kg/CM-day",
+      "range_min": 1.83,
+      "range_max": 2.39,
+      "source": "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "ISS flight value; 42-53% water content. Packaging is a separate line item (~0.27 kg/CM-d)."
+    },
+    {
+      "id": "food.packaged_food_dry_mass",
+      "name": "Food dry mass (reference)",
+      "value": 0.67,
+      "unit": "kg/CM-day",
+      "range_min": 0.66,
+      "range_max": 0.72,
+      "source": "NASA BVAD Table 4-47 (MSIS 1995) and Table 4-60 (Levri)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Dehydrated/dry basis, excludes intrinsic and rehydration water."
+    },
+    {
+      "id": "food.food_packaging_mass",
+      "name": "Food packaging mass",
+      "value": 0.274,
+      "unit": "kg/CM-day",
+      "range_min": 0.25,
+      "range_max": 0.4,
+      "source": "NASA BVAD Table 4-40 (Ewert 2017); upper from 2.36 kg total with 17% packaging",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Packaging is ~13-17% of prepackaged-food upmass; becomes trash mass."
+    },
+    {
+      "id": "food.food_shelf_life_required",
+      "name": "Required prepackaged-food shelf life for Mars",
+      "value": 5,
+      "unit": "years",
+      "range_min": 3,
+      "range_max": 5,
+      "source": "NASA BVAD Sec. 4.5.1 (Cooper et al. 2011)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Current ISS foods degrade (vitamin/quality loss) before 5 yr; a genuine open technology gap and a driver toward in-situ crops for multi-year stays."
+    },
+    {
+      "id": "food.crop_edible_caloric_density",
+      "name": "Edible dry-matter caloric density (staple-crop average)",
+      "value": 4.0,
+      "unit": "kcal/g dry weight",
+      "range_min": 2.5,
+      "range_max": 5.5,
+      "source": "MELiSSA/Frontiers 2023 (avg of bread wheat, durum wheat, potato, soybean = 4000 kcal/kg dw)",
+      "source_url": "https://www.frontiersin.org/articles/10.3389/fspas.2023.1198689/full",
+      "confidence": "high",
+      "notes": "Staples (wheat/potato/rice) ~3.7-4.0; soybean ~4.9; peanut ~5.5; lettuce ~2.5-3.0. Ideal edible composition 70% carb / 20% protein / 10% lipid."
+    },
+    {
+      "id": "food.potato_edible_productivity",
+      "name": "White potato edible productivity (dry basis)",
+      "value": 18.4,
+      "unit": "g dw/m2-day",
+      "range_min": 18.4,
+      "range_max": 30.0,
+      "source": "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Highest edible dry-mass productivity of any candidate crop; the calorie workhorse."
+    },
+    {
+      "id": "food.potato_rue_edible",
+      "name": "White potato radiation-use efficiency, edible biomass",
+      "value": 0.44,
+      "unit": "g dw/mol PAR",
+      "range_min": 0.44,
+      "range_max": 0.8,
+      "source": "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80)",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "RUE_total 0.64. Sets lighting energy per calorie; use 0.44 (conservative) to 0.5-0.64 (optimistic)."
+    },
+    {
+      "id": "food.potato_harvest_index",
+      "name": "White potato harvest index",
+      "value": 0.7,
+      "unit": "fraction edible/total dry mass",
+      "range_min": 0.6,
+      "range_max": 0.8,
+      "source": "NASA BVAD Table 4-90 (0.70); Wheeler 2008 measured ~0.68; Tibbitts CELSS 0.80",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "High HI is why potato dominates calorie-per-area and calorie-per-kWh."
+    },
+    {
+      "id": "food.wheat_edible_productivity",
+      "name": "Wheat (grain) edible productivity (dry basis)",
+      "value": 11.3,
+      "unit": "g dw/m2-day",
+      "range_min": 11.3,
+      "range_max": 20.0,
+      "source": "Wheeler et al. 2008 measured 11.3 (15.8 with VOC scrub to HI 0.40); BVAD Table 4-90 nominal 20.0",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "BPC HI was depressed to 0.29 by ethylene; scrubbing VOCs recovers HI 0.40. Total-biomass productivity 39.6 g dw/m2-d."
+    },
+    {
+      "id": "food.wheat_rue_edible",
+      "name": "Wheat radiation-use efficiency, edible (grain) biomass",
+      "value": 0.17,
+      "unit": "g dw/mol PAR",
+      "range_min": 0.17,
+      "range_max": 0.3,
+      "source": "Wheeler et al. 2008 (0.17 measured, 0.24 with VOC scrub, 0.30 potential); RUE_total 0.59",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Low edible RUE (grain HI 0.4) makes wheat ~2.6x more power-costly per calorie than potato under LEDs."
+    },
+    {
+      "id": "food.wheat_harvest_index",
+      "name": "Wheat harvest index",
+      "value": 0.4,
+      "unit": "fraction edible/total dry mass",
+      "range_min": 0.29,
+      "range_max": 0.45,
+      "source": "NASA BVAD Table 4-90 (0.40); Wheeler 2008 observed 0.29 (ethylene-depressed)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Ethylene/VOC accumulation in closed chambers cut BPC wheat HI to 0.29; scrubbing restores ~0.40."
+    },
+    {
+      "id": "food.sweet_potato_edible_productivity",
+      "name": "Sweet potato edible productivity (dry basis)",
+      "value": 24.7,
+      "unit": "g dw/m2-day",
+      "range_min": 20.0,
+      "range_max": 30.0,
+      "source": "NASA BVAD Table 4-90 (HI 0.60)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Highest BVAD edible productivity; DLI 28 mol/m2-d, 12 h photoperiod, 85 d cycle. Excellent calorie crop."
+    },
+    {
+      "id": "food.soybean_edible_productivity",
+      "name": "Soybean edible productivity (dry basis)",
+      "value": 6.0,
+      "unit": "g dw/m2-day",
+      "range_min": 4.54,
+      "range_max": 6.9,
+      "source": "Wheeler et al. 2008 (6.0 measured, 6.9 with transplant); BVAD Table 4-90 nominal 4.54",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Primary protein/oil crop; RUE_edible only 0.16 g/mol so it is power-expensive but nutritionally essential."
+    },
+    {
+      "id": "food.soybean_rue_edible",
+      "name": "Soybean radiation-use efficiency, edible biomass",
+      "value": 0.16,
+      "unit": "g dw/mol PAR",
+      "range_min": 0.16,
+      "range_max": 0.19,
+      "source": "Wheeler et al. 2008 (0.16 measured, 0.19 transplant); RUE_total 0.43",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Lowest edible RUE of the staples; caloric density ~4.9 kcal/g dw partly offsets this."
+    },
+    {
+      "id": "food.lettuce_edible_productivity",
+      "name": "Lettuce edible productivity (dry basis)",
+      "value": 7.1,
+      "unit": "g dw/m2-day",
+      "range_min": 6.57,
+      "range_max": 11.8,
+      "source": "Wheeler et al. 2008 (7.1 measured, 11.8 with transplant, RUE 0.70); BVAD Table 4-90 6.57",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Fast 28-30 d cycle, HI 0.90, but ~2.5-3 kcal/g dw and mostly water; a morale/vitamin crop, not calories."
+    },
+    {
+      "id": "food.tomato_edible_productivity",
+      "name": "Tomato edible productivity (dry basis)",
+      "value": 9.8,
+      "unit": "g dw/m2-day",
+      "range_min": 9.8,
+      "range_max": 11.4,
+      "source": "Wheeler et al. 2008 (9.8 measured, 11.4 transplant); BVAD Table 4-90 10.43; RUE_edible 0.25",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Salad crop; 94% water fresh; HI 0.45."
+    },
+    {
+      "id": "food.crop_transpiration_rate",
+      "name": "Crop transpiration / water uptake (mixed-crop average)",
+      "value": 3.96,
+      "unit": "L/m2-day",
+      "range_min": 2.1,
+      "range_max": 11.79,
+      "source": "Wheeler et al. 2008 (3.96 avg condensed); BVAD Table 4-91 per-crop (lettuce 2.1 ... wheat 11.79)",
+      "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "confidence": "high",
+      "notes": "Recovered as near-distilled condensate on cooling coils; ~100% recyclable to nutrient solution or potable loop. Wheat is a large water user (11.8 L/m2-d)."
+    },
+    {
+      "id": "food.led_photon_efficacy",
+      "name": "LED horticultural photon efficacy (2026 planning value)",
+      "value": 3.0,
+      "unit": "umol/J",
+      "range_min": 2.5,
+      "range_max": 4.1,
+      "source": "Kusuma, Pattison & Bugbee 2020 (ceiling 3.4 white+red / 4.1 blue+red); industry 2023-24 fixtures 2.5-3.5",
+      "source_url": "https://www.nature.com/articles/s41438-020-0283-7",
+      "confidence": "high",
+      "notes": "Diode electrical->photon efficiency: blue 0.93, white 0.76, red 0.81. Water/humidity optics cut ~10%."
+    },
+    {
+      "id": "food.light_delivery_efficiency",
+      "name": "Light delivery efficiency (PPF at canopy / PPF emitted)",
+      "value": 0.8,
+      "unit": "fraction",
+      "range_min": 0.3,
+      "range_max": 0.8,
+      "source": "NASA BVAD Table 4-86 (Sager 1999 low; Sager 2006 high)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Combine with efficacy: usable canopy PAR per electrical J = efficacy x delivery. BPC reflectors achieved only 0.10-0.15."
+    },
+    {
+      "id": "food.electric_energy_per_mol_photons",
+      "name": "Electrical energy per mol PAR photons delivered to canopy",
+      "value": 0.116,
+      "unit": "kWh/mol",
+      "range_min": 0.099,
+      "range_max": 0.139,
+      "source": "Derived: 1/(efficacy x delivery); efficacy 3.0 umol/J, delivery 0.8 (range from 2.5-3.5 umol/J)",
+      "source_url": null,
+      "confidence": "high",
+      "notes": "At LED output (delivery=1): 0.079-0.111 kWh/mol. This is the fundamental electricity-to-photons conversion."
+    },
+    {
+      "id": "food.led_electric_per_kcal_potato",
+      "name": "LED electrical energy per food kcal, potato",
+      "value": 0.066,
+      "unit": "kWh/kcal",
+      "range_min": 0.045,
+      "range_max": 0.075,
+      "source": "Derived: 1/(RUE_edible x efficacy x delivery x caloric_density); potato RUE 0.44, 3.0 umol/J, 0.8, 4.0 kcal/g",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "Lighting only, excludes ~25% pump/fan/thermal overhead. Optimistic 0.045 (RUE 0.64), conservative 0.075 (efficacy 2.5)."
+    },
+    {
+      "id": "food.led_electric_per_kcal_wheat",
+      "name": "LED electrical energy per food kcal, wheat",
+      "value": 0.17,
+      "unit": "kWh/kcal",
+      "range_min": 0.121,
+      "range_max": 0.204,
+      "source": "Derived: wheat RUE_edible 0.17 (0.24 opt), efficacy 3.0 umol/J, delivery 0.8, 4.0 kcal/g",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "~2.6x potato's cost per calorie; drives the potato-over-grain design conclusion."
+    },
+    {
+      "id": "food.plant_growth_chamber_esm_mass",
+      "name": "Plant growth chamber equivalent system mass per growing area",
+      "value": 101.5,
+      "unit": "kg/m2",
+      "range_min": 66,
+      "range_max": 101.5,
+      "source": "NASA BVAD Table 4-88 (Drysdale 1999b); lower bound = structure+root-zone excl. HPS lamps/ballasts",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Includes 20 kg/m2 crop structure + 36.8 kg/m2 root-zone water/nutrients + 31 kg/m2 HPS lamps+ballasts (LEDs lighter). Aeroponics reduces root-zone mass."
+    },
+    {
+      "id": "food.fertilizer_per_person_year",
+      "name": "Fertilizer salt for full-diet crop production",
+      "value": 95,
+      "unit": "kg/CM-year",
+      "range_min": 90,
+      "range_max": 100,
+      "source": "NASA BVAD Sec. 4.14 (Lunn et al. 2017), for 2500 kcal/person/day full diet",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": ">50% recyclable from inedible biomass (composting/bioreactor) and processed urine; scales with closure fraction."
+    },
+    {
+      "id": "food.growing_area_full_diet_closure",
+      "name": "Growing area for 100% caloric closure (balanced diet)",
+      "value": 50,
+      "unit": "m2/CM",
+      "range_min": 40,
+      "range_max": 60,
+      "source": "Derived from Wheeler productivities (3037 kcal / 4 kcal/g / ~15 g edible dw/m2-d); consistent with CELSS/ICES literature",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "Potato-only idealized ~41 m2; balanced nutrition (protein/oil crops) pushes to 40-60 m2. Excludes ~25-50% crew-access aisle area."
+    },
+    {
+      "id": "food.power_full_diet_closure",
+      "name": "Electrical power for 100% caloric closure (balanced diet, LED)",
+      "value": 15,
+      "unit": "kW/CM",
+      "range_min": 10,
+      "range_max": 20,
+      "source": "Derived: 3037 kcal x ~0.10-0.17 kWh/kcal mix / 24.66 h x 1.25 overhead (LED 3.0 umol/J)",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "Dominated by lighting. Potato-heavy mix lower (~8-10 kW); grain/legume-heavy higher. The single largest life-support power line item if food is grown."
+    },
+    {
+      "id": "food.worked_example_area_50pct_potato_wheat",
+      "name": "Growing area, 50% calories from potato+wheat (worked example)",
+      "value": 24,
+      "unit": "m2/CM",
+      "range_min": 21,
+      "range_max": 27,
+      "source": "Derived (Sec. 8): Wheeler RUE/productivity; 27.1 m2 as-measured, 21.1 m2 optimized",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "Potato ~9-10 m2, wheat ~12-17 m2. Wheat needs more area per calorie despite equal calorie split."
+    },
+    {
+      "id": "food.worked_example_power_50pct_potato_wheat",
+      "name": "Electrical power, 50% calories from potato+wheat (worked example)",
+      "value": 7,
+      "unit": "kW/CM",
+      "range_min": 5.5,
+      "range_max": 9.1,
+      "source": "Derived (Sec. 8): 135 kWh/sol optimized to 224 kWh/sol as-measured, incl. +25% overhead; LED 3.0 umol/J",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "Wheat contributes ~70% of the power despite half the calories. Range spans efficacy 2.5-3.5 umol/J and as-measured vs optimized crops."
+    },
+    {
+      "id": "food.mars_natural_dli",
+      "name": "Mars surface usable daily light integral (favorable latitudes)",
+      "value": 30,
+      "unit": "mol/m2-day",
+      "range_min": 5,
+      "range_max": 30,
+      "source": "NASA BVAD Sec. 4.14.1.1 (Clawson 2006)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Mars receives ~43% of Earth's solar irradiance; up to ~30 mol/m2-d at some latitudes for much of the year, but dust storms can suppress it drastically. Enough for hybrid natural+LED but not sole-source for staples."
+    }
+  ],
+  "modeling_notes": "Food splits into (1) resupplied prepackaged food (well-characterized ISS flight data: 1.83-2.39 kg/CM-day incl. ~0.27 kg packaging, 3037 kcal/CM-day demand, <=5 yr shelf life is an open gap) and (2) in-situ bioregenerative crops (soft numbers, all from NASA's Biomass Production Chamber 1987-1998). The crop trade is governed by radiation-use efficiency (RUE, g edible dw per mol PAR), harvest index, and LED photon efficacy. Lighting energy per calorie is set by 1/(RUE_edible x efficacy x delivery x caloric_density) and is INDEPENDENT of DLI (DLI only trades area vs. time). Central result: potato (high HI 0.70, RUE_edible 0.44) costs ~0.066 kWh/kcal vs. wheat ~0.17 and soybean ~0.18 -- potato/sweet-potato are ~3x cheaper per calorie, so a Mars menu should be tuber-biased with grain/legumes as nutrition supplements. Worked example (50% of one crew member's calories from potato+wheat): ~21-27 m2 and ~5.5-9 kW electrical (~135-224 kWh/sol), with wheat driving ~70% of the power. Full balanced-diet closure ~40-60 m2 and ~10-20 kW per person. CRITICAL CAUTIONS: (a) BVAD's chamber power of 2.6 kW/m2 is HPS-lamp-based and obsolete -- derive lighting from LED efficacy instead, this is the biggest error in legacy estimates; (b) BVAD Table 4-89 wheat light (115 mol/m2-d) is inconsistent with its own nominal yield -- use Wheeler RUE; (c) all BPC data are ~1 g Earth with elevated CO2 (1000-1200 ppm) and are optimistic upper bounds for Mars partial-gravity surface systems; (d) crop transpiration (~4 L/m2-d) is recovered as clean condensate and is a water-recovery benefit, not just a load. Fidelity tiers: L0 single scalars (Ybar~15 g edible dw/m2-d, ebar~0.10 kWh/kcal, ~45 m2 & ~10-15 kW per CM full closure); L1 per-crop analytic with edible_prod = RUE_edible x DLI x f_abs, staggered planting, seasonal Mars insolation, nutrient/water loops; L2 sub-sol physics (light-response photosynthesis, respiration, Penman-Monteith transpiration, coupled O2/CO2/water/thermal exchange with the habitat, stochastic pathogen/VOC/equipment failures on cycle-length recovery).",
+  "key_findings": [
+    "Crew demand anchor: 3037 kcal/CM-day (12.707 MJ, BVAD EER); prepackaged food 1.83-2.39 kg/CM-day incl. ~0.27 kg/CM-day packaging (13-17% of upmass); >=5 yr shelf life is an unsolved technology gap driving in-situ production.",
+    "Potato is the calorie champion: highest edible productivity (18-21 g dw/m2-d), harvest index 0.70, RUE_edible 0.44 g/mol -> ~0.066 kWh(elec)/kcal, about 2.6x cheaper than wheat (0.17) and 3x cheaper than soybean (0.18) under LEDs.",
+    "Lighting energy per calorie = 1/(RUE_edible x LED_efficacy x delivery x caloric_density) and is INDEPENDENT of DLI; DLI only trades growing area against cycle time. This is the key structural insight for the model.",
+    "LED photon efficacy 2.5-3.0 umol/J is the 2026 deployable range (ceiling 3.4-4.1, Kusuma/Bugbee 2020) -> ~0.10-0.14 kWh(elec) per mol PAR at the canopy; this replaces BVAD's obsolete HPS-based 2.6 kW/m2 chamber-power figure.",
+    "Worked example (50% of one crew member's calories from potato+wheat): ~21-27 m2 growing area and ~5.5-9 kW electrical (~135-224 kWh/sol), with wheat responsible for ~70% of the power despite half the calories -- a potato-only mix would need ~18 m2 and ~4 kW.",
+    "Full balanced-diet closure lands at the classic ~40-60 m2 and ~10-20 kW per person; nutritional balance (protein/oil crops soybean/peanut, RUE ~0.16) is what makes 100% closure power-expensive, not the calories themselves.",
+    "Crop transpiration (~4 L/m2-d, up to 11.8 for wheat) is recovered as near-distilled condensate (~100% recyclable) -- a farm is also a water processor; but crops fail fast (Fusarium in ISS Veggie after a humidity excursion, ethylene cutting wheat HI 0.40->0.29), so never model >50-70% steady-state closure without a >=1-crop-cycle stored-food buffer.",
+    "Data-quality caveat: every crop productivity number traces to the KSC Biomass Production Chamber at ~1 g Earth gravity with elevated CO2 (1000-1200 ppm); treat as optimistic upper bounds for untested Mars 0.38 g crop-scale production."
+  ],
+  "sources": [
+    {
+      "title": "Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2",
+      "org": "NASA",
+      "url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "year": 2022
+    },
+    {
+      "title": "Crop productivities and radiation use efficiencies for bioregenerative life support, Adv. Space Res. 41:706-713",
+      "org": "NASA KSC / Wheeler et al.",
+      "url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+      "year": 2008
+    },
+    {
+      "title": "From physics to fixtures to food: current and potential LED efficacy, Hortic. Res. 7:56",
+      "org": "Utah State University / Kusuma, Pattison & Bugbee",
+      "url": "https://www.nature.com/articles/s41438-020-0283-7",
+      "year": 2020
+    },
+    {
+      "title": "Stoichiometric model of a fully closed bioregenerative life support system for autonomous long-duration space missions (MELiSSA)",
+      "org": "Frontiers in Astronomy and Space Sciences",
+      "url": "https://www.frontiersin.org/articles/10.3389/fspas.2023.1198689/full",
+      "year": 2023
+    },
+    {
+      "title": "Influence of crop cultivation conditions on space greenhouse equivalent system mass, CEAS Space Journal",
+      "org": "Boscheri et al.",
+      "url": "https://link.springer.com/article/10.1007/s12567-020-00317-5",
+      "year": 2020
+    },
+    {
+      "title": "Biomass Production of the EDEN ISS Space Greenhouse in Antarctica During the 2018 Experiment Phase",
+      "org": "DLR / Zabel et al.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7264257/",
+      "year": 2020
+    },
+    {
+      "title": "NASA's Contributions to Vertical Farming, NASA/TM-2020-5008832",
+      "org": "NASA",
+      "url": "https://ntrs.nasa.gov/api/citations/20205008832/downloads/NASA%20TM-2020-5008832%20NASA's%20Contributions%20to%20Vertical%20Farming.pdf",
+      "year": 2020
+    },
+    {
+      "title": "Fusarium oxysporum as an Opportunistic Fungal Pathogen on Zinnia hybrida Plants Grown on board the International Space Station",
+      "org": "NASA / Schuerger et al.",
+      "url": "https://www.researchgate.net/publication/351237242",
+      "year": 2021
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "domain": "eclss",
+  "parameters": [
+    {
+      "id": "eclss.crew_o2_consumption",
+      "name": "Crew O2 consumption per crew-member-day",
+      "value": 0.9,
+      "unit": "kg/CM-d",
+      "range_min": 0.61,
+      "range_max": 1.08,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-1 nominal; Table 3-31 gives 0.895",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "82 kg reference CM, exercising to hold mass. Range = lower/upper design bounds (~5th-percentile female to 95th-percentile male, ~+/-25%). Legacy value 0.816 kg/CM-d."
+    },
+    {
+      "id": "eclss.crew_co2_production",
+      "name": "Crew CO2 production per crew-member-day",
+      "value": 1.04,
+      "unit": "kg/CM-d",
+      "range_min": 0.74,
+      "range_max": 1.31,
+      "source": "NASA BVAD Rev2 Table 4-1 (nominal 1.08); Table 3-31 CO2 load 1.085; RQ 0.86",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "1.04 = O2*RQ*(44/32) consistent point estimate; BVAD Table 4-1 nominal is 1.08. Carry with O2 as a coupled pair."
+    },
+    {
+      "id": "eclss.crew_respiratory_quotient",
+      "name": "Respiratory quotient (mol CO2 / mol O2)",
+      "value": 0.86,
+      "unit": "dimensionless",
+      "range_min": 0.83,
+      "range_max": 0.96,
+      "source": "NASA BVAD Rev2 Table 3-31 (Ewert 2021 MetMan)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "0.86 rest/sleep, 0.95 aerobic exercise, 0.96 resistive exercise."
+    },
+    {
+      "id": "eclss.crew_metabolic_heat",
+      "name": "Crew total metabolic heat load",
+      "value": 12.426,
+      "unit": "MJ/CM-d",
+      "range_min": null,
+      "range_max": null,
+      "source": "NASA BVAD Rev2 Table 3-31",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "= 143.8 W average per CM. Sensible 6.308 MJ/CM-d (73.0 W), latent 6.118 MJ/CM-d (70.8 W). Sensible->cabin air, latent->condensing HX."
+    },
+    {
+      "id": "eclss.crew_potable_water",
+      "name": "Crew total human water consumption (drink + food prep)",
+      "value": 2.5,
+      "unit": "kg/CM-d",
+      "range_min": 2.0,
+      "range_max": 3.22,
+      "source": "NASA BVAD Rev2 Table 4-20 (drinking 2.00 + food rehydration 0.50)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Table 3-31 potable water content 3.217 kg/CM-d includes 0.717 kg exercise-perspiration allowance. Drinking alone 2.0 kg/CM-d."
+    },
+    {
+      "id": "eclss.crew_hygiene_water",
+      "name": "Crew hygiene water use (mission-class dependent)",
+      "value": 0.7,
+      "unit": "kg/CM-d",
+      "range_min": 0.7,
+      "range_max": 6.62,
+      "source": "NASA BVAD Rev2 Table 4-20",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "ISS/transit minimal hygiene 0.7 (urinal flush 0.3 + personal hygiene 0.4). Early planetary base 1.98; mature base 6.62 (adds hand wash, shower, laundry, dish wash). verified correction: BVAD Table 4-20 lists hand wash as TBD/n-a for planetary bases; the 4.08 kg/CM-d hand-wash figure is a WASTEWATER stream (Table 4-21), not a Table 4-20 usage total. Do not add it to hygiene-usage totals."
+    },
+    {
+      "id": "eclss.crew_total_water_use",
+      "name": "Crew total water use (excl. payload)",
+      "value": 3.2,
+      "unit": "kg/CM-d",
+      "range_min": 3.2,
+      "range_max": 9.12,
+      "source": "NASA BVAD Rev2 Table 4-20",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Transit vehicle 3.2; early planetary base 4.48; mature base 9.12; ISS 5.38 incl 2.18 payload."
+    },
+    {
+      "id": "eclss.crew_urine_output",
+      "name": "Crew urine wastewater output (urine + flush)",
+      "value": 1.5,
+      "unit": "kg/CM-d",
+      "range_min": 1.42,
+      "range_max": 2.0,
+      "source": "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Table 3-31 urine water 1.420 kg/CM-d. Transit/base flush raises total to 1.8-2.0 kg/CM-d."
+    },
+    {
+      "id": "eclss.crew_humidity_condensate",
+      "name": "Crew latent humidity condensate output",
+      "value": 2.27,
+      "unit": "kg/CM-d",
+      "range_min": 2.27,
+      "range_max": 2.9,
+      "source": "NASA BVAD Rev2 Table 4-21",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Latent load removed by condensing heat exchanger, feeds WPA. Table 3-31 respiration+perspiration water is 2.946 kg/CM-d."
+    },
+    {
+      "id": "eclss.cabin_total_pressure",
+      "name": "Cabin total pressure (setpoint options)",
+      "value": 101.3,
+      "unit": "kPa",
+      "range_min": 56.5,
+      "range_max": 101.3,
+      "source": "NASA BVAD Rev2 Table 4-1; NASA exploration atmosphere studies",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "101.3 kPa sea-level (ISS); 70.3 kPa (10.2 psia) and 56.5 kPa (8.2 psia, 34% O2) reduced-pressure exploration options for shorter EVA prebreathe."
+    },
+    {
+      "id": "eclss.cabin_ppo2",
+      "name": "Cabin oxygen partial pressure (nominal setpoint)",
+      "value": 21.2,
+      "unit": "kPa",
+      "range_min": 15.2,
+      "range_max": 50.6,
+      "source": "NASA BVAD Rev2 Table 4-1; Norcross 2013; NASA-STD-3001",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Nominal ~21.2 kPa (Earth normal). Measurable impairment until acclimatized 17.2-18.6; min allowable <=1 h is 15.2-17.2 kPa. Upper bounded by flammability at higher O2 fraction."
+    },
+    {
+      "id": "eclss.cabin_ppn2",
+      "name": "Cabin nitrogen partial pressure (101.3 kPa atmosphere)",
+      "value": 79.0,
+      "unit": "kPa",
+      "range_min": null,
+      "range_max": null,
+      "source": "Derived: total 101.3 - ppO2 21.2 - ppCO2 ~0.4 - pH2O ~1.6",
+      "source_url": null,
+      "confidence": "high",
+      "notes": "Buffer gas ~78 mol%. Non-consumed except leakage and airlock/EVA losses; makeup dominated by airlock cycling, not metabolism."
+    },
+    {
+      "id": "eclss.cabin_ppco2_limit",
+      "name": "Cabin CO2 partial pressure limit (NASA-STD-3001, 1-h avg)",
+      "value": 0.4,
+      "unit": "kPa",
+      "range_min": 0.13,
+      "range_max": 1.2,
+      "source": "NASA-STD-3001 Vol 2 Rev D [V2 6004]; NASA OCHMO-TB-004",
+      "source_url": "https://www.nasa.gov/ochmo-tb-004-carbon-dioxide-2/",
+      "confidence": "high",
+      "notes": "3 mmHg = 0.40 kPa 1-h average limit (headache <1.4%). 7-day <2.5 mmHg (0.33 kPa) for <1% headache. ISS observed band 1-9 mmHg (0.13-1.2 kPa). BVAD design nominal 0.507 kPa. Formal CO2 SMAC deleted."
+    },
+    {
+      "id": "eclss.cabin_temperature",
+      "name": "Cabin temperature setpoint",
+      "value": 296,
+      "unit": "K",
+      "range_min": 291,
+      "range_max": 300,
+      "source": "NASA BVAD Rev2 Table 4-1",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "~23 C nominal, 18-27 C range. Relative humidity nominal 40% (range 25-75%)."
+    },
+    {
+      "id": "eclss.habitat_leakage_rate",
+      "name": "Habitat atmosphere leakage rate (per module, nominal design)",
+      "value": 0.02,
+      "unit": "kg/day/module",
+      "range_min": 0.01,
+      "range_max": 0.09,
+      "source": "NASA BVAD Rev2 Table 4-1, Sec 4.1",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Nominal = 2x the ~0.01 kg/day observed in module test (Gateway-derived margin). As fraction: 0.01-0.14 %/day. Whole-ISS observed leakage ~0.195 kg/day (ESA). verified correction: whole-ISS 'observed 0.195 kg/day (ESA)' is unverified; NASA trending gives ~0.18-0.23 kg/day (2008-2011). Post-2019 Zvezda structural-crack leakage is far higher (~0.45-1.7 kg/day) and not representative of design leakage. Design value 0.02 kg/day/module is unaffected."
+    },
+    {
+      "id": "eclss.oga_o2_production_max",
+      "name": "OGA maximum O2 production rate (PEM electrolysis)",
+      "value": 9.25,
+      "unit": "kg/day",
+      "range_min": null,
+      "range_max": null,
+      "source": "ICES-2023-311, Status of the Advanced OGA (NTRS 20230008013)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20230008013/downloads/ICES_2023_311%20final%205%2015%2023.pdf",
+      "confidence": "high",
+      "notes": "20.4 lb/day at 46.9 A max stack current; supports 10.88 CM at 0.85 kg O2/CM-d. Selectable rate; standby 1.0 A. Cumulative 2007-2023: 11,903 kg O2, 1,488 kg H2."
+    },
+    {
+      "id": "eclss.oga_specific_energy",
+      "name": "OGA electrolysis specific energy (cell stack)",
+      "value": 5.8,
+      "unit": "kWh/kg O2",
+      "range_min": 5.0,
+      "range_max": 12.0,
+      "source": "Derived from ICES-2023-311 (46.9 A, ~1.7 V/cell, ~28 cells => 2.23 kW at 9.25 kg/day)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20230008013/downloads/ICES_2023_311%20final%205%2015%2023.pdf",
+      "confidence": "medium",
+      "notes": "Stack level 5.8 kWh/kg (thermoneutral min 4.97 at 1.48 V/cell). System level ~7-12 kWh/kg incl balance-of-plant and part-load; flight estimates ~2.4 kW for ~6-crew O2."
+    },
+    {
+      "id": "eclss.cdra_co2_removal_capacity",
+      "name": "CDRA (4BMS) CO2 removal capacity",
+      "value": 3.5,
+      "unit": "kg/day CO2 per CDRA (20.4 SCFM nominal flow, 2.0 torr inlet ppCO2)",
+      "range_min": 3.0,
+      "range_max": 3.5,
+      "source": "Knox & Stanley, ICES-2015-165, NTRS 20150016500, Sec. II & Table 3 (PW 3.17 kg/day @461 W; PF 3.49 kg/day @486 W at 20 SCFM / 2 torr)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20150016500/downloads/20150016500.pdf",
+      "confidence": "high",
+      "notes": "4.1 CM-eq at 2.0 torr; 10.5 CM-eq at 5.0 torr; roughly linear in inlet ppCO2. Nominal air flow 34.7 m3/h (20.4 SCFM). ISS 6-CM CO2 throughput ~6.3 kg/day. Per-unit design 6-7 CM. verified correction: the 4.1/10.5 CM-eq capacities were demonstrated in a HIGH-FLOW 25 SCFM, 90-min half-cycle config (+200 W heater); nominal-flow (20.4 SCFM) measured removal is only 3.17-3.49 kg CO2/day (~3.0-3.4 CM-eq), so the prior capacity curve overstated nominal CDRA capacity by ~20-25%. Use 4.1/10.5 CM-eq ONLY for the high-flow configuration."
+    },
+    {
+      "id": "eclss.cdra_power",
+      "name": "CDRA nominal power (order of magnitude)",
+      "value": 0.8,
+      "unit": "kW",
+      "range_min": 0.6,
+      "range_max": 1.2,
+      "source": "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20150016500/downloads/20150016500.pdf",
+      "confidence": "low",
+      "notes": "Open literature gives flow/capacity cleanly but not a single clean nominal power. Thermal-swing heater power dominates and is duty-cycle dependent."
+    },
+    {
+      "id": "eclss.sabatier_o2_recovery",
+      "name": "Sabatier CO2-reduction O2-loop closure (metabolic O2 recovered)",
+      "value": 48,
+      "unit": "% of metabolic O2",
+      "range_min": 45,
+      "range_max": 50,
+      "source": "NTRS 20100033195 Sabatier CRA; NASA SCOR",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20100033195/downloads/20100033195.pdf",
+      "confidence": "high",
+      "notes": "H2-limited: OGA yields 2 H2 per O2 but Sabatier needs 4 H2 per CO2; CH4 vented. ISS estimated ~47%. Water output ~907 kg/yr (7-CM sizing). >50% needs CH4 pyrolysis/Bosch (not operational)."
+    },
+    {
+      "id": "eclss.wrs_water_recovery",
+      "name": "Water Recovery System overall recovery fraction (UPA+WPA+BPA)",
+      "value": 98,
+      "unit": "%",
+      "range_min": 93,
+      "range_max": 98,
+      "source": "NASA water recovery milestone, 20 Jun 2023",
+      "source_url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+      "confidence": "high",
+      "notes": "98% demonstrated with Brine Processor Assembly (2023); 93-94% pre-BPA baseline. Use 98% best-case closed loop, 93% conservative."
+    },
+    {
+      "id": "eclss.upa_urine_recovery",
+      "name": "UPA urine water recovery fraction (de-ratable)",
+      "value": 85,
+      "unit": "%",
+      "range_min": 70,
+      "range_max": 85,
+      "source": "NASA BVAD Rev2 Sec 4.3.3 (Carter); Wikipedia ISS ECLSS",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "US segment design 85%; de-rated to ~70% on orbit due to calcium-sulfate precipitation in high-Ca urine. Russian ~70%. UPA capacity 9 kg/day (6-CM). Treat as de-ratable parameter."
+    },
+    {
+      "id": "eclss.wpa_expendables_resupply",
+      "name": "WPA expendable filter/bed resupply mass",
+      "value": 472,
+      "unit": "kg/yr (6-CM crew)",
+      "range_min": null,
+      "range_max": null,
+      "source": "NASA BVAD Rev2 Sec 4.3.3 (Carrasquillo 2005)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Multifiltration beds + ion-exchange bed. Drives logistics for closed-loop water on no-resupply missions."
+    },
+    {
+      "id": "eclss.eclss_system_power_iss",
+      "name": "Total ISS ECLSS average electrical power",
+      "value": 5.31,
+      "unit": "kW",
+      "range_min": null,
+      "range_max": null,
+      "source": "NASA BVAD Rev2 Table 3-2",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Whole ECLSS average for ISS-class crew. Thermal Control System separately 8.72 kW. OGA is the largest single ECLSS draw."
+    },
+    {
+      "id": "eclss.eclss_mass_per_crew",
+      "name": "Regenerative ECLSS hardware mass per crew (ESM sizing estimate)",
+      "value": 1000,
+      "unit": "kg/CM",
+      "range_min": 600,
+      "range_max": 1500,
+      "source": "Estimate: engineering ESM order-of-magnitude incl racks + spares",
+      "source_url": null,
+      "confidence": "low",
+      "notes": "Individual ISS ORU masses are not cleanly partitioned in open literature; AOGA cell-stack module alone ~136 kg. Use as placeholder for system-level trades; refine per architecture. verified correction: the ~136 kg (300 lb) launch-config mass is the LEGACY ISS OGA Hydrogen ORU (per ICES-2023-311), not a next-gen AOGA module; the AOGA redesign is intended to reduce it. Do not use 136 kg as a next-gen mass assumption."
+    }
+  ],
+  "modeling_notes": "Primary source is NASA BVAD NASA/TP-2015-218570 Rev2 (Feb 2022, NTRS 20210024855) for all human-interface values; hardware from ISS-heritage ICES papers and NASA OCHMO/NASA-STD-3001. Metabolic O2/CO2/heat scale ~+/-25% (5th-percentile female to 95th-percentile male) and shift with activity via RQ (0.86 rest -> 0.95-0.96 exercise); model crew load as activity-block-weighted, not a single scalar. O2 and CO2 are coupled through RQ; water inflows (potable 3.22 + food 0.76 + metabolic 0.49) balance outflows (urine 1.42 + resp/persp 2.95 + fecal 0.10). Closure economics: OGA electrolysis + Sabatier recovers only ~48% of metabolic O2 (H2-limited); full O2-loop closure needs CH4 pyrolysis (not flight-operational). WRS reaches 98% water closure with the 2023 Brine Processor Assembly (93-94% before). For a Mars no-resupply mission the binding trade is reliability/spares/crew-time (ISS OGA/CDRA/UPA all have recurring failure modes), not steady-state efficiency; UPA recovery in particular de-rates 85%->70% from urine chemistry. Mars ISRU can supply O2 and buffer gas locally, changing whether to close loops or resupply. Fidelity tiers: L0 constant per-CM scalars for mass-balance sizing; L1 activity-block daily model with atmosphere ODEs and hardware capacity as f(ppCO2, production rate); L2 sub-sol physics with adsorption isotherms (CDRA), electrolysis polarization curves (OGA), Sabatier H2-limited kinetics, condensing-HX latent/sensible split, and a nodal water network with de-ratable recovery efficiencies. Cross-couples to thermal (sensible/latent heat), power (OGA/CDRA/Sabatier draw), and logistics/ISRU (O2/N2/water/spares).",
+  "key_findings": [
+    "BVAD Rev2 reference crew (82 kg): O2 consumed ~0.90 kg/CM-d, CO2 produced ~1.04-1.085 kg/CM-d at RQ 0.86, metabolic heat 12.43 MJ/CM-d (143.8 W; ~51% sensible / 49% latent). Design spread ~+/-25%.",
+    "Water: total human consumption 2.5 kg/CM-d (2.0 drink + 0.5 food prep); hygiene 0.7 kg/CM-d ISS-minimal up to 6.62 for a mature base; urine wastewater 1.5 kg/CM-d; humidity condensate 2.27 kg/CM-d.",
+    "Atmosphere: 101.3 kPa sea-level baseline (ppO2 ~21.2, ppN2 ~79 kPa) with 70.3/56.5 kPa reduced-pressure exploration options; CO2 held below NASA-STD-3001 limit of 3 mmHg (0.40 kPa) 1-h average; formal CO2 SMAC has been deleted.",
+    "Leakage baselined at 0.02 kg/day/module (2x the ~0.01 measured), i.e. up to ~0.14 %/day of cabin gas; whole-ISS observed ~0.195 kg/day.",
+    "OGA (PEM electrolysis) makes up to 9.25 kg O2/day at 46.9 A (supports 10.88 CM); derived stack specific energy ~5.8 kWh/kg O2 (system ~7-12 incl balance-of-plant).",
+    "CDRA (4-bed molecular sieve) removes 4.1 CM-equiv of CO2 at 2.0 torr inlet (10.5 CM-eq at 5.0 torr) at 34.7 m3/h flow; nominal power ~0.6-1.0 kW (heater-dominated, estimate).",
+    "Sabatier recovers only ~47-48% of metabolic O2 from CO2 (H2-limited, CH4 vented); full O2-loop closure requires methane pyrolysis not yet operational.",
+    "Water Recovery System reaches 98% overall closure with the 2023 Brine Processor Assembly (93-94% before); UPA urine recovery is 85% design but de-rates to ~70% on orbit from calcium-sulfate precipitation.",
+    "Total ISS ECLSS average power ~5.31 kW; for a 3-year Mars mission spares mass and crew-maintenance time (OGA cell-stack/pump, CDRA valves, UPA chemistry) dominate the ECLSS logistics trade over steady-state efficiency."
+  ],
+  "sources": [
+    {
+      "title": "Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev2",
+      "org": "NASA (Anderson, Ewert, Keener)",
+      "url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "year": 2022
+    },
+    {
+      "title": "Status of the Advanced Oxygen Generation Assembly Design (ICES-2023-311)",
+      "org": "NASA MSFC",
+      "url": "https://ntrs.nasa.gov/api/citations/20230008013/downloads/ICES_2023_311%20final%205%2015%2023.pdf",
+      "year": 2023
+    },
+    {
+      "title": "Optimization of the Carbon Dioxide Removal Assembly (CDRA-4EU)",
+      "org": "NASA",
+      "url": "https://ntrs.nasa.gov/api/citations/20150016500/downloads/20150016500.pdf",
+      "year": 2015
+    },
+    {
+      "title": "CO2 Removal Onboard the International Space Station (4-bed molecular sieve / 4BCO2)",
+      "org": "NASA MSFC",
+      "url": "https://ntrs.nasa.gov/api/citations/20190030370/downloads/20190030370.pdf",
+      "year": 2019
+    },
+    {
+      "title": "Sabatier Carbon Dioxide Reduction Assembly Development for Closed Loop Water Recovery",
+      "org": "NASA",
+      "url": "https://ntrs.nasa.gov/api/citations/20100033195/downloads/20100033195.pdf",
+      "year": 2010
+    },
+    {
+      "title": "NASA Achieves Water Recovery Milestone on the International Space Station (98%)",
+      "org": "NASA",
+      "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+      "year": 2023
+    },
+    {
+      "title": "OCHMO-TB-004 Carbon Dioxide (technical brief) / NASA-STD-3001 Vol 2 Rev D",
+      "org": "NASA OCHMO",
+      "url": "https://www.nasa.gov/ochmo-tb-004-carbon-dioxide-2/",
+      "year": 2024
+    },
+    {
+      "title": "Design of ISS Environmental Control and Life Support Systems / ECLSS Technology Evolution for Exploration",
+      "org": "NASA (Carrasquillo et al.)",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/05/design_iss_environment_control_and_life_support_systems.pdf",
+      "year": 2005
+    },
+    {
+      "title": "ESA ISS ECLSS / Node 3 Factsheet (leakage, hardware sizing)",
+      "org": "ESA",
+      "url": "https://wsn.spaceflight.esa.int/docs/Factsheets/30%20ECLSS%20LR.pdf",
+      "year": 2014
+    },
+    {
+      "title": "High Reliability Requires More Than Providing Spares (ECLSS reliability)",
+      "org": "NASA",
+      "url": "https://ntrs.nasa.gov/api/citations/20190027319/downloads/20190027319.pdf",
+      "year": 2019
+    }
+  ]
+}

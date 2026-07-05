@@ -1,0 +1,485 @@
+{
+  "domain": "starship",
+  "parameters": [
+    {
+      "id": "starship.stack_height_m",
+      "name": "Starship V3 full stack height",
+      "value": 124.4,
+      "unit": "m",
+      "range_min": 124.4,
+      "range_max": 124.4,
+      "confidence": "high",
+      "source": "SpaceX claim (Musk presentation 2025-05-29); Flight 12 vehicle (2026-05-22)",
+      "source_url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+      "notes": "V2 was 123.1 m. Booster 72.3 m + ship ~52.1 m."
+    },
+    {
+      "id": "starship.ship_length_m",
+      "name": "Starship (ship/upper stage) V3 length",
+      "value": 52.1,
+      "unit": "m",
+      "range_min": 52.1,
+      "range_max": 61,
+      "confidence": "medium",
+      "source": "Derived: 124.4 m stack minus 72.3 m booster; one Wikipedia table lists 61 m (likely V4 conflation)",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "notes": "9 m diameter cylinder; payload section top ~33.5 m above ground when landed (Howard et al. 2023)."
+    },
+    {
+      "id": "starship.diameter_m",
+      "name": "Starship body diameter",
+      "value": 9.0,
+      "unit": "m",
+      "range_min": 9.0,
+      "range_max": 9.0,
+      "confidence": "high",
+      "source": "SpaceX, all orbital-class Starships",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "notes": null
+    },
+    {
+      "id": "starship.payload_leo_reusable_t",
+      "name": "Payload to LEO, fully reusable (company claim)",
+      "value": 100,
+      "unit": "t",
+      "range_min": 100,
+      "range_max": 150,
+      "confidence": "medium",
+      "source": "SpaceX claim (Musk, 2025-05-29 presentation: '100+ t'; SpaceX materials up to 150 t)",
+      "source_url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+      "notes": "Not yet demonstrated: V2 flew ~35 t of simulators; V3 Flight 12 (2026-05-22) deployed 20 Starlink simulators + 2 satellites."
+    },
+    {
+      "id": "starship.payload_leo_expendable_t",
+      "name": "Payload to LEO, fully expendable (company claim)",
+      "value": 200,
+      "unit": "t",
+      "range_min": 180,
+      "range_max": 250,
+      "confidence": "low",
+      "source": "SpaceX/Musk claims 2024-2025 (company claim)",
+      "source_url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/",
+      "notes": "Never planned for Mars ops; useful as an upper performance bound."
+    },
+    {
+      "id": "starship.payload_mars_surface_claim_t",
+      "name": "Payload to Mars surface (SpaceX claim)",
+      "value": 100,
+      "unit": "t",
+      "range_min": 100,
+      "range_max": 150,
+      "confidence": "low",
+      "source": "SpaceX claim (2017-2026, incl. Musk 2025-05-29 presentation): 100 t class to Mars surface (corroborated by Heldmann et al. 2022)",
+      "source_url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "notes": "Company claim, not demonstrated. Landed mass ~200+ t would be ~200x largest previous Mars landing. verified correction: the '$100M/t Mars cargo pricing NET 2028' detail is NOT present at the cited Aerospace America URL and has been removed from the source string; the 100 t value and URL are retained."
+    },
+    {
+      "id": "starship.payload_mars_surface_independent_t",
+      "name": "Payload to Mars surface (independent working estimate, early flights)",
+      "value": 50,
+      "unit": "t",
+      "range_min": 10,
+      "range_max": 114.4,
+      "confidence": "speculative",
+      "source": "Estimate: midpoint between demonstrated V2 LEO capability (~35 t) and claim; bounded by Maiwald et al. 2024 optimistic max 114.4 t and their finding of infeasibility at realistic (210 t) dry mass",
+      "source_url": "https://www.nature.com/articles/s41598-024-54012-0",
+      "notes": "Rapp 2024: ~950 t of 1200 t burned at TMI, ~30 t midcourse, ~220-250 t left for EDL. Use as Monte-Carlo variable correlated with dry mass."
+    },
+    {
+      "id": "starship.pressurized_volume_m3",
+      "name": "Pressurized (crew) forward volume",
+      "value": 1000,
+      "unit": "m3",
+      "range_min": 600,
+      "range_max": 1100,
+      "confidence": "medium",
+      "source": "Heldmann et al. 2022 New Space ('on order of 1,100 m3 forward space'); SpaceX historical claim 1,000 m3",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
+      "notes": "Crew configuration only; cargo config uses 614 m3 payload bay."
+    },
+    {
+      "id": "starship.cargo_bay_volume_m3",
+      "name": "Cargo payload bay volume",
+      "value": 614,
+      "unit": "m3",
+      "range_min": 600,
+      "range_max": 1100,
+      "confidence": "medium",
+      "source": "Wikipedia (SpaceX Starship spacecraft page, from Users Guide-era data)",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+      "notes": "Nominal deployment doors 3 m x 3 m (Heldmann et al. 2022)."
+    },
+    {
+      "id": "starship.ship_dry_mass_t",
+      "name": "Ship dry mass (V3 cargo variant, estimate)",
+      "value": 125,
+      "unit": "t",
+      "range_min": 100,
+      "range_max": 210.5,
+      "confidence": "low",
+      "source": "Estimate: Musk 2021 stated ~100 t (Block 1); Maiwald et al. 2024 bottom-up crewed estimate 210.5 t incl. 20% margin; no official V3 figure",
+      "source_url": "https://www.nature.com/articles/s41598-024-54012-0",
+      "notes": "Master uncertainty of the whole transport model - drives Mars payload, refill count, and return feasibility. Crewed variants heavier than cargo/tanker."
+    },
+    {
+      "id": "starship.ship_propellant_capacity_t",
+      "name": "Ship propellant load (V3)",
+      "value": 1550,
+      "unit": "t",
+      "range_min": 1500,
+      "range_max": 1600,
+      "confidence": "medium",
+      "source": "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (ship: 1,550 t propellant, 52.1 m, ~1,600 tf, six engines)",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "notes": "At O/F 3.6: ~348 t CH4 + ~1252 t LOX. ~2% unusable residuals typical assumption. verified correction: May 2025 presentation gave 1,550 t (not 1,600 t) for the flown V3 ship; 1,600 t is near-term growth kept as range max. The 1,600 t Wikipedia 'Block 3' column mixes future-stretch specs."
+    },
+    {
+      "id": "starship.booster_propellant_capacity_t",
+      "name": "Super Heavy propellant load (V3)",
+      "value": 3650,
+      "unit": "t",
+      "range_min": 3650,
+      "range_max": 4050,
+      "confidence": "medium",
+      "source": "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (3,650 t; growth to ~3,700-4,000 t mentioned); Wikipedia 'SpaceX Super Heavy' Block 3 (3,650 t, 72.3 m); Tesla Oracle 2026-03-12 B19 load report (3,650 t)",
+      "source_url": "https://www.teslaoracle.com/2026/03/12/starship-flight-12-v3-booster-19-shows-boosted-propellant-load-speeds-static-fire-next/",
+      "notes": "V2 booster was 3650 t. verified correction: 4,050 t was a future stretched-vehicle figure conflated from a Wikipedia table; the flown V3 booster loads 3,650 t (volume check refutes 4,050 t in a 72.3 m booster). V1 was 3,250-3,400 t; V2/3-era is 3,650 t. 4,050 t is future growth only."
+    },
+    {
+      "id": "starship.stack_liftoff_mass_t",
+      "name": "Full stack gross liftoff mass (V3)",
+      "value": 5650,
+      "unit": "t",
+      "range_min": 5500,
+      "range_max": 5800,
+      "confidence": "medium",
+      "source": "Derived: ~5,200 t propellant (1,550 t ship + 3,650 t booster, May 2025 figures) + ~400-450 t stage dry masses",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "notes": "verified correction: rocketlaunch.org 5,250 t was the propellant sum mislabeled as GLOM (internally inconsistent: propellant alone exceeded it). Realistic V3 GLOM ~5,600-5,750 t; liftoff T/W at 80.8 MN is ~1.45, not 1.57. Do not use rocketlaunch.org for GLOM."
+    },
+    {
+      "id": "starship.raptor_of_ratio",
+      "name": "Raptor oxidizer-to-fuel mass ratio (LOX:CH4)",
+      "value": 3.6,
+      "unit": "dimensionless",
+      "range_min": 3.5,
+      "range_max": 3.8,
+      "confidence": "high",
+      "source": "Wikipedia SpaceX Raptor (3.6:1); Heldmann et al. 2022 use ~3.5",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+      "notes": "CH4 mass fraction = 1/(1+3.6) = 21.7% of total propellant."
+    },
+    {
+      "id": "starship.raptor3_thrust_sl_kn",
+      "name": "Raptor 3 sea-level thrust (rated)",
+      "value": 2746,
+      "unit": "kN",
+      "range_min": 2452,
+      "range_max": 2746,
+      "confidence": "high",
+      "source": "SpaceX claim (X post 2024-08-04: 280 tf); flown at ~250 tf nominal on early V3 flights per Wikipedia",
+      "source_url": "https://x.com/SpaceX/status/1819772716339339664",
+      "notes": "280 tf = 2.746 MN. Engine mass 1,525 kg (+195 kg vehicle-side). Chamber pressure 330-350 bar."
+    },
+    {
+      "id": "starship.raptor3_isp_sl_s",
+      "name": "Raptor 3 sea-level specific impulse",
+      "value": 350,
+      "unit": "s",
+      "range_min": 347,
+      "range_max": 350,
+      "confidence": "medium",
+      "source": "SpaceX claim (X post 2024-08-04)",
+      "source_url": "https://x.com/SpaceX/status/1819772716339339664",
+      "notes": "Company claim; not independently verified."
+    },
+    {
+      "id": "starship.raptor3_isp_vac_s",
+      "name": "Raptor 3 vacuum (RVac) specific impulse",
+      "value": 380,
+      "unit": "s",
+      "range_min": 372,
+      "range_max": 380,
+      "confidence": "medium",
+      "source": "SpaceX claim/target (2024); Maiwald et al. 2024 use 378 s",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+      "notes": "RVac thrust ~275 tf nominal, 306 tf target."
+    },
+    {
+      "id": "starship.ship_engine_count",
+      "name": "Ship engine count (V3)",
+      "value": 6,
+      "unit": "engines",
+      "range_min": 6,
+      "range_max": 9,
+      "confidence": "medium",
+      "source": "Musk presentation 2025-05-29 ('six engines now, nine on a future version'); Starship Flight 12 flew S39 with six Raptors (splashdown on 2 of 3 center engines)",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "notes": "Landing uses 2-3 sea-level gimbaling engines (Flight 12 splashed down on 2). verified correction: V3 ships fly 6 engines (3 sea-level + 3 RVac), not 9; the 3 SL + 6 RVac layout is the FUTURE config. Using 9 overstates Mars ascent/landing thrust by 50%. 9 kept as range max (future variant)."
+    },
+    {
+      "id": "starship.booster_engine_count",
+      "name": "Super Heavy engine count",
+      "value": 33,
+      "unit": "engines",
+      "range_min": 33,
+      "range_max": 33,
+      "confidence": "high",
+      "source": "Flight-demonstrated (Flight 12, 2026-05-22: all 33 Raptor 3 lit)",
+      "source_url": "https://www.nasaspaceflight.com/2026/05/starship-flight-12-block-3-pad-2/",
+      "notes": null
+    },
+    {
+      "id": "starship.booster_liftoff_thrust_kn",
+      "name": "Super Heavy liftoff thrust (V3)",
+      "value": 81000,
+      "unit": "kN",
+      "range_min": 74000,
+      "range_max": 90600,
+      "confidence": "medium",
+      "source": "rocketlaunch.org (80,806 kN, i.e. ~250 tf/engine); 33 x 280 tf rated = 90.6 MN; SpaceX '10,000 tf' aspiration with Raptor 3.x",
+      "source_url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+      "notes": "T/W at liftoff ~1.55-1.75 depending on rating."
+    },
+    {
+      "id": "starship.tanker_delivery_per_flight_t",
+      "name": "Propellant delivered to LEO depot per tanker flight",
+      "value": 150,
+      "unit": "t",
+      "range_min": 100,
+      "range_max": 200,
+      "confidence": "low",
+      "source": "Range across sources: Rapp 2024 uses 100 t; New Space Economy 2026 claims ~200 t for dedicated V3 tankers; no flight demonstration yet",
+      "source_url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/",
+      "notes": "Ship-to-ship transfer not yet demonstrated as of 2026-07; planned on upcoming V3 flights."
+    },
+    {
+      "id": "starship.tanker_refills_per_mars_ship",
+      "name": "Tanker flights to fill one Mars-bound ship in LEO",
+      "value": 12,
+      "unit": "flights",
+      "range_min": 8,
+      "range_max": 20,
+      "confidence": "low",
+      "source": "Rapp (Aerospace America 2026): 12 at 100 t/flight for 1200 t; SpaceX claims 8-10 (HLS-era); GAO/NASA 16-19 incl. boiloff",
+      "source_url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "notes": "N = (m_TMI - residuals)/m_deliver + depot boiloff losses. 5-ship 2026/27 fleet => ~60 tanker launches."
+    },
+    {
+      "id": "starship.mars_return_deltav_ms",
+      "name": "Delta-v, Mars surface to trans-Earth injection (direct ascent)",
+      "value": 6900,
+      "unit": "m/s",
+      "range_min": 6400,
+      "range_max": 7500,
+      "confidence": "medium",
+      "source": "Composed from Wooster et al. 2007-heritage values quoted by Rapp/IgMin: surface->500 km LMO 4.3 km/s, surface->1-sol orbit 5.6 km/s (incl. losses), + TEI 1.3-2.0 km/s",
+      "source_url": "https://www.igminresearch.com/articles/html/igmin232",
+      "notes": "Opportunity-dependent. Full V3 tanks give ~9.3 km/s at 145 t burnout - margin exists if dry mass <=160 t."
+    },
+    {
+      "id": "starship.mars_return_propellant_t",
+      "name": "CH4+LOX to relaunch one ship from Mars to Earth-return",
+      "value": 1200,
+      "unit": "t",
+      "range_min": 780,
+      "range_max": 1600,
+      "confidence": "low",
+      "source": "Heldmann et al. 2022: full V1-class refill 1200 t = 933 t LOX + 267 t CH4; Rapp 2024: ~920 t for stripped ship; rocket-equation minimum ~780 t (125 t dry + 20 t payload, 6.9 km/s, Isp 375 s)",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
+      "notes": "Requires ~600 t water + Sabatier/electrolysis ISRU per ship per synodic period (~780 sols); ~600 kW continuous for the LOX share alone (Hecht, quoted in Aerospace America 2026). Maiwald et al. 2024 find return infeasible at 210 t dry mass."
+    },
+    {
+      "id": "starship.boiloff_mars_surface_pct_per_sol",
+      "name": "Passive cryo boiloff rate on Mars surface (insulated, fraction of full load)",
+      "value": 0.25,
+      "unit": "%/sol",
+      "range_min": 0.05,
+      "range_max": 2.0,
+      "confidence": "speculative",
+      "source": "Estimate: scaled from Liu 2017 (NTRS 20170011674) Mars worst-case heat flux 15.4-18.1 W/m2 through 22 mm LCI (k=2 mW/m-K) over ~900 m2 tank area => 3.6-6.5 t/day on LOX (h_fg 213 kJ/kg); Handmer 2025: 20-layer MLI cuts heat ~99%, <1 t/day",
+      "source_url": "https://ntrs.nasa.gov/citations/20170011674",
+      "notes": "Bare stainless tanks: several %/sol. Well-insulated space reference: 0.016 %/day LOX (NTRS 20180004710). No SpaceX figure published."
+    },
+    {
+      "id": "starship.zbo_cryocooler_power_kw",
+      "name": "Electrical power for zero-boiloff storage of a full ship on Mars",
+      "value": 40,
+      "unit": "kW",
+      "range_min": 10,
+      "range_max": 80,
+      "confidence": "speculative",
+      "source": "Estimate: scaled from Liu 2017 (8.3-11.5 kW_e reverse turbo-Brayton per 3.5-3.7 kW heat lift at ~162-186 m2 insulated tank area, cryocooler eff. 70% of Carnot) to ~900 m2 Starship tank area",
+      "source_url": "https://ntrs.nasa.gov/citations/20170011674",
+      "notes": "~990 kWh per sol at 40 kW. Radiator area ~15 m2 per 11.5 kW rejected; 7 mbar CO2 convection nearly useless, radiation-dominated."
+    },
+    {
+      "id": "starship.landing_accuracy_mars_m",
+      "name": "Mars landing accuracy (CEP, early flights)",
+      "value": 100,
+      "unit": "m",
+      "range_min": 10,
+      "range_max": 2000,
+      "confidence": "speculative",
+      "source": "Estimate: Earth tower catches (2024-2025) show dm-class precision with GNSS; Mars requires terrain-relative navigation (Perseverance TRN ~5 m map-relative, 2021); powered descent + TRN plausibly 10-100 m CEP, first landings up to km-class",
+      "source_url": "https://www.astronomy.com/space-exploration/spacex-achieves-historic-booster-catch-during-starship-test/",
+      "notes": "Gerstenmaier 'half a centimeter' Flight 4 splashdown claim (2024) widely judged a misstatement. With landed beacons/pads: ~10 m."
+    },
+    {
+      "id": "starship.cargo_unload_height_m",
+      "name": "Cargo lowering height from payload section (landed ship)",
+      "value": 33.5,
+      "unit": "m",
+      "range_min": 20,
+      "range_max": 40,
+      "confidence": "medium",
+      "source": "Howard et al., AIAA ASCEND 2023 (NTRS 20220010430): lowering a 90-t habitat 'from the upper section of Starship (~33.5 m high)'",
+      "source_url": "https://ntrs.nasa.gov/citations/20220010430",
+      "notes": "Crane budget <=10 t (JSC study; ~5.3 t beams alone); tipping prevention needed (nosecone counterweight concepts); doors 3x3 m nominal. SpaceX has published no offloading solution."
+    },
+    {
+      "id": "starship.transit_time_days",
+      "name": "Earth-Mars transit time (crew/cargo, company claim)",
+      "value": 115,
+      "unit": "days",
+      "range_min": 80,
+      "range_max": 180,
+      "confidence": "medium",
+      "source": "SpaceX claim (Musk 2025-05-29: 80-150 days, avg ~115); Ataee & Elvander Sci Rep 2025 find 90-104 d feasible with 15 tankers/crewed ship",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "notes": "~112 sols at 115 days. Slower ~180-210 d Hohmann-like transfers reduce TMI propellant and entry velocity (7.5 km/s entry cited for nominal)."
+    },
+    {
+      "id": "starship.mars_ships_per_window_initial",
+      "name": "Mars-bound ships in first uncrewed window (2026/27, plan)",
+      "value": 5,
+      "unit": "ships",
+      "range_min": 0,
+      "range_max": 5,
+      "confidence": "low",
+      "source": "SpaceX claim (Musk 2025-05-29 presentation: 5 uncrewed V3 ships carrying Optimus robots, 50% probability of making window; ramp 20 -> 100 -> 500 in later windows)",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "notes": "Depends on orbital refilling demonstration in 2026. Musk 2026-03 X post reaffirmed end-2026 departure intent."
+    }
+  ],
+  "modeling_notes": "Use company claims as optimistic bounds, not expected values: as of 2026-07 Starship V3 has flown once (Flight 12, 2026-05-22, partial success) and ship-to-ship propellant transfer, Mars EDL, and surface relaunch are all undemonstrated. Ship dry mass is the master uncertainty (100-210 t across sources) and should be the correlated driver in Monte-Carlo runs: it simultaneously sets Mars-landed payload (rocket-equation EDL closure with dv_land ~500-800 m/s after aerodynamic deceleration from 7.5 km/s entry), tanker count (N = m_TMI/m_deliver, m_deliver 100-200 t), and Earth-return feasibility (dv 6.4-7.5 km/s from surface to TEI; propellant = (m_dry+m_pl)(exp(dv/g0/Isp)-1), Isp ~375-380 s). Return propellant baseline 1,200 t/ship (21.7% CH4 at O/F 3.6) implies ~600 t water and ~600 kW-class continuous ISRU power per ship per synodic period (~780 sols). Boiloff: model Q = k_e*A*dT/L with Mars diurnal ambient; passive insulated ~0.25 %/sol (0.05-2), zero-boiloff costs ~40 kW_e (~990 kWh/sol). Cargo offloading is a first-class constraint: ~33.5 m lowering height, <=10 t crane budget, tipping limits - budget equipment mass and sols per ship. Fidelity tiers: L0 scalar averages above; L1 analytic per-window (rocket equation + opportunity-dependent dv table + linear boiloff); L2 sub-sol 3-DOF EDL Monte-Carlo, 2-node tank thermal with diurnal forcing, and full ascent integration. Apply a schedule/performance haircut to all SpaceX figures (historically ~2 windows late, 30-50% payload-optimistic).",
+  "key_findings": [
+    "Starship V3 (124.4 m stack, 9 m dia, ~5,250 t GLOM, 1,600 t ship propellant, 33+9 Raptor 3s) flew once as of 2026-07: Flight 12 on 2026-05-22 reached space, deployed simulators, and soft-splashed the ship; orbital refilling remains undemonstrated.",
+    "Payload claims vs independent estimates diverge sharply: SpaceX claims 100(+) t to LEO reusable and 100-150 t to Mars surface; peer-reviewed analysis (Maiwald et al. 2024) finds at most ~114 t to Mars under optimistic dry mass and Earth-return infeasible at their bottom-up 210.5 t dry mass - simulation should treat 10-100 t as the credible Mars down-mass band with ~50 t working value.",
+    "Refilling a Mars-bound V3 ship in LEO takes ~12 tanker flights (range 8-20: SpaceX says 8-10, GAO/NASA 16-19, Rapp computes 12), so the planned 5-ship 2026/27 uncrewed fleet implies ~60 tanker launches.",
+    "Earth return requires ~6.9 km/s from Mars surface to TEI and ~780-1,600 t of CH4/LOX per ship (baseline 1,200 t = 933 t LOX + 267 t CH4 at O/F ~3.5-3.6), i.e., ~600 t of ISRU water and ~600 kW-class continuous power per returning ship per synodic period.",
+    "No SpaceX boiloff figures exist; NASA-derived heat-flux data (15-18 W/m2 through 22 mm Mars-optimized insulation, worst case) scale to ~0.2-0.4 %/sol passive loss on a full ship, with zero-boiloff refrigeration costing ~40 kW_e - storable-cryo management is a real power load for the settlement.",
+    "Cargo offloading is an unsolved, binding constraint: payload section sits ~33.5 m up, NASA studies budget <=10 t for a tipping-safe crane, and SpaceX has published no unloading solution - the sim should charge equipment mass and surface sols per delivered ship.",
+    "Raptor 3: 280 tf SL thrust, Isp 350 s SL / 380 s vac, O/F 3.6, 1,525 kg (SpaceX claims, 2024-08-04); early V3 flights operate nearer 250 tf nominal."
+  ],
+  "sources": [
+    {
+      "title": "Raptor 3 specifications (X post)",
+      "org": "SpaceX",
+      "year": 2024,
+      "url": "https://x.com/SpaceX/status/1819772716339339664"
+    },
+    {
+      "title": "The Road to Making Life Multiplanetary (Starbase presentation)",
+      "org": "SpaceX / E. Musk",
+      "year": 2025,
+      "url": "https://www.friendsofnasa.org/2025/06/the-road-to-making-life-multiplanetary.html"
+    },
+    {
+      "title": "SpaceX Starship / SpaceX Starship (spacecraft) / SpaceX Raptor / SpaceX Mars colonization program (accessed 2026-07)",
+      "org": "Wikipedia",
+      "year": 2026,
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship"
+    },
+    {
+      "title": "Starship V3 Vehicle Overview",
+      "org": "rocketlaunch.org",
+      "year": 2026,
+      "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3"
+    },
+    {
+      "title": "Starship Flight 12: Block 3 Impresses on First Flight",
+      "org": "NASASpaceFlight.com",
+      "year": 2026,
+      "url": "https://www.nasaspaceflight.com/2026/05/starship-flight-12-block-3-pad-2/"
+    },
+    {
+      "title": "What to Expect from Starship V3",
+      "org": "Payload",
+      "year": 2026,
+      "url": "https://payloadspace.com/what-to-expect-from-starship-v3/"
+    },
+    {
+      "title": "Detailed Review of Starship V3",
+      "org": "New Space Economy",
+      "year": 2026,
+      "url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/"
+    },
+    {
+      "title": "Mission Architecture Using the SpaceX Starship Vehicle to Enable a Sustained Human Presence on Mars (New Space 10(3))",
+      "org": "Heldmann et al.",
+      "year": 2022,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/"
+    },
+    {
+      "title": "About feasibility of SpaceX's human exploration Mars mission scenario with Starship (Scientific Reports 14)",
+      "org": "Maiwald et al. / DLR",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s41598-024-54012-0"
+    },
+    {
+      "title": "Human Missions to Mars Using the Starship (IgMin Research)",
+      "org": "D. Rapp",
+      "year": 2025,
+      "url": "https://www.igminresearch.com/articles/html/igmin308"
+    },
+    {
+      "title": "A Closer Look at SpaceX's Mars Plan",
+      "org": "Aerospace America (AIAA)",
+      "year": 2026,
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/"
+    },
+    {
+      "title": "Options for Offloading a 90-Ton Common Habitat from its Lander on the Surface of Mars (ASCEND 2023, NTRS 20220010430)",
+      "org": "Howard et al., NASA JSC/JPL",
+      "year": 2023,
+      "url": "https://ntrs.nasa.gov/citations/20220010430"
+    },
+    {
+      "title": "Long-Term Cryogenic Propellant Storage on Mars with Hercules Propellant Storage Facility (NTRS 20170011674)",
+      "org": "G. Liu, NASA KSC",
+      "year": 2017,
+      "url": "https://ntrs.nasa.gov/citations/20170011674"
+    },
+    {
+      "title": "NASA cryocooler technology developments and goals to achieve zero boil-off (Cryogenics 94, NTRS 20180004710)",
+      "org": "Plachta et al., NASA GRC",
+      "year": 2018,
+      "url": "https://ntrs.nasa.gov/citations/20180004710"
+    },
+    {
+      "title": "Long duration propellant stability in Starship (blog)",
+      "org": "C. Handmer",
+      "year": 2025,
+      "url": "https://caseyhandmer.wordpress.com/2025/03/14/long-duration-propellant-stability-in-starship/"
+    },
+    {
+      "title": "NASA's Management of the Human Landing System Contracts (IG-26-004); GAO HLS reviews (tanker counts 16-19)",
+      "org": "NASA OIG / GAO",
+      "year": 2026,
+      "url": "https://oig.nasa.gov/wp-content/uploads/2026/03/final-report-ig-26-004-nasas-management-of-the-human-landing-system-contracts.pdf"
+    },
+    {
+      "title": "3 months transit time to Mars for human missions using SpaceX Starship (Scientific Reports 15)",
+      "org": "Ataee & Elvander",
+      "year": 2025,
+      "url": "https://www.nature.com/articles/s41598-025-00565-7"
+    },
+    {
+      "title": "Mission design options for human Mars missions (MARS Journal; ascent delta-v heritage values as quoted by Rapp/IgMin)",
+      "org": "Wooster et al.",
+      "year": 2007,
+      "url": "https://www.igminresearch.com/articles/html/igmin232"
+    }
+  ]
+}

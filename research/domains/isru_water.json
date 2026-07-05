@@ -1,0 +1,478 @@
+{
+  "domain": "isru_water",
+  "parameters": [
+    {
+      "id": "isru_water.ice_burial_depth_arcadia_m",
+      "name": "Depth to top of massive ice, Arcadia-class mid-latitude site",
+      "value": 0.6,
+      "unit": "m",
+      "range_min": 0.2,
+      "range_max": 2.0,
+      "confidence": "medium",
+      "source": "SWIM refined maps (Morgan et al. 2025, PSJ 6:37) 0-1 m consistency band; Dundas et al. 2018 Science 359:199 scarps show ice 1-2 m below surface",
+      "source_url": "https://doi.org/10.3847/PSJ/ad9b24",
+      "notes": "Highly site-variable at sub-km scale; decimeters in best Arcadia/Utopia sites (expanded secondary craters), 1-2 m at Dundas scarps. Treat as site parameter; conservative designs (RedWater) assume up to 20 m overburden."
+    },
+    {
+      "id": "isru_water.ice_deposit_thickness_arcadia_m",
+      "name": "Thickness of excess-ice layer, Arcadia Planitia",
+      "value": 40,
+      "unit": "m",
+      "range_min": 20,
+      "range_max": 70,
+      "confidence": "medium",
+      "source": "Bramson et al. 2015 GRL 42:6566 (SHARAD + crater morphology): depth-to-base mode 42 m, mean 51 +/- 18 m; Dundas 2018 scarps expose >100 m in places",
+      "source_url": "https://doi.org/10.1002/2015GL064844",
+      "notes": "Volume ~1e4 km3 in Arcadia alone; effectively unlimited reservoir for settlement-scale demand (600 t/Starship = ~650 m3 of ice)."
+    },
+    {
+      "id": "isru_water.massive_ice_purity_frac",
+      "name": "Ice mass fraction of mid-latitude massive ice deposits",
+      "value": 0.9,
+      "unit": "fraction (0-1)",
+      "range_min": 0.5,
+      "range_max": 0.99,
+      "confidence": "medium",
+      "source": "Dundas et al. 2018 (massive, dust-poor scarp ice); Bramson et al. 2015 (bulk dielectric ~2.5, mostly clean ice); M-WIP 2016 reference Case A assumes 90% ice / 10% sand",
+      "source_url": "https://doi.org/10.1126/science.aao1619",
+      "notes": "No in-situ ground truth yet. Purity mainly drives Rodwell sediment/sump management and melt-water dirtiness, not extraction energy (weak function above ~0.5)."
+    },
+    {
+      "id": "isru_water.gypsum_mineral_water_frac",
+      "name": "Water content of pure gypsum (CaSO4.2H2O)",
+      "value": 0.209,
+      "unit": "fraction (0-1)",
+      "range_min": null,
+      "range_max": null,
+      "confidence": "high",
+      "source": "Stoichiometry (2x18.02/172.17); dehydration at 100-150 C confirmed in M-WIP 2016",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Releases water at benign 100-150 C (vs 300 C for smectite) - lowest-energy regolith route. Gypsum/polyhydrated-sulfate deposits mapped from orbit (e.g., north polar erg, Valles Marineris, Gale)."
+    },
+    {
+      "id": "isru_water.gypsum_deposit_recoverable_water_frac",
+      "name": "Bulk recoverable water fraction, gypsum-enriched regolith deposit",
+      "value": 0.086,
+      "unit": "fraction (0-1)",
+      "range_min": 0.03,
+      "range_max": 0.09,
+      "confidence": "medium",
+      "source": "M-WIP 2016 reference Case B: 40% gypsum + minor hydrates -> 186 t ore per 16 t H2O at 425 K",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Hypothetical reserve description, +/-30% heterogeneity assumed; no gypsum deposit has been ground-truthed at mining scale."
+    },
+    {
+      "id": "isru_water.smectite_deposit_recoverable_water_frac",
+      "name": "Bulk recoverable water fraction, smectite clay-enriched deposit",
+      "value": 0.027,
+      "unit": "fraction (0-1)",
+      "range_min": 0.02,
+      "range_max": 0.07,
+      "confidence": "medium",
+      "source": "M-WIP 2016 reference Case C: 40% smectite (avg 4 wt% water; Na-smectite ~2, Ca-smectite ~7) -> 584 t ore per 16 t H2O at 575 K",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Requires ~300 C process temperature. Phyllosilicates widely mapped by CRISM/OMEGA (3-8 wt% in enriched terrains per hydrated-silicate surveys)."
+    },
+    {
+      "id": "isru_water.typical_regolith_water_frac",
+      "name": "Recoverable water fraction of typical (globally ubiquitous) regolith",
+      "value": 0.015,
+      "unit": "fraction (0-1)",
+      "range_min": 0.013,
+      "range_max": 0.03,
+      "confidence": "medium",
+      "source": "MSL DAN/SAM (Gale): 1.5-3 wt% total; Kleinhenz & Paz AIAA 2017-0423: 1.3 wt% recoverable at 300 C; M-WIP Case D",
+      "source_url": "https://ntrs.nasa.gov/citations/20170001421",
+      "notes": "The 'works anywhere' fallback: 10-100x the excavated mass and 4-8x the thermal energy per kg water vs gypsum ore or ice."
+    },
+    {
+      "id": "isru_water.regolith_bulk_density_kg_m3",
+      "name": "Bulk density of undisturbed granular regolith",
+      "value": 1800,
+      "unit": "kg/m3",
+      "range_min": 1350,
+      "range_max": 2200,
+      "confidence": "medium",
+      "source": "M-WIP 2016 heuristics: undisturbed granular ~2.0 +/-10% t/m3 (35% porosity); disturbed/excavated ~1.5 +/-10% t/m3 (50% porosity)",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Use 1500 kg/m3 for hauled (disturbed) material volume sizing; 920 kg/m3 for pure ice."
+    },
+    {
+      "id": "isru_water.perchlorate_soil_frac",
+      "name": "Perchlorate mass fraction in Mars soil",
+      "value": 0.005,
+      "unit": "fraction (0-1)",
+      "range_min": 0.004,
+      "range_max": 0.006,
+      "confidence": "high",
+      "source": "Hecht et al. 2009, Science 325:64 (Phoenix WCL, 0.4-0.6 wt%); corroborated by MSL SAM at Gale",
+      "source_url": "https://doi.org/10.1126/science.1172466",
+      "notes": "Mostly Mg/Ca/Na perchlorate + chlorates. Toxic (thyroid) at ppm levels -> all soil-contacted or melt water needs treatment before crew use; electrolyzers also require cleanup. Massive glacial ice expected much cleaner but not measured."
+    },
+    {
+      "id": "isru_water.rassor_mass_kg",
+      "name": "RASSOR 2.0 excavator mass",
+      "value": 66,
+      "unit": "kg",
+      "range_min": null,
+      "range_max": null,
+      "confidence": "high",
+      "source": "Mueller et al., RASSOR 2.0, ASCE Earth & Space 2016, NTRS 20210011366",
+      "source_url": "https://ntrs.nasa.gov/citations/20210011366",
+      "notes": "Counter-rotating bucket drums give near-zero net excavation force (works in 0.38 g). Reference excavator in M-WIP and Kleinhenz & Paz sizing."
+    },
+    {
+      "id": "isru_water.rassor_payload_kg",
+      "name": "RASSOR 2.0 regolith payload per trip",
+      "value": 80,
+      "unit": "kg",
+      "range_min": null,
+      "range_max": null,
+      "confidence": "high",
+      "source": "Mueller et al., RASSOR 2.0, ASCE 2016, NTRS 20210011366 (2 x 40 kg drums)",
+      "source_url": "https://ntrs.nasa.gov/citations/20210011366",
+      "notes": "Payload/vehicle mass ratio 1.2 - unusually high for planetary rovers."
+    },
+    {
+      "id": "isru_water.rassor_excavation_rate_kg_per_sol",
+      "name": "RASSOR 2.0 excavation rate (minimum demonstrated design point)",
+      "value": 2770,
+      "unit": "kg/sol",
+      "range_min": 2770,
+      "range_max": 5000,
+      "confidence": "high",
+      "source": "Mueller et al. ASCE 2016: >=2.7 t per 24 h day (=2,770 kg/sol); 0.38 kg vehicle mass per (kg/h) rate",
+      "source_url": "https://ntrs.nasa.gov/citations/20210011366",
+      "notes": "Earth prototype in simulant; apply 60% duty cycle (M-WIP battery/recharge assumption) for fleet sizing. One RASSOR moves ~1.8 t/sol of ore at 60% duty."
+    },
+    {
+      "id": "isru_water.excavation_specific_energy_kwh_per_kg",
+      "name": "Specific excavation energy, granular regolith (RASSOR-class)",
+      "value": 0.004,
+      "unit": "kWh/kg regolith",
+      "range_min": 0.003,
+      "range_max": 0.008,
+      "confidence": "medium",
+      "source": "Mueller et al. ASCE 2016: 4 W per (kg/h) excavation rate = 4 Wh/kg",
+      "source_url": "https://ntrs.nasa.gov/citations/20210011366",
+      "notes": "Negligible vs extraction heat: at 8.6 wt% yield ~0.05 kWh/kg water, at 1.3 wt% ~0.31 kWh/kg water. Icy/ice-cemented ground is NOT excavatable by RASSOR - needs drilling (Rodwell) or aggressive cutters; use upper range +50-100% for duricrust."
+    },
+    {
+      "id": "isru_water.rassor_traverse_speed_m_s",
+      "name": "Excavator traverse speed",
+      "value": 0.25,
+      "unit": "m/s",
+      "range_min": 0.2,
+      "range_max": 0.5,
+      "confidence": "high",
+      "source": "M-WIP 2016 RASSOR key characteristics (25 cm/s)",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Drives trips/sol = f(haul distance); at 1 km one-way a round trip is ~2.2 h + load/dump."
+    },
+    {
+      "id": "isru_water.haul_distance_practical_max_m",
+      "name": "Practical max ore-haul distance, single-digit excavator fleet",
+      "value": 3000,
+      "unit": "m",
+      "range_min": 100,
+      "range_max": 3000,
+      "confidence": "medium",
+      "source": "M-WIP 2016 excavation/travel analysis: gypsum case feasible to ~3 km with 2 RASSOR-class excavators in 480-sol campaign; typical regolith excavator-limited even at 100 m",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Design rule: co-locate plant and mine; haul or pump water, not low-grade ore."
+    },
+    {
+      "id": "isru_water.transport_specific_energy_kwh_per_t_km",
+      "name": "Surface transport specific energy (regolith/water hauling)",
+      "value": 0.3,
+      "unit": "kWh/(t*km)",
+      "range_min": 0.15,
+      "range_max": 0.6,
+      "confidence": "low",
+      "source": "Estimate: rolling resistance physics, Crr 0.15-0.25 loose regolith, g=3.71 m/s2, drivetrain efficiency ~0.5; consistent with M-WIP RASSOR traverse assumptions",
+      "source_url": null,
+      "notes": "E = Crr*g*d/eta per kg hauled. Slow rovers with high hotel loads (MSL-style) can be 5x worse; purpose-built haulers approach the physics limit."
+    },
+    {
+      "id": "isru_water.melt_energy_theory_kwh_per_kg",
+      "name": "Theoretical energy to melt massive ice (from -80 C)",
+      "value": 0.135,
+      "unit": "kWh/kg H2O",
+      "range_min": 0.1,
+      "range_max": 0.14,
+      "confidence": "high",
+      "source": "Thermodynamics: cp_ice ~1.9 kJ/kg.K avg x 80 K + 334 kJ/kg fusion = ~486 kJ/kg; NASA JSC ice drilling assessment chart ~140 kWh per 1000 kg for -80 C ice",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/06/mars_ice_drilling_assessment_v6_for_public_release.pdf",
+      "notes": "Lower bound of all routes. -20 C ice: ~0.10 kWh/kg. Rodwell practice runs 3-5x this due to conductive losses into surrounding ice and evaporative losses at the pool surface."
+    },
+    {
+      "id": "isru_water.sublimation_energy_theory_kwh_per_kg",
+      "name": "Theoretical energy to sublime ice (vapor-transport extraction routes)",
+      "value": 0.82,
+      "unit": "kWh/kg H2O",
+      "range_min": 0.79,
+      "range_max": 0.95,
+      "confidence": "high",
+      "source": "Thermodynamics: L_sub = 2838 kJ/kg + sensible heat from ~210 K = ~2940 kJ/kg",
+      "source_url": null,
+      "notes": "Applies to open-pit volatilization, auger dryers venting vapor, and any route that boils/evaporates rather than melts. Condenser heat (~2.5 MJ/kg) is recoverable in principle (recuperation is the big design lever)."
+    },
+    {
+      "id": "isru_water.icy_regolith_extraction_energy_kwh_per_kg",
+      "name": "Practical thermal energy to extract water from icy regolith (20-40 wt% ice, sublimation/vapor route incl. matrix heating)",
+      "value": 0.85,
+      "unit": "kWh(th)/kg H2O",
+      "range_min": 0.6,
+      "range_max": 1.1,
+      "confidence": "medium",
+      "source": "Thermo model ((1-y)/y*c_reg*dT + c_ice*dT + L_sub) bracketed by NASA ISRU studies (Kleinhenz NTRS 20180005542 program targets; Hoffman JSC assessment); lower bound assumes partial heat recuperation",
+      "source_url": "https://ntrs.nasa.gov/citations/20180005542",
+      "notes": "Lab capture efficiencies remain poor at low TRL (Linne & Kleinhenz 2016 breadboard: 17% of heater energy into soil; LUWEX lunar demo ~1-2% overall). Multiply by 1.2-2.0 for near-term systems."
+    },
+    {
+      "id": "isru_water.rodwell_production_rate_kg_per_sol",
+      "name": "Mars Rodwell water production at 10 kW thermal (CRREL simulation, -80 C ice)",
+      "value": 390,
+      "unit": "kg/sol",
+      "range_min": 120,
+      "range_max": 410,
+      "confidence": "medium",
+      "source": "Hoffman et al.: CRREL Mars sims 120-400 L/day at 2-10 kW(th); 100 gal/day (379 kg/day) balances at ~10 kW. NASA/TP-20205011353 & JSC ice drilling assessment",
+      "source_url": "https://ntrs.nasa.gov/citations/20205011353",
+      "notes": "Scales ~linearly with thermal power in this range (see specific energy param). Withdrawal > melt rate collapses (refreezes) the well; overpowering wastes heat growing an unused pool. Wells restartable after deliberate freeze-down (South Pole/Camp Century heritage). Antarctic anchors: South Pole station well ~2,005 t/yr; IceCube wells ~1,140 t/season."
+    },
+    {
+      "id": "isru_water.rodwell_specific_thermal_energy_kwh_per_kg",
+      "name": "Rodwell steady-state specific thermal energy (Mars, -80 C ice)",
+      "value": 0.6,
+      "unit": "kWh(th)/kg H2O",
+      "range_min": 0.4,
+      "range_max": 0.7,
+      "confidence": "medium",
+      "source": "Derived from Hoffman/CRREL simulation points: 2 kW/120 L/day = 0.40; 10 kW/379-400 L/day = 0.60-0.63 kWh/kg (NASA/TP-20205011353; JSC ice-mining assessment 2016)",
+      "source_url": "https://ntrs.nasa.gov/citations/20205011353",
+      "notes": "THERMAL, not electric - can be reactor waste heat. Excludes drilling, pumping (mgh ~0.0002 kWh/kg per 150 m lift - negligible), cleanup, and startup transient (~10-30 sols at full power before first water; restart cost similar). Warmer mid-latitude ice (210-230 K at depth) cuts this 20-40%. Borehole must be sealed/pressurized >611 Pa to suppress evaporation/boiling."
+    },
+    {
+      "id": "isru_water.rodwell_borehole_depth_m",
+      "name": "Design borehole depth for Mars Rodwell through overburden into ice",
+      "value": 15,
+      "unit": "m",
+      "range_min": 8,
+      "range_max": 25,
+      "confidence": "medium",
+      "source": "RedWater design envelope: drill through up to ~20-25 m overburden (Mellerowicz et al. 2022, New Space, doi:10.1089/space.2021.0057); pool cavity forms 2.5-5 m tall, 5-10 m dia below that (Hoffman CRREL sims)",
+      "source_url": "https://doi.org/10.1089/space.2021.0057",
+      "notes": "Well migrates downward as ice is consumed; South Pole wells abandoned at ~150 m pump-lift depth after ~a decade. For sim: new borehole per ~10^3-10^4 t withdrawn or model lift growth."
+    },
+    {
+      "id": "isru_water.gypsum_route_specific_thermal_energy_kwh_per_kg",
+      "name": "Soil-processing thermal energy per kg water, gypsum-enriched ore (8.6 wt%, 425 K)",
+      "value": 1.5,
+      "unit": "kWh(th)/kg H2O",
+      "range_min": 1.2,
+      "range_max": 2.5,
+      "confidence": "medium",
+      "source": "M-WIP 2016 Case B: ~2 kW for 33 kg H2O/sol; theory floor ~1.15 kWh/kg (matrix heating + dehydration enthalpy)",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Cheapest regolith route and lowest process temperature (100-150 C) - also lowest corrosion risk (no HCl/H2S evolution below ~400 C)."
+    },
+    {
+      "id": "isru_water.smectite_route_specific_thermal_energy_kwh_per_kg",
+      "name": "Soil-processing thermal energy per kg water, smectite ore (2.7 wt%, 575 K)",
+      "value": 3.7,
+      "unit": "kWh(th)/kg H2O",
+      "range_min": 3.0,
+      "range_max": 5.0,
+      "confidence": "medium",
+      "source": "M-WIP 2016 Case C: ~5 kW for 33 kg H2O/sol; theory floor ~3.1 kWh/kg",
+      "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+      "notes": "Dominated by heating 36 kg of matrix per kg of water to 300 C; recuperator effectiveness is the key design lever."
+    },
+    {
+      "id": "isru_water.typical_regolith_route_specific_thermal_energy_kwh_per_kg",
+      "name": "Soil-processing thermal energy per kg water, typical regolith (1.3 wt%, 575 K)",
+      "value": 9.0,
+      "unit": "kWh(th)/kg H2O",
+      "range_min": 5.9,
+      "range_max": 12.5,
+      "confidence": "medium",
+      "source": "Range spans M-WIP Case D2 (~8 kW/33 kg/sol = 5.9) and Kleinhenz & Paz AIAA 2017-0423 (17 kW thermal for 1.36 kg/h = 12.5); disagreement from recuperation and yield assumptions",
+      "source_url": "https://ntrs.nasa.gov/citations/20170001421",
+      "notes": "Sources genuinely disagree 2x - carry the range, not the mean. Kleinhenz & Paz full-system context: 52 kW / 1.7 t total for MAV-scale plant; heat could come from fission waste heat, collapsing the electric penalty."
+    },
+    {
+      "id": "isru_water.trident_drill_mass_kg",
+      "name": "TRIDENT 1-m-class rotary-percussive drill mass",
+      "value": 20,
+      "unit": "kg",
+      "range_min": 15,
+      "range_max": 25,
+      "confidence": "high",
+      "source": "Honeybee Robotics/NASA (VIPER, PRIME-1): <20 kg, rotary and percussive actuators 200 W each, 200 N max weight-on-bit (Zacny et al., PSJ doi:10.3847/PSJ/ae0b51; Glass et al. 2024, NTRS 20240000585)",
+      "source_url": "https://ntrs.nasa.gov/citations/20240000585",
+      "notes": "Bite-sampling in 10 cm (down to 2 cm in hard material) increments. Flown hardware class (PRIME-1/IM-2, 2025). Scale reference for prospecting and pilot-hole drilling; RedWater coiled-tube drill is the production-scale analog."
+    },
+    {
+      "id": "isru_water.drilling_energy_kwh_per_m",
+      "name": "Drilling energy per meter of borehole (regolith to ice-cemented ground)",
+      "value": 0.4,
+      "unit": "kWh/m",
+      "range_min": 0.05,
+      "range_max": 2.0,
+      "confidence": "low",
+      "source": "Estimate: TRIDENT actuator power (~100-400 W draw) at field penetration rates - loose soil ~1+ m/h, massive ice-cemented material as slow as 0.16 m/h (7 cm/27 min, Haughton Crater, Glass et al. 2024, NTRS 20240000585)",
+      "source_url": "https://ntrs.nasa.gov/citations/20240000585",
+      "notes": "Energy trivial vs extraction; time and bit-life dominate. For sim: drilling rate parameter matters more than energy - use 0.15-1 m/h in ice-cemented ground."
+    },
+    {
+      "id": "isru_water.water_cleanup_energy_kwh_per_kg",
+      "name": "Water cleanup energy (filtration + perchlorate removal + deionization, electrolysis-grade)",
+      "value": 0.1,
+      "unit": "kWh(e)/kg H2O",
+      "range_min": 0.02,
+      "range_max": 0.3,
+      "confidence": "low",
+      "source": "Estimate: terrestrial ion-exchange/biocatalytic perchlorate removal is <0.01 kWh/kg but consumable-limited; vapor-compression distillation bounds the robust route at ~0.1-0.2 kWh/kg",
+      "source_url": null,
+      "notes": "No integrated Mars-water treatment demo has published end-to-end energy. Regolith-dryer condensate dirtier than Rodwell melt (volatilized Cl/S species above ~400 C). Perchlorate is also an O2 resource (brine electrolysis concepts) but no baseline credits it."
+    },
+    {
+      "id": "isru_water.water_per_kg_ch4_kg",
+      "name": "Water consumed per kg methane produced (Sabatier + electrolysis, net)",
+      "value": 2.246,
+      "unit": "kg H2O/kg CH4",
+      "range_min": null,
+      "range_max": null,
+      "confidence": "high",
+      "source": "Stoichiometry: net 2 H2O + CO2 -> CH4 + 2 O2; 2x18.02/16.04 = 2.246. Cross-check: Kleinhenz & Paz require 15,701 kg H2O for 6,978 kg CH4 (ratio 2.25)",
+      "source_url": "https://ntrs.nasa.gov/citations/20170001421",
+      "notes": "Co-produces 3.99 kg O2 per kg CH4 - more than Raptor's ~3.5-3.8 O/F needs, so no additional water is required for oxidizer in an all-Sabatier plant (~14% O2 surplus for life support/losses)."
+    },
+    {
+      "id": "isru_water.starship_reload_water_t",
+      "name": "Water required to fully refuel one Starship on Mars",
+      "value": 740,
+      "unit": "t H2O per reload",
+      "range_min": 500,
+      "range_max": 800,
+      "confidence": "medium",
+      "source": "SpaceX Starship Block 2/V3 specs: ~1,500-1,600 t ship propellant, ~330-350 t CH4 (en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft); payloadspace.com/what-to-expect-from-starship-v3) x 2.246 kg H2O/kg CH4",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+      "notes": "Range covers propellant loads 1,100-1,500 t across Starship versions and O/F 3.5-3.8. Over one synodic period (~640 sols) this is ~940 kg/sol = 2.4 Rodwells at 10 kW(th) each, or ~24 kW(th) continuous at 0.6 kWh/kg - water extraction is the logistics driver of propellant ISRU, not the energy driver (electrolysis/liquefaction dominate energy). verified correction: prior 600 t anchored to the superseded V1 1,200 t load; flying Block 2/V3 (1,500-1,600 t, ~330-350 t CH4) implies ~740-790 t water/reload, above the old 660 t max. Downstream per-sol rates (~940 kg/sol -> ~1,160 kg/sol) are ~25% higher."
+    }
+  ],
+  "modeling_notes": "L0 (scalar): water_rate [kg/sol] = P_thermal x 24.66 / e_specific, with e_specific = 0.6 kWh(th)/kg (Rodwell/massive ice), 1.5 (gypsum ore), 3.7 (smectite), 6-12.5 (typical regolith); add 0.1 kWh(e)/kg cleanup, 0.004/yield kWh/kg excavation for regolith routes, 0.3 kWh/t-km hauling; apply 0.6-0.8 availability. L1 (analytic daily/seasonal): ice temperature annual wave T(z,t) with skin depth ~1-2 m sets sensible-heat term; Rodwell as two-state system (startup: drill + 10-30 sols pool establishment; steady: max withdrawal = eta*P/(c_ice*dT + L_fus), collapse if exceeded; downward migration grows pump lift; abandon/redrill at ~150 m-equivalent); excavator fleet sizing N = ceil(ore_rate/(2770 kg/sol x 0.6 duty)) with traverse kinematics at 0.25 m/s and 80 kg loads; credit reactor waste heat against thermal loads on nuclear branches. L2 (sub-sol physics): CRREL-type lumped pool energy balance dT_pool/dt with melt flux from Nu = C*Ra^(1/3), conduction into ice annulus of radius ~4.5 r_pool (Lunardini & Rand 1995), and Mars-specific evaporative loss Sh = C'*Ra^(1/3) suppressed by borehole pressurization >611 Pa (JSC bell-jar experiments, NASA/TP-20205011353); regolith dryer as plug-flow ore heating with condenser recovery and recuperator effectiveness 0.3-0.7 (the lever explaining the 5.9 vs 12.5 kWh/kg disagreement between M-WIP and Kleinhenz & Paz); Monte-Carlo ore grade +/-30% (M-WIP heterogeneity). Key cautions: all Rodwell Mars numbers are simulation-based for -80 C ice (no Mars-environment full-scale demo; TRL 6 from Antarctic heritage); lab thermal-capture efficiencies at low TRL are 5-50x worse than system studies assume; SpaceX figures are company claims - parameterize per-ship reload.",
+  "key_findings": [
+    "Massive, ~90%-pure excess ice is confirmed at decimeters-to-2-m depth across Arcadia/Utopia Planitia (SWIM maps, Dundas 2018 scarps, Bramson 2015 SHARAD): at a good site the reservoir is effectively unlimited (10^4 km3 in Arcadia alone) and the binding constraints are access depth, energy per kg, and equipment duty cycle - not resource exhaustion.",
+    "The Rodwell is the standout bulk-water technique: 60+ years of Antarctic/Greenland operational heritage (South Pole station draws ~2,005 t/yr; IceCube wells made ~1,140 t/season), NASA-judged TRL 6, and CRREL Mars simulations give 120-400 L/day at 2-10 kW thermal, i.e. 0.4-0.7 kWh(th)/kg - within 3-5x of the 0.135 kWh/kg melting-theory floor, and the heat can be reactor waste heat.",
+    "Regolith bound water costs 2.5-20x more energy than ice per kg of water (gypsum ore ~1.5, smectite ~3.7, typical regolith 5.9-12.5 kWh(th)/kg) and 10-100x more excavated mass, but works at any latitude; gypsum-enriched deposits (8.6 wt%, released at only 100-150 C) are the only regolith route competitive for propellant-scale production.",
+    "Excavation and drilling energy are negligible (RASSOR: 0.004 kWh/kg regolith; drilling: ~0.05-2 kWh/m) - the real excavation-side constraints are fleet size, haul distance (M-WIP: ore hauling impractical beyond ~3 km), duty cycle, and drilling rate in ice-cemented ground (as slow as 0.16 m/h in TRIDENT field tests).",
+    "One full Starship reload (~1,200 t propellant, company claim) requires ~600 t of water via net stoichiometry 2 H2O + CO2 -> CH4 + 2 O2 (2.246 kg H2O per kg CH4); the co-produced O2 exceeds Raptor's mixture-ratio needs, so no extra water is needed for oxidizer. That is ~940 kg/sol over one synodic period - about 2.4 ten-kW Rodwells - confirming water supply is a logistics/reliability problem, while electrolysis/liquefaction dominate the energy problem.",
+    "Biggest epistemic gaps: no Mars-environment Rodwell demo (evaporation near the triple point demands borehole pressurization; JSC found pool-surface losses scale as Ra^(1/3)); lab water-capture efficiencies 5-50x below system-study assumptions; typical-regolith processing energy disagrees 2x between M-WIP (5.9) and Kleinhenz & Paz (12.5 kWh/kg); Phoenix-measured perchlorate (0.4-0.6 wt% of soil) forces a water-cleanup stage whose end-to-end energy has never been published."
+  ],
+  "sources": [
+    {
+      "title": "Availability of subsurface water-ice resources in the northern mid-latitudes of Mars (SWIM)",
+      "org": "Nature Astronomy / Planetary Science Institute",
+      "year": 2021,
+      "url": "https://doi.org/10.1038/s41550-020-01290-z"
+    },
+    {
+      "title": "Refined Mapping of Subsurface Water Ice on Mars to Support Future Missions (SWIM 3/4)",
+      "org": "Planetary Science Journal",
+      "year": 2025,
+      "url": "https://doi.org/10.3847/PSJ/ad9b24"
+    },
+    {
+      "title": "Widespread excess ice in Arcadia Planitia, Mars",
+      "org": "Geophysical Research Letters",
+      "year": 2015,
+      "url": "https://doi.org/10.1002/2015GL064844"
+    },
+    {
+      "title": "Exposed subsurface ice sheets in the Martian mid-latitudes",
+      "org": "Science",
+      "year": 2018,
+      "url": "https://doi.org/10.1126/science.aao1619"
+    },
+    {
+      "title": "Mars Water In-Situ Resource Utilization (ISRU) Planning (M-WIP) Study",
+      "org": "NASA/MEPAG (Abbud-Madrid et al.)",
+      "year": 2016,
+      "url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf"
+    },
+    {
+      "title": "'Mining' Water Ice on Mars - An Assessment of ISRU Options",
+      "org": "NASA JSC (Hoffman et al.)",
+      "year": 2016,
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/06/mars_ice_drilling_assessment_v6_for_public_release.pdf"
+    },
+    {
+      "title": "Mars Rodwell Experiment Final Report, NASA/TP-20205011353",
+      "org": "NASA JSC",
+      "year": 2020,
+      "url": "https://ntrs.nasa.gov/citations/20205011353"
+    },
+    {
+      "title": "Progress in Simulated Water Well Performance on Mars (AIAA ASCEND)",
+      "org": "NASA JSC (Hoffman, Andrews, Watts, Benson)",
+      "year": 2020,
+      "url": "https://ntrs.nasa.gov/citations/20205007716"
+    },
+    {
+      "title": "An ISRU Propellant Production System to Fully Fuel a Mars Ascent Vehicle, AIAA 2017-0423",
+      "org": "NASA GRC/JSC (Kleinhenz & Paz)",
+      "year": 2017,
+      "url": "https://ntrs.nasa.gov/citations/20170001421"
+    },
+    {
+      "title": "ISRU Technology Development for Extraction of Water from the Mars Surface",
+      "org": "NASA GRC (Kleinhenz)",
+      "year": 2018,
+      "url": "https://ntrs.nasa.gov/citations/20180005542"
+    },
+    {
+      "title": "Extraction and Capture of Water from Martian Regolith - Experimental Proof-of-Concept",
+      "org": "NASA GRC (Linne, Kleinhenz et al.)",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/citations/20160010258"
+    },
+    {
+      "title": "Design of an Excavation Robot: RASSOR 2.0 (ASCE Earth & Space)",
+      "org": "NASA KSC (Mueller et al.)",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/citations/20210011366"
+    },
+    {
+      "title": "TRIDENT Drill Validation at Mars and Lunar Analog Field Sites (LPSC 55)",
+      "org": "NASA Ames / Honeybee Robotics (Glass et al.)",
+      "year": 2024,
+      "url": "https://ntrs.nasa.gov/citations/20240000585"
+    },
+    {
+      "title": "RedWater: Water Mining System for Mars",
+      "org": "New Space / Honeybee Robotics (Mellerowicz, Zacny et al.)",
+      "year": 2022,
+      "url": "https://doi.org/10.1089/space.2021.0057"
+    },
+    {
+      "title": "Detection of Perchlorate and the Soluble Chemistry of Martian Soil at the Phoenix Lander Site",
+      "org": "Science (Hecht et al.)",
+      "year": 2009,
+      "url": "https://doi.org/10.1126/science.1172466"
+    },
+    {
+      "title": "Thermal Design of an Antarctic Water Well, CRREL Special Report 95-10",
+      "org": "US Army CRREL (Lunardini & Rand)",
+      "year": 1995,
+      "url": null
+    },
+    {
+      "title": "Starship vehicle specifications and Mars propellant plans (company claims, 2016-2025)",
+      "org": "SpaceX",
+      "year": 2025,
+      "url": "https://www.spacex.com/vehicles/starship/"
+    }
+  ]
+}

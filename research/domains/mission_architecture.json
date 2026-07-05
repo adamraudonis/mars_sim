@@ -1,0 +1,481 @@
+{
+  "domain": "mission_architecture",
+  "parameters": [
+    {
+      "id": "mission_architecture.synodic_period_days",
+      "name": "Earth-Mars synodic period",
+      "value": 779.94,
+      "unit": "days",
+      "range_min": 778,
+      "range_max": 782,
+      "source": "Computed from NASA Mars Fact Sheet orbital periods (365.256 d / 686.980 d); standard value used throughout NASA/TM-2010-216764",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "notes": "Launch windows recur every ~25.6 months (= 759.1 sols). Window-to-window spacing varies slightly with Mars orbital eccentricity."
+    },
+    {
+      "id": "mission_architecture.sol_length_s",
+      "name": "Mean Mars solar day (sol)",
+      "value": 88775.244,
+      "unit": "s",
+      "range_min": 88775.244,
+      "range_max": 88775.244,
+      "source": "Allison & McEwen (2000), Planet. Space Sci. 48; NASA GISS Mars24",
+      "source_url": "https://www.giss.nasa.gov/tools/mars24/help/notes.html",
+      "confidence": "high",
+      "notes": "= 24.6597 h. 1 Mars year = 686.98 d = 668.6 sols. Conversion: days x 0.97324 = sols."
+    },
+    {
+      "id": "mission_architecture.c3_min_2026",
+      "name": "Minimum departure C3, 2026 window",
+      "value": 9.144,
+      "unit": "km2/s2",
+      "range_min": 9.144,
+      "range_max": 11.11,
+      "source": "NASA/TM-2010-216764 Tables 1-2 (Burke, Falck, McGuire 2010)",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Type II optimum: depart 2026-10-31, arrive 2027-08-19 (292 d), arrival Vinf 2.73 km/s. Type I: C3 11.11, 2026-11-14 -> 2027-08-09 (268 d). This was SpaceX's originally targeted first uncrewed window (Nov-Dec 2026), abandoned Feb 2026."
+    },
+    {
+      "id": "mission_architecture.c3_min_2028",
+      "name": "Minimum departure C3, 2028/29 window",
+      "value": 8.928,
+      "unit": "km2/s2",
+      "range_min": 8.928,
+      "range_max": 9.05,
+      "source": "NASA/TM-2010-216764 Tables 1,3",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Type II: depart 2028-12-02, arrive 2029-10-16 (318 d). Type I: C3 9.05, 2028-12-10 -> 2029-07-20 (222 d). Current SpaceX target window for first uncrewed Starships after Feb 2026 delay."
+    },
+    {
+      "id": "mission_architecture.c3_min_2031",
+      "name": "Minimum departure C3, 2031 window",
+      "value": 8.237,
+      "unit": "km2/s2",
+      "range_min": 8.237,
+      "range_max": 9.0,
+      "source": "NASA/TM-2010-216764 Tables 1,4",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Type II: depart 2031-02-23, arrive 2032-01-09 (320 d). Type I: C3 9.00, 2031-01-28 -> 2031-08-06 (190 d)."
+    },
+    {
+      "id": "mission_architecture.c3_min_2033",
+      "name": "Minimum departure C3, 2033 window",
+      "value": 7.781,
+      "unit": "km2/s2",
+      "range_min": 7.781,
+      "range_max": 8.41,
+      "source": "NASA/TM-2010-216764 Tables 1,5",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Cheapest window of the 2026-2045 span. Type II: depart 2033-04-28, arrive 2034-01-27 (274 d). Type I: C3 8.41, 2033-04-06 -> 2033-10-01 (178 d). Kingdon (2025) 90-day crew trajectory departs 2033-04-30."
+    },
+    {
+      "id": "mission_architecture.c3_min_2035",
+      "name": "Minimum departure C3, 2035 window",
+      "value": 10.19,
+      "unit": "km2/s2",
+      "range_min": 10.19,
+      "range_max": 17.52,
+      "source": "NASA/TM-2010-216764 Tables 1,6",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Anomalous window: Type I is optimal (depart 2035-04-21, arrive 2035-11-03, 196 d) because Type II arrival coincides with Mars aphelion (Type II C3 17.52)."
+    },
+    {
+      "id": "mission_architecture.c3_min_2037",
+      "name": "Minimum departure C3, 2037 window",
+      "value": 14.84,
+      "unit": "km2/s2",
+      "range_min": 14.84,
+      "range_max": 17.07,
+      "source": "NASA/TM-2010-216764 Tables 1,7",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Most expensive window of the cycle (with 2039: C3 12.17, Type II 2039-07-15 -> 2040-07-09). Type II: 2037-06-18 -> 2038-07-19 (396 d); Type I: C3 17.07, 198 d. Payload per fixed vehicle drops ~2x vs 2033. 2041/2043/2045 minima: 9.82/8.97/8.59."
+    },
+    {
+      "id": "mission_architecture.launch_period_duration_days",
+      "name": "Practical launch period per window",
+      "value": 30,
+      "unit": "days",
+      "range_min": 14,
+      "range_max": 60,
+      "source": "Estimate: C3 penalty of a few km2/s2 buys ~+/-2-3 weeks around optimum (TM-2010-216764 contours); robotic missions hold ~3-week periods; SpaceX stated 'Nov-Dec 2026' (~45 d)",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "low",
+      "notes": "All ships of a wave plus their 10-16 tanker flights each must complete inside this period -> Earth pad cadence is the campaign bottleneck."
+    },
+    {
+      "id": "mission_architecture.cargo_transit_days",
+      "name": "Cargo transit time (min-energy ballistic)",
+      "value": 290,
+      "unit": "days",
+      "range_min": 180,
+      "range_max": 420,
+      "source": "NASA/TM-2010-216764 (Type I/II min-energy TOFs 178-412 d across 2026-2039); DRA 5.0 cargo legs 202-350 d",
+      "source_url": "https://ntrs.nasa.gov/citations/20100037210",
+      "confidence": "high",
+      "notes": "Value = typical Type II. Kingdon (2025) assumes slow cargo Starships needing only 4 LEO refuels. Cargo pre-deploys one full window (~26 mo) ahead of crew in NASA DRA 5.0."
+    },
+    {
+      "id": "mission_architecture.crew_transit_days_nasa",
+      "name": "Crew transit time, NASA reference (fast conjunction)",
+      "value": 180,
+      "unit": "days",
+      "range_min": 150,
+      "range_max": 210,
+      "source": "NASA-SP-2009-566 (DRA 5.0): 174 d outbound / 201 d inbound for 2037 NTR all-propulsive case; class characterized as 'less than 180 to 210 days'",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Transits minimized to limit crew GCR/SPE exposure and zero-g deconditioning."
+    },
+    {
+      "id": "mission_architecture.crew_transit_days_spacex_claim",
+      "name": "Crew transit time, SpaceX claim",
+      "value": 115,
+      "unit": "days",
+      "range_min": 80,
+      "range_max": 150,
+      "source": "Company claim: Musk IAC 2016/2017 (New Space 2017/2018); '80-150 days depending on window, average ~115 d'",
+      "source_url": "https://www.liebertpub.com/doi/10.1089/space.2017.29009.emu",
+      "confidence": "medium",
+      "notes": "Claim is well documented; achievability depends on refilled Starship delta-v (~4-4.6 km/s) and unproven high-speed Mars entry (7.5+ km/s)."
+    },
+    {
+      "id": "mission_architecture.fast_transit_days",
+      "name": "Fast crew transit (peer-reviewed Starship trajectory)",
+      "value": 97,
+      "unit": "days",
+      "range_min": 90,
+      "range_max": 104,
+      "source": "Kingdon, Scientific Reports 15:17764 (2025), doi:10.1038/s41598-025-00565-7",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12099006/",
+      "confidence": "medium",
+      "notes": "Round trips: depart 2033-04-30 (90 d out, 90 d back, Earth return 2035-07-02) and 2035-07-15 (104 d). C3 ~23-32 km2/s2; ~3.5-4.6 km/s post-refill delta-v incl 0.5 km/s landing burn; 15 LEO refuels per crew ship; pre-entry deceleration burn cuts Mars arrival 9.73 -> 6.87 km/s; peak entry load 3.5 g. Keeps mission dose within NASA career radiation limits where 180-d transits do not."
+    },
+    {
+      "id": "mission_architecture.surface_stay_conjunction_sols",
+      "name": "Surface stay, conjunction-class mission",
+      "value": 525,
+      "unit": "sols",
+      "range_min": 450,
+      "range_max": 620,
+      "source": "NASA-SP-2009-566 (DRA 5.0): 539 days = 525 sols; class defined as '500 days or more'",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Stay is set by Earth-return window phasing (t_stay ~ synodic - TOF_out - TOF_back), not logistics. Fast 90-104 d transits stretch stay to ~595 sols (Kingdon). Missing the return window costs +759 sols (one synodic period) - key contingency sizing case."
+    },
+    {
+      "id": "mission_architecture.total_mission_duration_days",
+      "name": "Total round-trip duration, conjunction-class",
+      "value": 914,
+      "unit": "days",
+      "range_min": 850,
+      "range_max": 1100,
+      "source": "NASA-SP-2009-566 (DRA 5.0), 2037 reference mission: 174 + 539 + 201 = 914 d; class ~900-950 d",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Upper range covers fast-transit variants with longer stays and window slack."
+    },
+    {
+      "id": "mission_architecture.opposition_stay_days",
+      "name": "Surface stay, opposition-class (short-stay) mission",
+      "value": 60,
+      "unit": "days",
+      "range_min": 30,
+      "range_max": 90,
+      "source": "NASA-SP-2009-566 (DRA 5.0) section 6.2: 'short surface stay times at Mars (typically 30 to 90 days)', total mission 500-650 d",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Requires Venus swing-by or deep-space maneuver, perihelion pass <=0.7 AU, much higher total energy. Rejected by DRA 5.0 and incompatible with ISRU-refill Starship return; include in sim only as a high-energy abort/architecture variant."
+    },
+    {
+      "id": "mission_architecture.tanker_flights_per_mars_ship",
+      "name": "LEO tanker refueling flights per Mars-bound Starship",
+      "value": 12,
+      "unit": "flights",
+      "range_min": 10,
+      "range_max": 16,
+      "source": "Company claim + NASA statements: ~1200 t propellant load at ~100-150 t/tanker; NASA HLS 'high teens' (L. Hawkins, Nov 2023); Aerospace America (2025) analysis: 12/ship, 60 launches for the 5-ship wave; Kingdon 2025: 15 (crew)/4 (cargo)",
+      "source_url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "confidence": "medium",
+      "notes": "Strong function of tanker variant payload (100 vs 150-200 t) and boil-off; Musk has claimed as few as 4-8. Refills must complete within the ~30-60 d launch period."
+    },
+    {
+      "id": "mission_architecture.starship_payload_to_mars_surface_t",
+      "name": "Starship payload landed on Mars surface",
+      "value": 100,
+      "unit": "t",
+      "range_min": 75,
+      "range_max": 150,
+      "source": "Company claim (Musk IAC 2017, New Space 2018; SpaceX statements 2016-2025: '100 t class, up to 150 t with full refill')",
+      "source_url": "https://www.liebertpub.com/doi/10.1089/space.2018.29013.emu",
+      "confidence": "low",
+      "notes": "Disputed: Maiwald et al. (Sci Rep 2024) could not reproduce the mass model and find the return leg infeasible without near-full ISRU reload. Sim should include a downside toggle to ~50 t."
+    },
+    {
+      "id": "mission_architecture.starship_return_propellant_t",
+      "name": "ISRU propellant required per returning Starship",
+      "value": 1200,
+      "unit": "t",
+      "range_min": 600,
+      "range_max": 1500,
+      "source": "Derived from SpaceX propellant capacity claims (933 t LOX + 267 t LCH4; V3 ~1500 t) and Maiwald et al. 2024 minimum Mars-surface-to-Earth return delta-v of 7.12 km/s",
+      "source_url": "https://www.nature.com/articles/s41598-024-54012-0",
+      "confidence": "low",
+      "notes": "LOX:LCH4 ~ 3.5:1. Scale gap: MOXIE produced ~122 g O2 total (2021-2023) vs ~600-900 t O2 needed per ship; power O(0.6-1+ MWe) continuous. Lower bound ~600 t if direct-return with partial load proves possible."
+    },
+    {
+      "id": "mission_architecture.mars_entry_velocity_kms",
+      "name": "Mars atmospheric entry velocity (crewed Starship)",
+      "value": 7.5,
+      "unit": "km/s",
+      "range_min": 5.7,
+      "range_max": 9.7,
+      "source": "Company claim: Musk IAC 2017 ('entering very quickly, going seven and a half kilometers a second'); cross-checked v_entry = sqrt(vinf^2 + 5.03^2)",
+      "source_url": "https://www.liebertpub.com/doi/10.1089/space.2018.29013.emu",
+      "confidence": "medium",
+      "notes": "Min-energy arrivals: 5.7-6.2 km/s (MSL was 5.8). 90-d transits: 8.5-9.7 km/s unless a pre-entry deceleration burn is made (Kingdon: burn to 6.87 km/s, peak 3.5 g). Starship TPS entry-corridor limit at Mars is not publicly established. Direct entry from interplanetary (no aerocapture-to-orbit), lifting entry L/D ~0.3, terminal propulsive burn ~0.5 km/s."
+    },
+    {
+      "id": "mission_architecture.landing_accuracy_m",
+      "name": "Starship Mars landing accuracy (3-sigma radius)",
+      "value": 100,
+      "unit": "m",
+      "range_min": 20,
+      "range_max": 2000,
+      "source": "Estimate: extrapolation from Starship meter-class propulsive precision on Earth (tower catches 2024-25) and Mars state of the art (Perseverance TRN, ~1-2 km from ellipse center in 7.7x6.6 km ellipse); no SpaceX figure published",
+      "source_url": null,
+      "confidence": "speculative",
+      "notes": "Base build-out (landing near pre-placed depots/habs) requires <1 km spacing. DRA 5.0 abort-to-surface philosophy also requires landing within crew-rover reach of pre-deployed assets."
+    },
+    {
+      "id": "mission_architecture.landing_site_max_latitude_deg",
+      "name": "Landing site latitude criterion",
+      "value": 40,
+      "unit": "deg N (max)",
+      "range_min": 30,
+      "range_max": 45,
+      "source": "Golombek et al., 'SpaceX Starship Landing Sites on Mars', 52nd LPSC #2420 (2021): latitude <40 deg for solar power and thermal management",
+      "source_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "confidence": "high",
+      "notes": "Tension: shallow ice becomes more abundant poleward; Arcadia Planitia (~38-44N) is the sweet spot with ice consistency ~0.6-0.7 at ~40N. Seven candidate sites: AP-1/8/9 (Arcadia), EM-15/16 (Erebus Montes), PM-1/7 (Phlegra Montes); AP-8 rates best on combined ice+safety (SWIM) scores."
+    },
+    {
+      "id": "mission_architecture.landing_site_max_elevation_km",
+      "name": "Landing site elevation criterion",
+      "value": -2,
+      "unit": "km (MOLA, max)",
+      "range_min": -4,
+      "range_max": -1,
+      "source": "Golombek et al., 52nd LPSC #2420 (2021): below -2 km required, <= -3 km preferred, for EDL deceleration timeline of heavy landers",
+      "source_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "confidence": "high",
+      "notes": "Additional criteria: slopes <5 deg over 10 m; probability of rocks >0.5 m below 5%; radar-reflective load-bearing surface; no dense expanded secondary craters."
+    },
+    {
+      "id": "mission_architecture.comm_blackout_days_per_synodic",
+      "name": "Solar conjunction communication blackout",
+      "value": 12,
+      "unit": "days",
+      "range_min": 5,
+      "range_max": 20,
+      "source": "NASA NTRS 20220013418 (ASCEND 2022): Sun-Earth-Mars angle <2 deg criterion gives ~11-14 d (mean 11.8 d); <3 deg up to ~3 weeks; <1 deg under a week",
+      "source_url": "https://ntrs.nasa.gov/citations/20220013418",
+      "confidence": "high",
+      "notes": "Occurs once per synodic period (~26 months); flight practice (e.g., Oct 2-16, 2021 moratorium) ~2 weeks. One-way light time 3-22 min (6-44 min two-way) -> EDL, medical, ISRU fault handling must be autonomous."
+    },
+    {
+      "id": "mission_architecture.dra5_landed_mass_per_lander_t",
+      "name": "DRA 5.0 landed useful mass per lander",
+      "value": 56.8,
+      "unit": "t",
+      "range_min": 40,
+      "range_max": 64,
+      "source": "NASA-SP-2009-566 Table 4-3 (EDL System Characteristics)",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Entry mass 109.7 t, 10x30 m triconic aeroshell, ballistic coefficient 471 kg/m2, descent dv 595 m/s, ignition 1350 m / Mach 2.29, peak heating 131 W/cm2. Landed/entry ratio ~0.52. Two such landers (MAV+ISRU+reactor; SHAB) pre-deployed per crew-of-6 mission, one window ahead; MAV verified fully fueled before crew departs Earth."
+    },
+    {
+      "id": "mission_architecture.dra5_imleo_t",
+      "name": "DRA 5.0 total IMLEO per crewed mission",
+      "value": 848.7,
+      "unit": "t",
+      "range_min": 848.7,
+      "range_max": 1251.8,
+      "source": "NASA-SP-2009-566 section 4: NTR option 848.7 t (9 Ares V launches); chemical/aerocapture option 1251.8 t (12 Ares V)",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Per mission = 2 cargo vehicles (246.2 t IMLEO each, delivering 103 t payload elements) + crew MTV (356.4 t). Useful cross-check: ~850-1250 t IMLEO buys ~110-120 t landed + crew round trip for 6."
+    },
+    {
+      "id": "mission_architecture.dra5_surface_power_kwe",
+      "name": "DRA 5.0 surface power (fission reactor)",
+      "value": 30,
+      "unit": "kWe",
+      "range_min": 25,
+      "range_max": 40,
+      "source": "NASA-SP-2009-566 section 5.4: 30-kWe version of 40-kWe lunar fission design; deployed 1 km from lander, 30-40 sols to emplace",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "confidence": "high",
+      "notes": "Load breakdown: ISRU O2 production 25 kWe continuous (dominant), habitat 12 kWe day/night. ISRU makes ascent-stage LOX only (CH4 from Earth; 400 kg H2 seed for water). SpaceX-scale full-propellant ISRU needs ~20-40x this power."
+    },
+    {
+      "id": "mission_architecture.mars_direct_tmi_throw_t",
+      "name": "Mars Direct TMI throw mass per launch",
+      "value": 47,
+      "unit": "t",
+      "range_min": 40,
+      "range_max": 50,
+      "source": "Zubrin & Baker (1991), Mars Direct; Ares HLV: 47 t trans-Mars injection (121 t to 300 km LEO); via Encyclopedia Astronautica",
+      "source_url": "http://www.astronautix.com/m/marsdirect.html",
+      "confidence": "medium",
+      "notes": "2 launches per crew-of-4 mission, offset one window: ERV ~28.5 t landed (makes CH4/O2 from 6 t H2 seed) + Hab ~25 t landed. Per-crew landed mass ~13 t/person vs DRA 5.0 ~19-28 t/person - useful lower/upper band for settlement cargo manifests."
+    },
+    {
+      "id": "mission_architecture.spacex_ships_per_window_ambition_2033",
+      "name": "SpaceX ships-per-window ambition (2033 window)",
+      "value": 500,
+      "unit": "ships",
+      "range_min": 5,
+      "range_max": 1000,
+      "source": "Company claim (Musk, Starbase talk, May 29, 2025): 5 ships 2026/27 -> ~20 in 2028/29 -> ~100 in 2030/31 -> ~500 by 2033; long-term 1000-2000/window",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "confidence": "speculative",
+      "notes": "Treat as upper-bound scenario input, not manifest. Feb 9, 2026 delay announcement shifts the whole ramp right by >=1 synodic cycle. Each ship also implies 10-16 tanker launches: 500 ships -> ~6000+ Earth launches per window."
+    },
+    {
+      "id": "mission_architecture.uncrewed_starship_first_window_year",
+      "name": "First uncrewed Starship Mars attempt (company target)",
+      "value": 2028,
+      "unit": "calendar year (window: Dec 2028 - Jan 2029)",
+      "range_min": 2028,
+      "range_max": 2031,
+      "source": "Company claim: Sep 7, 2024 target of 5 ships at Nov-Dec 2026 window was abandoned Feb 9, 2026 (Musk: Mars delayed 'about five to seven years' to focus on lunar missions); first attempt now the 2028/29 window",
+      "source_url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "confidence": "speculative",
+      "notes": "Status as of mid-2026. Mission profile per 2024-25 statements: ~5 uncrewed ships carrying Tesla Optimus robots to test landing intact, survey ice, begin infrastructure."
+    },
+    {
+      "id": "mission_architecture.crewed_landing_earliest_year",
+      "name": "First crewed Mars landing (company target)",
+      "value": 2031,
+      "unit": "calendar year",
+      "range_min": 2029,
+      "range_max": 2035,
+      "source": "Company claims: Musk Mar 15, 2025 ('as soon as 2029, although 2031 is more likely'); Feb 9, 2026 delay statement pushes credible first crew to ~2031-2033",
+      "source_url": "https://x.com/elonmusk/status/1900774290682683612",
+      "confidence": "speculative",
+      "notes": "Every SpaceX crewed-Mars date since 2016 has slipped ~1 synodic cycle per cycle elapsed. NASA M2M planning holds crewed Mars in the late 2030s-2040s. Sim should treat crew date as a scenario variable gated on uncrewed landing success + ISRU demo."
+    }
+  ],
+  "modeling_notes": "CAMPAIGN CLOCK: model launch opportunities on the 779.94-d synodic period using the per-window table from NASA/TM-2010-216764 (departure dates walk Oct 2026 -> Dec 2028 -> Feb 2031 -> Apr 2033 -> Apr 2035 -> Jun 2037 -> Jul 2039; min C3 varies 7.78-14.84 km2/s2, cheapest 2033, dearest 2037-39, so payload per fixed vehicle varies ~2x across the cycle). Convert C3 to TMI dv via dv = sqrt(C3 + 2*mu_E/r) - v_circ; Mars entry velocity via v_e = sqrt(vinf^2 + 5.03^2) km/s. ARCHITECTURE: conjunction-class only for baseline (transits 150-210 d NASA / 90-150 d Starship-fast; stay ~500-620 sols set by return-window phasing t_stay ~ S - TOF_out - TOF_back; total ~900-950 d); opposition-class (30-90 d stay, 500-650 d total, Venus swing-by, much higher energy) only as variant. Missing the Mars-departure return window costs +759 sols - the contingency sizing case for surface consumables/power. LOGISTICS: each Mars ship needs 10-16 LEO tanker flights completed inside a ~30-d launch period, so Earth pad cadence x depot boil-off caps ships/window; returning ships need ~1100-1500 t ISRU propellant produced before the return window opens. EDL: commit-to-land, no abort-to-orbit (DRA 5.0 finding); direct entry 5.7-9.7 km/s depending on transit speed (deceleration burn option); use DRA 5.0 Table 4-3 (109.7 t entry -> 56.8 t landed, beta = 471 kg/m2) as the validated anchor and treat Starship 100 t landed as low-confidence company claim (DLR 2024 disputes closure). SITES: constrain to Arcadia/Amazonis band (lat <40N, elev <= -2 km, slopes <5 deg, shallow SWIM ice). COMMS: OWLT 3-22 min; hard 12-d blackout each synodic cycle (SEP <2 deg). ABORT STATE MACHINE: pre-TMI full abort; post-TMI 2-yr free-return (costly, high reentry speeds); Mars-orbit safe-haven loiter to TEI window; EDL no abort; surface shelter-in-place, ascent only when MAV/ship fueled (verify-before-crew-departs gate per DRA 5.0). All SpaceX dates/fleet sizes are company claims as of mid-2026: first uncrewed attempt slipped (Feb 9, 2026 announcement) from the Nov-Dec 2026 window to 2028/29; crew no earlier than ~2031.",
+  "key_findings": [
+    "The campaign clock is the 779.94-d Earth-Mars synodic period, but windows are not equal: minimum departure C3 swings from 7.78 km2/s2 (2033, cheapest) to 14.84 (2037, dearest) across the 15-year cycle (NASA/TM-2010-216764), so deliverable tonnage per window varies ~2x for a fixed fleet.",
+    "Launch window departure dates 2026-2039 (min-energy): Oct-Nov 2026, Dec 2028, Jan-Feb 2031, Apr 2033, Apr-May 2035, Jun 2037, Jul 2039 - each with Type I (fast, 178-268 d) and Type II (slow, 274-412 d) branches.",
+    "As of mid-2026, SpaceX has slipped its first uncrewed Mars Starships (5 ships with Optimus robots, originally Nov-Dec 2026) to the 2028/29 window, per Musk's Feb 9, 2026 announcement of a ~5-7 year Mars delay to prioritize lunar/Artemis; crewed landing company target is now realistically 2031-2033 (all company claims).",
+    "Conjunction-class is the only viable settlement architecture: 174-210 d transits (NASA DRA 5.0) or 90-150 d (Starship claims; 90-104 d confirmed feasible in peer-reviewed analysis at C3 ~23-32 km2/s2), ~500-620 sol surface stays set by return-window phasing, ~914 d round trips; opposition class buys only 30-90 d on the surface for far more energy.",
+    "Each Mars-bound Starship requires 10-16 LEO tanker flights (~1200 t propellant); a 5-ship wave is ~60 tanker launches inside a ~30-45 d window - Earth launch cadence, not astrodynamics, is the campaign bottleneck; return requires ~1100-1500 t of ISRU propellant per ship (a ~10^6 scale-up over MOXIE with O(1 MWe) continuous power).",
+    "EDL is commit-to-land: NASA's DRA 5.0 concluded abort-to-orbit during Mars entry is infeasible (abort-to-surface philosophy); its validated EDL anchor is 109.7 t entry mass -> 56.8 t landed (471 kg/m2 ballistic coefficient); Starship's claimed 100-150 t landed at 7.5 km/s entry is unproven, and DLR's 2024 peer-reviewed mass model could not close the return leg.",
+    "SpaceX-commissioned JPL site studies (Golombek et al., LPSC 2021) down-selected 7 sites in Arcadia Planitia / Erebus Montes / Phlegra Montes (Amazonis lowlands): <40 deg N latitude (solar/thermal), <= -2 km elevation (EDL timeline), <5 deg slopes, <5% rock hazard, shallow SWIM-mapped water ice for ISRU - Arcadia AP-8 rates best.",
+    "Communications: one-way light time 3-22 min, plus a hard ~12-day solar-conjunction blackout (Sun-Earth-Mars angle <2 deg) every 26 months that the sim must schedule; surface operations and EDL must be Earth-independent.",
+    "Cargo-manifest cross-checks: DRA 5.0 lands ~114 t (2 landers) + crew lander with 30 kWe fission and O2-only ISRU for a crew of 6 (~850-1250 t IMLEO); Mars Direct lands ~53 t for 4 crew with full CH4/O2 ISRU; early settlement manifests should budget roughly 10-30 t landed per person."
+  ],
+  "sources": [
+    {
+      "title": "Interplanetary Mission Design Handbook: Earth-to-Mars Mission Opportunities 2026 to 2045 (NASA/TM-2010-216764)",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "org": "NASA Glenn Research Center",
+      "year": 2010
+    },
+    {
+      "title": "Human Exploration of Mars Design Reference Architecture 5.0 (NASA-SP-2009-566)",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "org": "NASA",
+      "year": 2009
+    },
+    {
+      "title": "Communication Delays, Disruptions, and Blackouts for Crewed Mars Missions (ASCEND 2022; NTRS 20220013418)",
+      "url": "https://ntrs.nasa.gov/citations/20220013418",
+      "org": "NASA",
+      "year": 2022
+    },
+    {
+      "title": "SpaceX Starship Landing Sites on Mars (52nd LPSC, abstract #2420)",
+      "url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "org": "JPL/Caltech with SpaceX",
+      "year": 2021
+    },
+    {
+      "title": "Geomorphological Evidence of Near-Surface Ice at Candidate Landing Sites in Northern Amazonis Planitia, Mars",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024JE008724",
+      "org": "JGR Planets",
+      "year": 2025
+    },
+    {
+      "title": "3 months transit time to Mars for human missions using SpaceX Starship (Sci Rep 15:17764)",
+      "url": "https://doi.org/10.1038/s41598-025-00565-7",
+      "org": "Scientific Reports / UCSB",
+      "year": 2025
+    },
+    {
+      "title": "About feasibility of SpaceX's human exploration Mars mission scenario with Starship",
+      "url": "https://doi.org/10.1038/s41598-024-54012-0",
+      "org": "Scientific Reports / DLR",
+      "year": 2024
+    },
+    {
+      "title": "Making Humans a Multi-Planetary Species / Making Life Multi-Planetary (IAC 2016/2017 talks, New Space)",
+      "url": "https://www.liebertpub.com/doi/10.1089/space.2018.29013.emu",
+      "org": "SpaceX (company claims)",
+      "year": 2017
+    },
+    {
+      "title": "SpaceX Mars colonization program - dated statement compilation (Sep 2024, May 2025, Feb 2026)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "org": "Wikipedia (secondary, cross-checked)",
+      "year": 2026
+    },
+    {
+      "title": "A Closer Look at SpaceX's Mars Plan",
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "org": "Aerospace America (AIAA)",
+      "year": 2025
+    },
+    {
+      "title": "NASA HLS tanker-count statements ('high teens', Nov 2023) and GAO Artemis reporting",
+      "url": "https://spacenews.com/starship-lunar-lander-missions-to-require-nearly-20-launches-nasa-says/",
+      "org": "NASA / GAO / SpaceNews",
+      "year": 2023
+    },
+    {
+      "title": "Mission design options for human Mars missions (Wooster, Braun, Ahn, Putnam)",
+      "url": "https://ui.adsabs.harvard.edu/abs/2007IJMSE...3...12W/abstract",
+      "org": "Int. J. Mars Science and Exploration",
+      "year": 2007
+    },
+    {
+      "title": "Mars Direct: A Simple, Robust, and Cost Effective Architecture (Zubrin & Baker)",
+      "url": "http://www.astronautix.com/m/marsdirect.html",
+      "org": "Martin Marietta / Mars Society",
+      "year": 1991
+    },
+    {
+      "title": "Mars Fact Sheet (NSSDCA)",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "org": "NASA GSFC",
+      "year": 2024
+    },
+    {
+      "title": "Mars24 Sunclock - Time on Mars (sol length; Allison & McEwen 2000)",
+      "url": "https://www.giss.nasa.gov/tools/mars24/help/notes.html",
+      "org": "NASA GISS",
+      "year": 2000
+    }
+  ]
+}

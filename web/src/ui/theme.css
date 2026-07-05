@@ -1,0 +1,546 @@
+/* Mars Habitat Sim — mission-control theme */
+:root {
+  --panel-bg: rgba(11, 14, 20, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.035);
+  --input-bg: rgba(0, 0, 0, 0.35);
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-bright: rgba(255, 255, 255, 0.16);
+  --accent: #ff7a3d;
+  --accent-dim: rgba(255, 122, 61, 0.14);
+  --accent2: #54c7e8;
+  --good: #4ade80;
+  --warn: #fbbf24;
+  --bad: #f87171;
+  --text-hi: #f2efe9;
+  --text: #c9c5bd;
+  --text-dim: #8b877f;
+  --text-faint: #5c5952;
+  --font-ui: 'Helvetica Neue', -apple-system, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Menlo', 'SF Mono', 'Consolas', 'Roboto Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+  background: #06070a;
+  font-family: var(--font-ui);
+  color: var(--text);
+  font-size: 13px;
+}
+
+canvas.world {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ---------- Panels & layout ---------- */
+.panel {
+  position: absolute;
+  background: var(--panel-bg);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+
+.topbar {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 16px;
+  z-index: 10;
+}
+
+.dock-left {
+  left: 10px;
+  top: 74px;
+  bottom: 48px;
+  width: 330px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.dock-right {
+  right: 10px;
+  top: 74px;
+  bottom: 48px;
+  width: 430px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.ticker {
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  z-index: 10;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  scrollbar-width: none;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Typography ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.brand .mark {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+.brand .title {
+  color: var(--text-hi);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--text-dim);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.section-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--hairline);
+}
+
+.caption {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+.faint {
+  color: var(--text-faint);
+}
+
+/* ---------- Clock cluster ---------- */
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 0;
+  min-width: 0;
+}
+.clock .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+.clock .block + .block {
+  border-left: 1px solid var(--hairline);
+}
+.clock .cap {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--text-faint);
+}
+.clock .val {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-hi);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* ---------- Controls ---------- */
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--text);
+}
+
+.ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+}
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.11);
+}
+.ghost.active {
+  background: var(--accent);
+  color: #140b06;
+  font-weight: 700;
+}
+
+.segmented {
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.segmented button {
+  font-size: 10px;
+  color: var(--text-dim);
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+.segmented button.active {
+  background: var(--accent);
+  color: #140b06;
+  font-weight: 700;
+}
+
+.tabs {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+.tabs button {
+  font-family: var(--font-ui);
+  letter-spacing: 2px;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 4px 10px;
+}
+
+/* ---------- Cards (systems panel) ---------- */
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+.card .head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.card .name {
+  color: var(--text-hi);
+  font-size: 12px;
+  font-weight: 700;
+  flex: 1;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.card .status {
+  margin: 2px 0 4px 15px;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+.kv {
+  display: flex;
+  align-items: baseline;
+  margin-left: 15px;
+  gap: 4px;
+}
+.kv .k {
+  flex: 1;
+  font-size: 10px;
+  color: var(--text-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kv .v {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-hi);
+}
+.kv .u {
+  font-size: 9px;
+  color: var(--text-faint);
+  width: 34px;
+}
+
+/* ---------- Charts ---------- */
+.chart {
+  margin-bottom: 14px;
+}
+.chart .titlerow {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 3px;
+}
+.chart .title {
+  color: var(--text-hi);
+  font-size: 12px;
+  font-weight: 700;
+  flex: 1;
+}
+.chart .unit {
+  font-size: 9px;
+  color: var(--text-faint);
+}
+.chart .legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  margin-bottom: 4px;
+}
+.chart .legend .item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+.chart .legend .val {
+  font-family: var(--font-mono);
+}
+.chart canvas {
+  width: 100%;
+  height: 118px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 7px;
+  background: rgba(6, 8, 12, 0.95);
+}
+
+/* ---------- Parameters ---------- */
+.search {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--hairline);
+  border-radius: 5px;
+  color: var(--text-hi);
+  font-size: 12px;
+  padding: 6px 9px;
+  outline: none;
+  font-family: var(--font-ui);
+}
+.search:focus {
+  border-color: var(--hairline-bright);
+}
+
+.param-row {
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.param-row .head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.param-row .name {
+  flex: 1;
+  font-size: 11px;
+  color: var(--text);
+}
+.param-row input {
+  width: 86px;
+  background: var(--input-bg);
+  border: 1px solid var(--hairline);
+  border-radius: 5px;
+  color: var(--text-hi);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-align: right;
+  padding: 3px 6px;
+  outline: none;
+}
+.param-row input.overridden {
+  color: var(--accent);
+}
+.param-row .unit {
+  width: 58px;
+  font-size: 9px;
+  color: var(--text-faint);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.param-row .meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+.param-row .src {
+  font-size: 9px;
+  color: var(--text-faint);
+}
+.param-row .reset {
+  color: var(--accent);
+  font-size: 13px;
+  padding: 0 4px;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ---------- Log ---------- */
+.log-row {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 5px;
+  align-items: flex-start;
+}
+.log-row .bar {
+  width: 2px;
+  border-radius: 1px;
+  align-self: stretch;
+  margin: 2px 0;
+  flex-shrink: 0;
+}
+.log-row .sol {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  margin-top: 1px;
+  flex-shrink: 0;
+  width: 44px;
+  text-align: right;
+}
+.log-row .msg {
+  font-size: 10px;
+  color: var(--text);
+  min-width: 0;
+}
+.log-row .msg.info {
+  color: var(--text-dim);
+}
+
+/* ---------- Scenario popup ---------- */
+.scenario-btn {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.scenario-popup {
+  position: absolute;
+  top: 70px;
+  left: 210px;
+  width: 430px;
+  z-index: 30;
+  padding: 12px;
+  border-color: var(--hairline-bright);
+}
+.scenario-popup button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 11px;
+  color: var(--text);
+  padding: 7px 9px;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  border: 1px solid transparent;
+}
+.scenario-popup button:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.scenario-popup button.current {
+  background: var(--accent-dim);
+  border-color: rgba(255, 122, 61, 0.4);
+  color: var(--accent);
+}
+.scenario-popup .desc {
+  font-size: 9px;
+  color: var(--text-faint);
+  margin-top: 2px;
+  white-space: normal;
+}
+
+.distill-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 4px;
+}
+.distill-card .row {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-dim);
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+.loading .mark {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 3px;
+  transform: rotate(45deg);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}

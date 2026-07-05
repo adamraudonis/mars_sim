@@ -1,0 +1,457 @@
+{
+  "domain": "power_nuclear",
+  "parameters": [
+    {
+      "id": "power_nuclear.kilopower_1kwe_system_mass_kg",
+      "name": "Kilopower 1 kWe complete system mass",
+      "value": 400,
+      "unit": "kg",
+      "source": "Smith/Mason/Palac/Gibson, 'Kilopower: Small & Affordable Fission Power Systems for Space', NTRS 20180000691",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+      "confidence": "high",
+      "range_min": 350,
+      "range_max": 450,
+      "notes": "Complete system (core 28 kg U-235, heat pipes, 8x125 We Stirling, radiator, light shield). Reactor thermal power 4.3 kWt."
+    },
+    {
+      "id": "power_nuclear.kilopower_10kwe_system_mass_kg",
+      "name": "Kilopower 10 kWe system mass (science/remote config, minimal shield)",
+      "value": 1500,
+      "unit": "kg",
+      "source": "NTRS 20180000691; Gibson et al. IEEE Aerospace 2017; core 226 kg incl 43.7 kg U-235, 43.3 kWt",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+      "confidence": "high",
+      "range_min": 1400,
+      "range_max": 1600,
+      "notes": "~6.7 We/kg. Radiator ~9.6 m2 (Stirling option, ~500 K rejection, NTRS 20140010823)."
+    },
+    {
+      "id": "power_nuclear.kilopower_10kwe_mars_crew_shielded_mass_kg",
+      "name": "Kilopower 10 kWe Mars unit mass with crew-rated shadow shield",
+      "value": 1754,
+      "unit": "kg",
+      "source": "Rucker, 'Solar vs. Fission Surface Power for Mars', AIAA 2016-5452 (COMPASS point design), incl. 15% MGA, shield sized <3 mR/hr at 500 m",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf",
+      "confidence": "high",
+      "range_min": 1500,
+      "range_max": 2000,
+      "notes": "Team press statements quote ~2000 kg with shielding, less if buried. Fixed conical radiator, no deployment; 106 W keep-alive after landing; total demonstrator payload 2751 kg."
+    },
+    {
+      "id": "power_nuclear.kilopower_design_life_yr",
+      "name": "Kilopower design lifetime",
+      "value": 12,
+      "unit": "yr",
+      "source": "NTRS 20180000691 ('1 to 10 kW continuously for 10 years or more'); Rucker 2016 presentation, NTRS 20160011275 slide 18 ('12-year Kilopower service life')",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+      "confidence": "medium",
+      "range_min": 10,
+      "range_max": 15,
+      "notes": "Use 10 yr contractual / 12 nominal / 15 stretch. verified correction: prior source_url (nasa.gov Kilopower page) contains no lifetime figure; repointed to NTRS 20180000691. Value 12 yr (range 10-15) is unchanged."
+    },
+    {
+      "id": "power_nuclear.kilopower_stirling_thermal_efficiency",
+      "name": "Stirling converter thermal efficiency (KRUSTY measured)",
+      "value": 0.32,
+      "unit": "dimensionless",
+      "source": "Gibson et al., KRUSTY Nuclear Ground Test Results, AIAA P&E 2018, NTRS 20180005435 (measured 30-34%, ~50% of Carnot)",
+      "source_url": "https://ntrs.nasa.gov/citations/20180005435",
+      "confidence": "high",
+      "range_min": 0.3,
+      "range_max": 0.34,
+      "notes": "Converter-level. System net efficiency is lower after thermal losses (~18-20%) and PMAD (83-90%): ~23% for FSP HP-Stirling."
+    },
+    {
+      "id": "power_nuclear.kilopower_reactivity_droop_c_per_yr",
+      "name": "Core temperature droop from burnup if control rod untouched (1 kWe design)",
+      "value": 10,
+      "unit": "degC/yr",
+      "source": "KRUSTY test paper, NTRS 20180005435; equivalent to ~$0.02/yr excess reactivity to hold 800 degC setpoint",
+      "source_url": "https://ntrs.nasa.gov/citations/20180005435",
+      "confidence": "medium",
+      "range_min": 5,
+      "range_max": 15,
+      "notes": "With periodic rod adjustment, electrical output stays constant over life; fuel burnup <1% in 10 yr. Power turn-down ratio up to ~16:1 (engines throttle to 50%, others off); reactor passively load-follows with <4% core-temp deviation for >175% load swings."
+    },
+    {
+      "id": "power_nuclear.fsp_40kwe_system_mass_kg",
+      "name": "Fission Surface Power 40 kWe system mass (HP-Stirling gov reference, incl 20% MGA)",
+      "value": 6820,
+      "unit": "kg",
+      "source": "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": 5800,
+      "range_max": 10046,
+      "notes": "NASA goal 6000 kg not met by any full design. GC-Brayton 7502 kg; fully-deployable COMPASS 2022 concept 10046 kg (+2080 kg rover); 2010 buried concept 5800 kg. Includes shield, radiators, PMAD, 1 km cable, user pallet."
+    },
+    {
+      "id": "power_nuclear.fsp_design_life_yr",
+      "name": "FSP design life, no crew or robotic maintenance",
+      "value": 10,
+      "unit": "yr",
+      "source": "FSP Phase 1 SOW DR-1 (2021/2022 contracts): 40 kWe for 10 years, no human intervention",
+      "source_url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+      "confidence": "high",
+      "range_min": 8,
+      "range_max": 15,
+      "notes": "2010 concept used 8 yr full-power life. Post-shutdown crew approach requires ~months of radiological cool-down."
+    },
+    {
+      "id": "power_nuclear.fsp_net_system_efficiency",
+      "name": "FSP net thermal-to-user electrical efficiency (HP-Stirling)",
+      "value": 0.23,
+      "unit": "dimensionless",
+      "source": "Mason NETS 2025: 40 kWe net / 175 kWt (HP-Stirling); GC-Brayton 17% (40/230 kWt)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": 0.17,
+      "range_max": 0.23,
+      "notes": "COMPASS 2022 deployable variant achieved 18.1% end-to-end (26.1% converter x 87% PMAD, 18% reactor thermal losses)."
+    },
+    {
+      "id": "power_nuclear.fsp_mass_scaling_coefficient_kg",
+      "name": "FSP mass scaling law coefficient a in M[kg]=a*P[kWe]^b (HP-Stirling, incl 20% MGA)",
+      "value": 562,
+      "unit": "kg",
+      "source": "This work: least-squares fit to Mason NETS 2025 Table V (10/20/40/80/100 kWe = 2.7/4.1/6.8/10.7/12.6 t)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "medium",
+      "range_min": 500,
+      "range_max": 900,
+      "notes": "GC-Brayton fit: a=863, b=0.580; crossover ~90 kWe (Brayton lighter above). Valid 10-100 kWe; R^2>0.999 on source data."
+    },
+    {
+      "id": "power_nuclear.fsp_mass_scaling_exponent",
+      "name": "FSP mass scaling law exponent b in M[kg]=a*P[kWe]^b (HP-Stirling)",
+      "value": 0.673,
+      "unit": "dimensionless",
+      "source": "This work: fit to Mason NETS 2025 Table V",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "medium",
+      "range_min": 0.58,
+      "range_max": 0.75,
+      "notes": "Specific mass: 270 kg/kWe @10 kWe, 170 @40, 126 @100; extrapolates to ~100 kg/kWe @200 kWe and ~59 kg/kWe @1 MWe (low confidence beyond 100 kWe)."
+    },
+    {
+      "id": "power_nuclear.mw_class_specific_mass_kg_per_kwe",
+      "name": "MW-class fission specific mass anchor (in-space NEP design, 1.9 MWe)",
+      "value": 13,
+      "unit": "kg/kWe",
+      "source": "Mason et al., NASA/TM-20210016968 (2022): 1.9 MWe HALEU SCO2-Brayton NEP <25 t incl reactor/shield/conversion/radiators/PMAD; HEU version 11 kg/kWe",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210016968/downloads/TM-20210016968_final.pdf",
+      "confidence": "medium",
+      "range_min": 11,
+      "range_max": 60,
+      "notes": "In-space system: 50 rem/yr shadow shield, 2-yr full-power life, 2500 m2 radiator. A Mars SURFACE MW plant with 5 rem/yr and 10-yr life is estimated 30-60 kg/kWe (speculative). HALEU costs +3500 kg vs HEU at 10 MWt (7600 vs 4100 kg reactor+shield)."
+    },
+    {
+      "id": "power_nuclear.shield_shadow_mass_40kwe_1km_kg",
+      "name": "Shadow shield mass, 40 kWe reactor, 5 rem/yr at 1 km (HP-Stirling)",
+      "value": 1370,
+      "unit": "kg",
+      "source": "Mason NETS 2025 Table IV: LiH/B4C/W directional shield, 36-deg included angle covering 1-km-dia outpost at 1 km",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": 1250,
+      "range_max": 1500,
+      "notes": "GC-Brayton shield 1500 kg (larger core, higher kWt). COMPASS 2022: 1250 kg basic (LiH & W). Dose OUTSIDE shielded cone ~50 rem/yr at 1 km. Separation sensitivity: 0.5 km -> ~2700 kg (52-deg angle), 2 km -> ~700 kg (22-deg); system-mass optimum ~1.8 km, nearly flat 1-2.5 km."
+    },
+    {
+      "id": "power_nuclear.crew_dose_design_limit_rem_per_yr",
+      "name": "Design crew dose limit from reactor at habitat boundary",
+      "value": 5,
+      "unit": "rem/yr",
+      "source": "FSP Phase 1 SOW DR-3 (<5 rem/yr at 1 km); same limit used in 2010 FSP and COMPASS studies; 100% occupancy assumed",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "= 50 mSv/yr, small vs Mars natural background GCR dose (~20-30 rem/yr unshielded). Electronics limits: 10 MRad/5e14 n/cm2 at 1 m; 300 kRad/1e12 n/cm2 at 10 m."
+    },
+    {
+      "id": "power_nuclear.keepout_radius_shadow_shield_m",
+      "name": "Keep-out / separation distance, surface-sited shadow-shielded reactor",
+      "value": 1000,
+      "unit": "m",
+      "source": "FSP SOW and all recent NASA concepts: crew habitat at 1 km within ~36-deg shielded cone",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf",
+      "confidence": "high",
+      "range_min": 500,
+      "range_max": 2000,
+      "notes": "Unshielded azimuths remain exclusion zone (~50 rem/yr at 1 km). Control electronics sited at 50 m need no extra shielding. 1/r^2 scaling for dose beyond design points."
+    },
+    {
+      "id": "power_nuclear.keepout_radius_buried_m",
+      "name": "Keep-out distance if reactor buried under regolith",
+      "value": 100,
+      "unit": "m",
+      "source": "Fission Surface Power System Initial Concept Definition, NASA/TM-2010-216772: reactor in ~2 m excavation, regolith limits dose to <5 rem/yr at 100 m",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20100033102/downloads/20100033102.pdf",
+      "confidence": "high",
+      "range_min": 50,
+      "range_max": 200,
+      "notes": "Burial trades launched shield mass (1.4-2.7 t) + 1 km cable against excavation equipment and emplacement ops. 2010 buried system: 5800 kg total, 145 kg/kWe."
+    },
+    {
+      "id": "power_nuclear.radiator_specific_area_m2_per_kwe",
+      "name": "Deployed radiator area per net kWe (FSP-class, ~420 K rejection)",
+      "value": 3.5,
+      "unit": "m2/kWe",
+      "source": "Mason NETS 2025 Table V: 40-351 m2 for 10-100 kWe (3.5-4.0 m2/kWe), two-sided vertical panels, eps 0.85 EOL",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": 1.0,
+      "range_max": 5.5,
+      "notes": "Lunar 270 K design sink; Mars sink is colder on average so this is conservative, but add dust-deposition margin. Kilopower corner case: ~1 m2/kWe at ~500 K rejection with lower efficiency. Realized flux ~0.85 kWt/m2 at 403-433 K."
+    },
+    {
+      "id": "power_nuclear.radiator_reject_temp_k",
+      "name": "Heat rejection temperature (Stirling cold end / radiator loop)",
+      "value": 418,
+      "unit": "K",
+      "source": "Mason NETS 2025: HP-Stirling radiator 403-433 K (cold end 420 K); COMPASS 2022: 420 K inlet/370 K outlet",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": 370,
+      "range_max": 504,
+      "notes": "GC-Brayton rejects 379-504 K. Pumped-water loop + Ti/H2O heat-pipe composite panels (freeze management needed on Mars nights during shutdown)."
+    },
+    {
+      "id": "power_nuclear.autonomous_startup_time_h",
+      "name": "Autonomous startup sequence duration (cold to full power)",
+      "value": 8,
+      "unit": "h",
+      "source": "Mason NETS 2025: entire startup <8 h on 4 kWh battery + 1 kWe aux array; KRUSTY demonstrated 1.5 h bounding fast start",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+      "confidence": "high",
+      "range_min": 1.5,
+      "range_max": 24,
+      "notes": "Sequence: low-power criticality, warm heat pipes, start converters sequentially, deploy radiators with own waste heat, ramp to full. Multiple on/off cycles are a design goal."
+    },
+    {
+      "id": "power_nuclear.deployment_crew_time_h",
+      "name": "Crew time required for deployment/startup/operation (nominal)",
+      "value": 0,
+      "unit": "h",
+      "source": "FSP SOW requirement: self-contained, no crew or robotic support for startup, operation, maintenance for 10 yr; deployment by robotic rover (COMPASS NETS 2022)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf",
+      "confidence": "high",
+      "range_min": 0,
+      "range_max": 40,
+      "notes": "Robotic deployment: ~2 t rover, 1-2 trips, 1 km cable unreeled to 870 kg user pallet; order days. Upper range covers crew contingency: cable hookups at user interface (safe end), site survey. Estimate for contingency hours is speculative."
+    },
+    {
+      "id": "power_nuclear.fission_output_degradation_pct_per_yr",
+      "name": "Net electrical output degradation rate over design life (fission system)",
+      "value": 0.5,
+      "unit": "%/yr",
+      "source": "Estimate: reactor output flat (constant-temperature core, rod-compensated burnup <1%/10 yr per FSP TRL data); residual term = Mars dust on radiators + converter aging",
+      "source_url": null,
+      "confidence": "low",
+      "range_min": 0,
+      "range_max": 1,
+      "notes": "Degradation is dominated by DISCRETE string failures, not drift: 4x25% strings, >=75% power after any single fault (FSP DG-5). Sink-temperature seasonal variation gives +/-2-4% power."
+    },
+    {
+      "id": "power_nuclear.mmrtg_power_bol_we",
+      "name": "MMRTG electrical power at beginning of Mars mission",
+      "value": 110,
+      "unit": "We",
+      "source": "NASA/JPL MMRTG fact sheet; Curiosity/Perseverance flight units (design 125 We at fueling BOL, >=100 We at 14 yr)",
+      "source_url": "https://mars.nasa.gov/internal_resources/788/",
+      "confidence": "high",
+      "range_min": 100,
+      "range_max": 125,
+      "notes": "Thermal power ~2000 Wt from 4.8 kg PuO2; ~6% thermoelectric efficiency; also used directly as heat for rover thermal control."
+    },
+    {
+      "id": "power_nuclear.mmrtg_mass_kg",
+      "name": "MMRTG unit mass",
+      "value": 45,
+      "unit": "kg",
+      "source": "NASA/JPL MMRTG fact sheet; 64.2 cm dia x 66.8 cm",
+      "source_url": "https://mars.nasa.gov/internal_resources/788/",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "~2.4 We/kg BOL - an order of magnitude worse than 10 kWe fission (6.7 We/kg) and two orders worse at 100 kWe scale. Availability limited by Pu-238 production (~1.5 kg/yr DOE target; 4.8 kg per unit)."
+    },
+    {
+      "id": "power_nuclear.mmrtg_degradation_pct_per_yr",
+      "name": "MMRTG electrical power degradation rate",
+      "value": 2.5,
+      "unit": "%/yr",
+      "source": "NASA/JPL MMRTG fact sheet NF-2020-05-619-HQ (BOL 110 We, est. 72 We at 17-yr design life => ~2.5%/yr compounded); MSL flight analyses ~3-4.8%/yr early-mission",
+      "source_url": "https://mars.nasa.gov/internal_resources/788/",
+      "confidence": "medium",
+      "range_min": 1.3,
+      "range_max": 4.8,
+      "notes": "Sources disagree: 2026 quantitative flight-data analysis gives ~1.3-1.35%/yr effective compounded; early Curiosity data often quoted up to ~4.8%/yr. Model as P(t)=P0*(1-r)^t with r=0.018 nominal. verified correction: prior 1.8%/yr was derived from a 125->100 We / 14-yr Wikipedia curve (which actually computes to ~1.6%/yr) and is biased low vs both the official design curve (~2.5%/yr) and flight data. Keep 1.3-4.8 %/yr sensitivity range."
+    },
+    {
+      "id": "power_nuclear.rucker_solar_system_mass_kg",
+      "name": "Rucker 2016 trade: solar+storage mass for crewed Mars mission (Jezero)",
+      "value": 9800,
+      "unit": "kg",
+      "source": "Rucker, Solar vs. Fission Surface Power for Mars, AIAA 2016-5452 / NTRS 20160002628: 22 kWe keep-alive through 120-sol tau=5 dust storm, 35 kWe clear-sky peak",
+      "source_url": "https://ntrs.nasa.gov/citations/20160002628",
+      "confidence": "high",
+      "range_min": 9800,
+      "range_max": 12679,
+      "notes": "Presentation MEL variant: 11713 kg at Jezero (18.9N), 12679 kg at Columbus Crater (29.5S), excl. lander-to-lander PMAD (up to ~1 t/lander). UltraFlex arrays 33% cells + Li-ion 165 Wh/kg at 60% DoD; storm diffuse light 30-40% of clear direct."
+    },
+    {
+      "id": "power_nuclear.rucker_fission_system_mass_kg",
+      "name": "Rucker 2016 trade: fission mass for same crewed mission (4x10 kWe Kilopower)",
+      "value": 7000,
+      "unit": "kg",
+      "source": "Rucker AIAA 2016-5452 abstract (4 units, 35 kWe continuous); presentation MEL: 9154 kg incl 5th spare unit + MGA + Stirling PMAD",
+      "source_url": "https://ntrs.nasa.gov/citations/20160002628",
+      "confidence": "high",
+      "range_min": 7000,
+      "range_max": 9154,
+      "notes": "Headline: 50 kWe fission ~20% less landed mass than 35 kWe solar at Jezero Expedition 1; mass identical at any latitude/season/dust. Fission LOSES the small equatorial demo trade (2751 kg vs 1128-2425 kg solar). NASA ACR24 (Dec 2024) baselined fission as primary crewed-Mars surface power."
+    },
+    {
+      "id": "power_nuclear.design_dust_storm_duration_sols",
+      "name": "Design-basis global dust storm duration (drives solar sizing, not fission)",
+      "value": 120,
+      "unit": "sol",
+      "source": "Rucker AIAA 2016-5452 study assumption: one 120-sol storm, optical depth tau=5, max wind 20 m/s",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf",
+      "confidence": "high",
+      "range_min": 35,
+      "range_max": 180,
+      "notes": "Include in sim so the solar-vs-fission trade is reproducible: fission output is unchanged by tau; solar keep-alive fraction ~30-40% (diffuse). Wind loads are a structural design case for radiators/arrays, not a power source."
+    },
+    {
+      "id": "power_nuclear.cable_mass_per_km_kg",
+      "name": "Power transmission cable mass, 1 km at +/-2800 VDC, ~43 kWe, 95% efficiency",
+      "value": 45,
+      "unit": "kg per 1-km link at stated design point (mass ~ L^2 at fixed efficiency)",
+      "source": "Oleson et al., COMPASS 40 kWe FSP, NETS 2022: mass-optimal at +/-2800 VDC; 3 km cable = 240 kg at 2800 V vs 3300 kg at 500 V",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf",
+      "confidence": "high",
+      "range_min": 40,
+      "range_max": 100,
+      "notes": "Bare optimized aluminum conductor + insulation only; no redundancy/micrometeoroid armor. NETS-2025 baseline instead uses 3 kVac/1 kHz, 4x10 kWe feeds; full user-interface pallet incl spool/PMAD = 872 kg. End-to-end converter-to-user efficiency ~78-83% (Stirling) / ~90% local PMAD (Brayton). verified correction: the kg/km unit implies incorrect linear length scaling; the same source (Oleson NETS 2022, Fig. 13) gives 240 kg for a 3 km cable (80 kg/km) because conductor area grows with L at fixed fractional loss (mass ~ L^2). The flight-like NETS-2025 1 km cable+spool assembly is 325 kg; the 45 kg is bare optimized conductor+insulation only."
+    },
+    {
+      "id": "power_nuclear.fsp_2030_target_power_kwe",
+      "name": "Current NASA FSP program-of-record target (Aug 2025 directive)",
+      "value": 100,
+      "unit": "kWe",
+      "source": "NASA directive Aug 2025 (agency claim, ANS Nuclear Newswire 2 Sep 2025): 100 kWe-class closed-Brayton, <=15 t, launch-ready Q1 FY2030",
+      "source_url": "https://www.ans.org/news/2025-09-02/article-7336/nuclear-power-on-the-moon-what-were-watching/",
+      "confidence": "medium",
+      "range_min": 40,
+      "range_max": 100,
+      "notes": "Schedule confidence LOW (repeated prior slips; SpaceNews reported fiscal challenges 2024-25). 100 kWe @ 15 t = 150 kg/kWe, consistent with scaling law. Budget: $350M FY26 request -> ~$500M/yr FY27 (whole Mars Technology line). Lunar demo first; Mars-qualified unit later. No flight-qualified space fission unit exists as of mid-2026."
+    },
+    {
+      "id": "power_nuclear.krusty_program_cost_usd",
+      "name": "Kilopower/KRUSTY prototype program cost (design, build, nuclear test to TRL 5)",
+      "value": 20000000,
+      "unit": "USD",
+      "source": "NASA: '3 years and $15M' project (NTRS 20180000691); ~$20M widely cited incl DOE/NNSA contributions; DUFF precursor <$1M",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+      "confidence": "medium",
+      "range_min": 15000000,
+      "range_max": 25000000,
+      "notes": "Prototype/ground-test cost only - NOT a flight unit price. FSP Phase 1 design contracts: 3 x $5M (2022). Flight-system development for the 40-100 kWe class estimated $0.5-2B (speculative)."
+    }
+  ],
+  "modeling_notes": "Fission is the constant term in a Mars power model: output is independent of latitude, season, sol cycle, and dust optical depth, which is precisely why NASA's 2024 Architecture Concept Review baselined it for crewed Mars. L0: model each unit as constant net power P_rated with mass M[kg]=562*P^0.673 (HP-Stirling, 10-100 kWe, incl 20% MGA; GC-Brayton 863*P^0.580; use 1750-2000 kg for a crew-shielded 10 kWe Kilopower), energy per sol = P*24.6597 h (40 kWe -> 986 kWh/sol, ~0.145 kWh/sol per landed kg). L1: add (a) discrete k-of-n string reliability - 4x25% strings, >=75% power after any single fault, restart <=8 h autonomous; (b) slow drift 0-1%/yr (dust on radiators, converter aging - reactor itself is flat because the constant-temperature core load-follows passively and rod motion nulls burnup droop); (c) siting trade: shadow shield {0.5 km: 2700 kg, 1 km: 1370 kg, 2 km: 700 kg} + cable ~45-100 kg/km at 2.8-3 kV vs buried option (shield mass mostly deleted, keep-out 1 km -> 100 m, but requires excavation equipment); (d) reproduce Rucker solar-vs-fission: solar sized for 22 kWe keep-alive through 120-sol tau=5 storm = 9.8-12.7 t vs fission 7-9.2 t at 35-50 kWe. L2: point-kinetics with strong negative temperature feedback (KRUSTY: <4% core-temp deviation for >175% load swings, +14 degC on total loss of cooling), Stirling eta ~ 0.5*Carnot(1050 K/420 K) ~ 26% converter, PMAD 83-90%, end-to-end ~78-83%; radiator Q = A*[eps*sigma*(Tr^4-Tsky^4)*Fsky + eps*sigma*(Tr^4-Tgnd^4)*Fgnd + h*(Tr-Tatm)] - alpha*A*G_solar with eps=0.85 EOL, alpha=0.2, Tr=403-433 K, Mars Tsky~150-170 K, h~1-5 W/m2K in CO2 (lunar-sized 3.5-4 m2/kWe is conservative on Mars); dose field D(r)=D_1km*(1000/r)^2 with 5 rem/yr inside 36-deg shielded cone at 1 km, ~50 rem/yr outside cone, months-long cooldown clock before crew approach after shutdown. Caveats: no space fission unit is flight-qualified as of mid-2026 (KRUSTY was a ground test at TRL 5); the 6 t/40 kWe goal is unmet (6.8-10 t actual designs); >100 kWe scaling is extrapolation bounded by the 13 kg/kWe in-space MW anchor; HALEU policy costs ~2x reactor mass vs HEU; all schedule/cost figures are agency claims with a history of slips.",
+  "key_findings": [
+    "KRUSTY (Mar 2018) is the only modern flight-like fission ground test: >4 kWt at 800 degC for 28 h, measured Stirling thermal efficiency 30-34%, fully passive load following (<4% core-temp deviation for >175% load swings), 1.5-h worst-case startup - achieved for ~$15-20M total.",
+    "Kilopower flight designs: ~400 kg at 1 kWe and ~1500 kg at 10 kWe complete; a Mars crew-rated 10 kWe unit with shadow shield is 1754-2000 kg (COMPASS/Rucker), i.e. ~0.14 kWh/sol per landed kg, with 12-15 yr design life.",
+    "NASA FSP 40 kWe class: 2022 contracts (Lockheed, Westinghouse, IX; $5M each) targeted 40 kWe/10 yr/6 t; the government reference design actually weighs 6.8 t (HP-Stirling, 23% net efficiency, 175 kWt, 140 m2 radiator, incl 20% MGA) to 7.5 t (Brayton), and a fully deployable version hit 10 t - the 6 t goal remains unmet.",
+    "Mass scales as M[kg]=562*P^0.673 (fit to NASA's own 10-100 kWe family): 270 kg/kWe at 10 kWe falling to 126 kg/kWe at 100 kWe; extrapolation gives ~59 kg/kWe at 1 MWe, bracketed below by NASA's in-space MW-class design at 13 kg/kWe.",
+    "Shielding is a siting trade, not a fixed cost: 1370 kg shadow shield gives 5 rem/yr at 1 km within a 36-deg cone (~50 rem/yr outside it); halving separation doubles shield to 2700 kg; burying the reactor under ~2 m of regolith (2010 FSP concept) shrinks the keep-out from 1 km to 100 m and cuts most shield mass at the price of excavation ops.",
+    "Deployment and operation need essentially zero crew time by requirement: robotic rover emplacement, 1-km cable (~45-100 kg/km at 2.8-3 kV), fully autonomous startup in <8 h on a 4 kWh battery; no maintenance for 10 yr, months of cooldown before crew can approach after shutdown.",
+    "Fission output degradation is ~0 (constant-temperature core, rod-compensated burnup); reliability is dominated by discrete power-string failures (4x25% architecture keeps >=75% after any single fault). MMRTG (110 We, 45 kg, ~1.8%/yr decline) remains the right model for rover-scale loads but is Pu-238 supply-limited.",
+    "The Rucker 2016 solar-vs-fission trade the sim should reproduce: at Jezero, solar sized to keep 22 kWe alive through a 120-sol tau=5 dust storm masses ~9.8-12.7 t vs ~7-9.2 t for 35-50 kWe of Kilopower fission (fission ~20% lighter and storm-immune, but loses to solar for small equatorial demos); NASA's Dec 2024 ACR formally baselined fission as primary crewed-Mars surface power.",
+    "Program of record (Aug 2025 directive): 100 kWe-class Brayton lunar reactor, <=15 t, launch-ready by late CY2029, $350-500M/yr funding line - explicitly Mars-forward, but schedule confidence is low and no space fission system is flight-qualified as of mid-2026."
+  ],
+  "sources": [
+    {
+      "title": "The Kilopower Reactor Using Stirling TechnologY (KRUSTY) Nuclear Ground Test Results and Lessons Learned (AIAA P&E 2018)",
+      "org": "NASA GRC / LANL",
+      "year": 2018,
+      "url": "https://ntrs.nasa.gov/citations/20180005435"
+    },
+    {
+      "title": "Kilopower: Small & Affordable Fission Power Systems for Space",
+      "org": "NASA GRC",
+      "year": 2018,
+      "url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf"
+    },
+    {
+      "title": "Key Design Trades for a Near-term Lunar Fission Surface Power System (NETS 2025)",
+      "org": "NASA GRC / INL / LANL",
+      "year": 2025,
+      "url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf"
+    },
+    {
+      "title": "A Deployable 40 kWe Lunar Fission Surface Power Concept (NETS 2022, COMPASS CD-2021-187)",
+      "org": "NASA GRC / LANL",
+      "year": 2022,
+      "url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf"
+    },
+    {
+      "title": "Solar vs. Fission Surface Power for Mars (AIAA 2016-5452)",
+      "org": "NASA JSC / GRC COMPASS",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/citations/20160002628"
+    },
+    {
+      "title": "Mars Surface Power Technology Decision (2024 Moon-to-Mars Architecture Concept Review white paper)",
+      "org": "NASA ESDMD",
+      "year": 2024,
+      "url": "https://www.nasa.gov/wp-content/uploads/2024/12/acr24-mars-surface-power-decision.pdf"
+    },
+    {
+      "title": "Fission Surface Power System Initial Concept Definition (NASA/TM-2010-216772)",
+      "org": "NASA / DOE FSP Team",
+      "year": 2010,
+      "url": "https://ntrs.nasa.gov/api/citations/20100033102/downloads/20100033102.pdf"
+    },
+    {
+      "title": "Nuclear Power Concepts and Development Strategies for High-Power Electric Propulsion Missions to Mars (NASA/TM-20210016968)",
+      "org": "NASA / ORNL",
+      "year": 2022,
+      "url": "https://ntrs.nasa.gov/api/citations/20210016968/downloads/TM-20210016968_final.pdf"
+    },
+    {
+      "title": "NASA Announces Artemis Concept Awards for Nuclear Power on Moon (FSP Phase 1 contracts)",
+      "org": "NASA / DOE",
+      "year": 2022,
+      "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/"
+    },
+    {
+      "title": "Nuclear power on the moon: what we're watching (Aug 2025 NASA FSP directive)",
+      "org": "American Nuclear Society, Nuclear Newswire",
+      "year": 2025,
+      "url": "https://www.ans.org/news/2025-09-02/article-7336/nuclear-power-on-the-moon-what-were-watching/"
+    },
+    {
+      "title": "Kilopower: Small Fission Power Systems for Mars and Beyond (10 kWe radiator sizing)",
+      "org": "NASA GRC",
+      "year": 2014,
+      "url": "https://ntrs.nasa.gov/api/citations/20140010823/downloads/20140010823.pdf"
+    },
+    {
+      "title": "MMRTG fact sheet / flight performance (Curiosity, Perseverance)",
+      "org": "NASA/JPL, DOE",
+      "year": 2020,
+      "url": "https://mars.nasa.gov/internal_resources/788/"
+    },
+    {
+      "title": "Demonstration Proves Nuclear Fission System Can Provide Space Exploration Power (KRUSTY press release)",
+      "org": "NASA",
+      "year": 2018,
+      "url": "https://www.nasa.gov/news-release/demonstration-proves-nuclear-fission-system-can-provide-space-exploration-power/"
+    }
+  ]
+}

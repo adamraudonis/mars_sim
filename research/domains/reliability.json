@@ -1,0 +1,480 @@
+{
+  "domain": "reliability",
+  "parameters": [
+    {
+      "id": "reliability.iss_maint_crew_time_per_cm_week",
+      "name": "ISS scheduled maintenance crew time per crewmember-week (flight data 2017-2023)",
+      "value": 6.0,
+      "unit": "h/CM-week",
+      "range_min": 4.0,
+      "range_max": 8.0,
+      "source": "Lynch et al., ICES-2024-132, Table 4 (OPTimIS dataset, Oct 2017-Dec 2023)",
+      "source_url": "https://ntrs.nasa.gov/citations/20240005648",
+      "confidence": "high",
+      "notes": "Corrective + preventive scheduled maintenance. Adjacent categories: Routine Ops 4.5, Logistics 2.3 h/CM-wk. Use ~15% of a 40 h work-week as L0 maintenance fraction; add Mars comm-delay overhead."
+    },
+    {
+      "id": "reliability.iss_eclss_maint_crew_time_per_week",
+      "name": "ISS ECLSS-only maintenance and repair crew time, station-wide",
+      "value": 14.0,
+      "unit": "h/week",
+      "range_min": 13.0,
+      "range_max": 15.0,
+      "source": "Owens et al., AIAA 2017-5124, citing Bagdigian et al., ICES-2015-094; design documents predicted ~1 h/week",
+      "source_url": "https://ntrs.nasa.gov/citations/20170009115",
+      "confidence": "high",
+      "notes": "Actual exceeded design estimate (~1 h/wk) by >10x; Russell & Klaus 2007 found +60.4% in analyzed categories. Anchor for regenerative-ECLSS maintenance burden per ~6-crew outpost; apply as pessimism multiplier on bottom-up estimates."
+    },
+    {
+      "id": "reliability.corrective_maint_fraction",
+      "name": "Fraction of maintenance crew time that is corrective (vs preventive/scheduled)",
+      "value": 0.3,
+      "unit": "fraction",
+      "range_min": 0.2,
+      "range_max": 0.5,
+      "source": "Estimate: based on Russell & Klaus 2007 ISS Increments 4-8 category breakdown (35.3% of ECLSS maintenance time on air/waste repair) and ISS ops practice",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832006001050",
+      "confidence": "low",
+      "notes": "No clean modern public split; ISS planning emphasizes preventive. Treat corrective portion as stochastic (scales with realized failures), preventive as deterministic clock."
+    },
+    {
+      "id": "reliability.fraction_eclss_orus_failure_rate_underestimated",
+      "name": "Fraction of ECLSS ORUs whose flight failure rate exceeded pre-flight estimate",
+      "value": 0.7,
+      "unit": "fraction",
+      "range_min": 0.5,
+      "range_max": 0.8,
+      "source": "Jones, ICES-2019-14 (14 of 20 ECLSS ORUs with changed estimates were worse; MADS vs ~8 yr flight data)",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "high",
+      "notes": "ECLSS/fluid-handling specific. Contrast with MADS-wide Bayesian updates (see fraction_madswide_mtbf_adjusted_down)."
+    },
+    {
+      "id": "reliability.fraction_madswide_mtbf_adjusted_down",
+      "name": "Fraction of all ISS Crit-1/2 components whose Bayesian-updated MTBF decreased",
+      "value": 0.15,
+      "unit": "fraction",
+      "range_min": 0.1,
+      "range_max": 0.2,
+      "source": "Stromgren et al., AIAA 2016-5307 (MADS updates through June 2016; ~3% ended at <=0.25x initial MTBF; ~85% improved, 14% of those >=10x)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011578",
+      "confidence": "high",
+      "notes": "Use as station-wide prior; the small worse-tail dominates system risk (asymmetry). ECLSS classes should be biased toward the Jones result."
+    },
+    {
+      "id": "reliability.failure_rate_underestimate_max_multiplier",
+      "name": "Worst-case observed flight-to-predicted failure rate multiplier (ECLSS ORUs)",
+      "value": 22.0,
+      "unit": "ratio",
+      "range_min": 7.5,
+      "range_max": 22.0,
+      "source": "Jones, ICES-2019-14 (four UPA ORUs at 7.5-22x; seven other ORUs at 1.9-6.3x)",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "high",
+      "notes": "Tail anchor for the epistemic failure-rate distribution of new fluid-handling hardware."
+    },
+    {
+      "id": "reliability.k_factor_induced_failures_median",
+      "name": "K-factor (induced-failure multiplier on intrinsic failure rate), median across ECLSS ORUs",
+      "value": 1.2,
+      "unit": "ratio",
+      "range_min": 1.01,
+      "range_max": 3.26,
+      "source": "Chen, ICES-2025-127, Appendix Tables 2-11 (ISS MADS-derived; e.g., WPA pump/separator 3.26, avionics air assy 3.2, most items 1.0-1.4)",
+      "source_url": "https://ntrs.nasa.gov/citations/20250003955",
+      "confidence": "high",
+      "notes": "Annual failure rate = duty_cycle x quantity x K x 8760 / MTBF. Captures crew error, environment, false alarms, cross-system damage."
+    },
+    {
+      "id": "reliability.error_factor_lognormal_default",
+      "name": "Default lognormal error factor (p95/p50) on failure-rate estimates for new hardware",
+      "value": 3.0,
+      "unit": "ratio",
+      "range_min": 2.0,
+      "range_max": 10.0,
+      "source": "Estimate: EF definition per Anderson et al. AIAA 2012-5320; magnitude anchored to Jones ICES-2019-14 flight ratios (1.9-22x) and Stromgren 2016 MTBF-change distribution",
+      "source_url": "https://ntrs.nasa.gov/citations/20120014060",
+      "confidence": "low",
+      "notes": "sigma_ln = ln(EF)/1.645. Use EF~2 for ISS-heritage mature hardware, 5-10 for new-design fluid handling on first Mars deployment."
+    },
+    {
+      "id": "reliability.mtbf_confidence_operating_multiple",
+      "name": "Accumulated operating time (multiple of MTBF) needed for 95% confidence in MTBF estimate",
+      "value": 3.0,
+      "unit": "x MTBF",
+      "range_min": 3.0,
+      "range_max": 5.0,
+      "source": "Stromgren et al., AIAA 2016-5307 (3x for 95% confidence, ~5x for 99%)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011578",
+      "confidence": "medium",
+      "notes": "Drives value of pre-deployment testing and lunar/ISS heritage in reducing EF."
+    },
+    {
+      "id": "reliability.mtbf_upa_fcpa_flight",
+      "name": "UPA Fluids Control & Pump Assembly MTBF, flight-derived",
+      "value": 1000,
+      "unit": "h",
+      "range_min": 800,
+      "range_max": 22759,
+      "source": "Jones, ICES-2019-14, Table 3 (flight data; MADS pre-flight estimate was 22,759 h). ICES-2025-127 MADS now lists 22,759 h post-redesign",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "high",
+      "notes": "Worst ECLSS actor: alone drove UPA insufficient-spares probability to 0.983 over 450 d. 1,000 h ~= 41 sols continuous."
+    },
+    {
+      "id": "reliability.mtbf_upa_distillation_assembly_flight",
+      "name": "UPA Distillation Assembly MTBF, flight-derived",
+      "value": 5500,
+      "unit": "h",
+      "range_min": 3000,
+      "range_max": 41376,
+      "source": "Jones, ICES-2019-14, Table 3 (MADS estimate 41,376 h; CaSO4 precipitation from microgravity bone-loss urine chemistry was root cause)",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "high",
+      "notes": "Classic unknown-unknown CCF example. PCPA 3,000 h, SPA 4,000 h from same table."
+    },
+    {
+      "id": "reliability.mtbf_oga_pump_flight",
+      "name": "OGA recirculation Pump ORU MTBF, flight-derived",
+      "value": 35000,
+      "unit": "h",
+      "range_min": 35000,
+      "range_max": 189433,
+      "source": "Jones, ICES-2019-14, Table 2 (MADS estimate 189,433 h -> flight 35,000 h, 5.4x worse)",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "medium",
+      "notes": "OGA cell-stack degradation (design-oversight CCF chain) dominated OGA ops impact; cured by ACTEX deionizing bed with ~11,000 h replacement interval."
+    },
+    {
+      "id": "reliability.mtbf_cdra_problem_components",
+      "name": "CDRA valves/heaters effective MTBF (problem components, early flight experience)",
+      "value": 1150,
+      "unit": "h",
+      "range_min": 800,
+      "range_max": 1500,
+      "source": "Review: 'Toward sustainable living in space' (2025), summarizing ISS heritage: CDRA valves and heaters 800-1,500 h; sorbent dust/check-valve damage per Jones ICES-2019-14",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S2950616625000452",
+      "confidence": "low",
+      "notes": "Post-redesign 2025 MADS lists CDRA selector valve 117,000 h, blower/precooler 129,700 h - use pair (early vs mature) to bracket new-deployment risk."
+    },
+    {
+      "id": "reliability.mtbf_eclss_oru_median_mature",
+      "name": "Median MTBF across mature ISS ECLSS ORUs (2025 MADS)",
+      "value": 180000,
+      "unit": "h",
+      "range_min": 8180,
+      "range_max": 200000000,
+      "source": "Chen, Rivas & Rangel, ICES-2025-127, Appendix Tables 2-11 (full ORU population; ~1.3e5 h if restricted to active process ORUs with MTBF <= 1e6 h)",
+      "source_url": "https://ntrs.nasa.gov/citations/20250003955",
+      "confidence": "high",
+      "notes": "Median ~1e5 h ~= 4,055 sols. Pumps/rotating machinery cluster at 5,000-20,000 h per 2025 review. verified correction: prior 1e5 h median holds only for the active/process-ORU subset; across the full listed ORU population (which the 8,180-2e8 h range implies) the median is ~1.8e5 h. Min (MCA 8,180 h) and max (passive vents 2e8 h) endpoints are correct."
+    },
+    {
+      "id": "reliability.mttr_oru_replace_median",
+      "name": "Median crew time to remove & replace a major ECLSS ORU (excl. gather/stow)",
+      "value": 3.0,
+      "unit": "h",
+      "range_min": 1.0,
+      "range_max": 19.25,
+      "source": "Chen, ICES-2025-127, Table 1 (R&R times: most 2-5 h; OGA hydrogen dome 14 h; WPA gas separator group 19.25 h) and MTTR columns (0.3-17.7 h)",
+      "source_url": "https://ntrs.nasa.gov/citations/20250003955",
+      "confidence": "high",
+      "notes": "Add gather/stow + diagnosis + Mars ground-loop (2x ~22 min light time + deliberation) overhead of ~0.5-1.5 h per event."
+    },
+    {
+      "id": "reliability.pos_target_system_mars",
+      "name": "Target probability of sufficiency (spares) per critical system, Mars mission",
+      "value": 0.99,
+      "unit": "probability",
+      "range_min": 0.95,
+      "range_max": 0.999,
+      "source": "EMC practice: Stromgren AIAA 2016-5307 (0.99 DSH reliability spares case), Owens/NASA POS framing ICES-2024-95; ISS historical POS/confidence targets 85-99.5% (Anderson AIAA 2012-5320)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011578",
+      "confidence": "medium",
+      "notes": "With ~150 repairable item types, per-item POS must be ~0.9999 (0.99^(1/150)). Crew-survival-critical functions should target 0.999+ with dissimilar backup."
+    },
+    {
+      "id": "reliability.iss_spares_mass_on_orbit",
+      "name": "ISS spares inventory maintained on orbit (USOS)",
+      "value": 13000,
+      "unit": "kg",
+      "range_min": 13000,
+      "range_max": 31000,
+      "source": "Owens & de Weck, AIAA 2016-5394 (>13,000 kg on orbit; ~18,000 kg staged on ground; >95% of corrective spares expected never used)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011570",
+      "confidence": "high",
+      "notes": "Range max = total staged posture incl. ground. Demonstrates the LEO-with-resupply baseline a Mars base cannot replicate."
+    },
+    {
+      "id": "reliability.mars_dsh_spares_mass_pos99_deterministic",
+      "name": "Spares mass for 4-crew, 1,100-day Mars transit habitat at R=0.99 (deterministic MTBFs)",
+      "value": 5984,
+      "unit": "kg",
+      "range_min": 5000,
+      "range_max": 7000,
+      "source": "Stromgren et al., AIAA 2016-5307 (EMAT, EMC deep-space habitat critical systems incl. ECLSS, TCS, EPS, C&DH, comm, water recovery)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011578",
+      "confidence": "high",
+      "notes": "THE anchor for 4-6 crew Mars hab sparing. ~2,000 kg per Earth-year, ~10%/yr of a 20 t habitat dry mass."
+    },
+    {
+      "id": "reliability.mars_dsh_spares_mass_incl_uncertainty",
+      "name": "Spares mass to hold 0.99 reliability at 95th-pct confidence with MTBF epistemic uncertainty",
+      "value": 14500,
+      "unit": "kg",
+      "range_min": 12000,
+      "range_max": 17232,
+      "source": "Stromgren et al., AIAA 2016-5307 (>12,000 kg low-uncertainty bound, >17,000 kg high-uncertainty); Owens & de Weck AIAA 2016-5394 (17,232 kg for median P(LoC contrib)=1e-3, +4,124 kg per further 10x risk reduction)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011570",
+      "confidence": "medium",
+      "notes": "Uncertainty roughly doubles-to-triples the deterministic spares mass. This is the planning value for first Mars missions."
+    },
+    {
+      "id": "reliability.spares_mass_fraction_per_year_mars",
+      "name": "Mars-planning annual spares fraction of supported dry mass (POS 0.99, no resupply)",
+      "value": 0.1,
+      "unit": "fraction/yr (Earth year)",
+      "range_min": 0.05,
+      "range_max": 0.28,
+      "source": "Derived: 5,984 kg (deterministic) to 17,232 kg (with uncertainty) per AIAA 2016-5307/5394, over 1,100 d against ~20,000 kg habitat dry mass (ICES-2015-288 typical)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011578",
+      "confidence": "medium",
+      "notes": "L0 scalar: 0.10/yr; 0.05/yr is the Salyut/Mir/ISS historical heuristic (Larson & Pranke via ICES-2015-288, valid only with resupply); 0.20-0.28 conservative for new hardware at high confidence. Multiply by 1.881 for per-Mars-year rates."
+    },
+    {
+      "id": "reliability.settlement_spares_fraction_of_delivered_mass",
+      "name": "Spares as fraction of all Earth-delivered mass, growing settlement at month 130",
+      "value": 0.62,
+      "unit": "fraction",
+      "range_min": 0.4,
+      "range_max": 0.7,
+      "source": "Do et al., Acta Astronautica 120 (2016) (Mars One assessment, ISS-derived failure rates, crews added every 26 months)",
+      "source_url": "https://dspace.mit.edu/handle/1721.1/103973",
+      "confidence": "high",
+      "notes": "Spares come to dominate settlement logistics; range reflects sensitivity to commonality/shared-spares (Jones ICES-2015-044: sharing could cut required spares ~50%)."
+    },
+    {
+      "id": "reliability.commonality_spares_reduction_fraction",
+      "name": "Reduction in required spares count from parts commonality/reconfigurability across elements",
+      "value": 0.4,
+      "unit": "fraction",
+      "range_min": 0.33,
+      "range_max": 0.5,
+      "source": "Siddiqi & de Weck, J. Spacecraft & Rockets 44(1) 2007 (Mars surface mission case study; quoted in Jones ICES-2015-044)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160001251",
+      "confidence": "medium",
+      "notes": "Same availability with 33-50% fewer spares. Caveat: commonality concentrates common-cause/design-defect exposure for unproven designs (Jones ICES-2017-83)."
+    },
+    {
+      "id": "reliability.cannibalization_recovery_fraction",
+      "name": "Fraction of a failed ORU's function recoverable via cannibalization/sub-ORU repair",
+      "value": 0.3,
+      "unit": "fraction",
+      "range_min": 0.1,
+      "range_max": 0.5,
+      "source": "Estimate: ORU-level replacement discards items with useful life (AIAA 2017-5124); shared/cold-spare pooling across co-located elements halves spares in Jones ICES-2015-044 worked example; no flight-quantified value",
+      "source_url": "https://ntrs.nasa.gov/citations/20170009115",
+      "confidence": "speculative",
+      "notes": "Model as probability a corrective demand can be met from the failed-unit boneyard instead of stores; requires sub-ORU repair capability (tools, diagnostics, crew skill)."
+    },
+    {
+      "id": "reliability.ism_manufacturable_item_fraction",
+      "name": "Fraction of MEL line items manufacturable on demand by near-term ISM (fluid-flow class)",
+      "value": 0.33,
+      "unit": "fraction",
+      "range_min": 0.2,
+      "range_max": 0.5,
+      "source": "Owens & de Weck, AIAA 2016-5394 (plumbing, ducting, fans, heat exchangers, tanks, valves ~33% of Master Equipment List; 50% used as growth sensitivity)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011570",
+      "confidence": "medium",
+      "notes": "Feasibility limited by production rate (AM: 0.01-10 kg/h) vs component time-to-effect (Moraguez & de Weck ICES-2020)."
+    },
+    {
+      "id": "reliability.ism_maintenance_mass_reduction_fraction",
+      "name": "Maintenance-logistics mass reduction from ISM at fixed risk (33% item coverage)",
+      "value": 0.28,
+      "unit": "fraction",
+      "range_min": 0.28,
+      "range_max": 0.34,
+      "source": "Owens & de Weck, AIAA 2016-5394 (17,232 -> 12,323 kg at P(LoC contrib)=1e-3; 0.34 with feedstock recycling -> 11,254 kg; covered items alone: -78.3%, -97.7% with recycling)",
+      "source_url": "https://ntrs.nasa.gov/citations/20160011570",
+      "confidence": "medium",
+      "notes": "Also reduces sensitivity to MTBF uncertainty (median P(LoC) contrib 0.027 -> 0.0167 at 33%, 0.0084 at 50% coverage). Feedstock packaging overhead 0.015% vs 1.5% for spares."
+    },
+    {
+      "id": "reliability.weibull_shape_rotating_machinery",
+      "name": "Weibull shape parameter, pumps/fans/blowers/compressors (wear-out class)",
+      "value": 1.8,
+      "unit": "dimensionless",
+      "range_min": 1.2,
+      "range_max": 3.0,
+      "source": "Estimate: generic rotating-machinery reliability practice (Ebeling, Introduction to Reliability & Maintainability Engineering; OREDA-class industrial data); consistent with ISS pump wear-out history",
+      "source_url": null,
+      "confidence": "low",
+      "notes": "Scale eta set so distribution mean matches MTBF/K. ISS program itself assumes exponential (CFR) - use beta=1 at L0/L1, Weibull at L2."
+    },
+    {
+      "id": "reliability.weibull_shape_electronics",
+      "name": "Weibull shape parameter, electronics/controllers/sensors (random-failure class)",
+      "value": 1.0,
+      "unit": "dimensionless",
+      "range_min": 0.9,
+      "range_max": 1.1,
+      "source": "Chen, ICES-2025-127 (ISS program assumes constant failure rate / exponential, memoryless)",
+      "source_url": "https://ntrs.nasa.gov/citations/20250003955",
+      "confidence": "medium",
+      "notes": "Exponential inter-failure times; radiation environment on Mars transit may add an SEU-driven K-factor rather than shape change."
+    },
+    {
+      "id": "reliability.weibull_shape_valves_mechanisms",
+      "name": "Weibull shape parameter, valves/actuators/mechanisms",
+      "value": 1.3,
+      "unit": "dimensionless",
+      "range_min": 1.0,
+      "range_max": 2.0,
+      "source": "Estimate: mixed random/wear behavior; CDRA check-valve dust-abrasion wear (Jones ICES-2019-14) supports beta>1 for particulate-exposed valves",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "low",
+      "notes": "For Mars dust-exposed mechanisms (airlocks, EVA hardware) bias toward 1.5-2.0 and raise K during dust season (sensitivity parameter, no flight basis)."
+    },
+    {
+      "id": "reliability.weibull_shape_infant_mortality",
+      "name": "Weibull shape parameter, infant-mortality phase for newly installed/manufactured units",
+      "value": 0.8,
+      "unit": "dimensionless",
+      "range_min": 0.6,
+      "range_max": 0.9,
+      "source": "Estimate: bathtub-curve early phase (Ebeling; simplified bathtub in ICES-2025-127); 'first model year' effect discussed in Stromgren AIAA 2016-5307",
+      "source_url": "https://ntrs.nasa.gov/citations/20250003955",
+      "confidence": "speculative",
+      "notes": "Apply for first ~500-1,000 operating hours of new-design or ISM-printed units, then transition to class shape."
+    },
+    {
+      "id": "reliability.ccf_beta_factor",
+      "name": "Common-cause failure beta factor across identical redundant units/spares",
+      "value": 0.05,
+      "unit": "fraction",
+      "range_min": 0.01,
+      "range_max": 0.1,
+      "source": "Estimate: generic PRA beta-factor values (NUREG/CR-5485 class); documented ECLSS CCF chains (OGA cell stack, CDRA dust, UPA urine chemistry) per Jones ICES-2019-14",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+      "confidence": "speculative",
+      "notes": "Fraction of failures that defeat identical spares/redundancy. This is the term POS math ignores; dissimilar redundancy is the mitigation."
+    }
+  ],
+  "modeling_notes": "Core demand model (NASA-standard): per-ORU annual failure rate lambda = duty_cycle x quantity x K_factor x 8760/MTBF (ICES-2025-127); failures over window T are Poisson(lambda*T) with cold-spare POS(n) = sum_{x=0..n} (lambda T)^x e^{-lambda T}/x!; system POS is the product over item types, so per-item POS must be ~POS_sys^(1/N) (~0.9999 for 0.99 over 150 items). Carry epistemic uncertainty by drawing lambda from a lognormal with error factor EF = p95/p50 (sigma_ln = ln(EF)/1.645; gamma-Poisson/negative-binomial equivalent per ICES-2024-95): EF~2 for ISS-heritage hardware, 5-10 for new fluid-handling designs; this uncertainty doubles-to-triples spares mass at fixed confidence (12-17 t vs 6 t for a 4-crew/1,100-d transit hab). Allocate spares by greedy marginal delta-POS/delta-kg (EMAT logic). L0: spares upmass = 10% of supported dry mass per Earth-year (5% optimistic, 28% conservative), maintenance crew time 6.0 h/CM-week, availability 0.99. L1: per-subsystem NB demand + POS optimization + crew-time POS check against work-opportunity time (flag weeks where maintenance demand exceeds available hours). L2: per-ORU renewal processes - exponential for electronics (ISS CFR practice), Weibull beta~1.8 rotating machinery, beta~1.3 valves, deterministic life/throughput clocks for beds/filters/bladders, infant-mortality beta~0.8 for new units; beta-factor CCF ~0.05 across identical units; cannibalization queue (p~0.3 recovery); ISM job shop covering ~33% of items at 0.01-10 kg/h cutting maintenance mass ~28-34%; commonality cuts spares count 33-50%. Crew repair events: R&R time median 3 h (1-19 h) + gather/stow + Mars ground-loop overhead ~0.5-1.5 h. Assumptions to stress-test: dormant systems don't fail; repairs restore good-as-new; failures independent. POS is an upper bound on reliability - CCF and unknown-unknowns historically dominate (OGA cell stack, CDRA dust, UPA CaSO4). Convert MTBF hours to sols by /24.6597; multiply per-Earth-year rates by 1.881 for per-Mars-year (668.6 sols).",
+  "key_findings": [
+    "ISS crews average 6.0 h/crewmember-week of scheduled maintenance (OPTimIS flight data 2017-2023); ECLSS alone consumes 13-15 h/week station-wide versus ~1 h/week predicted at design - an order-of-magnitude underestimate that must be carried into Mars crew-time budgets (~15% of work time).",
+    "Failure-rate prediction error dominates sparing risk: 14 of 20 ISS ECLSS ORUs ran worse than predicted, with four UPA ORUs at 7.5-22x the estimated failure rate (FCPA pump flight MTBF ~1,000 h vs 22,759 h predicted); the originally planned spares set would have had a 99.5% chance of running out on a 450-day Mars transit.",
+    "Station-wide, Bayesian MADS updates show ~85% of components got better and 15% worse - but the worse tail (3% at <=0.25x MTBF) drives system risk because sparing is asymmetric; model this with a lognormal error factor (EF~2 heritage, 5-10 new designs) feeding gamma-Poisson demand.",
+    "Anchor spares masses for a 4-crew, ~1,100-day Mars transit habitat: 5,984 kg at R=0.99 with perfect MTBF knowledge, rising to 12,000-17,232 kg once epistemic uncertainty is included - i.e., ~10%/yr of supported dry mass (vs the 5%/yr Salyut/Mir/ISS heuristic), up to ~28%/yr conservative.",
+    "At settlement scale spares dominate logistics: 62% of all Earth-delivered mass by month 130 (Mars One assessment with ISS failure rates); the levers are commonality (33-50% fewer spares), in-space manufacturing (28-34% maintenance-mass reduction at 33% item coverage; -78% on covered items), shared spares pools (~50%), and sub-ORU repair.",
+    "NASA sparing math is Poisson demand -> probability of sufficiency, with system POS the product across ~150 item types, so per-item POS ~0.9999 is needed for 0.99 system POS; ISS used POS/confidence targets of 85-99.5%, while no-resupply Mars missions need >=0.99 at high confidence per critical system plus dissimilar backup for crew-survival functions.",
+    "For the stochastic failure engine: exponential inter-failure times for electronics (ISS CFR practice), Weibull beta~1.8 (1.2-3.0) for pumps/rotating machinery, beta~1.3 for valves, deterministic life-limit clocks for beds/filters/softgoods, K-factor 1.0-3.3 (median 1.2) for induced failures, beta-factor ~0.05 common-cause overlay, and infant-mortality beta~0.8 for newly installed or 3D-printed units.",
+    "K-factors and MTTRs are now published per-ORU (ICES-2025-127, 2025 MADS extract): median ECLSS ORU MTBF ~1e5 h, MTTR median ~1.5-3 h (R&R 1-19 h incl. access), giving hardware availability >=0.999 when spares exist - on Mars, stock-out probability and crew-time contention, not repair duration, drive availability."
+  ],
+  "sources": [
+    {
+      "title": "High Reliability Requires More Than Providing Spares (ICES-2019-14)",
+      "org": "NASA Ames Research Center",
+      "year": 2019,
+      "url": "https://ntrs.nasa.gov/citations/20190027319"
+    },
+    {
+      "title": "The Threat of Uncertainty - Why Using Traditional Approaches for Evaluating Spacecraft Reliability Are Insufficient for Future Human Mars Missions (AIAA 2016-5307)",
+      "org": "Binera / NASA Langley / MIT",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/citations/20160011578"
+    },
+    {
+      "title": "Systems Analysis of In-Space Manufacturing Applications for the International Space Station and the Evolvable Mars Campaign (AIAA 2016-5394)",
+      "org": "MIT",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/citations/20160011570"
+    },
+    {
+      "title": "Supportability Challenges, Metrics, and Key Decisions for Future Human Spaceflight (AIAA 2017-5124)",
+      "org": "MIT / Binera / NASA Langley",
+      "year": 2017,
+      "url": "https://ntrs.nasa.gov/citations/20170009115"
+    },
+    {
+      "title": "Challenges of Sustaining the International Space Station through 2020 and Beyond: Including Epistemic Uncertainty in Reassessing Confidence Targets (AIAA 2012-5320)",
+      "org": "NASA / Boeing ISS S&MA",
+      "year": 2012,
+      "url": "https://ntrs.nasa.gov/citations/20120014060"
+    },
+    {
+      "title": "Modeling Logistics and Supportability for Crewed Missions Beyond Low Earth Orbit (ICES-2024-95)",
+      "org": "Binera / NASA Langley",
+      "year": 2024,
+      "url": "https://ntrs.nasa.gov/citations/20240005642"
+    },
+    {
+      "title": "A Historical Review of Logistics Mass and Crew Time Demands for ISS Operations (ICES-2024-132)",
+      "org": "NASA Langley / Binera",
+      "year": 2024,
+      "url": "https://ntrs.nasa.gov/citations/20240005648"
+    },
+    {
+      "title": "Advancing ECLSS Reliability Modeling: Integrating ISS Data for Sustainable Long-Duration Mission Planning (ICES-2025-127)",
+      "org": "The Aerospace Corporation / NASA JSC",
+      "year": 2025,
+      "url": "https://ntrs.nasa.gov/citations/20250003955"
+    },
+    {
+      "title": "On-Orbit Maintenance Operations Strategy for the International Space Station - Concept and Implementation",
+      "org": "NASA Johnson Space Center",
+      "year": 2000,
+      "url": "https://ntrs.nasa.gov/citations/20100042525"
+    },
+    {
+      "title": "Comparison of Spares Logistics Analysis Techniques for Long Duration Human Spaceflight (ICES-2015-288)",
+      "org": "MIT / Binera / NASA Langley",
+      "year": 2015,
+      "url": "https://ntrs.nasa.gov/citations/20160006509"
+    },
+    {
+      "title": "An independent assessment of the technical feasibility of the Mars One mission plan - Updated analysis, Acta Astronautica 120:192-228",
+      "org": "MIT",
+      "year": 2016,
+      "url": "https://dspace.mit.edu/handle/1721.1/103973"
+    },
+    {
+      "title": "Comments on the MIT Assessment of the Mars One Plan (ICES-2015-044)",
+      "org": "NASA Ames Research Center",
+      "year": 2015,
+      "url": "https://ntrs.nasa.gov/citations/20160001251"
+    },
+    {
+      "title": "Maintenance, reliability and policies for orbital space station life support systems, Reliability Engineering & System Safety 92(6):808-820",
+      "org": "University of Colorado",
+      "year": 2007,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832006001050"
+    },
+    {
+      "title": "Spare Parts Requirements for Space Missions with Reconfigurability and Commonality, J. Spacecraft & Rockets 44(1)",
+      "org": "MIT",
+      "year": 2007,
+      "url": null
+    },
+    {
+      "title": "Life Support Baseline Values and Assumptions Document (NASA/TP-2015-218570/REV2)",
+      "org": "NASA Johnson Space Center",
+      "year": 2022,
+      "url": "https://ntrs.nasa.gov/citations/20210024855"
+    },
+    {
+      "title": "In-Space Manufacturing Production Rate and Reliability Targets for On-Demand Fabrication of ECLSS Spares (ICES-2020)",
+      "org": "MIT",
+      "year": 2020,
+      "url": "https://ttu-ir.tdl.org/handle/2346/84476"
+    },
+    {
+      "title": "Toward sustainable living in space: A review of environmental control and life support system technologies",
+      "org": null,
+      "year": 2025,
+      "url": "https://www.sciencedirect.com/science/article/pii/S2950616625000452"
+    }
+  ]
+}

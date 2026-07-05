@@ -1,0 +1,530 @@
+{
+  "domain": "mars_environment",
+  "parameters": [
+    {
+      "id": "mars_environment.sol_length_s",
+      "name": "Sol (mean Mars solar day) length",
+      "value": 88775.244,
+      "unit": "s",
+      "source": "Allison & McEwen (2000), Planet. Space Sci. 48; NASA GISS Mars24 algorithm",
+      "source_url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "= 24.6597 h = 1.0274912517 Earth days. Canonical sim time unit."
+    },
+    {
+      "id": "mars_environment.mars_year_sols",
+      "name": "Mars year length",
+      "value": 668.5991,
+      "unit": "sol",
+      "source": "Allison & McEwen (2000)",
+      "source_url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "= 686.97 Earth days. Season lengths (sols): Ls 0-90: 193.3; 90-180: 178.6; 180-270: 141.9; 270-360: 154.4 (Kepler asymmetry). verified correction: Kepler-exact season lengths (e=0.0934, Ls_peri=251, T=668.5991 sols) are Ls 0-90: 193.3; 90-180: 178.6; 180-270: 142.7; 270-360: 154.0 (sum 668.6); the prior 141.9/154.4 were slightly off and summed to 668.2."
+    },
+    {
+      "id": "mars_environment.gravity_surface_ms2",
+      "name": "Surface gravitational acceleration",
+      "value": 3.711,
+      "unit": "m/s2",
+      "source": "NSSDC Mars Fact Sheet (NASA GSFC)",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "range_min": 3.69,
+      "range_max": 3.73,
+      "notes": "0.379 g. Range reflects latitude/elevation variation."
+    },
+    {
+      "id": "mars_environment.obliquity_deg",
+      "name": "Axial obliquity (current epoch)",
+      "value": 25.19,
+      "unit": "deg",
+      "source": "NSSDC Mars Fact Sheet; Allison & McEwen (2000) use sin(25.19 deg)=0.42565 in declination formula",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "Solar declination: delta = arcsin(0.42565 sin Ls) + 0.25 deg * sin Ls."
+    },
+    {
+      "id": "mars_environment.orbit_eccentricity",
+      "name": "Orbital eccentricity",
+      "value": 0.0934,
+      "unit": "dimensionless",
+      "source": "NSSDC Mars Fact Sheet",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "Drives +/-19% swing in TOA solar flux over the year (vs +/-3.4% for Earth)."
+    },
+    {
+      "id": "mars_environment.ls_perihelion_deg",
+      "name": "Areocentric solar longitude of perihelion",
+      "value": 251.0,
+      "unit": "deg Ls",
+      "source": "Allison & McEwen (2000)",
+      "source_url": "http://amsat-bda.org/files/2000_Allison_McEwen.pdf",
+      "confidence": "high",
+      "range_min": null,
+      "range_max": null,
+      "notes": "Near southern-summer solstice (Ls 270): southern summer is hot/short and hosts the dust-storm season. True anomaly nu = Ls - 251 deg."
+    },
+    {
+      "id": "mars_environment.solar_flux_toa_mean_wm2",
+      "name": "Mean top-of-atmosphere solar flux at Mars",
+      "value": 586.2,
+      "unit": "W/m2",
+      "source": "Appelbaum & Flood (1990), NASA TM-102299 (590/493/718 at TSI 1371) rescaled to TSI 1361: 586.2 mean, 490 aphelion, 713 perihelion",
+      "source_url": "https://ntrs.nasa.gov/citations/19890018252",
+      "confidence": "high",
+      "range_min": 490,
+      "range_max": 713,
+      "notes": "Range = aphelion..perihelion. S_TOA(Ls) = 586.2*[(1+e*cos(Ls-251deg))/(1-e^2)]^2. Older sources using TSI 1371 give 590/497/723. verified correction: range endpoints made self-consistent with the stored formula (e=0.0934, S_mean 586.2): perihelion 586.2/(1-e)^2=713.2, aphelion 586.2/(1+e)^2=490.4 (was 493/717, which are TSI-1371 A&F endpoints). Note 'older sources 590/497/723' misquotes A&F (actual 590/493/718)."
+    },
+    {
+      "id": "mars_environment.surface_pressure_gale_mean_pa",
+      "name": "Surface pressure, low-elevation site (Gale, -4.5 km), annual mean",
+      "value": 840,
+      "unit": "Pa",
+      "source": "MSL REMS: Harri et al. (2014) JGR Planets; Haberle et al. (2014); Martinez et al. (2017) SSR 212",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013JE004488",
+      "confidence": "high",
+      "range_min": 700,
+      "range_max": 955,
+      "notes": "Range = annual CO2 condensation cycle: min ~700-740 Pa at Ls~150, max ~925-955 Pa at Ls~250-260, secondary max ~890 Pa at Ls~55. ~25% of atmosphere cycles through polar caps. VL1 (-3.63 km): ~680-900 Pa. Scale to site elevation z with exp(-dz/11.1 km); datum reference 610.5 Pa. Diurnal tides add +/-2-5% (up to ~10% p-p at Gale)."
+    },
+    {
+      "id": "mars_environment.atmo_scale_height_km",
+      "name": "Atmospheric pressure scale height",
+      "value": 11.1,
+      "unit": "km",
+      "source": "NSSDC Mars Fact Sheet",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "range_min": 10.0,
+      "range_max": 12.0,
+      "notes": "Temperature dependent. Use for site-elevation pressure scaling. Surface air density rho = p*0.04334/(8.314*T) ~ 0.020 kg/m^3 at Gale (0.014-0.025 over diurnal/annual cycle) = ~1.6% of Earth sea level."
+    },
+    {
+      "id": "mars_environment.atmo_co2_volume_fraction",
+      "name": "Atmospheric CO2 volume mixing ratio",
+      "value": 0.951,
+      "unit": "mol/mol",
+      "source": "MSL SAM QMS annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124; original Mahaffy et al. (2013) Science 341",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0032063317300545",
+      "confidence": "high",
+      "range_min": 0.93,
+      "range_max": 0.96,
+      "notes": "Condensable; seasonal variation as CO2 cycles to polar caps (Trainer et al. 2019). Mean molar mass of atmosphere 43.34 g/mol. verified correction: prior source_url was Franz et al. 2015 (CO2=0.957); the stored 0.951 comes from the Franz et al. 2017 annual-mean paper (PII S0032063317300545). Value unchanged."
+    },
+    {
+      "id": "mars_environment.atmo_n2_volume_fraction",
+      "name": "Atmospheric N2 volume mixing ratio",
+      "value": 0.0259,
+      "unit": "mol/mol",
+      "source": "MSL SAM reevaluated annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124 (Mahaffy 2013 gave 0.0189; Viking gave 0.027)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0032063317300545",
+      "confidence": "high",
+      "range_min": 0.023,
+      "range_max": 0.029,
+      "notes": "Non-condensable: enriched ~+/-10-20% seasonally opposite the CO2 cycle. Feedstock for ISRU buffer gas (N2+Ar ~ 4.5% of intake). verified correction: prior source_url (PII S0032063315000495) is Franz et al. 2015, which reports N2=0.0203 - contradicting the stored 0.0259 by ~28%. Correct paper is Franz et al. 2017 (PII S0032063317300545), whose 2.59% N2 matches the stored value. Value unchanged."
+    },
+    {
+      "id": "mars_environment.atmo_ar_volume_fraction",
+      "name": "Atmospheric Ar-40 volume mixing ratio",
+      "value": 0.0194,
+      "unit": "mol/mol",
+      "source": "MSL SAM: Mahaffy et al. (2013) Science 341; confirmed by Franz et al. (2017)",
+      "source_url": "https://www.science.org/doi/10.1126/science.1237966",
+      "confidence": "high",
+      "range_min": 0.017,
+      "range_max": 0.022,
+      "notes": "Inert seasonal tracer (Trainer et al. 2019). O2 = 0.16%, CO = 0.058% (minor species, not separate parameters)."
+    },
+    {
+      "id": "mars_environment.tair_summer_day_max_k",
+      "name": "Air temperature, typical daily max, southern summer (Gale-like mid-latitude, 1.6 m)",
+      "value": 272,
+      "unit": "K",
+      "source": "MSL REMS: Gomez-Elvira et al. (2014); Martinez et al. (2017) SSR",
+      "source_url": "https://link.springer.com/article/10.1007/s11214-017-0360-x",
+      "confidence": "medium",
+      "range_min": 265,
+      "range_max": 283,
+      "notes": "Record highs ~+6 to +10 C at 2 pm LTST near perihelion. Winter (aphelion) daily max only 240-250 K. Site-specific: Gale is 4.6 S, -4.5 km (warm site)."
+    },
+    {
+      "id": "mars_environment.tair_winter_night_min_k",
+      "name": "Air temperature, typical nightly min, winter (Gale-like mid-latitude, 1.6 m)",
+      "value": 183,
+      "unit": "K",
+      "source": "MSL REMS: Martinez et al. (2017); frost-event analyses",
+      "source_url": "https://link.springer.com/article/10.1007/s11214-017-0360-x",
+      "confidence": "medium",
+      "range_min": 178,
+      "range_max": 190,
+      "notes": "Summer nights bottom at 195-205 K. Diurnal air range 50-80 K in all seasons - the dominant thermal-cycling load. 40-50 deg latitude winter nights reach 150-170 K."
+    },
+    {
+      "id": "mars_environment.tground_day_max_k",
+      "name": "Ground surface temperature, midday max, summer (mid-latitude)",
+      "value": 290,
+      "unit": "K",
+      "source": "MSL REMS GTS (150-300 K instrument range): Hamilton et al. 2013; Martinez et al. (2017); NASA TFAWS 2024 MarsWRF worst-case hot 289.7 K",
+      "source_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "confidence": "medium",
+      "range_min": 270,
+      "range_max": 300,
+      "notes": "Ground exceeds air by 15-30 K at midday (thin atmosphere decouples them). Winter midday: 255-270 K."
+    },
+    {
+      "id": "mars_environment.tground_night_min_k",
+      "name": "Ground surface temperature, pre-dawn min, winter (mid-latitude)",
+      "value": 160,
+      "unit": "K",
+      "source": "MSL REMS GTS; NASA TFAWS 2024 MarsWRF worst-case cold 129.5-139 K at -50 deg lat",
+      "source_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "confidence": "medium",
+      "range_min": 150,
+      "range_max": 185,
+      "notes": "H2O frost observed at Gale when ground <170 K with high RH; CO2 frost floor ~148 K at 700-900 Pa. Global design cold case: 130 K."
+    },
+    {
+      "id": "mars_environment.sky_temp_effective_k",
+      "name": "Effective IR sky sink temperature (radiator boundary)",
+      "value": 170,
+      "unit": "K",
+      "source": "NASA TFAWS 2024 (Popok, MSFC) MarsWRF-derived boundary conditions: ~160 K predawn / ~186 K midday at tau=1, equator; MARSTHERM: ~140 K predawn clear sky",
+      "source_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "confidence": "medium",
+      "range_min": 130,
+      "range_max": 215,
+      "notes": "Rises toward air temperature (~210-230 K) during global dust storms - radiators degrade exactly when solar power is scarce. Night radiator at 290 K, eps 0.9 rejects ~330 W/m^2."
+    },
+    {
+      "id": "mars_environment.dust_tau_clear_season",
+      "name": "Background dust optical depth, clear (aphelion) season, Ls 0-135",
+      "value": 0.4,
+      "unit": "dimensionless (880 nm extinction, column)",
+      "source": "Montabone et al. (2015) Icarus 251 multiannual climatology (converted from 9.3 um CDOD); Lemmon et al. (2015) MER 5-Mars-year record",
+      "source_url": "https://arxiv.org/abs/1409.4841",
+      "confidence": "high",
+      "range_min": 0.25,
+      "range_max": 0.65,
+      "notes": "Highly repeatable year-to-year. WARNING: orbital climatologies report IR absorption CDOD; visible extinction = ~2.6x that value. All sim values are visible extinction."
+    },
+    {
+      "id": "mars_environment.dust_tau_dusty_season",
+      "name": "Background dust optical depth, dusty season, Ls 135-360 (no major storm)",
+      "value": 0.9,
+      "unit": "dimensionless (880 nm extinction, column)",
+      "source": "Montabone et al. (2015); Lemmon et al. (2015): MER record spans 0.3-4.7 over 5 Mars years",
+      "source_url": "https://arxiv.org/abs/1403.4234",
+      "confidence": "medium",
+      "range_min": 0.6,
+      "range_max": 2.0,
+      "notes": "Punctuated by A (Ls~210-240), B (~250-270), C (~300-330) regional storm sequences every Mars year; regional storm peaks reach tau 2-5 for 15-40 sols."
+    },
+    {
+      "id": "mars_environment.dust_tau_global_storm_peak",
+      "name": "Global dust storm peak optical depth",
+      "value": 9,
+      "unit": "dimensionless (880 nm extinction, column)",
+      "source": "MY34/2018 event: tau ~8.5 measured at Gale (Guzewich et al. 2019 GRL; Viudez-Moreiras et al. 2019); >10.8 estimated at Meridiani (Opportunity, saturated)",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL080839",
+      "confidence": "medium",
+      "range_min": 5,
+      "range_max": 11,
+      "notes": "Design case: tau>=5 sustained >=60 sols with tau>=8 for ~30 sols. Diffuse light keeps ~15-25% of TOA insolation available even at peak. Storms cut daytime highs 10-20 K and raise night lows 5-10 K."
+    },
+    {
+      "id": "mars_environment.global_dust_storm_probability_per_mars_year",
+      "name": "Probability of a planet-encircling dust storm in a given Mars year",
+      "value": 0.33,
+      "unit": "1/Mars-year",
+      "source": "Zurek & Martin (1993) JGR (NTRS 19930046754); 8-9 confirmed events 1956-2018 (1956, 1971, 1973, 1977a, 1977b, 2001, 2007, 2018)",
+      "source_url": "https://ntrs.nasa.gov/search.jsp?R=19930046754",
+      "confidence": "medium",
+      "range_min": 0.25,
+      "range_max": 0.4,
+      "notes": "Aperiodic; onset confined to Ls ~185-310 (perihelion season). Model as Bernoulli/Poisson per Mars year within that Ls window."
+    },
+    {
+      "id": "mars_environment.global_dust_storm_duration_sols",
+      "name": "Global dust storm duration (elevated tau above ~2x background)",
+      "value": 100,
+      "unit": "sol",
+      "source": "MY34/2018: onset Ls 184.9, intense phase ~3 months, decay into Ls ~250+ (Guzewich et al. 2019; Viudez-Moreiras et al. 2019); MY25/2001 similar",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019je005985",
+      "confidence": "medium",
+      "range_min": 60,
+      "range_max": 150,
+      "notes": "Profile: ~1-2 week ramp-up, 30-60 sols near peak, 1-3 month exponential decay tail. Sizes energy storage / non-solar backup for settlements."
+    },
+    {
+      "id": "mars_environment.dust_deposition_obscuration_pct_per_sol",
+      "name": "Dust deposition rate on horizontal surfaces (solar array obscuration)",
+      "value": 0.2,
+      "unit": "%/sol",
+      "source": "Pathfinder 0.28%/sol (Landis & Jenkins); MER Spirit/Opportunity medians 0.16-0.18%/sol; InSight median 0.28%/sol; synthesis Lorenz et al. (2021) P&SS 207",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768",
+      "confidence": "medium",
+      "range_min": 0.05,
+      "range_max": 2.0,
+      "notes": "Upper end during/after storms. Episodic wind/dust-devil cleaning events recover tens of % (few per Mars year at MER sites) but are not schedulable - take no credit at L0/L1. InSight (no cleaning): ~90% array loss over ~4 Mars years. verified correction: the note's 'InSight ~90% array loss over ~4 Mars years' conflates Earth with Mars years - InSight operated ~4 Earth years = ~2.1 Mars years; using 4 Mars years understates the no-cleaning rate ~2x. InSight median deposition was 0.28%/sol (upper half of the envelope), not the 0.16-0.18 MER medians."
+    },
+    {
+      "id": "mars_environment.dust_devil_rate_per_km2_sol",
+      "name": "Dust devil areal formation rate (site/season dependent)",
+      "value": 3,
+      "unit": "1/(km2 sol)",
+      "source": "Jezero MEDA/RDS: 1.3-3.4 /km^2/sol (Toledo et al. 2023 JGR Planets); Pathfinder ~19; Spirit seasonal peak ~50; InSight: 502 vortex pressure drops >0.3 Pa in 151 sols",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JE007494",
+      "confidence": "low",
+      "range_min": 0.5,
+      "range_max": 50,
+      "notes": "Summer-midday peak. Point encounter with core pressure drop >=8 Pa: ~once per several hundred sols. Mechanically negligible (q<1 Pa); matters for array cleaning, electrostatics, sensor contamination."
+    },
+    {
+      "id": "mars_environment.wind_speed_mean_ms",
+      "name": "Near-surface mean wind speed (1.5-2 m height)",
+      "value": 5,
+      "unit": "m/s",
+      "source": "Viking 0-9.5 m/s; InSight 0-7.5 m/s; Perseverance 0-12 m/s (Martinez et al. 2017 review; Viking/InSight/MEDA records)",
+      "source_url": "https://link.springer.com/article/10.1007/s11214-017-0360-x",
+      "confidence": "high",
+      "range_min": 2,
+      "range_max": 10,
+      "notes": "Diurnally modulated: calm nights, convective afternoons. Model as Weibull with diurnal modulation at L2."
+    },
+    {
+      "id": "mars_environment.wind_gust_design_ms",
+      "name": "Design gust wind speed (storm conditions)",
+      "value": 30,
+      "unit": "m/s",
+      "source": "Bickel et al. (2025), Sci. Adv. 11, eadw5170 (orbital dust-devil migration, supports 20-40 m/s near-surface winds); for in-situ MEDA gusts cite Hueso et al. (2023) JGR Planets / MEDA storm papers",
+      "source_url": "https://www.science.org/doi/10.1126/sciadv.adw5170",
+      "confidence": "medium",
+      "range_min": 22,
+      "range_max": 40,
+      "notes": "Dynamic pressure q = 0.5*rho*v^2 = ~9 Pa at 30 m/s with rho=0.020 kg/m^3 - a light Earth breeze. Wind force is NOT a structural driver; dust ingress/abrasion is. Convective h at habitat scale: 0.4 (still) to 4.0 (windy) W/m^2K (JPL MSR guideline via TFAWS 2024). verified correction: DOI 10.1126/sciadv.adw5170 is Bickel et al. 2025 (orbital dust-devil-migration wind inference), not a Perseverance MEDA in-situ 22 m/s gust measurement. The 30 m/s design value (range 22-40) is unchanged and supported by Bickel's inferred tens-of-m/s near-surface winds."
+    },
+    {
+      "id": "mars_environment.uv_total_noon_wm2",
+      "name": "Total UV irradiance (200-380 nm) at surface, local noon",
+      "value": 35,
+      "unit": "W/m2",
+      "source": "MSL REMS UV 10+ Mars-year record: total 26.9-42.3 W/m^2 (UVA 21.4-33.7, UVB 4.21-6.45, UVC 1.39-2.21), PNAS 2025",
+      "source_url": "https://www.pnas.org/doi/10.1073/pnas.2426611122",
+      "confidence": "high",
+      "range_min": 27,
+      "range_max": 42,
+      "notes": "UVC reaches the surface (no ozone layer): polymer degradation and surface sterilization. Attenuate as exp(-tau/cos z); dust roughly grey in UV-vis."
+    },
+    {
+      "id": "mars_environment.regolith_thermal_conductivity_wmk",
+      "name": "Regolith thermal conductivity (upper 0.4 m, unconsolidated)",
+      "value": 0.039,
+      "unit": "W/(m K)",
+      "source": "InSight HP3 active heating experiment, 0.03-0.37 m depth: 0.039 +/- 0.002 W/m/K (Grott et al. 2021 JGR Planets)",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JE006861",
+      "confidence": "high",
+      "range_min": 0.033,
+      "range_max": 0.06,
+      "notes": "Flight-measured, one site; duricrust/rockier ground higher. Regolith is effectively insulation - ground-coupled heat rejection needs large area. Bulk density 1470-1730 kg/m^3 (HP3); cp ~630 J/kgK; albedo 0.105-0.315 (MCD v6.1), typical 0.20."
+    },
+    {
+      "id": "mars_environment.regolith_thermal_inertia",
+      "name": "Regolith thermal inertia (typical soil, lander sites)",
+      "value": 195,
+      "unit": "J/(m2 K s^0.5)",
+      "source": "InSight HP3: 160-230 (Grott et al. 2021); MCD v6.1 engineering range 42-394 used in NASA TFAWS 2024 worst-case study",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JE006861",
+      "confidence": "medium",
+      "range_min": 160,
+      "range_max": 230,
+      "notes": "Global orbital range ~24 (dust) to ~800 (rock/duricrust). Low TI = larger diurnal ground temperature swings. Diurnal thermal skin depth ~3.3 cm; seasonal ~0.9 m."
+    },
+    {
+      "id": "mars_environment.regolith_temp_1m_depth_k",
+      "name": "Regolith temperature at 1 m depth (annual mean, low-latitude site)",
+      "value": 217,
+      "unit": "K",
+      "source": "InSight HP3 (Elysium, 4.5 N): 217.5 K mean at 0.1-0.2 m, seasonal +/-6.7 K, diurnal damped (Spohn et al. 2024 GRL); extrapolated to 1 m where diurnal wave vanishes",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108600",
+      "confidence": "medium",
+      "range_min": 205,
+      "range_max": 225,
+      "notes": "At 1 m: zero diurnal variation, seasonal amplitude ~30% of surface seasonal wave. Stable cold boundary for buried habitats/tanks; colder at higher latitude (roughly tracks annual-mean surface temperature)."
+    }
+  ],
+  "modeling_notes": "TIME/SUN CORE: t[sols] -> Ls via Allison & McEwen 2000 series (M = 19.3871 + 0.52402073*dtJ2000; equation of center; Ls = alphaFMS + (nu-M); EOT = 2.861 sin2Ls - 0.071 sin4Ls + 0.002 sin6Ls - (nu-M)). Declination: delta = arcsin(0.42565 sin Ls) + 0.25deg sin Ls. Hour angle h = 15deg*(LTST-12); cos z = sin phi sin delta + cos phi cos delta cos h; sunrise/sunset: cos h_ss = -tan phi tan delta; daylength = (h_ss/180deg)*24.6597 h. TOA flux: S = 586.2*[(1+e cos(Ls-251deg))/(1-e^2)]^2 W/m^2. Surface: direct = S exp(-tau/cos z); total horizontal = S cos z * f(tau,z) with Appelbaum & Flood 1990 net-flux table (f(0deg) ~ 0.88/0.72/0.50/0.33/0.17 at tau 0.4/1/2/3/5 - diffuse keeps arrays alive in storms). PRESSURE: 2-harmonic annual fit through Gale landmarks (Ls,Pa): (0,860),(55,890),(150,730),(255,950); scale exp(-dz/11.1km) for site elevation; rho = p*0.04334/(8.314*T). TEMPERATURE: L1 = seasonal sinusoids for daily Tmax/Tmin anchored to REMS values with asymmetric intra-sol shape; L2 = 1D conduction PDE (15-node, 1 m grid, k=0.039, rho*c=1.0e6) with surface balance (1-A)G + eps*sigma(Tsky^4-Ts^4) + h(Tair-Ts), h = 0.4-4.0 W/m^2K. DUST: tau(Ls) climatology (0.4 clear season, 0.9 dusty season) + Poisson regional storms (~3/MY in Ls 135-330, +tau 2-4, 15-40 sols) + Bernoulli GDS (p=0.33/MY, onset Ls 185-310, peak tau 5-11, 60-150 sols). Deposition 0.2%/sol on arrays (no scheduled cleaning credit). Sky temp for radiators: 140-160 K night, ~185 K day (tau=1), -> air temp (210-230 K) in GDS. UNIT TRAPS: visible-extinction tau = ~2.6x Montabone 9.3um CDOD; solar constant convention 1361 vs 1371 W/m^2; '600-750 Pa' folklore is datum elevation - real (low) sites see 700-1000 Pa.",
+  "key_findings": [
+    "Perihelion (Ls 251) nearly coincides with southern-summer solstice: TOA solar flux swings 493-717 W/m^2 (+/-19%) over the year, and the perihelion insolation boost is exactly when global dust storms occur - dusty-season solar gains cannot be banked.",
+    "The CO2 condensation cycle moves ~25% of the atmosphere through the polar caps each year: surface pressure at a low settlement site cycles ~700-955 Pa (min Ls~150, max Ls~255), directly modulating ISRU compressor throughput and EDL performance.",
+    "Diurnal air temperature range is 50-80 K everywhere in all seasons (thin atmosphere, low ground thermal inertia) - thermal cycling, not mean temperature, is the dominant environmental load on surface hardware.",
+    "Global dust storms are the defining survival event: probability ~0.33 per Mars year (onset only Ls 185-310), peak visible tau 5-11 (MY34: 8.5 measured at Gale), elevated for 60-150 sols; but diffuse scattering keeps 15-25% of insolation available even at peak, so 'solar + big storage' remains viable with ~3x margin or non-solar backup.",
+    "Dust deposition degrades unattended solar arrays ~0.2%/sol (0.05-2%/sol envelope); without cleaning (InSight) arrays lose ~90% in ~4 Mars years - dust mitigation is a first-order power-system parameter, more important than storm frequency.",
+    "Wind is thermally significant but mechanically negligible: 30 m/s design gust gives only ~9 Pa dynamic pressure in 0.020 kg/m^3 air, while convective h spans 0.4-4.0 W/m^2K (an order of magnitude) in habitat heat-loss budgets.",
+    "Flight-measured regolith (InSight HP3): k = 0.039 W/m/K, TI 160-230, ~217 K at depth with zero diurnal swing below ~0.4 m - regolith is simultaneously excellent passive insulation, a stable ~215 K heat sink for buried systems, and a radiation shield.",
+    "Effective sky temperature 130-215 K (predawn clear ~140 K) makes Mars nights outstanding for radiators (~330 W/m^2 at 290 K), but sky warms toward 230 K during dust storms - thermal and power systems degrade simultaneously and must be co-analyzed.",
+    "Surface UV (200-380 nm) peaks at 27-42 W/m^2 with ~2 W/m^2 of unshielded UVC - free sterilization outside, aggressive polymer/seal degradation for anything not UV-hardened.",
+    "SAM reevaluated composition (CO2 95.1%, N2 2.59%, Ar 1.94%) means N2+Ar ~ 4.5% of every ISRU atmospheric intake is harvestable buffer gas - Viking-era numbers understate N2 by ~35%."
+  ],
+  "sources": [
+    {
+      "title": "A post-Pathfinder evaluation of areocentric solar coordinates with improved timing recipes for Mars seasonal/diurnal climate studies",
+      "org": "NASA GISS (Allison & McEwen), Planet. Space Sci. 48",
+      "year": 2000,
+      "url": "http://amsat-bda.org/files/2000_Allison_McEwen.pdf"
+    },
+    {
+      "title": "Mars24 Sunclock - Algorithm and Worked Examples",
+      "org": "NASA GISS",
+      "year": 2024,
+      "url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html"
+    },
+    {
+      "title": "Mars Fact Sheet",
+      "org": "NASA GSFC NSSDC",
+      "year": 2024,
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+    },
+    {
+      "title": "Solar radiation on Mars (NASA TM-102299)",
+      "org": "NASA Lewis/Glenn (Appelbaum & Flood)",
+      "year": 1990,
+      "url": "https://ntrs.nasa.gov/citations/19890018252"
+    },
+    {
+      "title": "The annual cycle of pressure on Mars measured by Viking Landers 1 and 2",
+      "org": "GRL 7 (Hess et al.)",
+      "year": 1980,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/gl007i003p00197"
+    },
+    {
+      "title": "Preliminary interpretation of the REMS pressure data from the first 100 sols of the MSL mission",
+      "org": "JGR Planets (Haberle et al.)",
+      "year": 2014,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013JE004488"
+    },
+    {
+      "title": "The Modern Near-Surface Martian Climate: A Review of In-situ Meteorological Data from Viking to Curiosity",
+      "org": "Space Science Reviews 212 (Martinez et al.)",
+      "year": 2017,
+      "url": "https://link.springer.com/article/10.1007/s11214-017-0360-x"
+    },
+    {
+      "title": "Abundance and Isotopic Composition of Gases in the Martian Atmosphere from the Curiosity Rover",
+      "org": "Science 341 (Mahaffy et al., MSL SAM)",
+      "year": 2013,
+      "url": "https://www.science.org/doi/10.1126/science.1237966"
+    },
+    {
+      "title": "Reevaluated martian atmospheric mixing ratios from the mass spectrometer on the Curiosity rover",
+      "org": "Planet. Space Sci. (Franz et al.)",
+      "year": 2017,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0032063315000495"
+    },
+    {
+      "title": "Seasonal Variations in Atmospheric Composition as Measured in Gale Crater, Mars",
+      "org": "JGR Planets (Trainer et al.)",
+      "year": 2019,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006175"
+    },
+    {
+      "title": "Eight-year climatology of dust optical depth on Mars",
+      "org": "Icarus 251 (Montabone et al.)",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1409.4841"
+    },
+    {
+      "title": "Dust aerosol, clouds, and the atmospheric optical depth record over 5 Mars years of the MER mission",
+      "org": "Icarus (Lemmon et al.)",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1403.4234"
+    },
+    {
+      "title": "Mars Science Laboratory Observations of the 2018/Mars Year 34 Global Dust Storm",
+      "org": "GRL 46 (Guzewich et al.)",
+      "year": 2019,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL080839"
+    },
+    {
+      "title": "Effects of the MY34/2018 Global Dust Storm as Measured by MSL REMS in Gale Crater",
+      "org": "JGR Planets (Viudez-Moreiras et al.)",
+      "year": 2019,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019je005985"
+    },
+    {
+      "title": "Interannual variability of planet-encircling dust storms on Mars",
+      "org": "JGR (Zurek & Martin), NTRS 19930046754",
+      "year": 1993,
+      "url": "https://ntrs.nasa.gov/search.jsp?R=19930046754"
+    },
+    {
+      "title": "Lander and rover histories of dust accumulation on and removal from solar arrays on Mars",
+      "org": "Planet. Space Sci. 207 (Lorenz et al.)",
+      "year": 2021,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768"
+    },
+    {
+      "title": "Dust Accumulation and Solar Panel Array Performance on the Mars Exploration Rover Project",
+      "org": "NASA NTRS 20050186821 (Stella & Herman)",
+      "year": 2005,
+      "url": "https://ntrs.nasa.gov/citations/20050186821"
+    },
+    {
+      "title": "Mars Solar Power",
+      "org": "NASA NTRS 20040191326 (Landis et al.)",
+      "year": 2004,
+      "url": "https://ntrs.nasa.gov/api/citations/20040191326/downloads/20040191326.pdf"
+    },
+    {
+      "title": "Dust Devil Frequency of Occurrence and Radiative Effects at Jezero Crater as Measured by MEDA RDS",
+      "org": "JGR Planets (Toledo et al.)",
+      "year": 2023,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JE007494"
+    },
+    {
+      "title": "The atmosphere of Mars as observed by InSight",
+      "org": "Nature Geoscience 13 (Banfield et al.)",
+      "year": 2020,
+      "url": "https://www.nature.com/articles/s41561-020-0534-0"
+    },
+    {
+      "title": "Thermal Conductivity of the Martian Soil at the InSight Landing Site From HP3 Active Heating Experiments",
+      "org": "JGR Planets (Grott et al.)",
+      "year": 2021,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JE006861"
+    },
+    {
+      "title": "Mars Soil Temperature and Thermal Properties From InSight HP3 Data",
+      "org": "GRL 51 (Spohn et al.)",
+      "year": 2024,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108600"
+    },
+    {
+      "title": "Modeling Martian Surface Thermal Environments in Thermal Desktop (TFAWS 2024 Passive Thermal Paper Session)",
+      "org": "NASA MSFC (Popok)",
+      "year": 2024,
+      "url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf"
+    },
+    {
+      "title": "Ultraviolet and biological effective dose observations at Gale Crater, Mars (REMS UV record)",
+      "org": "PNAS",
+      "year": 2025,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2426611122"
+    },
+    {
+      "title": "MARSTHERM Thermal Model Documentation",
+      "org": "Planetary Science Institute",
+      "year": 2023,
+      "url": "https://marstherm.psi.edu/model_documentation.php"
+    }
+  ]
+}

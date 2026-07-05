@@ -1,0 +1,260 @@
+{
+  "name": "Trade: Fission-primary power (35 \u00d7 40 kWe FSP)",
+  "description": "Same campaign as baseline, but primary power is 35 FSP-class 40 kWe fission units (1.4 MWe continuous, ~240 t landed across two waves) with a small solar+battery trim farm. Storm-immune: compare propellant-by-window and unmet-power against the solar baseline through the dusty season.",
+  "site": {
+    "latitude_deg": 40.0,
+    "elevation_km": -3.0
+  },
+  "epoch_utc": "2031-09-15",
+  "timestep_seconds": 3699,
+  "seed": 42,
+  "duration_sols": 2200,
+  "fidelity": {
+    "environment": "L2",
+    "solar": "L2",
+    "greenhouse": "L1",
+    "isru_plant": "L1"
+  },
+  "overrides": {},
+  "flights": [
+    {
+      "sol": 0,
+      "label": "Cargo wave 1 (launched Feb 2031)",
+      "ships": [
+        {
+          "name": "Cargo-1",
+          "role": "Cargo",
+          "habitat": false
+        },
+        {
+          "name": "Cargo-2",
+          "role": "Cargo",
+          "habitat": false
+        },
+        {
+          "name": "Cargo-3",
+          "role": "Cargo",
+          "habitat": false
+        },
+        {
+          "name": "Cargo-4",
+          "role": "TankerDepot",
+          "habitat": false
+        },
+        {
+          "name": "Cargo-5",
+          "role": "TankerDepot",
+          "habitat": false
+        }
+      ],
+      "crew": 0,
+      "cargo": {
+        "solar_area_m2": 5000,
+        "battery_kwh": 1000,
+        "nuclear_units": 30,
+        "isru_capacity_kg_sol": 3000,
+        "ice_capacity_kg_sol": 3000,
+        "greenhouse_m2": 200,
+        "hab_volume_m3": 0,
+        "eclss_crew_capacity": 16,
+        "food_kg": 30000,
+        "water_kg": 20000,
+        "o2_kg": 5000,
+        "n2_kg": 8000,
+        "h2_kg": 0,
+        "robots": 20,
+        "spares": [
+          {
+            "class": "eclss_oru",
+            "units": 60,
+            "unit_kg": 50
+          },
+          {
+            "class": "isru_mech",
+            "units": 40,
+            "unit_kg": 80
+          },
+          {
+            "class": "isru_stack",
+            "units": 30,
+            "unit_kg": 40
+          },
+          {
+            "class": "mining_mech",
+            "units": 35,
+            "unit_kg": 120
+          },
+          {
+            "class": "power_electronics",
+            "units": 40,
+            "unit_kg": 20
+          },
+          {
+            "class": "greenhouse_mech",
+            "units": 15,
+            "unit_kg": 25
+          },
+          {
+            "class": "robotics",
+            "units": 60,
+            "unit_kg": 15
+          }
+        ]
+      }
+    },
+    {
+      "sol": 776,
+      "label": "Crew wave (launched Apr 2033)",
+      "ships": [
+        {
+          "name": "Heart of Gold",
+          "role": "CrewTransport",
+          "habitat": true
+        },
+        {
+          "name": "Aurora",
+          "role": "CrewTransport",
+          "habitat": true
+        },
+        {
+          "name": "Cargo-6",
+          "role": "Cargo",
+          "habitat": false
+        }
+      ],
+      "crew": 12,
+      "cargo": {
+        "solar_area_m2": 3000,
+        "battery_kwh": 500,
+        "nuclear_units": 5,
+        "isru_capacity_kg_sol": 0,
+        "ice_capacity_kg_sol": 1000,
+        "greenhouse_m2": 300,
+        "hab_volume_m3": 500,
+        "eclss_crew_capacity": 8,
+        "food_kg": 40000,
+        "water_kg": 10000,
+        "o2_kg": 3000,
+        "n2_kg": 5000,
+        "h2_kg": 0,
+        "robots": 20,
+        "spares": [
+          {
+            "class": "eclss_oru",
+            "units": 60,
+            "unit_kg": 50
+          },
+          {
+            "class": "isru_mech",
+            "units": 30,
+            "unit_kg": 80
+          },
+          {
+            "class": "isru_stack",
+            "units": 20,
+            "unit_kg": 40
+          },
+          {
+            "class": "mining_mech",
+            "units": 30,
+            "unit_kg": 120
+          },
+          {
+            "class": "power_electronics",
+            "units": 30,
+            "unit_kg": 20
+          },
+          {
+            "class": "greenhouse_mech",
+            "units": 15,
+            "unit_kg": 25
+          },
+          {
+            "class": "robotics",
+            "units": 60,
+            "unit_kg": 15
+          }
+        ]
+      }
+    },
+    {
+      "sol": 1560,
+      "label": "Resupply wave (launched May 2035)",
+      "ships": [
+        {
+          "name": "Cargo-9",
+          "role": "Cargo",
+          "habitat": false
+        },
+        {
+          "name": "Cargo-10",
+          "role": "Cargo",
+          "habitat": false
+        },
+        {
+          "name": "Cargo-11",
+          "role": "Cargo",
+          "habitat": false
+        }
+      ],
+      "crew": 0,
+      "cargo": {
+        "solar_area_m2": 2000,
+        "battery_kwh": 1000,
+        "nuclear_units": 5,
+        "isru_capacity_kg_sol": 1000,
+        "ice_capacity_kg_sol": 1000,
+        "greenhouse_m2": 200,
+        "hab_volume_m3": 0,
+        "eclss_crew_capacity": 4,
+        "food_kg": 30000,
+        "water_kg": 5000,
+        "o2_kg": 4000,
+        "n2_kg": 5000,
+        "h2_kg": 0,
+        "robots": 30,
+        "spares": [
+          {
+            "class": "eclss_oru",
+            "units": 80,
+            "unit_kg": 50
+          },
+          {
+            "class": "isru_mech",
+            "units": 40,
+            "unit_kg": 80
+          },
+          {
+            "class": "isru_stack",
+            "units": 30,
+            "unit_kg": 40
+          },
+          {
+            "class": "mining_mech",
+            "units": 40,
+            "unit_kg": 120
+          },
+          {
+            "class": "power_electronics",
+            "units": 50,
+            "unit_kg": 20
+          },
+          {
+            "class": "greenhouse_mech",
+            "units": 20,
+            "unit_kg": 25
+          },
+          {
+            "class": "robotics",
+            "units": 80,
+            "unit_kg": 15
+          }
+        ]
+      }
+    }
+  ],
+  "return_windows_sols": [
+    1380,
+    2140
+  ]
+}

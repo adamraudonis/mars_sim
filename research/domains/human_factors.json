@@ -1,0 +1,494 @@
+{
+  "domain": "human_factors",
+  "parameters": [
+    {
+      "id": "human_factors.time.sleep_scheduled_h_per_cm_day",
+      "name": "Scheduled sleep per crewmember per day",
+      "value": 8.5,
+      "unit": "h/CM-day",
+      "range_min": 8.0,
+      "range_max": 8.5,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (Langston 2005, ISS)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Flight actuals: astronauts sleep only ~6.09 h/night on ISS (Barger et al. 2014, Lancet Neurol 13:904). Schedule 8.5 h; model the deficit as a performance risk, not recoverable labor. Scale by 1.0275 for per-sol budgets. An additional invariant 1.5 h/CM-day of pre-sleep (1.0) + post-sleep (0.5) time, including personal hygiene, brackets the sleep period (BVAD Table 3-28)."
+    },
+    {
+      "id": "human_factors.time.scheduled_work_h_per_cm_workday",
+      "name": "Scheduled work (systems+utilization+maintenance ops) per workday",
+      "value": 6.5,
+      "unit": "h/CM-workday",
+      "range_min": 6.0,
+      "range_max": 8.0,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28; ISS standard workweek",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "5 workdays + 2 weekend days/week (weekend has only ~0.3 h/d payload tending); 8 vacation days/yr. Mars surface work rate needs +0.7 h/CM-d vs ISS in NASA integrated model (Stromgren 2015)."
+    },
+    {
+      "id": "human_factors.time.exercise_h_per_cm_day",
+      "name": "Exercise incl. setup, stow, hygiene per day",
+      "value": 2.5,
+      "unit": "h/CM-day",
+      "range_min": 1.5,
+      "range_max": 3.0,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Device time ~1.5 h (aerobic+resistive), rest is overhead. BVAD assumes -0.5 h/d in hypogravity (surface); transit may require more. 7 days/week including rest days."
+    },
+    {
+      "id": "human_factors.time.meals_h_per_cm_day",
+      "name": "Meals (prep+consumption+cleanup) per day",
+      "value": 3.0,
+      "unit": "h/CM-day",
+      "range_min": 2.5,
+      "range_max": 3.5,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (1.0 h per meal x 3)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Prepackaged food system. Does not diminish on rest days. Preparation component broken out separately in hf.time.food_prep_* parameters."
+    },
+    {
+      "id": "human_factors.time.planning_overhead_h_per_cm_workday",
+      "name": "Planning/reporting/work-prep overhead per workday",
+      "value": 2.0,
+      "unit": "h/CM-workday",
+      "range_min": 1.5,
+      "range_max": 3.0,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (DPC 0.5 + plan review/report 1.0 + work prep 0.5)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Mars autonomy (4-24 min one-way light time) shifts this from ground-conference to onboard planning; NASA Mars crew time model increased training/work-prep liens for autonomous ops."
+    },
+    {
+      "id": "human_factors.time.housekeeping_h_per_cm_week",
+      "name": "Housekeeping and laundry per week",
+      "value": 4.0,
+      "unit": "h/CM-week",
+      "range_min": 2.0,
+      "range_max": 7.0,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (2.0 h on each of 2 weekend days)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "ISS actual scheduling. Larger habitats with dust ingress (Mars EVA ops) plausibly need more; upper range is an engineering allowance."
+    },
+    {
+      "id": "human_factors.time.recreation_h_per_cm_weekend_day",
+      "name": "Recreation/off-duty block per weekend day (psychological constraint)",
+      "value": 6.0,
+      "unit": "h/CM-weekend-day",
+      "range_min": 4.0,
+      "range_max": 8.0,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "Treat as a hard scheduling constraint (2 contiguous rest days/week) for behavioral health; includes private family/psych conferences ~1 h/wk. Not harvestable labor except in short (<28 d) surge periods."
+    },
+    {
+      "id": "human_factors.time.vst_h_per_cm_week_surface",
+      "name": "Variably-Scheduled Time (taxable labor pool) per week, planetary surface",
+      "value": 69.7,
+      "unit": "h/CM-week",
+      "range_min": 50.0,
+      "range_max": 76.7,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-29 and sect. 3.2.5",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Includes work, meals, housekeeping, LSS ops. 67.2 h/wk in weightlessness (transit). Max (76.7) sustainable <=28 days per Skylab. Min 50 = minimum expected work output. Per sol multiply daily value by 1.0275."
+    },
+    {
+      "id": "human_factors.time.food_prep_prepackaged_h_per_cm_day",
+      "name": "Food preparation labor, fully prepackaged food system",
+      "value": 0.17,
+      "unit": "h/CM-day",
+      "range_min": 0.12,
+      "range_max": 0.25,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Shuttle experience 45-90 min/d for crew of 6)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Subset of the 3.0 h/d meals block. Use for resupplied-food scenarios."
+    },
+    {
+      "id": "human_factors.time.food_prep_bioregenerative_h_per_cm_day",
+      "name": "Food preparation labor, fully crop-based (bioregenerative) diet",
+      "value": 0.83,
+      "unit": "h/CM-day",
+      "range_min": 0.5,
+      "range_max": 1.15,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Hunter model; LMLSTP Phase III measured 4.6 CM-h/d for crew of 4)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "EXCLUDES crop processing into ingredients (unquantified in BVAD) and crop tending (belongs to food/plant domain). 50/50 mixed diet = 0.50 h/CM-day. Major labor lever for settlement-scale food closure."
+    },
+    {
+      "id": "human_factors.maint.eclss_h_per_habitat_day",
+      "name": "ECLSS preventive+corrective upkeep per habitat per day (2-3 crew scale)",
+      "value": 3.15,
+      "unit": "h/habitat-day",
+      "range_min": 3.0,
+      "range_max": 3.3,
+      "source": "Russell & Klaus 2007, Reliab. Eng. Syst. Saf. 92:808-820 (ISS/Mir-derived)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832006001050",
+      "confidence": "medium",
+      "notes": "Per habitat, not per crewmember; scales sub-linearly with crew. Baseline for ISS-class ECLSS technology; regenerative closure increases it."
+    },
+    {
+      "id": "human_factors.maint.corrective_h_per_cm_sol",
+      "name": "Corrective (unscheduled) maintenance, expected value",
+      "value": 0.44,
+      "unit": "h/CM-sol",
+      "range_min": 0.16,
+      "range_max": 1.26,
+      "source": "Stromgren et al. 2021, IEEE Aerospace, NTRS 20210026843 (lunar Surface Habitat, ISS component data: expected 24.7 h per 28-day 2-crew mission; 50th pct 9.0 h, 99th pct 70.5 h)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210026843/downloads/IEEE%20Assessment%20of%20Crew%20Time%20for%20Maintenance%20and%20Repairs%20Activities%20for%20Lunar%20Surface%20Missions.pdf",
+      "confidence": "medium",
+      "notes": "Right-skewed (lognormal-like): range_min=50th pct, range_max=99th pct. ECLSS dominates. Scales with installed equipment count, not crew size; renormalize per habitat for settlement scale."
+    },
+    {
+      "id": "human_factors.eva.max_h_per_cm_week",
+      "name": "Maximum EVA time per crewmember per week",
+      "value": 24.0,
+      "unit": "h/CM-week",
+      "range_min": 16.0,
+      "range_max": 24.0,
+      "source": "NASA HAT EVA team constraint, in Stromgren et al. 2015, NTRS 20150009469",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20150009469/downloads/20150009469.pdf",
+      "confidence": "medium",
+      "notes": "With one full rest day per 7 days. NASA model also imposes 30-day post-landing reconditioning before first EVA (long-stay). BVAD lunar outpost: 80 CM-h/wk total EVA at 7 two-person sorties/wk."
+    },
+    {
+      "id": "human_factors.eva.iss_prep_post_crew_h_per_eva",
+      "name": "ISS EVA total prep + post crew-hours per EVA (actuals, microgravity EMU)",
+      "value": 74.1,
+      "unit": "crew-h/EVA",
+      "range_min": 50.0,
+      "range_max": 90.0,
+      "source": "NASA EVA-EXP-0031 figures cited in Griffin, AIAA 2020-4170 (58.25 h prep + 15.83 h post, typically 2-person EVA)",
+      "source_url": "https://spacearchitect.org/pubs/AIAA-2020-4170.pdf",
+      "confidence": "high",
+      "notes": "Total crew-hours across EV+IV crew over several days: procedures, tool config, suit servicing, prebreathe. Work efficiency index 0.39-0.51. Upper bound / legacy-ops anchor for Mars EVA overhead trades. ISS gas cost: ~9.1 kg prebreathe O2 + 1.8 kg airlock air lost per EVA."
+    },
+    {
+      "id": "human_factors.eva.mars_overhead_h_per_cm_eva",
+      "name": "Mars surface EVA overhead per crewmember per sortie (design case)",
+      "value": 1.5,
+      "unit": "h/CM-EVA",
+      "range_min": 1.0,
+      "range_max": 3.0,
+      "source": "Estimate: exploration atmosphere 56.5 kPa/34% O2 gives ~15-min prebreathe (Abercromby et al. 2015, Acta Astronautica 109:76-87) + don/doff, checkout, dust mitigation, amortized suit servicing",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576514004937",
+      "confidence": "low",
+      "notes": "No flight data for planetary suits since Apollo; sensitivity-test between this and ISS actuals. Assumes suitport or high-cadence airlock ops."
+    },
+    {
+      "id": "human_factors.eva.o2_loss_kg_per_cm_h",
+      "name": "EVA oxygen usage + leakage per suited hour",
+      "value": 0.092,
+      "unit": "kg/CM-h",
+      "range_min": 0.069,
+      "range_max": 0.11,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (lunar surface EVA values)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "high",
+      "notes": "xEMU suitport scenario: 0.10 kg/CM-h + 0.54 kg/CM-EVA fixed (N2 purge dominated). Metabolic rate suited: 295-352 W (Apollo surface avg ~1030 kJ/h)."
+    },
+    {
+      "id": "human_factors.eva.cooling_water_loss_kg_per_cm_h",
+      "name": "EVA cooling water (sublimator/evaporator) loss per suited hour",
+      "value": 0.34,
+      "unit": "kg/CM-h",
+      "range_min": 0.25,
+      "range_max": 0.76,
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (polar 0.25-0.5; equatorial 0.46-0.76)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "confidence": "medium",
+      "notes": "Thermal-environment dependent; lunar-derived. Mars ambient (colder, CO2 atmosphere) may allow radiator-augmented PLSS with lower water use; treat as upper-bound consumable."
+    },
+    {
+      "id": "human_factors.hab.nhv_min_m3_per_cm",
+      "name": "Minimum acceptable Net Habitable Volume per crewmember, long-duration",
+      "value": 25.0,
+      "unit": "m3/CM",
+      "range_min": 25.0,
+      "range_max": 50.0,
+      "source": "Whitmire et al. 2015, NASA/TM-2015-218564 (SME consensus, NTRS 20140016951); consistent with NASA-STD-3001 Vol 2 task-based NHV requirement",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf",
+      "confidence": "high",
+      "notes": "Floor for ~1-2.5 yr missions with countermeasures in place; permanent settlement plausibly needs more (no data; range_max is engineering allowance). Crew of 6 -> 150 m3 NHV minimum."
+    },
+    {
+      "id": "human_factors.hab.private_quarters_m3_per_cm",
+      "name": "Private crew quarters volume per crewmember",
+      "value": 5.4,
+      "unit": "m3/CM",
+      "range_min": 2.1,
+      "range_max": 10.0,
+      "source": "Whitmire et al. 2015 consensus report (5.4 m3 allocation); ISS USOS CQ flight actual 2.1 m3 (Broyan et al., 08ICES-0222)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf",
+      "confidence": "high",
+      "notes": "2.1 m3 (ISS) is the demonstrated floor and is considered marginal for multi-year missions; 5.4 m3 recommended for long-duration. Include radiation-augmented quarters if used as SPE shelter."
+    },
+    {
+      "id": "human_factors.rad.gcr_surface_msv_per_day",
+      "name": "Mars surface GCR dose equivalent rate (Gale crater, solar max era)",
+      "value": 0.64,
+      "unit": "mSv/day",
+      "range_min": 0.5,
+      "range_max": 0.8,
+      "source": "Hassler et al. 2014, Science 343:1244797 (MSL RAD); solar-cycle range per Guo et al. 2021, Astron. Astrophys. Rev. 29:8",
+      "source_url": "https://www.science.org/doi/10.1126/science.1244797",
+      "confidence": "high",
+      "notes": "+/-0.12 measurement uncertainty; = 0.66 mSv/sol = ~233 mSv/Earth-yr. Absorbed dose 0.21 mGy/d. Higher at solar min and at higher elevation (thinner atmosphere). Thin-detector point dose equivalent; ICRP effective dose ~30% lower (Martinez-Sierra 2024). verified correction: the 'Martinez-Sierra 2024' attribution for the ICRP-effective-dose reduction is a phantom author for arXiv:2409.02001 (actually Ralha et al. 2024)."
+    },
+    {
+      "id": "human_factors.rad.gcr_transit_msv_per_day",
+      "name": "Interplanetary transit GCR dose equivalent rate (light shielding, solar max)",
+      "value": 1.84,
+      "unit": "mSv/day",
+      "range_min": 1.5,
+      "range_max": 3.0,
+      "source": "Zeitlin et al. 2013, Science 340:1080-1084 (MSL RAD cruise, 2011-12)",
+      "source_url": "https://www.science.org/doi/10.1126/science.1235989",
+      "confidence": "high",
+      "notes": "+/-0.33 uncertainty; measured at solar max behind ~10-40 g/cm2 nonuniform shielding. Solar-min GCR can be ~50-60% higher. Round-trip fast-transit (~360 d) GCR alone ~0.66 Sv. SPE contributions additional and stochastic."
+    },
+    {
+      "id": "human_factors.rad.career_limit_msv",
+      "name": "NASA career effective dose limit",
+      "value": 600.0,
+      "unit": "mSv",
+      "range_min": null,
+      "range_max": null,
+      "source": "NASA-STD-3001 Vol 1 Rev B (2022), per 2021 NAS review; universal all ages/sexes, 3% mean REID basis",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+      "confidence": "high",
+      "notes": "Binding constraint: an unmitigated conjunction mission (~360 d transit + 500 sols surface) accrues ~1.0 Sv. Dose tracker should flag crew approaching limit and drive shielding/timing trades. A settlement sim may need its own (non-NASA) risk policy for permanent residents."
+    },
+    {
+      "id": "human_factors.rad.spe_30day_bfo_limit_mgy_eq",
+      "name": "Short-term (30-day) blood-forming-organ dose limit",
+      "value": 250.0,
+      "unit": "mSv NASA effective dose per design-reference SPE (Oct 1989 spectrum)",
+      "range_min": null,
+      "range_max": null,
+      "source": "NASA-STD-3001 Vol 1 Rev B [V1 4031], per OCHMO-TB-020 Rev E (12/2022); legacy 30-day BFO 250 mGy-Eq limit is NCRP-132/pre-Rev-B and Townsend et al. 2018",
+      "source_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+      "confidence": "high",
+      "notes": "Deterministic (acute) effects limit; the design driver for SPE storm shelters, separate from the 600 mSv career (cancer) limit. verified correction: NASA-STD-3001 Vol 1 Rev B (2022) does NOT contain a 30-day BFO 250 mGy-Eq limit; requirement [V1 4031] is <250 mSv NASA effective dose per design-reference SPE (Oct 1989 spectrum). The 30-day BFO 250 / 1-yr 500 mGy-Eq limits are the retired NCRP-132/pre-Rev-B values (still used in shelter-design literature). A rolling-30-day-BFO tracker would enforce a retired requirement."
+    },
+    {
+      "id": "human_factors.rad.mars_atm_column_g_cm2",
+      "name": "Mean vertical atmospheric shielding column at datum",
+      "value": 23.0,
+      "unit": "g/cm2 (mean vertical column at low-elevation sites, Gale-like, -4.4 km MOLA; ~16 g/cm2 at MOLA datum)",
+      "range_min": 16.0,
+      "range_max": 30.0,
+      "source": "Guo et al. 2021, Astron. Astrophys. Rev. 29:8; Ralha et al. 2024, arXiv:2409.02001",
+      "source_url": "https://arxiv.org/abs/2409.02001",
+      "confidence": "high",
+      "notes": "Slant-path average shielding over the sky is substantially higher than vertical. Removes most SPE protons <150 MeV: SPE shelters are primarily a transit problem. Seasonal pressure cycle modulates surface dose by a few percent. verified correction: arXiv:2409.02001 is Ralha et al. 2024 (no author 'Martinez-Sierra'); 23 g/cm2 is the mean column at Gale/low-elevation sites (-4.4 km MOLA), not the datum. At the MOLA datum mean column is ~16 g/cm2 - relabel to avoid double-counting elevation scaling (~2%/(g/cm2) dose sensitivity)."
+    },
+    {
+      "id": "human_factors.rad.regolith_neutron_buildup_g_cm2",
+      "name": "Dry-regolith depth below which shielding is counterproductive (neutron buildup)",
+      "value": 200.0,
+      "unit": "g/cm2",
+      "range_min": 88.0,
+      "range_max": 250.0,
+      "source": "Röstel et al. 2020, JGR Planets 125:e2019JE006246 (GEANT4/AtRIS, RAD-validated): equivalent dose peaks at 30-40 cm (88-102 g/cm2) and only drops below surface value beyond ~200 g/cm2 (0.7-0.9 m dry rock)",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246",
+      "confidence": "medium",
+      "notes": "Model-critical: <0.7 m of dry regolith cover INCREASES crew equivalent dose (up to ~+10-25% at the ~30 cm peak). Buildup is much weaker for hydrogen-rich (icy) regolith. range_min = buildup peak location."
+    },
+    {
+      "id": "human_factors.rad.regolith_depth_halve_gcr_m",
+      "name": "Dry regolith depth to roughly halve surface GCR equivalent dose",
+      "value": 1.26,
+      "unit": "m",
+      "range_min": 1.0,
+      "range_max": 1.7,
+      "source": "Röstel et al. 2020, Table 3: 1.26 m andesite (rho=2.8 g/cm3, ~350 g/cm2) reduces water-sphere equivalent dose to 200 mSv/yr, <=half the dry-surface value; sandstone 1.64 m",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246",
+      "confidence": "medium",
+      "notes": "In water-sphere equivalent-dose metric at medium solar modulation (Phi=580 MV). Loose regolith (rho~1.5-1.7) needs proportionally more thickness for equal areal density. Hydrated regolith halves dose in substantially less depth."
+    },
+    {
+      "id": "human_factors.rad.regolith_depth_100msv_yr_m",
+      "name": "Regolith depth to bring annual equivalent dose under 100 mSv/yr",
+      "value": 1.6,
+      "unit": "m",
+      "range_min": 0.8,
+      "range_max": 2.5,
+      "source": "Röstel et al. 2020 (0.8-2.5 m depending on composition; hydrated less); Zhang et al. 2022 JGR Planets: 1-1.6 m at representative sites",
+      "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246",
+      "confidence": "medium",
+      "notes": "100 mSv/yr threshold chosen as the level above which lifetime cancer risk increase is evident. Water-ice-rich regolith (10-50 wt%) is the most mass-efficient cover; 10% subsurface water content alone cuts above-ground equivalent dose ~36%."
+    },
+    {
+      "id": "human_factors.rad.spe_shelter_areal_density_g_cm2",
+      "name": "Dedicated SPE storm-shelter shielding (transit; aluminum-equivalent)",
+      "value": 20.0,
+      "unit": "g/cm2",
+      "range_min": 10.0,
+      "range_max": 40.0,
+      "source": "Townsend et al. 2018, Life Sci. Space Res. 17:32-39 (PMID 29753411); Kim et al. 2006: 5 g/cm2 Al insufficient for BFO in Aug-1972-class event; ~10 g/cm2 meets 30-day BFO limits; 20+ g/cm2 (hydrogenous) for extreme events",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/29753411/",
+      "confidence": "medium",
+      "notes": "Water/polyethylene ~1.5-2x more effective than Al per g/cm2. Occupancy 12-36 h/event (all crew), warning minutes-hours: costs crew time and interrupts EVA. On surface, any >=200 g/cm2 regolith-covered module trivially satisfies SPE sheltering."
+    },
+    {
+      "id": "human_factors.med.events_per_person_year",
+      "name": "Clinical medical events (all severities), long-duration spaceflight",
+      "value": 3.4,
+      "unit": "events/person-year",
+      "range_min": 2.5,
+      "range_max": 4.5,
+      "source": "Crucian et al. 2016, Int. J. Gen. Med. 9:383-391 (ISS incidence; skin rash 1.12/py, upper-respiratory 0.97/py leading; infections ~0.6/py)",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098747/",
+      "confidence": "medium",
+      "notes": "Mostly minor/self-limited. Model as Poisson with per-category labor cost (patient downtime hours-days + caregiver ~0.5-2 h/d for significant events). ISS cohort is screened/healthy; settlement demographics would raise rates."
+    },
+    {
+      "id": "human_factors.med.evac_class_events_per_person_year",
+      "name": "Evacuation-class medical events",
+      "value": 0.017,
+      "unit": "events/person-year",
+      "range_min": 0.01,
+      "range_max": 0.06,
+      "source": "Derived estimate from Antonsen et al. 2022 Fig. 4 (EVAC 0.3-1% per <42-d mission, 4 crew, unlimited ISS capability); not a stated IMM rate",
+      "source_url": "https://www.nature.com/articles/s41526-022-00193-9",
+      "confidence": "medium",
+      "notes": "No actual ISS medical evacuation has occurred. For Mars (no evac possible): treat as severe-event rate requiring definitive onboard care; IMM projects >10% probability of an evac-class condition on a 730+ day mission even with ISS-level capability, and ~0.01 floor on medical loss-of-crew-life per 1195-d, 4-crew mission. verified correction: Antonsen et al. 2022 reports mission-level IMM probabilities (EVAC 0.3-1% for <42-day missions, >10% for 730+ day missions), not a 0.017 events/person-year rate; the value is derivable from those figures but should be labeled a derived estimate, not a published IMM rate."
+    }
+  ],
+  "modeling_notes": "LABOR SUPPLY (per CM-sol, sol = 24.6597 h; ISS 24.0-h budgets scaled by 1.0275): Invariant time (sleep 8.5 + pre/post-sleep 1.5 + exercise 2.5) ~12.8 h/sol; on workdays add planning 2.0 and meals 3.0, leaving ~6.7-6.9 h/sol of assignable work inside the 6.5-h-equivalent ops block; weekly liens: housekeeping 4 h/CM-wk, food prep 0.17 (packaged) to 0.83+ (grown) h/CM-sol, ECLSS upkeep 3.0-3.3 h/habitat-day, corrective maintenance stochastic (mean 0.44, 99th pct 1.26 h/CM-sol, lognormal, scales with installed equipment). Schedule 5 workdays + 2 rest days per 7-sol week (rest days are a behavioral-health constraint; surge >VST max 76.7 h/wk sustainable <=28 d). EVA: cap 24 h/CM/wk with 1 full rest day; charge per-CM overhead (1.5 h design / up to ISS-actual 74 crew-h per EVA for sensitivity), O2 0.092 kg/CM-h, cooling water 0.25-0.76 kg/CM-h, suitport fixed 0.54 kg O2/CM-EVA; 30-sol post-landing reconditioning with no EVA. Cross-check: NASA's integrated Mars model yields only ~8.5% of gross surface crew-hours as science/utilization - if your sim gives >>15%, liens are being dropped. RADIATION TRACKER: L0 dose_mSv = 1.84*days_transit + 0.66*S*sols_surface, S = shielding transfer factor; track vs 600 mSv career and 250 mGy-Eq/30-day BFO. L1: modulate GCR +/-20% with 11-yr solar cycle (anti-correlated with sunspot number), atmospheric column correction around 23 g/cm2, S(depth) lookup MUST reproduce the dry-regolith neutron buildup hump (S rises to ~1.1-1.25 at ~90 g/cm2, crosses 1.0 at ~200 g/cm2, ~0.5 at ~350 g/cm2, <=0.3 beyond ~2 m); SPEs as Poisson events (lambda ~2-6/yr solar max, ~0.2-1/yr min) mostly negligible on surface behind atmosphere but requiring 12-36 h shelter occupancy (labor hit) and dominating transit acute risk. L2: BON2020/DLR GCR spectra + HZETRN/GEANT4 response matrices through time-varying column density (diurnal/seasonal pressure from MCD, ~5% sub-sol dose modulation), ICRP effective dose on phantoms, validated against RAD 0.64 mSv/d at Gale (Phi~580 MV). METRIC CONSISTENCY: RAD point dose-equivalent, Rostel water-sphere equivalent dose, and ICRP effective dose differ +/-30-50%; pick one (recommend effective dose) and convert sources consistently. MEDICAL: Poisson 3.4 minor + 0.017 evac-class events/person-yr with labor costs; no-evac reality means severe events convert to onboard care demand and possible crew loss (~0.01/mission floor).",
+  "key_findings": [
+    "ISS crew time budget (BVAD Table 3-28) is fully quantified and transfers to Mars with a 1.0275 sol scaling: 8.5 h sleep, 6.5 h scheduled work (5 d/wk), 2.5 h exercise, 3.0 h meals, 2.0 h planning overhead, 4 h/wk housekeeping; the taxable labor pool (VST) is 69.7 h/CM-week on a planetary surface (range 50-76.7).",
+    "After all liens, NASA's own integrated Mars crew-time model leaves only ~8.5% of gross surface crew-hours for science/utilization on a 460-sol stay - overhead, not science, dominates the human time economy.",
+    "Corrective maintenance is stochastic and right-skewed: expected ~0.44 h/CM-sol for an ISS-technology surface habitat but 99th percentile ~1.26 h/CM-sol (Stromgren 2021); ECLSS upkeep adds ~3.0-3.3 h/habitat-day (Russell & Klaus 2007).",
+    "EVA overhead spans two orders of magnitude between ISS actuals (~74 crew-h prep+post per EVA) and planetary design targets (~1.5 h/CM with the 56.5 kPa/34% O2 exploration atmosphere and 15-min prebreathe) - the single largest unproven human-factors assumption for Mars surface productivity.",
+    "Radiation is a binding design constraint: measured doses (0.64 mSv/day surface, Hassler 2014; 1.84 mSv/day transit, Zeitlin 2013) put an unmitigated conjunction mission at ~1.0 Sv versus NASA's 600 mSv career limit (NASA-STD-3001, 2021 standard).",
+    "Regolith shielding is non-monotonic: less than ~0.7-0.9 m (200 g/cm2) of dry regolith INCREASES equivalent dose via secondary neutrons; ~1.3 m dry rock halves it; 0.8-2.5 m brings it under 100 mSv/yr, and water-ice-rich regolith is dramatically more mass-efficient (Rostel 2020, Zhang 2022).",
+    "SPE storm shelters (~20 g/cm2, hydrogenous) are primarily a transit requirement - Mars's >=23 g/cm2 atmosphere suppresses surface SPE doses - but shelter occupancy (12-36 h/event) is a real crew-time and ops disruption.",
+    "Habitability floors for long missions: 25 m3 net habitable volume per person (Whitmire 2015 consensus) with ~5.4 m3 private quarters each (ISS's 2.1 m3 CQ is the demonstrated minimum), plus 2 contiguous rest days/week as a behavioral-health scheduling constraint.",
+    "Medical demand: ~3.4 clinical events/person-year (mostly minor, Crucian 2016), ~0.017 evac-class events/person-year (IMM); with no evacuation possible from Mars, IMM projects >10% probability of an evac-class condition per 730+ day mission and a ~1% floor on medical loss-of-crew-life for a 1195-day, 4-crew mission.",
+    "Astronauts actually sleep 6.1 h vs the 8.5 h scheduled (Barger 2014) - schedule the full 8.5 h and model the deficit as a fatigue/performance risk rather than harvestable labor."
+  ],
+  "sources": [
+    {
+      "title": "Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2",
+      "org": "NASA",
+      "year": 2022,
+      "url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+    },
+    {
+      "title": "Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover (Hassler et al.)",
+      "org": "Science 343:1244797",
+      "year": 2014,
+      "url": "https://www.science.org/doi/10.1126/science.1244797"
+    },
+    {
+      "title": "Measurements of Energetic Particle Radiation in Transit to Mars on the Mars Science Laboratory (Zeitlin et al.)",
+      "org": "Science 340:1080",
+      "year": 2013,
+      "url": "https://www.science.org/doi/10.1126/science.1235989"
+    },
+    {
+      "title": "NASA-STD-3001 Vol 1 Rev B and OCHMO Radiation Protection Technical Brief (600 mSv career limit)",
+      "org": "NASA OCHMO",
+      "year": 2022,
+      "url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf"
+    },
+    {
+      "title": "Minimum Acceptable Net Habitable Volume for Long-Duration Exploration Missions (Whitmire et al., NASA/TM-2015-218564)",
+      "org": "NASA HRP",
+      "year": 2015,
+      "url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf"
+    },
+    {
+      "title": "Subsurface Radiation Environment of Mars and Its Implication for Shielding Protection of Future Habitats (Röstel et al.)",
+      "org": "JGR Planets 125:e2019JE006246",
+      "year": 2020,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246"
+    },
+    {
+      "title": "Mars Radiation Environment Under Different Atmospheric and Regolith Depths (Zhang et al.)",
+      "org": "JGR Planets e2021JE007157",
+      "year": 2022,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JE007157"
+    },
+    {
+      "title": "Radiation environment for future human exploration on the surface of Mars (Guo et al. review)",
+      "org": "Astron. Astrophys. Rev. 29:8",
+      "year": 2021,
+      "url": "https://link.springer.com/article/10.1007/s00159-021-00136-5"
+    },
+    {
+      "title": "Developing a Crew Time Model for Human Exploration Missions to Mars (Stromgren et al., IEEE Aerospace)",
+      "org": "NASA NTRS 20150009469",
+      "year": 2015,
+      "url": "https://ntrs.nasa.gov/api/citations/20150009469/downloads/20150009469.pdf"
+    },
+    {
+      "title": "Assessment of Crew Time for Maintenance and Repair Activities for Lunar Surface Missions (Stromgren et al., IEEE Aerospace)",
+      "org": "NASA NTRS 20210026843",
+      "year": 2021,
+      "url": "https://ntrs.nasa.gov/api/citations/20210026843/downloads/IEEE%20Assessment%20of%20Crew%20Time%20for%20Maintenance%20and%20Repairs%20Activities%20for%20Lunar%20Surface%20Missions.pdf"
+    },
+    {
+      "title": "Prevalence of sleep deficiency and use of hypnotic drugs in astronauts (Barger et al.)",
+      "org": "Lancet Neurology 13:904",
+      "year": 2014,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25127232/"
+    },
+    {
+      "title": "Maintenance, reliability and policies for orbital space station life support systems (Russell & Klaus)",
+      "org": "Reliab. Eng. Syst. Saf. 92:808",
+      "year": 2007,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832006001050"
+    },
+    {
+      "title": "Incidence of clinical symptoms during long-duration orbital spaceflight (Crucian et al.)",
+      "org": "Int. J. Gen. Med. 9:383",
+      "year": 2016,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098747/"
+    },
+    {
+      "title": "Estimating medical risk in human spaceflight (Antonsen et al.)",
+      "org": "npj Microgravity 8:8",
+      "year": 2022,
+      "url": "https://www.nature.com/articles/s41526-022-00193-9"
+    },
+    {
+      "title": "The Wait-less EVA Solution: Single-Person Spacecraft (Griffin, AIAA 2020-4170; ISS EVA overhead per NASA EVA-EXP-0031)",
+      "org": "AIAA",
+      "year": 2020,
+      "url": "https://spacearchitect.org/pubs/AIAA-2020-4170.pdf"
+    },
+    {
+      "title": "Modeling a 15-min EVA prebreathe protocol using NASA's exploration atmosphere 56.5 kPa/34% O2 (Abercromby et al.)",
+      "org": "Acta Astronautica 109:76",
+      "year": 2015,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576514004937"
+    },
+    {
+      "title": "Solar particle event storm shelter requirements for missions beyond low Earth orbit (Townsend et al.)",
+      "org": "Life Sci. Space Res. 17:32",
+      "year": 2018,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29753411/"
+    },
+    {
+      "title": "International Space Station USOS Crew Quarters Development (Broyan et al., 08ICES-0222)",
+      "org": "NASA NTRS 20080013462",
+      "year": 2008,
+      "url": "https://ntrs.nasa.gov/api/citations/20080013462/downloads/20080013462.pdf"
+    },
+    {
+      "title": "Effective dose equivalent estimation for humans on Mars (Martinez-Sierra et al.)",
+      "org": "arXiv:2409.02001",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2409.02001"
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "domain": "power_solar",
+  "parameters": [
+    {
+      "id": "power_solar.toa_irradiance_mean",
+      "name": "Mars mean solar irradiance at top of atmosphere (TOA, normal incidence)",
+      "value": 586,
+      "unit": "W/m2",
+      "range_min": 490,
+      "range_max": 718,
+      "source": "Computed from TSI 1361 W/m2 at 1.5236915 AU; Appelbaum & Flood NASA TM-102299 use 590 (S=1371). Range = aphelion..perihelion.",
+      "source_url": "https://ntrs.nasa.gov/citations/19890018252",
+      "confidence": "high",
+      "notes": "Use 590 W/m2 when implementing the A&F lookup tables for self-consistency; difference is 0.7%."
+    },
+    {
+      "id": "power_solar.toa_irradiance_perihelion",
+      "name": "TOA beam irradiance at perihelion (Ls~251 deg)",
+      "value": 717,
+      "unit": "W/m2",
+      "range_min": 713,
+      "range_max": 718,
+      "source": "NASA TM-102299 eq. (4): Gob = 590[1+e cos(Ls-248)]^2/(1-e^2)^2",
+      "source_url": "https://ntrs.nasa.gov/citations/19890018252",
+      "confidence": "high",
+      "notes": "Perihelion coincides with southern summer and the dust storm season."
+    },
+    {
+      "id": "power_solar.toa_irradiance_aphelion",
+      "name": "TOA beam irradiance at aphelion (Ls~71 deg)",
+      "value": 493,
+      "unit": "W/m2",
+      "range_min": 490,
+      "range_max": 494,
+      "source": "NASA TM-102299 eq. (4)",
+      "source_url": "https://ntrs.nasa.gov/citations/19890018252",
+      "confidence": "high",
+      "notes": "Peri/aphelion flux ratio 1.45 - dominant deterministic seasonal driver."
+    },
+    {
+      "id": "power_solar.orbit_eccentricity",
+      "name": "Mars orbital eccentricity",
+      "value": 0.093377,
+      "unit": "dimensionless",
+      "range_min": null,
+      "range_max": null,
+      "source": "NASA TM-102299 nomenclature (e = 0.093377); NSSDC Mars Fact Sheet 0.0935",
+      "source_url": "https://ntrs.nasa.gov/citations/19890018252",
+      "confidence": "high",
+      "notes": null
+    },
+    {
+      "id": "power_solar.ls_perihelion",
+      "name": "Areocentric longitude of perihelion",
+      "value": 251,
+      "unit": "deg",
+      "range_min": 248,
+      "range_max": 251,
+      "source": "Modern ephemeris/NSSDC Mars Fact Sheet (251 deg); A&F TM-102299 used 248 deg",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "notes": "Use 251 in new code; <1% insolation effect vs 248."
+    },
+    {
+      "id": "power_solar.obliquity",
+      "name": "Mars obliquity (axial tilt) for solar declination",
+      "value": 25.19,
+      "unit": "deg",
+      "range_min": 24.936,
+      "range_max": 25.19,
+      "source": "NSSDC Mars Fact Sheet; A&F TM-102299 eq. (7) used 24.936 deg. sin(dec) = sin(obliquity) sin(Ls)",
+      "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "confidence": "high",
+      "notes": null
+    },
+    {
+      "id": "power_solar.tau_clear_season",
+      "name": "Visible dust optical depth, clear (aphelion) season, low latitudes",
+      "value": 0.45,
+      "unit": "dimensionless",
+      "range_min": 0.3,
+      "range_max": 0.6,
+      "source": "MER 5-Mars-year record (Lemmon et al. 2015, NTRS 20150008268): Spirit <0.3, Opportunity <0.5 in aphelion season; Viking 'typically about 0.5' (TM-102299); ICES-2019-181 (NTRS 20190027303) non-storm background tau ~0.4",
+      "source_url": "https://ntrs.nasa.gov/citations/20150008268",
+      "confidence": "high",
+      "notes": "880 nm solar-imaging standard; minima ~0.2 observed. verified correction: prior source string misquoted ICES-2019-181 as 'planetary background ~0.48'; that paper states ~0.4. Value 0.45 (range 0.3-0.6) is unchanged and remains defensible."
+    },
+    {
+      "id": "power_solar.tau_dusty_season_background",
+      "name": "Dust optical depth, dusty (perihelion) season background (no global storm)",
+      "value": 1.0,
+      "unit": "dimensionless",
+      "range_min": 0.7,
+      "range_max": 2.0,
+      "source": "MER/MSL/Viking records: regional storms to tau 1.2-3.6 superposed (Lemmon et al. 2015; TM-102299 VL1 record max 3.25-3.6 in 1977 storms)",
+      "source_url": "https://ntrs.nasa.gov/citations/20150008268",
+      "confidence": "high",
+      "notes": "Ls 180-360; regional storms (days-weeks) add +1 to +2.5."
+    },
+    {
+      "id": "power_solar.tau_global_storm_peak",
+      "name": "Peak dust optical depth during a global (planet-encircling) dust storm",
+      "value": 9.5,
+      "unit": "dimensionless",
+      "range_min": 8.5,
+      "range_max": 10.8,
+      "source": "2018/MY34 GDS: MSL Mastcam tau=8.5 (Guzewich et al. 2019 GRL); Opportunity tau>10.7 lower limit (NTRS 20190027303)",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027303",
+      "confidence": "high",
+      "notes": "Site-dependent; A&F f-tables end at tau=6, extrapolate beyond."
+    },
+    {
+      "id": "power_solar.global_storm_frequency",
+      "name": "Global dust storm occurrence rate",
+      "value": 0.3,
+      "unit": "events per Mars year",
+      "range_min": 0.17,
+      "range_max": 0.5,
+      "source": "3 GDS in MY25/28/34 over ~10 Mars years (NTRS 20190027303); historical ~1 per 3 Mars years, aperiodic with gaps up to 6 MY",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027303",
+      "confidence": "medium",
+      "notes": "All observed GDS initiate at Ls 185-310 deg; model as Bernoulli per Mars year."
+    },
+    {
+      "id": "power_solar.global_storm_decay_timescale",
+      "name": "Global dust storm optical-depth exponential decay time",
+      "value": 43,
+      "unit": "sols",
+      "range_min": 40,
+      "range_max": 50,
+      "source": "MSL MY34 record: exponential decay, e-folding 43 sols (NTRS 20190027303, citing Guzewich et al. 2019)",
+      "source_url": "https://ntrs.nasa.gov/citations/20190027303",
+      "confidence": "high",
+      "notes": "Rise time ~1-2 weeks; total enhanced-tau duration ~100 sols."
+    },
+    {
+      "id": "power_solar.global_storm_design_duration",
+      "name": "Design-case dust storm duration at tau>=5 (NASA HEOMD sizing case)",
+      "value": 120,
+      "unit": "sols",
+      "range_min": 60,
+      "range_max": 150,
+      "source": "Rucker et al., Solar vs. Fission Surface Power for Mars (NTRS 20160002628): 120-day storm at average optical depth 5",
+      "source_url": "https://ntrs.nasa.gov/citations/20160002628",
+      "confidence": "medium",
+      "notes": "Conservative envelope vs observed ~100 sols enhanced tau in 2018."
+    },
+    {
+      "id": "power_solar.dust_obscuration_rate",
+      "name": "Solar array dust deposition (obscuration) rate, horizontal array, between cleanings",
+      "value": 0.28,
+      "unit": "%/sol",
+      "range_min": 0.05,
+      "range_max": 2.0,
+      "source": "Pathfinder 0.28%/sol first 30 sols (NASA/TM-2004-213367); InSight 0.2%/sol observed, 0.28%/sol steady-state model (Lorenz et al. 2020, doi:10.1029/2019EA000992); MER long-term ~0.14%/sol; envelope 0.05-2%/sol (Lorenz et al. 2021 P&SS 105337)",
+      "source_url": "https://doi.org/10.1029/2019EA000992",
+      "confidence": "high",
+      "notes": "x3-10 during storm fallout; ~x0.1 for near-vertical panels (Landis used 0.028%/sol)."
+    },
+    {
+      "id": "power_solar.cleaning_event_recovery_dust_factor",
+      "name": "Dust factor restored by a major natural cleaning event",
+      "value": 0.9,
+      "unit": "dimensionless",
+      "range_min": 0.8,
+      "range_max": 0.95,
+      "source": "MER flight history: 2014 Opportunity events boosted power ~70%, arrays imaged near-clean; frequency is site-specific - InSight saw no significant cleaning in 4 years (Lorenz et al. 2021)",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768",
+      "confidence": "low",
+      "notes": "Model as Poisson 0-6 events/Mars-year (site wind climate); do not rely on for design - assume active cleaning restores 0.95-1.0."
+    },
+    {
+      "id": "power_solar.pv_cell_efficiency_bol",
+      "name": "Flight III-V triple-junction cell efficiency, BOL, AM0 28 degC",
+      "value": 0.307,
+      "unit": "dimensionless",
+      "range_min": 0.275,
+      "range_max": 0.32,
+      "source": "Spectrolab XTJ Prime datasheet 7/2016 (company claim, flight product): 30.7% production average; SolAero ZTJ 29.5%; MER-era 3J ~27.5%; Mars-spectrum-adapted ~32% (Landis NTRS 20070010752)",
+      "source_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+      "confidence": "high",
+      "notes": "Radiation degradation negligible under Mars atmosphere (~20 g/cm2 shielding)."
+    },
+    {
+      "id": "power_solar.pv_power_temp_coeff",
+      "name": "Relative maximum-power temperature coefficient, 3J cell",
+      "value": -0.0022,
+      "unit": "1/degC",
+      "range_min": -0.0028,
+      "range_max": -0.0017,
+      "source": "Computed from Spectrolab XTJ Prime datasheet coefficients (dVmp/dT=-6.5 mV/degC on 2.390 V; dJmp/dT=+8.9 uA/cm2/degC on 17.4 mA/cm2)",
+      "source_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+      "confidence": "medium",
+      "notes": "Mars arrays run cold (-50 to +10 degC daytime): +8 to +15% relative efficiency vs 28 degC rating."
+    },
+    {
+      "id": "power_solar.pv_dust_spectrum_factor",
+      "name": "Efficiency multiplier for red-shifted dusty-sky spectrum (3J cells, tau~1)",
+      "value": 0.95,
+      "unit": "dimensionless",
+      "range_min": 0.88,
+      "range_max": 1.02,
+      "source": "Landis & Hyatt, The Solar Spectrum on the Martian Surface and its Effect on Photovoltaic Performance (NTRS 20070010752): dust absorbs blue, top junction becomes current-limiting",
+      "source_url": "https://ntrs.nasa.gov/citations/20070010752",
+      "confidence": "low",
+      "notes": "Worsens with tau; ~1.0 for Si or spectrum-matched cells."
+    },
+    {
+      "id": "power_solar.array_areal_density_system",
+      "name": "Mars surface array areal mass, system level (blanket + structure + deployment + electrical)",
+      "value": 1.5,
+      "unit": "kg/m2",
+      "range_min": 1.2,
+      "range_max": 2.9,
+      "source": "Compact Telescoping Surface Array study (NTRS 20190000437): 1500 kg per 1000 m2 goal, blanket 0.5-1.0 kg/m2; Rucker 2016 UltraFlex-based point ~2.9 kg/m2",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20190000437/downloads/20190000437.pdf",
+      "confidence": "medium",
+      "notes": "CTSA is a TRL 4-5 design goal; UltraFlex value has flight-adjacent pedigree."
+    },
+    {
+      "id": "power_solar.array_specific_power_mars_noon",
+      "name": "Array specific power at Mars surface noon, clear sky, equator",
+      "value": 43,
+      "unit": "W/kg",
+      "range_min": 33,
+      "range_max": 53,
+      "source": "CTSA study (NTRS 20190000437): 50-80 kW daytime from ~1500 kg, 1000 m2 (200 W/kg at 1 AU equivalent); UltraFlex flight wings 100-150 W/kg at 1 AU",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20190000437/downloads/20190000437.pdf",
+      "confidence": "medium",
+      "notes": "Equivalent ~19-30 kg per noon-peak kW, generation hardware only (no storage)."
+    },
+    {
+      "id": "power_solar.system_mass_per_kw_continuous",
+      "name": "Complete solar power system mass per kW continuous (day+night) load",
+      "value": 335,
+      "unit": "kg/kW",
+      "range_min": 280,
+      "range_max": 580,
+      "source": "Rucker AIAA Space 2016 (NTRS 20160011275): 11,713 kg Jezero system for ~35 kW day / 26.8 kW night (12,679 kg Columbus); storm-hardened variant 9,800 kg for 22 kW keep-alive (NTRS 20160002628). Fission comparison: 4x10 kWe Kilopower = 9,154 kg (~230 kg/kW)",
+      "source_url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf",
+      "confidence": "medium",
+      "notes": "Includes generation + Li-ion storage + structure + thermal, excludes lander-to-lander PMAD; equatorial site, modest storm requirement."
+    },
+    {
+      "id": "power_solar.battery_specific_energy_pack",
+      "name": "Li-ion battery specific energy, pack/system level, Mars-surface rated",
+      "value": 130,
+      "unit": "Wh/kg",
+      "range_min": 90,
+      "range_max": 180,
+      "source": "JPL D-101146 Energy Storage Technologies report (2017): flight state-of-practice packs <100 Wh/kg (Yardney MER/Phoenix/MSL heritage); development targets 150-250 Wh/kg; modern cells 240-270 Wh/kg imply near-term packs 150-180",
+      "source_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+      "confidence": "medium",
+      "notes": "Settlement-era value is a projection; flight-qualified today is the low end."
+    },
+    {
+      "id": "power_solar.battery_round_trip_efficiency",
+      "name": "Li-ion battery round-trip energy efficiency (system level, incl. converters)",
+      "value": 0.92,
+      "unit": "dimensionless",
+      "range_min": 0.85,
+      "range_max": 0.97,
+      "source": "Estimate: Li-ion cell-level 94-97% from terrestrial literature; Tesla Powerwall 92.5% DC round-trip (company claim); system studies 84-96%",
+      "source_url": null,
+      "confidence": "medium",
+      "notes": "Degrades at low temperature and high C-rate."
+    },
+    {
+      "id": "power_solar.battery_allowable_dod",
+      "name": "Allowable depth of discharge for multi-Mars-year cycle life",
+      "value": 0.7,
+      "unit": "dimensionless",
+      "range_min": 0.5,
+      "range_max": 0.8,
+      "source": "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions",
+      "source_url": null,
+      "confidence": "low",
+      "notes": "Sizing: battery kWh = night load x 12.3 h / (DOD x round-trip eff)."
+    },
+    {
+      "id": "power_solar.rfc_specific_energy",
+      "name": "Regenerative H2/O2 fuel cell specific energy for multi-sol (storm) storage",
+      "value": 400,
+      "unit": "Wh/kg",
+      "range_min": 250,
+      "range_max": 600,
+      "source": "JPL D-101146 human-lander target >500 Wh/kg; CTSA study baselines 10 kW RFC night power; no flight heritage",
+      "source_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+      "confidence": "speculative",
+      "notes": "Round-trip efficiency only ~40-55%; beats Li-ion on mass for >30-50 h of storage."
+    },
+    {
+      "id": "power_solar.insolation_equator_clear_horiz",
+      "name": "Daily global insolation, horizontal surface, equator, clear sky (tau 0.4)",
+      "value": 4.0,
+      "unit": "kWh/m2/sol",
+      "range_min": 3.4,
+      "range_max": 4.3,
+      "source": "Integrated from A&F TM-103623 f-table (this work, 4.05 at equinox); matches TM-103623 Table V VL1 max 4.18 kWh/m2-sol at Ls 140",
+      "source_url": "https://ntrs.nasa.gov/citations/19910005804",
+      "confidence": "high",
+      "notes": "Range covers aphelion/perihelion Gob swing at low latitude."
+    },
+    {
+      "id": "power_solar.insolation_equator_gds_horiz",
+      "name": "Daily global insolation, horizontal, equator, global-storm design tau=5",
+      "value": 1.2,
+      "unit": "kWh/m2/sol",
+      "range_min": 0.9,
+      "range_max": 1.5,
+      "source": "Integrated from A&F TM-103623 f-table (this work); consistent with Lemmon et al. 2015 flight observation that tau>4 cuts surface insolation only by factor 2-3 due to forward scattering",
+      "source_url": "https://ntrs.nasa.gov/citations/19910005804",
+      "confidence": "medium",
+      "notes": "At tau 8.5 (GDS peak) extrapolated ~0.55-0.7 kWh/m2/sol; NOT e^-tau scaling."
+    },
+    {
+      "id": "power_solar.insolation_annual_min_lat48n",
+      "name": "Worst-sol daily insolation at 48 deg N (winter + Viking-year dust storm)",
+      "value": 0.32,
+      "unit": "kWh/m2/sol",
+      "range_min": 0.3,
+      "range_max": 0.45,
+      "source": "NASA TM-103623 Table V, VL2 (47.7 N) minimum 315 Wh/m2-day at Ls 280; VL1 (22.3 N) minimum 935 Wh/m2-day for comparison",
+      "source_url": "https://ntrs.nasa.gov/citations/19910005804",
+      "confidence": "high",
+      "notes": "Latitude penalty: worst-sol/best-sol = 7.5% at 48N vs 22% at 22N. NASA crewed solar studies restrict to |lat|<~30 deg."
+    },
+    {
+      "id": "power_solar.equiv_peak_hours_clear",
+      "name": "Equivalent peak-sun hours per sol (daily energy / noon power), equator, horizontal",
+      "value": 7.4,
+      "unit": "h/sol",
+      "range_min": 6.3,
+      "range_max": 7.5,
+      "source": "Computed from A&F model (this work): 7.44 h at tau 0.4, falling to 6.4 h at tau 5-6 (profile flattens as diffuse dominates)",
+      "source_url": "https://ntrs.nasa.gov/citations/19910005804",
+      "confidence": "medium",
+      "notes": "Distillation: kWh/sol per installed kW (rated at 590 W/m2 reference) = 6.9 (tau 0.4), 5.7 (tau 1), 3.3 (tau 3), 2.0 (tau 5); multiply by dust factor and PMAD efficiency."
+    }
+  ],
+  "modeling_notes": "L0 (scalar): E_sol[kWh/sol] = P_installed[kW] x EPH x DF x eta_sys, with EPH ~5.5 kWh/sol per installed kW (equator, climatological dust, kW rated at eta*A*590 W/m2), DF~0.85 maintained arrays, eta_sys~0.90 PMAD; storm risk = output x0.3 for ~100 sols with p~0.3 per Mars year. L1 (daily/seasonal): Gob(Ls)=590[1+e cos(Ls-251)]^2/(1-e^2)^2; declination sin(d)=sin(25.19)sin(Ls); daily TOA insolation Hobh=(24/pi)Gob[(pi*wss/180)sin(phi)sin(d)+cos(phi)cos(d)sin(wss)] with wss=acos(-tan phi tan d); surface H = Hobh x T(tau) with T = {0.86@0.4, 0.71@1, 0.41@3, 0.26@5, 0.20@6}; tau(Ls) piecewise 0.45 clear/0.9 dusty seasons + stochastic regional storms + GDS process (Bernoulli 0.3/MY, onset Ls 185-310, peak tau N(9,1), exp decay 43 sols); dust factor DF ODE: -0.28%/sol deposition, Poisson cleaning (site param 0-6/MY, restore to 0.9) or scheduled active cleaning. L2 (sub-sol): cos z = sin phi sin d + cos phi cos d cos w (w=15T-180); beam Gbh=Gob cos z exp(-tau/cos z); global Gh=Gob cos z f(z,tau,al)/(1-al) with bilinear interpolation of the TM-103623 f-table (albedo 0.1; extrapolate log-linearly for tau>6); diffuse=Gh-Gbh; tilted plane via beam AOI + isotropic diffuse; cell temp from energy balance (alpha=0.88, eps=0.85, thin CO2 convection) with eta(T)=eta_ref[1-0.0022(T-301K)] and spectral factor ~0.95; battery SOC integration (round-trip 0.92, DOD 0.7). Validation targets: VL1/VL2 daily insolation tables (TM-103623 Table V), InSight 4.6->0.5 kWh/sol power history, MSL 97% UV drop at MY34 GDS peak. Key trap: storm output scales with the net-flux function (factor ~3 loss at tau 5), NOT exp(-tau) (factor ~150); diffuse light keeps solar viable through storms at reduced power.",
+  "key_findings": [
+    "Mars TOA solar flux averages 586-590 W/m2 (43% of Earth's) and swings 493-718 W/m2 over the eccentric orbit (+/-19%); perihelion boost coincides with the dust-storm season, so the two largest seasonal effects partially cancel at low-latitude sites.",
+    "The Appelbaum & Flood model (NASA TM-102299/103623) remains the engineering standard: direct beam = Gob cos z exp(-tau/cos z); global horizontal = Gob cos z f(z,tau,albedo)/(1-albedo) using Pollack's tabulated normalized net flux function - the full f(z,tau) lookup table (tau 0.1-6, z 0-85 deg) was extracted from TM-103623 and is reproduced in the markdown.",
+    "Because Mars dust is strongly forward-scattering, global surface insolation falls only x2-3 during a tau=5 global storm (4.0 -> 1.2 kWh/m2/sol at the equator), not by exp(-tau); solar power survives storms at ~25-30% output, which flight data from MER confirmed.",
+    "Optical depth climatology from 20+ years of flight data: clear season 0.3-0.6, dusty season background 0.7-1.2 with regional storms to ~3, global storms peaking at tau 8.5-10.8 (2018/MY34), occurring ~1 per 3 Mars years (aperiodic, gaps up to 6 MY), rising in ~2 weeks and decaying with a 43-sol e-folding time; NASA sizes systems to a 120-sol tau=5 design storm.",
+    "Dust deposition degrades horizontal arrays ~0.28%/sol (Pathfinder, InSight; MER ~0.14%/sol; envelope 0.05-2%/sol); natural wind cleaning events fully restored MER arrays repeatedly but never occurred at InSight in 4 years - cleaning is a site-specific random process, so settlement designs must assume active dust removal.",
+    "Flight 3J cells deliver ~30% AM0 efficiency (XTJ Prime 30.7% datasheet) with a -0.22%/degC relative power coefficient; cold Mars operating temperatures add ~+10% relative, partially offset by a ~5% red-spectrum penalty under dust.",
+    "Mars-surface array system mass: ~1.5 kg/m2 (NASA CTSA 1000 m2 study goal; UltraFlex-derived point 2.9 kg/m2), i.e. ~19-30 kg per noon-peak kW; complete solar+storage systems for continuous crewed loads run ~300-450 kg/kW versus ~230 kg/kW for Kilopower fission (Rucker 2016) - solar wins or ties only at low latitudes with modest storm keep-alive requirements.",
+    "Energy storage: flight-qualified Li-ion packs are <100 Wh/kg (JPL D-101146) with 130-180 Wh/kg a reasonable settlement-era pack projection, ~92% round-trip; nights are ~12.3 h at the equator; multi-sol storm ride-through favors regenerative fuel cells (~400 Wh/kg, ~50% round-trip, no flight heritage) or array oversizing.",
+    "Distilled scalar for trade studies: a maintained equatorial horizontal array yields ~6.9 kWh/sol per installed kW in the clear season, ~5.5 annual average with climatological dust, ~2.0 during a tau=5 storm, and ~1.0 at a tau=8.5 GDS peak (installed kW rated at 590 W/m2 reference irradiance).",
+    "Latitude: 48 deg N worst-sol insolation is 0.32 kWh/m2/sol (7.5% of its best sol) vs 0.94 (22%) at 22 deg N - the winter+storm compound drives NASA solar architectures to |latitude| < ~30 deg."
+  ],
+  "sources": [
+    {
+      "title": "Solar Radiation on Mars (NASA TM-102299)",
+      "org": "NASA Lewis Research Center (Appelbaum & Flood)",
+      "year": 1989,
+      "url": "https://ntrs.nasa.gov/citations/19890018252"
+    },
+    {
+      "title": "Solar Radiation on Mars - Update 1990 (NASA TM-103623)",
+      "org": "NASA Lewis Research Center (Appelbaum & Flood)",
+      "year": 1990,
+      "url": "https://ntrs.nasa.gov/citations/19910005804"
+    },
+    {
+      "title": "Mars Solar Power (NASA/TM-2004-213367, AIAA-2004-5555)",
+      "org": "NASA Glenn Research Center (Landis, Kerslake, Jenkins, Scheiman)",
+      "year": 2004,
+      "url": "https://ntrs.nasa.gov/citations/20040191326"
+    },
+    {
+      "title": "The Solar Spectrum on the Martian Surface and its Effect on Photovoltaic Performance",
+      "org": "NASA Glenn Research Center (Landis & Hyatt)",
+      "year": 2007,
+      "url": "https://ntrs.nasa.gov/citations/20070010752"
+    },
+    {
+      "title": "Dust aerosol, clouds, and the atmospheric optical depth record over 5 Mars years of the Mars Exploration Rover mission",
+      "org": "Icarus (Lemmon et al.)",
+      "year": 2015,
+      "url": "https://ntrs.nasa.gov/citations/20150008268"
+    },
+    {
+      "title": "The Mars Science Laboratory record of optical depth measurements via solar imaging",
+      "org": "Icarus (Lemmon et al.)",
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2309.07378"
+    },
+    {
+      "title": "Mars Science Laboratory Observations of the 2018/Mars Year 34 Global Dust Storm",
+      "org": "Geophysical Research Letters (Guzewich et al.)",
+      "year": 2019,
+      "url": "https://doi.org/10.1029/2018GL080839"
+    },
+    {
+      "title": "The Mars Global Dust Storm of 2018 (ICES-2019)",
+      "org": "NASA (NTRS 20190027303)",
+      "year": 2019,
+      "url": "https://ntrs.nasa.gov/citations/20190027303"
+    },
+    {
+      "title": "Scientific Observations With the InSight Solar Arrays: Dust, Clouds, and Eclipses on Mars",
+      "org": "Earth and Space Science (Lorenz et al.)",
+      "year": 2020,
+      "url": "https://doi.org/10.1029/2019EA000992"
+    },
+    {
+      "title": "Lander and rover histories of dust accumulation on and removal from solar arrays on Mars",
+      "org": "Planetary and Space Science 207, 105337 (Lorenz et al.)",
+      "year": 2021,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768"
+    },
+    {
+      "title": "Solar vs. Fission Surface Power for Mars (AIAA Space 2016)",
+      "org": "NASA JSC (Rucker et al.)",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/citations/20160002628"
+    },
+    {
+      "title": "Solar vs. Fission Surface Power for Mars - presentation (NTRS 20160011275)",
+      "org": "NASA JSC (Rucker)",
+      "year": 2016,
+      "url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf"
+    },
+    {
+      "title": "Compact Telescoping Surface Array for Mars Solar Power",
+      "org": "NASA Langley (NTRS 20190000437)",
+      "year": 2019,
+      "url": "https://ntrs.nasa.gov/api/citations/20190000437/downloads/20190000437.pdf"
+    },
+    {
+      "title": "XTJ Prime 30.7% Triple Junction Space Grade Solar Cell datasheet (company claim)",
+      "org": "Spectrolab (Boeing)",
+      "year": 2016,
+      "url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf"
+    },
+    {
+      "title": "Energy Storage Technologies for Future Planetary Science Missions (JPL D-101146)",
+      "org": "NASA JPL",
+      "year": 2017,
+      "url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF"
+    },
+    {
+      "title": "Mars Fact Sheet",
+      "org": "NASA NSSDC",
+      "year": 2024,
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html"
+    },
+    {
+      "title": "NASA Retires InSight Mars Lander Mission (end-of-mission power 500 Wh/sol)",
+      "org": "NASA",
+      "year": 2022,
+      "url": "https://www.nasa.gov/missions/insight/nasa-retires-insight-mars-lander-mission-after-years-of-science/"
+    }
+  ]
+}
