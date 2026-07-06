@@ -15,7 +15,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-1 nominal; Table 3-31 gives 0.895",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -27,7 +27,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 4-1 (nominal 1.08); Table 3-31 CO2 load 1.085; RQ 0.86",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -39,7 +39,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 4-20",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -51,7 +51,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30) \u2014 urine + humidity condensate",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -63,7 +63,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 4-1; NASA exploration atmosphere studies",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -75,7 +75,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 4-1; Norcross 2013; NASA-STD-3001",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -87,7 +87,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA-STD-3001 Vol 2 Rev D [V2 6004]; NASA OCHMO-TB-004",
-     "source_url": null,
+     "source_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
      "confidence": "high",
      "notes": "ISS ops target; NASA-STD-3001 180-day SMAC is 0.71 kPa"
     },
@@ -99,7 +99,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Derived from ICES-2023-311 (46.9 A, ~1.7 V/cell, ~28 cells => 2.23 kW at 9.25 kg/day)",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20230008013",
      "confidence": "medium",
      "notes": null
     },
@@ -111,7 +111,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500) \u2014 derived: 0.8 kW / (4.1 CM x 1.04 kg CO2/day)",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20150016500",
      "confidence": "medium",
      "notes": null
     },
@@ -123,7 +123,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA water recovery milestone, 20 Jun 2023",
-     "source_url": null,
+     "source_url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
      "confidence": "high",
      "notes": null
     },
@@ -135,7 +135,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA Sabatier System Design Study, ICES-2018 / NTRS 20180004697; PNNL microchannel reactors",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20180004697",
      "confidence": "high",
      "notes": null
     },
@@ -147,7 +147,7 @@
      "range_min": 0.61,
      "range_max": 1.08,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-1 nominal; Table 3-31 gives 0.895",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "82 kg reference CM, exercising to hold mass. Range = lower/upper design bounds (~5th-percentile female to 95th-percentile male, ~+/-25%). Legacy value 0.816 kg/CM-d. | reference (research campaign)"
     },
@@ -159,7 +159,7 @@
      "range_min": 0.74,
      "range_max": 1.31,
      "source": "NASA BVAD Rev2 Table 4-1 (nominal 1.08); Table 3-31 CO2 load 1.085; RQ 0.86",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "1.04 = O2*RQ*(44/32) consistent point estimate; BVAD Table 4-1 nominal is 1.08. Carry with O2 as a coupled pair. | reference (research campaign)"
     },
@@ -171,7 +171,7 @@
      "range_min": 0.83,
      "range_max": 0.96,
      "source": "NASA BVAD Rev2 Table 3-31 (Ewert 2021 MetMan)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "0.86 rest/sleep, 0.95 aerobic exercise, 0.96 resistive exercise. | reference (research campaign)"
     },
@@ -183,7 +183,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 3-31",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "= 143.8 W average per CM. Sensible 6.308 MJ/CM-d (73.0 W), latent 6.118 MJ/CM-d (70.8 W). Sensible->cabin air, latent->condensing HX. | reference (research campaign)"
     },
@@ -195,7 +195,7 @@
      "range_min": 2.0,
      "range_max": 3.22,
      "source": "NASA BVAD Rev2 Table 4-20 (drinking 2.00 + food rehydration 0.50)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Table 3-31 potable water content 3.217 kg/CM-d includes 0.717 kg exercise-perspiration allowance. Drinking alone 2.0 kg/CM-d. | reference (research campaign)"
     },
@@ -207,7 +207,7 @@
      "range_min": 0.7,
      "range_max": 6.62,
      "source": "NASA BVAD Rev2 Table 4-20",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "ISS/transit minimal hygiene 0.7 (urinal flush 0.3 + personal hygiene 0.4). Early planetary base 1.98; mature base 6.62 (adds hand wash, shower, laundry, dish wash). verified correction: BVAD Table 4-20 lists hand wash as TBD/n-a for planetary bases; the 4.08 kg/CM-d hand-wash figure is a WASTEWATER stream (Table 4-21), not a Table 4-20 usage total. Do not add it to hygiene-usage totals. | reference (research campaign)"
     },
@@ -219,7 +219,7 @@
      "range_min": 3.2,
      "range_max": 9.12,
      "source": "NASA BVAD Rev2 Table 4-20",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Transit vehicle 3.2; early planetary base 4.48; mature base 9.12; ISS 5.38 incl 2.18 payload. | reference (research campaign)"
     },
@@ -231,7 +231,7 @@
      "range_min": 1.42,
      "range_max": 2.0,
      "source": "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Table 3-31 urine water 1.420 kg/CM-d. Transit/base flush raises total to 1.8-2.0 kg/CM-d. | reference (research campaign)"
     },
@@ -243,7 +243,7 @@
      "range_min": 2.27,
      "range_max": 2.9,
      "source": "NASA BVAD Rev2 Table 4-21",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Latent load removed by condensing heat exchanger, feeds WPA. Table 3-31 respiration+perspiration water is 2.946 kg/CM-d. | reference (research campaign)"
     },
@@ -255,7 +255,7 @@
      "range_min": 15.2,
      "range_max": 50.6,
      "source": "NASA BVAD Rev2 Table 4-1; Norcross 2013; NASA-STD-3001",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Nominal ~21.2 kPa (Earth normal). Measurable impairment until acclimatized 17.2-18.6; min allowable <=1 h is 15.2-17.2 kPa. Upper bounded by flammability at higher O2 fraction. | reference (research campaign)"
     },
@@ -279,7 +279,7 @@
      "range_min": 0.13,
      "range_max": 1.2,
      "source": "NASA-STD-3001 Vol 2 Rev D [V2 6004]; NASA OCHMO-TB-004",
-     "source_url": "https://www.nasa.gov/ochmo-tb-004-carbon-dioxide-2/",
+     "source_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
      "confidence": "high",
      "notes": "3 mmHg = 0.40 kPa 1-h average limit (headache <1.4%). 7-day <2.5 mmHg (0.33 kPa) for <1% headache. ISS observed band 1-9 mmHg (0.13-1.2 kPa). BVAD design nominal 0.507 kPa. Formal CO2 SMAC deleted. | reference (research campaign)"
     },
@@ -291,7 +291,7 @@
      "range_min": 291,
      "range_max": 300,
      "source": "NASA BVAD Rev2 Table 4-1",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "~23 C nominal, 18-27 C range. Relative humidity nominal 40% (range 25-75%). | reference (research campaign)"
     },
@@ -303,7 +303,7 @@
      "range_min": 0.01,
      "range_max": 0.09,
      "source": "NASA BVAD Rev2 Table 4-1, Sec 4.1",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Nominal = 2x the ~0.01 kg/day observed in module test (Gateway-derived margin). As fraction: 0.01-0.14 %/day. Whole-ISS observed leakage ~0.195 kg/day (ESA). verified correction: whole-ISS 'observed 0.195 kg/day (ESA)' is unverified; NASA trending gives ~0.18-0.23 kg/day (2008-2011). Post-2019 Zvezda structural-crack leakage is far higher (~0.45-1.7 kg/day) and not representative of design leakage. Design value 0.02 kg/day/module is unaffected. | reference (research campaign)"
     },
@@ -315,7 +315,7 @@
      "range_min": null,
      "range_max": null,
      "source": "ICES-2023-311, Status of the Advanced OGA (NTRS 20230008013)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20230008013/downloads/ICES_2023_311%20final%205%2015%2023.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20230008013",
      "confidence": "high",
      "notes": "20.4 lb/day at 46.9 A max stack current; supports 10.88 CM at 0.85 kg O2/CM-d. Selectable rate; standby 1.0 A. Cumulative 2007-2023: 11,903 kg O2, 1,488 kg H2. | reference (research campaign)"
     },
@@ -327,7 +327,7 @@
      "range_min": 5.0,
      "range_max": 12.0,
      "source": "Derived from ICES-2023-311 (46.9 A, ~1.7 V/cell, ~28 cells => 2.23 kW at 9.25 kg/day)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20230008013/downloads/ICES_2023_311%20final%205%2015%2023.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20230008013",
      "confidence": "medium",
      "notes": "Stack level 5.8 kWh/kg (thermoneutral min 4.97 at 1.48 V/cell). System level ~7-12 kWh/kg incl balance-of-plant and part-load; flight estimates ~2.4 kW for ~6-crew O2. | reference (research campaign)"
     },
@@ -339,7 +339,7 @@
      "range_min": 3.0,
      "range_max": 3.5,
      "source": "Knox & Stanley, ICES-2015-165, NTRS 20150016500, Sec. II & Table 3 (PW 3.17 kg/day @461 W; PF 3.49 kg/day @486 W at 20 SCFM / 2 torr)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20150016500/downloads/20150016500.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20150016500",
      "confidence": "high",
      "notes": "4.1 CM-eq at 2.0 torr; 10.5 CM-eq at 5.0 torr; roughly linear in inlet ppCO2. Nominal air flow 34.7 m3/h (20.4 SCFM). ISS 6-CM CO2 throughput ~6.3 kg/day. Per-unit design 6-7 CM. verified correction: the 4.1/10.5 CM-eq capacities were demonstrated in a HIGH-FLOW 25 SCFM, 90-min half-cycle config (+200 W heater); nominal-flow (20.4 SCFM) measured removal is only 3.17-3.49 kg CO2/day (~3.0-3.4 CM-eq), so the prior capacity curve overstated nominal CDRA capacity by ~20-25%. Use 4.1/10.5 CM-eq ONLY for the high-flow configuration. | reference (research campaign)"
     },
@@ -351,7 +351,7 @@
      "range_min": 0.6,
      "range_max": 1.2,
      "source": "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20150016500/downloads/20150016500.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20150016500",
      "confidence": "low",
      "notes": "Open literature gives flow/capacity cleanly but not a single clean nominal power. Thermal-swing heater power dominates and is duty-cycle dependent. | reference (research campaign)"
     },
@@ -363,7 +363,7 @@
      "range_min": 45,
      "range_max": 50,
      "source": "NTRS 20100033195 Sabatier CRA; NASA SCOR",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20100033195/downloads/20100033195.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20100033195",
      "confidence": "high",
      "notes": "H2-limited: OGA yields 2 H2 per O2 but Sabatier needs 4 H2 per CO2; CH4 vented. ISS estimated ~47%. Water output ~907 kg/yr (7-CM sizing). >50% needs CH4 pyrolysis/Bosch (not operational). | reference (research campaign)"
     },
@@ -387,7 +387,7 @@
      "range_min": 70,
      "range_max": 85,
      "source": "NASA BVAD Rev2 Sec 4.3.3 (Carter); Wikipedia ISS ECLSS",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "US segment design 85%; de-rated to ~70% on orbit due to calcium-sulfate precipitation in high-Ca urine. Russian ~70%. UPA capacity 9 kg/day (6-CM). Treat as de-ratable parameter. | reference (research campaign)"
     },
@@ -399,7 +399,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Sec 4.3.3 (Carrasquillo 2005)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Multifiltration beds + ion-exchange bed. Drives logistics for closed-loop water on no-resupply missions. | reference (research campaign)"
     },
@@ -411,7 +411,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Rev2 Table 3-2",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Whole ECLSS average for ISS-class crew. Thermal Control System separately 8.72 kW. OGA is the largest single ECLSS draw. | reference (research campaign)"
     },
@@ -441,7 +441,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2, Eq. 3-2 (EER) and Tables 4-57/4-61 (12.707 MJ/CM-d)",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -453,7 +453,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper) \u2014 derived: 3037 kcal / 1.83 kg",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -465,7 +465,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06 \u2014 18.4 g dw/m2-day x 4 kcal/g",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": null
     },
@@ -477,7 +477,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80) \u2014 derived: (18.4 g/m2-d / 0.44 g/mol PAR) x 0.116 kWh/mol / 0.80 delivery",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "medium",
      "notes": null
     },
@@ -489,7 +489,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Table 4-90 (0.70); Wheeler 2008 measured ~0.68; Tibbitts CELSS 0.80",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -501,7 +501,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Wheeler et al. 2008 (3.96 avg condensed); BVAD Table 4-91 per-crop (lettuce 2.1 ... wheat 11.79)",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": null
     },
@@ -513,7 +513,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD Table 4-88 (Drysdale 1999b); lower bound = structure+root-zone excl. HPS lamps/ballasts",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": null
     },
@@ -525,7 +525,7 @@
      "range_min": 2500,
      "range_max": 3100,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2, Eq. 3-2 (EER) and Tables 4-57/4-61 (12.707 MJ/CM-d)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "12.707 MJ/CM-day for the average astronaut via the Estimated Energy Requirement equation. Older CELSS studies use 2500-3000 kcal. | reference (research campaign)"
     },
@@ -537,7 +537,7 @@
      "range_min": 1.83,
      "range_max": 2.39,
      "source": "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "ISS flight value; 42-53% water content. Packaging is a separate line item (~0.27 kg/CM-d). | reference (research campaign)"
     },
@@ -549,7 +549,7 @@
      "range_min": 0.66,
      "range_max": 0.72,
      "source": "NASA BVAD Table 4-47 (MSIS 1995) and Table 4-60 (Levri)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Dehydrated/dry basis, excludes intrinsic and rehydration water. | reference (research campaign)"
     },
@@ -561,7 +561,7 @@
      "range_min": 0.25,
      "range_max": 0.4,
      "source": "NASA BVAD Table 4-40 (Ewert 2017); upper from 2.36 kg total with 17% packaging",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Packaging is ~13-17% of prepackaged-food upmass; becomes trash mass. | reference (research campaign)"
     },
@@ -573,7 +573,7 @@
      "range_min": 3,
      "range_max": 5,
      "source": "NASA BVAD Sec. 4.5.1 (Cooper et al. 2011)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Current ISS foods degrade (vitamin/quality loss) before 5 yr; a genuine open technology gap and a driver toward in-situ crops for multi-year stays. | reference (research campaign)"
     },
@@ -585,7 +585,7 @@
      "range_min": 2.5,
      "range_max": 5.5,
      "source": "MELiSSA/Frontiers 2023 (avg of bread wheat, durum wheat, potato, soybean = 4000 kcal/kg dw)",
-     "source_url": "https://www.frontiersin.org/articles/10.3389/fspas.2023.1198689/full",
+     "source_url": "https://doi.org/10.3389/fspas.2023.1198689",
      "confidence": "high",
      "notes": "Staples (wheat/potato/rice) ~3.7-4.0; soybean ~4.9; peanut ~5.5; lettuce ~2.5-3.0. Ideal edible composition 70% carb / 20% protein / 10% lipid. | reference (research campaign)"
     },
@@ -597,7 +597,7 @@
      "range_min": 18.4,
      "range_max": 30.0,
      "source": "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Highest edible dry-mass productivity of any candidate crop; the calorie workhorse. | reference (research campaign)"
     },
@@ -609,7 +609,7 @@
      "range_min": 0.44,
      "range_max": 0.8,
      "source": "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80)",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "RUE_total 0.64. Sets lighting energy per calorie; use 0.44 (conservative) to 0.5-0.64 (optimistic). | reference (research campaign)"
     },
@@ -621,7 +621,7 @@
      "range_min": 0.6,
      "range_max": 0.8,
      "source": "NASA BVAD Table 4-90 (0.70); Wheeler 2008 measured ~0.68; Tibbitts CELSS 0.80",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "High HI is why potato dominates calorie-per-area and calorie-per-kWh. | reference (research campaign)"
     },
@@ -633,7 +633,7 @@
      "range_min": 11.3,
      "range_max": 20.0,
      "source": "Wheeler et al. 2008 measured 11.3 (15.8 with VOC scrub to HI 0.40); BVAD Table 4-90 nominal 20.0",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "BPC HI was depressed to 0.29 by ethylene; scrubbing VOCs recovers HI 0.40. Total-biomass productivity 39.6 g dw/m2-d. | reference (research campaign)"
     },
@@ -645,7 +645,7 @@
      "range_min": 0.17,
      "range_max": 0.3,
      "source": "Wheeler et al. 2008 (0.17 measured, 0.24 with VOC scrub, 0.30 potential); RUE_total 0.59",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Low edible RUE (grain HI 0.4) makes wheat ~2.6x more power-costly per calorie than potato under LEDs. | reference (research campaign)"
     },
@@ -657,7 +657,7 @@
      "range_min": 0.29,
      "range_max": 0.45,
      "source": "NASA BVAD Table 4-90 (0.40); Wheeler 2008 observed 0.29 (ethylene-depressed)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Ethylene/VOC accumulation in closed chambers cut BPC wheat HI to 0.29; scrubbing restores ~0.40. | reference (research campaign)"
     },
@@ -669,7 +669,7 @@
      "range_min": 20.0,
      "range_max": 30.0,
      "source": "NASA BVAD Table 4-90 (HI 0.60)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Highest BVAD edible productivity; DLI 28 mol/m2-d, 12 h photoperiod, 85 d cycle. Excellent calorie crop. | reference (research campaign)"
     },
@@ -681,7 +681,7 @@
      "range_min": 4.54,
      "range_max": 6.9,
      "source": "Wheeler et al. 2008 (6.0 measured, 6.9 with transplant); BVAD Table 4-90 nominal 4.54",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Primary protein/oil crop; RUE_edible only 0.16 g/mol so it is power-expensive but nutritionally essential. | reference (research campaign)"
     },
@@ -693,7 +693,7 @@
      "range_min": 0.16,
      "range_max": 0.19,
      "source": "Wheeler et al. 2008 (0.16 measured, 0.19 transplant); RUE_total 0.43",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Lowest edible RUE of the staples; caloric density ~4.9 kcal/g dw partly offsets this. | reference (research campaign)"
     },
@@ -705,7 +705,7 @@
      "range_min": 6.57,
      "range_max": 11.8,
      "source": "Wheeler et al. 2008 (7.1 measured, 11.8 with transplant, RUE 0.70); BVAD Table 4-90 6.57",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Fast 28-30 d cycle, HI 0.90, but ~2.5-3 kcal/g dw and mostly water; a morale/vitamin crop, not calories. | reference (research campaign)"
     },
@@ -717,7 +717,7 @@
      "range_min": 9.8,
      "range_max": 11.4,
      "source": "Wheeler et al. 2008 (9.8 measured, 11.4 transplant); BVAD Table 4-90 10.43; RUE_edible 0.25",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Salad crop; 94% water fresh; HI 0.45. | reference (research campaign)"
     },
@@ -729,7 +729,7 @@
      "range_min": 2.1,
      "range_max": 11.79,
      "source": "Wheeler et al. 2008 (3.96 avg condensed); BVAD Table 4-91 per-crop (lettuce 2.1 ... wheat 11.79)",
-     "source_url": "http://bigidea.nianet.org/wp-content/uploads/2018/07/Adv-Space-Res-2008-Crop-Prod-and-Rad-Use-Eff.pdf",
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "high",
      "notes": "Recovered as near-distilled condensate on cooling coils; ~100% recyclable to nutrient solution or potable loop. Wheat is a large water user (11.8 L/m2-d). | reference (research campaign)"
     },
@@ -741,7 +741,7 @@
      "range_min": 2.5,
      "range_max": 4.1,
      "source": "Kusuma, Pattison & Bugbee 2020 (ceiling 3.4 white+red / 4.1 blue+red); industry 2023-24 fixtures 2.5-3.5",
-     "source_url": "https://www.nature.com/articles/s41438-020-0283-7",
+     "source_url": "https://doi.org/10.1038/s41438-020-0283-7",
      "confidence": "high",
      "notes": "Diode electrical->photon efficiency: blue 0.93, white 0.76, red 0.81. Water/humidity optics cut ~10%. | reference (research campaign)"
     },
@@ -753,7 +753,7 @@
      "range_min": 0.3,
      "range_max": 0.8,
      "source": "NASA BVAD Table 4-86 (Sager 1999 low; Sager 2006 high)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Combine with efficacy: usable canopy PAR per electrical J = efficacy x delivery. BPC reflectors achieved only 0.10-0.15. | reference (research campaign)"
     },
@@ -801,7 +801,7 @@
      "range_min": 66,
      "range_max": 101.5,
      "source": "NASA BVAD Table 4-88 (Drysdale 1999b); lower bound = structure+root-zone excl. HPS lamps/ballasts",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Includes 20 kg/m2 crop structure + 36.8 kg/m2 root-zone water/nutrients + 31 kg/m2 HPS lamps+ballasts (LEDs lighter). Aeroponics reduces root-zone mass. | reference (research campaign)"
     },
@@ -813,7 +813,7 @@
      "range_min": 90,
      "range_max": 100,
      "source": "NASA BVAD Sec. 4.14 (Lunn et al. 2017), for 2500 kcal/person/day full diet",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": ">50% recyclable from inedible biomass (composting/bioreactor) and processed urine; scales with closure fraction. | reference (research campaign)"
     },
@@ -825,7 +825,7 @@
      "range_min": 40,
      "range_max": 60,
      "source": "Derived from Wheeler productivities (3037 kcal / 4 kcal/g / ~15 g edible dw/m2-d); consistent with CELSS/ICES literature",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "medium",
      "notes": "Potato-only idealized ~41 m2; balanced nutrition (protein/oil crops) pushes to 40-60 m2. Excludes ~25-50% crew-access aisle area. | reference (research campaign)"
     },
@@ -849,7 +849,7 @@
      "range_min": 21,
      "range_max": 27,
      "source": "Derived (Sec. 8): Wheeler RUE/productivity; 27.1 m2 as-measured, 21.1 m2 optimized",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1016/j.asr.2007.06.059",
      "confidence": "medium",
      "notes": "Potato ~9-10 m2, wheat ~12-17 m2. Wheat needs more area per calorie despite equal calorie split. | reference (research campaign)"
     },
@@ -873,7 +873,7 @@
      "range_min": 5,
      "range_max": 30,
      "source": "NASA BVAD Sec. 4.14.1.1 (Clawson 2006)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Mars receives ~43% of Earth's solar irradiance; up to ~30 mol/m2-d at some latitudes for much of the year, but dust storms can suppress it drastically. Enough for hybrid natural+LED but not sole-source for staples. | reference (research campaign)"
     }
@@ -891,7 +891,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Spectrolab XTJ Prime datasheet 7/2016 (company claim, flight product): 30.7% production average; SolAero ZTJ 29.5%; MER-era 3J ~27.5%; Mars-spectrum-adapted ~32% (Landis NTRS 20070010752)",
-     "source_url": null,
+     "source_url": "sources/spectrolab_xtj_prime.pdf",
      "confidence": "high",
      "notes": null
     },
@@ -903,7 +903,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Computed from Spectrolab XTJ Prime datasheet coefficients (dVmp/dT=-6.5 mV/degC on 2.390 V; dJmp/dT=+8.9 uA/cm2/degC on 17.4 mA/cm2)",
-     "source_url": null,
+     "source_url": "sources/spectrolab_xtj_prime.pdf",
      "confidence": "medium",
      "notes": null
     },
@@ -915,7 +915,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Pathfinder 0.28%/sol first 30 sols (NASA/TM-2004-213367); InSight 0.2%/sol observed, 0.28%/sol steady-state model (Lorenz et al. 2020, doi:10.1029/2019EA000992); MER long-term ~0.14%/sol; envelope 0.05-2%/sol (Lorenz et al. 2021 P&SS 105337)",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1029/2019EA000992",
      "confidence": "high",
      "notes": null
     },
@@ -927,7 +927,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Compact Telescoping Surface Array study (NTRS 20190000437): 1500 kg per 1000 m2 goal, blanket 0.5-1.0 kg/m2; Rucker 2016 UltraFlex-based point ~2.9 kg/m2",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20190000437",
      "confidence": "medium",
      "notes": null
     },
@@ -939,7 +939,7 @@
      "range_min": null,
      "range_max": null,
      "source": "JPL D-101146 Energy Storage Technologies report (2017): flight state-of-practice packs <100 Wh/kg (Yardney MER/Phoenix/MSL heritage); development targets 150-250 Wh/kg; modern cells 240-270 Wh/kg imply near-term packs 150-180",
-     "source_url": null,
+     "source_url": "sources/jpl_energy_storage_2017.pdf",
      "confidence": "medium",
      "notes": null
     },
@@ -951,7 +951,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: Li-ion cell-level 94-97% from terrestrial literature; Tesla Powerwall 92.5% DC round-trip (company claim); system studies 84-96%",
-     "source_url": null,
+     "source_url": "https://www.tesla.com/powerwall",
      "confidence": "medium",
      "notes": null
     },
@@ -963,7 +963,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions \u2014 1 - allowable DoD",
-     "source_url": null,
+     "source_url": "sources/jpl_energy_storage_2017.pdf",
      "confidence": "low",
      "notes": null
     },
@@ -1143,7 +1143,7 @@
      "range_min": 0.275,
      "range_max": 0.32,
      "source": "Spectrolab XTJ Prime datasheet 7/2016 (company claim, flight product): 30.7% production average; SolAero ZTJ 29.5%; MER-era 3J ~27.5%; Mars-spectrum-adapted ~32% (Landis NTRS 20070010752)",
-     "source_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+     "source_url": "sources/spectrolab_xtj_prime.pdf",
      "confidence": "high",
      "notes": "Radiation degradation negligible under Mars atmosphere (~20 g/cm2 shielding). | reference (research campaign)"
     },
@@ -1155,7 +1155,7 @@
      "range_min": -0.0028,
      "range_max": -0.0017,
      "source": "Computed from Spectrolab XTJ Prime datasheet coefficients (dVmp/dT=-6.5 mV/degC on 2.390 V; dJmp/dT=+8.9 uA/cm2/degC on 17.4 mA/cm2)",
-     "source_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+     "source_url": "sources/spectrolab_xtj_prime.pdf",
      "confidence": "medium",
      "notes": "Mars arrays run cold (-50 to +10 degC daytime): +8 to +15% relative efficiency vs 28 degC rating. | reference (research campaign)"
     },
@@ -1179,7 +1179,7 @@
      "range_min": 1.2,
      "range_max": 2.9,
      "source": "Compact Telescoping Surface Array study (NTRS 20190000437): 1500 kg per 1000 m2 goal, blanket 0.5-1.0 kg/m2; Rucker 2016 UltraFlex-based point ~2.9 kg/m2",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20190000437/downloads/20190000437.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20190000437",
      "confidence": "medium",
      "notes": "CTSA is a TRL 4-5 design goal; UltraFlex value has flight-adjacent pedigree. | reference (research campaign)"
     },
@@ -1191,7 +1191,7 @@
      "range_min": 33,
      "range_max": 53,
      "source": "CTSA study (NTRS 20190000437): 50-80 kW daytime from ~1500 kg, 1000 m2 (200 W/kg at 1 AU equivalent); UltraFlex flight wings 100-150 W/kg at 1 AU",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20190000437/downloads/20190000437.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20190000437",
      "confidence": "medium",
      "notes": "Equivalent ~19-30 kg per noon-peak kW, generation hardware only (no storage). | reference (research campaign)"
     },
@@ -1203,7 +1203,7 @@
      "range_min": 280,
      "range_max": 580,
      "source": "Rucker AIAA Space 2016 (NTRS 20160011275): 11,713 kg Jezero system for ~35 kW day / 26.8 kW night (12,679 kg Columbus); storm-hardened variant 9,800 kg for 22 kW keep-alive (NTRS 20160002628). Fission comparison: 4x10 kWe Kilopower = 9,154 kg (~230 kg/kW)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20160011275",
      "confidence": "medium",
      "notes": "Includes generation + Li-ion storage + structure + thermal, excludes lander-to-lander PMAD; equatorial site, modest storm requirement. | reference (research campaign)"
     },
@@ -1215,7 +1215,7 @@
      "range_min": 90,
      "range_max": 180,
      "source": "JPL D-101146 Energy Storage Technologies report (2017): flight state-of-practice packs <100 Wh/kg (Yardney MER/Phoenix/MSL heritage); development targets 150-250 Wh/kg; modern cells 240-270 Wh/kg imply near-term packs 150-180",
-     "source_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+     "source_url": "sources/jpl_energy_storage_2017.pdf",
      "confidence": "medium",
      "notes": "Settlement-era value is a projection; flight-qualified today is the low end. | reference (research campaign)"
     },
@@ -1227,7 +1227,7 @@
      "range_min": 0.85,
      "range_max": 0.97,
      "source": "Estimate: Li-ion cell-level 94-97% from terrestrial literature; Tesla Powerwall 92.5% DC round-trip (company claim); system studies 84-96%",
-     "source_url": null,
+     "source_url": "https://www.tesla.com/powerwall",
      "confidence": "medium",
      "notes": "Degrades at low temperature and high C-rate. | reference (research campaign)"
     },
@@ -1239,7 +1239,7 @@
      "range_min": 0.5,
      "range_max": 0.8,
      "source": "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions",
-     "source_url": null,
+     "source_url": "sources/jpl_energy_storage_2017.pdf",
      "confidence": "low",
      "notes": "Sizing: battery kWh = night load x 12.3 h / (DOD x round-trip eff). | reference (research campaign)"
     },
@@ -1251,7 +1251,7 @@
      "range_min": 250,
      "range_max": 600,
      "source": "JPL D-101146 human-lander target >500 Wh/kg; CTSA study baselines 10 kW RFC night power; no flight heritage",
-     "source_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+     "source_url": "sources/jpl_energy_storage_2017.pdf",
      "confidence": "speculative",
      "notes": "Round-trip efficiency only ~40-55%; beats Li-ion on mass for >30-50 h of storage. | reference (research campaign)"
     },
@@ -1317,7 +1317,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Montabone et al. (2015) Icarus 251 multiannual climatology (converted from 9.3 um CDOD); Lemmon et al. (2015) MER 5-Mars-year record",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1016/j.icarus.2014.12.034",
      "confidence": "high",
      "notes": null
     },
@@ -1329,7 +1329,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Montabone et al. (2015); Lemmon et al. (2015): MER record spans 0.3-4.7 over 5 Mars years",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/1403.4234",
      "confidence": "medium",
      "notes": null
     },
@@ -1341,7 +1341,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Zurek & Martin (1993) JGR (NTRS 19930046754); 8-9 confirmed events 1956-2018 (1956, 1971, 1973, 1977a, 1977b, 2001, 2007, 2018)",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/19930046754",
      "confidence": "medium",
      "notes": null
     },
@@ -1353,7 +1353,7 @@
      "range_min": null,
      "range_max": null,
      "source": "MY34/2018 event: tau ~8.5 measured at Gale (Guzewich et al. 2019 GRL; Viudez-Moreiras et al. 2019); >10.8 estimated at Meridiani (Opportunity, saturated)",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1029/2018GL080839",
      "confidence": "medium",
      "notes": "2018 storm reached tau 8-11 at Opportunity"
     },
@@ -1365,7 +1365,7 @@
      "range_min": null,
      "range_max": null,
      "source": "MY34/2018: onset Ls 184.9, intense phase ~3 months, decay into Ls ~250+ (Guzewich et al. 2019; Viudez-Moreiras et al. 2019); MY25/2001 similar",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1029/2019JE005985",
      "confidence": "medium",
      "notes": null
     },
@@ -1387,7 +1387,7 @@
      "value": 668.5991,
      "unit": "sol",
      "source": "Allison & McEwen (2000)",
-     "source_url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
+     "source_url": "sources/allison_mcewen_2000.pdf",
      "confidence": "high",
      "range_min": null,
      "range_max": null,
@@ -1435,7 +1435,7 @@
      "value": 251.0,
      "unit": "deg Ls",
      "source": "Allison & McEwen (2000)",
-     "source_url": "http://amsat-bda.org/files/2000_Allison_McEwen.pdf",
+     "source_url": "sources/allison_mcewen_2000.pdf",
      "confidence": "high",
      "range_min": null,
      "range_max": null,
@@ -1459,7 +1459,7 @@
      "value": 840,
      "unit": "Pa",
      "source": "MSL REMS: Harri et al. (2014) JGR Planets; Haberle et al. (2014); Martinez et al. (2017) SSR 212",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013JE004488",
+     "source_url": "https://doi.org/10.1002/2013JE004488",
      "confidence": "high",
      "range_min": 700,
      "range_max": 955,
@@ -1483,7 +1483,7 @@
      "value": 0.951,
      "unit": "mol/mol",
      "source": "MSL SAM QMS annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124; original Mahaffy et al. (2013) Science 341",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0032063317300545",
+     "source_url": "https://ntrs.nasa.gov/citations/20170004958",
      "confidence": "high",
      "range_min": 0.93,
      "range_max": 0.96,
@@ -1495,7 +1495,7 @@
      "value": 0.0259,
      "unit": "mol/mol",
      "source": "MSL SAM reevaluated annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124 (Mahaffy 2013 gave 0.0189; Viking gave 0.027)",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0032063317300545",
+     "source_url": "https://ntrs.nasa.gov/citations/20170004958",
      "confidence": "high",
      "range_min": 0.023,
      "range_max": 0.029,
@@ -1507,7 +1507,7 @@
      "value": 0.0194,
      "unit": "mol/mol",
      "source": "MSL SAM: Mahaffy et al. (2013) Science 341; confirmed by Franz et al. (2017)",
-     "source_url": "https://www.science.org/doi/10.1126/science.1237966",
+     "source_url": "https://doi.org/10.1126/science.1237966",
      "confidence": "high",
      "range_min": 0.017,
      "range_max": 0.022,
@@ -1519,7 +1519,7 @@
      "value": 272,
      "unit": "K",
      "source": "MSL REMS: Gomez-Elvira et al. (2014); Martinez et al. (2017) SSR",
-     "source_url": "https://link.springer.com/article/10.1007/s11214-017-0360-x",
+     "source_url": "https://doi.org/10.1007/s11214-017-0360-x",
      "confidence": "medium",
      "range_min": 265,
      "range_max": 283,
@@ -1531,7 +1531,7 @@
      "value": 183,
      "unit": "K",
      "source": "MSL REMS: Martinez et al. (2017); frost-event analyses",
-     "source_url": "https://link.springer.com/article/10.1007/s11214-017-0360-x",
+     "source_url": "https://doi.org/10.1007/s11214-017-0360-x",
      "confidence": "medium",
      "range_min": 178,
      "range_max": 190,
@@ -1543,7 +1543,7 @@
      "value": 290,
      "unit": "K",
      "source": "MSL REMS GTS (150-300 K instrument range): Hamilton et al. 2013; Martinez et al. (2017); NASA TFAWS 2024 MarsWRF worst-case hot 289.7 K",
-     "source_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+     "source_url": "sources/tfaws_2024_mars_thermal.pdf",
      "confidence": "medium",
      "range_min": 270,
      "range_max": 300,
@@ -1555,7 +1555,7 @@
      "value": 160,
      "unit": "K",
      "source": "MSL REMS GTS; NASA TFAWS 2024 MarsWRF worst-case cold 129.5-139 K at -50 deg lat",
-     "source_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+     "source_url": "sources/tfaws_2024_mars_thermal.pdf",
      "confidence": "medium",
      "range_min": 150,
      "range_max": 185,
@@ -1567,7 +1567,7 @@
      "value": 170,
      "unit": "K",
      "source": "NASA TFAWS 2024 (Popok, MSFC) MarsWRF-derived boundary conditions: ~160 K predawn / ~186 K midday at tau=1, equator; MARSTHERM: ~140 K predawn clear sky",
-     "source_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+     "source_url": "sources/tfaws_2024_mars_thermal.pdf",
      "confidence": "medium",
      "range_min": 130,
      "range_max": 215,
@@ -1579,7 +1579,7 @@
      "value": 0.4,
      "unit": "dimensionless (880 nm extinction, column)",
      "source": "Montabone et al. (2015) Icarus 251 multiannual climatology (converted from 9.3 um CDOD); Lemmon et al. (2015) MER 5-Mars-year record",
-     "source_url": "https://arxiv.org/abs/1409.4841",
+     "source_url": "https://doi.org/10.1016/j.icarus.2014.12.034",
      "confidence": "high",
      "range_min": 0.25,
      "range_max": 0.65,
@@ -1603,7 +1603,7 @@
      "value": 9,
      "unit": "dimensionless (880 nm extinction, column)",
      "source": "MY34/2018 event: tau ~8.5 measured at Gale (Guzewich et al. 2019 GRL; Viudez-Moreiras et al. 2019); >10.8 estimated at Meridiani (Opportunity, saturated)",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL080839",
+     "source_url": "https://doi.org/10.1029/2018GL080839",
      "confidence": "medium",
      "range_min": 5,
      "range_max": 11,
@@ -1615,7 +1615,7 @@
      "value": 0.33,
      "unit": "1/Mars-year",
      "source": "Zurek & Martin (1993) JGR (NTRS 19930046754); 8-9 confirmed events 1956-2018 (1956, 1971, 1973, 1977a, 1977b, 2001, 2007, 2018)",
-     "source_url": "https://ntrs.nasa.gov/search.jsp?R=19930046754",
+     "source_url": "https://ntrs.nasa.gov/citations/19930046754",
      "confidence": "medium",
      "range_min": 0.25,
      "range_max": 0.4,
@@ -1627,7 +1627,7 @@
      "value": 100,
      "unit": "sol",
      "source": "MY34/2018: onset Ls 184.9, intense phase ~3 months, decay into Ls ~250+ (Guzewich et al. 2019; Viudez-Moreiras et al. 2019); MY25/2001 similar",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019je005985",
+     "source_url": "https://doi.org/10.1029/2019JE005985",
      "confidence": "medium",
      "range_min": 60,
      "range_max": 150,
@@ -1639,7 +1639,7 @@
      "value": 0.2,
      "unit": "%/sol",
      "source": "Pathfinder 0.28%/sol (Landis & Jenkins); MER Spirit/Opportunity medians 0.16-0.18%/sol; InSight median 0.28%/sol; synthesis Lorenz et al. (2021) P&SS 207",
-     "source_url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768",
+     "source_url": "https://doi.org/10.1016/j.pss.2021.105337",
      "confidence": "medium",
      "range_min": 0.05,
      "range_max": 2.0,
@@ -1651,7 +1651,7 @@
      "value": 3,
      "unit": "1/(km2 sol)",
      "source": "Jezero MEDA/RDS: 1.3-3.4 /km^2/sol (Toledo et al. 2023 JGR Planets); Pathfinder ~19; Spirit seasonal peak ~50; InSight: 502 vortex pressure drops >0.3 Pa in 151 sols",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022JE007494",
+     "source_url": "https://doi.org/10.1029/2022JE007494",
      "confidence": "low",
      "range_min": 0.5,
      "range_max": 50,
@@ -1663,7 +1663,7 @@
      "value": 5,
      "unit": "m/s",
      "source": "Viking 0-9.5 m/s; InSight 0-7.5 m/s; Perseverance 0-12 m/s (Martinez et al. 2017 review; Viking/InSight/MEDA records)",
-     "source_url": "https://link.springer.com/article/10.1007/s11214-017-0360-x",
+     "source_url": "https://doi.org/10.1007/s11214-017-0360-x",
      "confidence": "high",
      "range_min": 2,
      "range_max": 10,
@@ -1675,7 +1675,7 @@
      "value": 30,
      "unit": "m/s",
      "source": "Bickel et al. (2025), Sci. Adv. 11, eadw5170 (orbital dust-devil migration, supports 20-40 m/s near-surface winds); for in-situ MEDA gusts cite Hueso et al. (2023) JGR Planets / MEDA storm papers",
-     "source_url": "https://www.science.org/doi/10.1126/sciadv.adw5170",
+     "source_url": "https://doi.org/10.1126/sciadv.adw5170",
      "confidence": "medium",
      "range_min": 22,
      "range_max": 40,
@@ -1687,7 +1687,7 @@
      "value": 35,
      "unit": "W/m2",
      "source": "MSL REMS UV 10+ Mars-year record: total 26.9-42.3 W/m^2 (UVA 21.4-33.7, UVB 4.21-6.45, UVC 1.39-2.21), PNAS 2025",
-     "source_url": "https://www.pnas.org/doi/10.1073/pnas.2426611122",
+     "source_url": "https://doi.org/10.1073/pnas.2426611122",
      "confidence": "high",
      "range_min": 27,
      "range_max": 42,
@@ -1699,7 +1699,7 @@
      "value": 0.039,
      "unit": "W/(m K)",
      "source": "InSight HP3 active heating experiment, 0.03-0.37 m depth: 0.039 +/- 0.002 W/m/K (Grott et al. 2021 JGR Planets)",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JE006861",
+     "source_url": "https://doi.org/10.1029/2021JE006861",
      "confidence": "high",
      "range_min": 0.033,
      "range_max": 0.06,
@@ -1711,7 +1711,7 @@
      "value": 195,
      "unit": "J/(m2 K s^0.5)",
      "source": "InSight HP3: 160-230 (Grott et al. 2021); MCD v6.1 engineering range 42-394 used in NASA TFAWS 2024 worst-case study",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021JE006861",
+     "source_url": "https://doi.org/10.1029/2021JE006861",
      "confidence": "medium",
      "range_min": 160,
      "range_max": 230,
@@ -1723,7 +1723,7 @@
      "value": 217,
      "unit": "K",
      "source": "InSight HP3 (Elysium, 4.5 N): 217.5 K mean at 0.1-0.2 m, seasonal +/-6.7 K, diurnal damped (Spohn et al. 2024 GRL); extrapolated to 1 m where diurnal wave vanishes",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108600",
+     "source_url": "https://doi.org/10.1029/2024GL108600",
      "confidence": "medium",
      "range_min": 205,
      "range_max": 225,
@@ -1743,7 +1743,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV \u2014 FSP class",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "notes": null
     },
@@ -1755,7 +1755,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "notes": null
     },
@@ -1767,7 +1767,7 @@
      "range_min": null,
      "range_max": null,
      "source": "FSP Phase 1 SOW DR-1 (2021/2022 contracts): 40 kWe for 10 years, no human intervention",
-     "source_url": null,
+     "source_url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
      "confidence": "high",
      "notes": null
     },
@@ -1779,7 +1779,7 @@
      "range_min": null,
      "range_max": null,
      "source": "FSP SOW and all recent NASA concepts: crew habitat at 1 km within ~36-deg shielded cone",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20220004670",
      "confidence": "high",
      "notes": null
     },
@@ -1789,7 +1789,7 @@
      "value": 400,
      "unit": "kg",
      "source": "Smith/Mason/Palac/Gibson, 'Kilopower: Small & Affordable Fission Power Systems for Space', NTRS 20180000691",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20180000691",
      "confidence": "high",
      "range_min": 350,
      "range_max": 450,
@@ -1801,7 +1801,7 @@
      "value": 1500,
      "unit": "kg",
      "source": "NTRS 20180000691; Gibson et al. IEEE Aerospace 2017; core 226 kg incl 43.7 kg U-235, 43.3 kWt",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20180000691",
      "confidence": "high",
      "range_min": 1400,
      "range_max": 1600,
@@ -1813,7 +1813,7 @@
      "value": 1754,
      "unit": "kg",
      "source": "Rucker, 'Solar vs. Fission Surface Power for Mars', AIAA 2016-5452 (COMPASS point design), incl. 15% MGA, shield sized <3 mR/hr at 500 m",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20160002628",
      "confidence": "high",
      "range_min": 1500,
      "range_max": 2000,
@@ -1825,7 +1825,7 @@
      "value": 12,
      "unit": "yr",
      "source": "NTRS 20180000691 ('1 to 10 kW continuously for 10 years or more'); Rucker 2016 presentation, NTRS 20160011275 slide 18 ('12-year Kilopower service life')",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20160011275",
      "confidence": "medium",
      "range_min": 10,
      "range_max": 15,
@@ -1861,7 +1861,7 @@
      "value": 6820,
      "unit": "kg",
      "source": "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": 5800,
      "range_max": 10046,
@@ -1885,7 +1885,7 @@
      "value": 0.23,
      "unit": "dimensionless",
      "source": "Mason NETS 2025: 40 kWe net / 175 kWt (HP-Stirling); GC-Brayton 17% (40/230 kWt)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": 0.17,
      "range_max": 0.23,
@@ -1897,7 +1897,7 @@
      "value": 562,
      "unit": "kg",
      "source": "This work: least-squares fit to Mason NETS 2025 Table V (10/20/40/80/100 kWe = 2.7/4.1/6.8/10.7/12.6 t)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "medium",
      "range_min": 500,
      "range_max": 900,
@@ -1909,7 +1909,7 @@
      "value": 0.673,
      "unit": "dimensionless",
      "source": "This work: fit to Mason NETS 2025 Table V",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "medium",
      "range_min": 0.58,
      "range_max": 0.75,
@@ -1921,7 +1921,7 @@
      "value": 13,
      "unit": "kg/kWe",
      "source": "Mason et al., NASA/TM-20210016968 (2022): 1.9 MWe HALEU SCO2-Brayton NEP <25 t incl reactor/shield/conversion/radiators/PMAD; HEU version 11 kg/kWe",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210016968/downloads/TM-20210016968_final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210016968",
      "confidence": "medium",
      "range_min": 11,
      "range_max": 60,
@@ -1933,7 +1933,7 @@
      "value": 1370,
      "unit": "kg",
      "source": "Mason NETS 2025 Table IV: LiH/B4C/W directional shield, 36-deg included angle covering 1-km-dia outpost at 1 km",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": 1250,
      "range_max": 1500,
@@ -1945,7 +1945,7 @@
      "value": 5,
      "unit": "rem/yr",
      "source": "FSP Phase 1 SOW DR-3 (<5 rem/yr at 1 km); same limit used in 2010 FSP and COMPASS studies; 100% occupancy assumed",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": null,
      "range_max": null,
@@ -1957,7 +1957,7 @@
      "value": 1000,
      "unit": "m",
      "source": "FSP SOW and all recent NASA concepts: crew habitat at 1 km within ~36-deg shielded cone",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20220004670",
      "confidence": "high",
      "range_min": 500,
      "range_max": 2000,
@@ -1969,7 +1969,7 @@
      "value": 100,
      "unit": "m",
      "source": "Fission Surface Power System Initial Concept Definition, NASA/TM-2010-216772: reactor in ~2 m excavation, regolith limits dose to <5 rem/yr at 100 m",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20100033102/downloads/20100033102.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20100033102",
      "confidence": "high",
      "range_min": 50,
      "range_max": 200,
@@ -1981,7 +1981,7 @@
      "value": 3.5,
      "unit": "m2/kWe",
      "source": "Mason NETS 2025 Table V: 40-351 m2 for 10-100 kWe (3.5-4.0 m2/kWe), two-sided vertical panels, eps 0.85 EOL",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": 1.0,
      "range_max": 5.5,
@@ -1993,7 +1993,7 @@
      "value": 418,
      "unit": "K",
      "source": "Mason NETS 2025: HP-Stirling radiator 403-433 K (cold end 420 K); COMPASS 2022: 420 K inlet/370 K outlet",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": 370,
      "range_max": 504,
@@ -2005,7 +2005,7 @@
      "value": 8,
      "unit": "h",
      "source": "Mason NETS 2025: entire startup <8 h on 4 kWh battery + 1 kWe aux array; KRUSTY demonstrated 1.5 h bounding fast start",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20250000841",
      "confidence": "high",
      "range_min": 1.5,
      "range_max": 24,
@@ -2017,7 +2017,7 @@
      "value": 0,
      "unit": "h",
      "source": "FSP SOW requirement: self-contained, no crew or robotic support for startup, operation, maintenance for 10 yr; deployment by robotic rover (COMPASS NETS 2022)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20220004670",
      "confidence": "high",
      "range_min": 0,
      "range_max": 40,
@@ -2041,7 +2041,7 @@
      "value": 110,
      "unit": "We",
      "source": "NASA/JPL MMRTG fact sheet; Curiosity/Perseverance flight units (design 125 We at fueling BOL, >=100 We at 14 yr)",
-     "source_url": "https://mars.nasa.gov/internal_resources/788/",
+     "source_url": "sources/mmrtg_fact_sheet.pdf",
      "confidence": "high",
      "range_min": 100,
      "range_max": 125,
@@ -2053,7 +2053,7 @@
      "value": 45,
      "unit": "kg",
      "source": "NASA/JPL MMRTG fact sheet; 64.2 cm dia x 66.8 cm",
-     "source_url": "https://mars.nasa.gov/internal_resources/788/",
+     "source_url": "sources/mmrtg_fact_sheet.pdf",
      "confidence": "high",
      "range_min": null,
      "range_max": null,
@@ -2065,7 +2065,7 @@
      "value": 2.5,
      "unit": "%/yr",
      "source": "NASA/JPL MMRTG fact sheet NF-2020-05-619-HQ (BOL 110 We, est. 72 We at 17-yr design life => ~2.5%/yr compounded); MSL flight analyses ~3-4.8%/yr early-mission",
-     "source_url": "https://mars.nasa.gov/internal_resources/788/",
+     "source_url": "sources/mmrtg_fact_sheet.pdf",
      "confidence": "medium",
      "range_min": 1.3,
      "range_max": 4.8,
@@ -2101,7 +2101,7 @@
      "value": 120,
      "unit": "sol",
      "source": "Rucker AIAA 2016-5452 study assumption: one 120-sol storm, optical depth tau=5, max wind 20 m/s",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20160011275/downloads/20160011275.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20160002628",
      "confidence": "high",
      "range_min": 35,
      "range_max": 180,
@@ -2113,7 +2113,7 @@
      "value": 45,
      "unit": "kg per 1-km link at stated design point (mass ~ L^2 at fixed efficiency)",
      "source": "Oleson et al., COMPASS 40 kWe FSP, NETS 2022: mass-optimal at +/-2800 VDC; 3 km cable = 240 kg at 2800 V vs 3300 kg at 500 V",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20220004670/downloads/40%20kW%20Deployable%20FSP%20Paper_FINAL.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20220004670",
      "confidence": "high",
      "range_min": 40,
      "range_max": 100,
@@ -2137,7 +2137,7 @@
      "value": 20000000,
      "unit": "USD",
      "source": "NASA: '3 years and $15M' project (NTRS 20180000691); ~$20M widely cited incl DOE/NNSA contributions; DUFF precursor <$1M",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20180000691/downloads/20180000691.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20180000691",
      "confidence": "medium",
      "range_min": 15000000,
      "range_max": 25000000,
@@ -2157,7 +2157,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Hassler et al. 2014, Science 343:1244797 (MSL RAD); solar-cycle range per Guo et al. 2021, Astron. Astrophys. Rev. 29:8",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1126/science.1244797",
      "confidence": "high",
      "notes": null
     },
@@ -2169,7 +2169,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA-STD-3001 Vol 1 Rev B (2022), per 2021 NAS review; universal all ages/sexes, 3% mean REID basis",
-     "source_url": null,
+     "source_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_1",
      "confidence": "high",
      "notes": null
     },
@@ -2181,7 +2181,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28; ISS standard workweek",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": null
     },
@@ -2193,7 +2193,7 @@
      "range_min": 8.0,
      "range_max": 8.5,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (Langston 2005, ISS)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Flight actuals: astronauts sleep only ~6.09 h/night on ISS (Barger et al. 2014, Lancet Neurol 13:904). Schedule 8.5 h; model the deficit as a performance risk, not recoverable labor. Scale by 1.0275 for per-sol budgets. An additional invariant 1.5 h/CM-day of pre-sleep (1.0) + post-sleep (0.5) time, including personal hygiene, brackets the sleep period (BVAD Table 3-28). | reference (research campaign)"
     },
@@ -2205,7 +2205,7 @@
      "range_min": 6.0,
      "range_max": 8.0,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28; ISS standard workweek",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "5 workdays + 2 weekend days/week (weekend has only ~0.3 h/d payload tending); 8 vacation days/yr. Mars surface work rate needs +0.7 h/CM-d vs ISS in NASA integrated model (Stromgren 2015). | reference (research campaign)"
     },
@@ -2217,7 +2217,7 @@
      "range_min": 1.5,
      "range_max": 3.0,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Device time ~1.5 h (aerobic+resistive), rest is overhead. BVAD assumes -0.5 h/d in hypogravity (surface); transit may require more. 7 days/week including rest days. | reference (research campaign)"
     },
@@ -2229,7 +2229,7 @@
      "range_min": 2.5,
      "range_max": 3.5,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (1.0 h per meal x 3)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Prepackaged food system. Does not diminish on rest days. Preparation component broken out separately in hf.time.food_prep_* parameters. | reference (research campaign)"
     },
@@ -2241,7 +2241,7 @@
      "range_min": 1.5,
      "range_max": 3.0,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (DPC 0.5 + plan review/report 1.0 + work prep 0.5)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Mars autonomy (4-24 min one-way light time) shifts this from ground-conference to onboard planning; NASA Mars crew time model increased training/work-prep liens for autonomous ops. | reference (research campaign)"
     },
@@ -2253,7 +2253,7 @@
      "range_min": 2.0,
      "range_max": 7.0,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (2.0 h on each of 2 weekend days)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "ISS actual scheduling. Larger habitats with dust ingress (Mars EVA ops) plausibly need more; upper range is an engineering allowance. | reference (research campaign)"
     },
@@ -2265,7 +2265,7 @@
      "range_min": 4.0,
      "range_max": 8.0,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "Treat as a hard scheduling constraint (2 contiguous rest days/week) for behavioral health; includes private family/psych conferences ~1 h/wk. Not harvestable labor except in short (<28 d) surge periods. | reference (research campaign)"
     },
@@ -2277,7 +2277,7 @@
      "range_min": 50.0,
      "range_max": 76.7,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-29 and sect. 3.2.5",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Includes work, meals, housekeeping, LSS ops. 67.2 h/wk in weightlessness (transit). Max (76.7) sustainable <=28 days per Skylab. Min 50 = minimum expected work output. Per sol multiply daily value by 1.0275. | reference (research campaign)"
     },
@@ -2289,7 +2289,7 @@
      "range_min": 0.12,
      "range_max": 0.25,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Shuttle experience 45-90 min/d for crew of 6)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Subset of the 3.0 h/d meals block. Use for resupplied-food scenarios. | reference (research campaign)"
     },
@@ -2301,7 +2301,7 @@
      "range_min": 0.5,
      "range_max": 1.15,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Hunter model; LMLSTP Phase III measured 4.6 CM-h/d for crew of 4)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "EXCLUDES crop processing into ingredients (unquantified in BVAD) and crop tending (belongs to food/plant domain). 50/50 mixed diet = 0.50 h/CM-day. Major labor lever for settlement-scale food closure. | reference (research campaign)"
     },
@@ -2313,7 +2313,7 @@
      "range_min": 3.0,
      "range_max": 3.3,
      "source": "Russell & Klaus 2007, Reliab. Eng. Syst. Saf. 92:808-820 (ISS/Mir-derived)",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832006001050",
+     "source_url": "https://doi.org/10.1016/j.ress.2006.04.020",
      "confidence": "medium",
      "notes": "Per habitat, not per crewmember; scales sub-linearly with crew. Baseline for ISS-class ECLSS technology; regenerative closure increases it. | reference (research campaign)"
     },
@@ -2325,7 +2325,7 @@
      "range_min": 0.16,
      "range_max": 1.26,
      "source": "Stromgren et al. 2021, IEEE Aerospace, NTRS 20210026843 (lunar Surface Habitat, ISS component data: expected 24.7 h per 28-day 2-crew mission; 50th pct 9.0 h, 99th pct 70.5 h)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210026843/downloads/IEEE%20Assessment%20of%20Crew%20Time%20for%20Maintenance%20and%20Repairs%20Activities%20for%20Lunar%20Surface%20Missions.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210026843",
      "confidence": "medium",
      "notes": "Right-skewed (lognormal-like): range_min=50th pct, range_max=99th pct. ECLSS dominates. Scales with installed equipment count, not crew size; renormalize per habitat for settlement scale. | reference (research campaign)"
     },
@@ -2337,7 +2337,7 @@
      "range_min": 16.0,
      "range_max": 24.0,
      "source": "NASA HAT EVA team constraint, in Stromgren et al. 2015, NTRS 20150009469",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20150009469/downloads/20150009469.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20150009469",
      "confidence": "medium",
      "notes": "With one full rest day per 7 days. NASA model also imposes 30-day post-landing reconditioning before first EVA (long-stay). BVAD lunar outpost: 80 CM-h/wk total EVA at 7 two-person sorties/wk. | reference (research campaign)"
     },
@@ -2349,7 +2349,7 @@
      "range_min": 50.0,
      "range_max": 90.0,
      "source": "NASA EVA-EXP-0031 figures cited in Griffin, AIAA 2020-4170 (58.25 h prep + 15.83 h post, typically 2-person EVA)",
-     "source_url": "https://spacearchitect.org/pubs/AIAA-2020-4170.pdf",
+     "source_url": "https://doi.org/10.2514/6.2020-4170",
      "confidence": "high",
      "notes": "Total crew-hours across EV+IV crew over several days: procedures, tool config, suit servicing, prebreathe. Work efficiency index 0.39-0.51. Upper bound / legacy-ops anchor for Mars EVA overhead trades. ISS gas cost: ~9.1 kg prebreathe O2 + 1.8 kg airlock air lost per EVA. | reference (research campaign)"
     },
@@ -2361,7 +2361,7 @@
      "range_min": 1.0,
      "range_max": 3.0,
      "source": "Estimate: exploration atmosphere 56.5 kPa/34% O2 gives ~15-min prebreathe (Abercromby et al. 2015, Acta Astronautica 109:76-87) + don/doff, checkout, dust mitigation, amortized suit servicing",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576514004937",
+     "source_url": "https://doi.org/10.1016/j.actaastro.2014.11.039",
      "confidence": "low",
      "notes": "No flight data for planetary suits since Apollo; sensitivity-test between this and ISS actuals. Assumes suitport or high-cadence airlock ops. | reference (research campaign)"
     },
@@ -2373,7 +2373,7 @@
      "range_min": 0.069,
      "range_max": 0.11,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (lunar surface EVA values)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "high",
      "notes": "xEMU suitport scenario: 0.10 kg/CM-h + 0.54 kg/CM-EVA fixed (N2 purge dominated). Metabolic rate suited: 295-352 W (Apollo surface avg ~1030 kJ/h). | reference (research campaign)"
     },
@@ -2385,7 +2385,7 @@
      "range_min": 0.25,
      "range_max": 0.76,
      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (polar 0.25-0.5; equatorial 0.46-0.76)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210024855",
      "confidence": "medium",
      "notes": "Thermal-environment dependent; lunar-derived. Mars ambient (colder, CO2 atmosphere) may allow radiator-augmented PLSS with lower water use; treat as upper-bound consumable. | reference (research campaign)"
     },
@@ -2397,7 +2397,7 @@
      "range_min": 25.0,
      "range_max": 50.0,
      "source": "Whitmire et al. 2015, NASA/TM-2015-218564 (SME consensus, NTRS 20140016951); consistent with NASA-STD-3001 Vol 2 task-based NHV requirement",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20140016951",
      "confidence": "high",
      "notes": "Floor for ~1-2.5 yr missions with countermeasures in place; permanent settlement plausibly needs more (no data; range_max is engineering allowance). Crew of 6 -> 150 m3 NHV minimum. | reference (research campaign)"
     },
@@ -2409,7 +2409,7 @@
      "range_min": 2.1,
      "range_max": 10.0,
      "source": "Whitmire et al. 2015 consensus report (5.4 m3 allocation); ISS USOS CQ flight actual 2.1 m3 (Broyan et al., 08ICES-0222)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20140016951",
      "confidence": "high",
      "notes": "2.1 m3 (ISS) is the demonstrated floor and is considered marginal for multi-year missions; 5.4 m3 recommended for long-duration. Include radiation-augmented quarters if used as SPE shelter. | reference (research campaign)"
     },
@@ -2421,7 +2421,7 @@
      "range_min": 0.5,
      "range_max": 0.8,
      "source": "Hassler et al. 2014, Science 343:1244797 (MSL RAD); solar-cycle range per Guo et al. 2021, Astron. Astrophys. Rev. 29:8",
-     "source_url": "https://www.science.org/doi/10.1126/science.1244797",
+     "source_url": "https://doi.org/10.1126/science.1244797",
      "confidence": "high",
      "notes": "+/-0.12 measurement uncertainty; = 0.66 mSv/sol = ~233 mSv/Earth-yr. Absorbed dose 0.21 mGy/d. Higher at solar min and at higher elevation (thinner atmosphere). Thin-detector point dose equivalent; ICRP effective dose ~30% lower (Martinez-Sierra 2024). verified correction: the 'Martinez-Sierra 2024' attribution for the ICRP-effective-dose reduction is a phantom author for arXiv:2409.02001 (actually Ralha et al. 2024). | reference (research campaign)"
     },
@@ -2433,7 +2433,7 @@
      "range_min": 1.5,
      "range_max": 3.0,
      "source": "Zeitlin et al. 2013, Science 340:1080-1084 (MSL RAD cruise, 2011-12)",
-     "source_url": "https://www.science.org/doi/10.1126/science.1235989",
+     "source_url": "https://doi.org/10.1126/science.1235989",
      "confidence": "high",
      "notes": "+/-0.33 uncertainty; measured at solar max behind ~10-40 g/cm2 nonuniform shielding. Solar-min GCR can be ~50-60% higher. Round-trip fast-transit (~360 d) GCR alone ~0.66 Sv. SPE contributions additional and stochastic. | reference (research campaign)"
     },
@@ -2445,7 +2445,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA-STD-3001 Vol 1 Rev B (2022), per 2021 NAS review; universal all ages/sexes, 3% mean REID basis",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+     "source_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_1",
      "confidence": "high",
      "notes": "Binding constraint: an unmitigated conjunction mission (~360 d transit + 500 sols surface) accrues ~1.0 Sv. Dose tracker should flag crew approaching limit and drive shielding/timing trades. A settlement sim may need its own (non-NASA) risk policy for permanent residents. | reference (research campaign)"
     },
@@ -2457,7 +2457,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA-STD-3001 Vol 1 Rev B [V1 4031], per OCHMO-TB-020 Rev E (12/2022); legacy 30-day BFO 250 mGy-Eq limit is NCRP-132/pre-Rev-B and Townsend et al. 2018",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+     "source_url": "sources/ochmo_radiation_brief_2022.pdf",
      "confidence": "high",
      "notes": "Deterministic (acute) effects limit; the design driver for SPE storm shelters, separate from the 600 mSv career (cancer) limit. verified correction: NASA-STD-3001 Vol 1 Rev B (2022) does NOT contain a 30-day BFO 250 mGy-Eq limit; requirement [V1 4031] is <250 mSv NASA effective dose per design-reference SPE (Oct 1989 spectrum). The 30-day BFO 250 / 1-yr 500 mGy-Eq limits are the retired NCRP-132/pre-Rev-B values (still used in shelter-design literature). A rolling-30-day-BFO tracker would enforce a retired requirement. | reference (research campaign)"
     },
@@ -2469,7 +2469,7 @@
      "range_min": 16.0,
      "range_max": 30.0,
      "source": "Guo et al. 2021, Astron. Astrophys. Rev. 29:8; Ralha et al. 2024, arXiv:2409.02001",
-     "source_url": "https://arxiv.org/abs/2409.02001",
+     "source_url": "https://doi.org/10.1007/s00159-021-00136-5",
      "confidence": "high",
      "notes": "Slant-path average shielding over the sky is substantially higher than vertical. Removes most SPE protons <150 MeV: SPE shelters are primarily a transit problem. Seasonal pressure cycle modulates surface dose by a few percent. verified correction: arXiv:2409.02001 is Ralha et al. 2024 (no author 'Martinez-Sierra'); 23 g/cm2 is the mean column at Gale/low-elevation sites (-4.4 km MOLA), not the datum. At the MOLA datum mean column is ~16 g/cm2 - relabel to avoid double-counting elevation scaling (~2%/(g/cm2) dose sensitivity). | reference (research campaign)"
     },
@@ -2481,7 +2481,7 @@
      "range_min": 88.0,
      "range_max": 250.0,
      "source": "R\u00f6stel et al. 2020, JGR Planets 125:e2019JE006246 (GEANT4/AtRIS, RAD-validated): equivalent dose peaks at 30-40 cm (88-102 g/cm2) and only drops below surface value beyond ~200 g/cm2 (0.7-0.9 m dry rock)",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246",
+     "source_url": "https://doi.org/10.1029/2019JE006246",
      "confidence": "medium",
      "notes": "Model-critical: <0.7 m of dry regolith cover INCREASES crew equivalent dose (up to ~+10-25% at the ~30 cm peak). Buildup is much weaker for hydrogen-rich (icy) regolith. range_min = buildup peak location. | reference (research campaign)"
     },
@@ -2493,7 +2493,7 @@
      "range_min": 1.0,
      "range_max": 1.7,
      "source": "R\u00f6stel et al. 2020, Table 3: 1.26 m andesite (rho=2.8 g/cm3, ~350 g/cm2) reduces water-sphere equivalent dose to 200 mSv/yr, <=half the dry-surface value; sandstone 1.64 m",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246",
+     "source_url": "https://doi.org/10.1029/2019JE006246",
      "confidence": "medium",
      "notes": "In water-sphere equivalent-dose metric at medium solar modulation (Phi=580 MV). Loose regolith (rho~1.5-1.7) needs proportionally more thickness for equal areal density. Hydrated regolith halves dose in substantially less depth. | reference (research campaign)"
     },
@@ -2505,7 +2505,7 @@
      "range_min": 0.8,
      "range_max": 2.5,
      "source": "R\u00f6stel et al. 2020 (0.8-2.5 m depending on composition; hydrated less); Zhang et al. 2022 JGR Planets: 1-1.6 m at representative sites",
-     "source_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019JE006246",
+     "source_url": "https://doi.org/10.1029/2019JE006246",
      "confidence": "medium",
      "notes": "100 mSv/yr threshold chosen as the level above which lifetime cancer risk increase is evident. Water-ice-rich regolith (10-50 wt%) is the most mass-efficient cover; 10% subsurface water content alone cuts above-ground equivalent dose ~36%. | reference (research campaign)"
     },
@@ -2541,7 +2541,7 @@
      "range_min": 0.01,
      "range_max": 0.06,
      "source": "Derived estimate from Antonsen et al. 2022 Fig. 4 (EVAC 0.3-1% per <42-d mission, 4 crew, unlimited ISS capability); not a stated IMM rate",
-     "source_url": "https://www.nature.com/articles/s41526-022-00193-9",
+     "source_url": "https://doi.org/10.1038/s41526-022-00193-9",
      "confidence": "medium",
      "notes": "No actual ISS medical evacuation has occurred. For Mars (no evac possible): treat as severe-event rate requiring definitive onboard care; IMM projects >10% probability of an evac-class condition on a 730+ day mission even with ISS-level capability, and ~0.01 floor on medical loss-of-crew-life per 1195-d, 4-crew mission. verified correction: Antonsen et al. 2022 reports mission-level IMM probabilities (EVAC 0.3-1% for <42-day missions, >10% for 730+ day missions), not a 0.017 events/person-year rate; the value is derivable from those figures but should be labeled a derived estimate, not a published IMM rate. | reference (research campaign)"
     }
@@ -2559,7 +2559,7 @@
      "range_min": null,
      "range_max": null,
      "source": "TDA Research, ICES-2020-151: 0.91 kW heating/cooling for 1.51 kg CO2/hr module",
-     "source_url": null,
+     "source_url": "sources/tda_ices_2020_151.pdf",
      "confidence": "medium",
      "notes": null
     },
@@ -2583,7 +2583,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: h_fg 511 kJ/kg + sensible, 90 K-class cryocooler at 10-20% of Carnot; same cooler class as O2 (CryoFILL philosophy)",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210023574",
      "confidence": "low",
      "notes": null
     },
@@ -2595,7 +2595,7 @@
      "range_min": null,
      "range_max": null,
      "source": "NASA CryoFILL (NTRS 20210023574): 2.2 kg/hr O2 requires 1.2-4 kW input; iScience 25:104323 (2022): 7.3 kW for 3 kg/hr incl. heat leaks at 10% cryocooler efficiency",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20210023574",
      "confidence": "medium",
      "notes": null
     },
@@ -2607,7 +2607,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Derived: 25-30 kW / 2-3 kg/hr (Hoffman 2023); cross-check Kleinhenz & Paz O2-only case 34 kW / 1.97 kg/hr = 17 kWh/kg",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20170001421",
      "confidence": "medium",
      "notes": null
     },
@@ -2619,7 +2619,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Kleinhenz & Paz, AIAA 2017-0423: 1.7 t hardware for 73 kg/day product (Case 2); O2-only 0.9 t for 47 kg/day = 19 \u2014 converted from per kg/day",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20170001421",
      "confidence": "medium",
      "notes": null
     },
@@ -2679,7 +2679,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Hoffman et al. 2023, Acta Astronautica 210:547-553; NASA/JPL 2023",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576523002187",
+     "source_url": "https://doi.org/10.1016/j.actaastro.2023.04.045",
      "confidence": "high",
      "notes": "Operated across all seasons of a full Mars year; graceful degradation (small iASR increase per run, ~0.75 -> ~0.9 ohm.cm2 through burn-in). | reference (research campaign)"
     },
@@ -2691,7 +2691,7 @@
      "range_min": 280,
      "range_max": 320,
      "source": "Hecht et al. 2021, Space Sci. Rev. 217:9; NASA Mars 2020 fact sheet",
-     "source_url": "https://en.wikipedia.org/wiki/Mars_Oxygen_ISRU_Experiment",
+     "source_url": "https://doi.org/10.1007/s11214-020-00782-8",
      "confidence": "high",
      "notes": "Breakdown: ~115 W SOXE stack (35 W electrolysis + 80 W stack heater at 800 C) + scroll compressor + avionics. Mass 17.1 kg. | reference (research campaign)"
     },
@@ -2703,7 +2703,7 @@
      "range_min": 25,
      "range_max": 50,
      "source": "Derived: 300 W / 6-12 g/hr (Hecht 2021; NASA/JPL 2023)",
-     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9432831/",
+     "source_url": "https://doi.org/10.1007/s11214-020-00782-8",
      "confidence": "medium",
      "notes": "Small-scale penalty dominated by fixed thermal losses; thermodynamic floor is 4.91 kWh/kg. Stack-only best case 9.6 kWh/kg (2.5 g/W/day, Shahid et al. 2023 AIChE J). verified correction: the 'stack-only 9.6 kWh/kg (2.5 g/W/day, Shahid et al. 2023)' note is a stack-only derivation, not a Shahid figure; Shahid et al. benchmark MOXIE at ~0.8 g O2/W/day system-level. | reference (research campaign)"
     },
@@ -2715,7 +2715,7 @@
      "range_min": 9.6,
      "range_max": 19.2,
      "source": "Derived: MOXIE SOXE stack ~115 W (Hecht et al. 2021, Space Sci. Rev. 217:9) at 6-12 g/hr flight rates; cf. Shahid et al. 2023, AIChE J 69(5) e18010 (benchmarks MOXIE at ~0.8 g O2/W/day system-level)",
-     "source_url": "https://arxiv.org/pdf/2404.00800",
+     "source_url": "https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.18010",
      "confidence": "medium",
      "notes": "Excludes compressor and avionics; shows scaling headroom vs 30 kWh/kg system value. verified correction: the '2.5 g/W/day per Shahid et al. 2023' attribution was wrong (that paper reports 3.54 g O2/W/day for its own electrolyzer and benchmarks MOXIE at ~0.8 g O2/W/day system-level); 2.5 g/W/day is the researcher's own stack-only derivation. Value 12 kWh/kg (9.6-19.2) is unchanged. | reference (research campaign)"
     },
@@ -2727,7 +2727,7 @@
      "range_min": 25,
      "range_max": 30,
      "source": "Hoffman et al. 2023, Acta Astronautica 210 (scaled several-hundred-x MOXIE); OxEon manned-mission stack development (4 stacks > 2.3 kg/hr)",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576523002187",
+     "source_url": "https://doi.org/10.1016/j.actaastro.2023.04.045",
      "confidence": "medium",
      "notes": "Produces ~30 t LOX in a 435-500 day window for a Mars Ascent Vehicle. | reference (research campaign)"
     },
@@ -2763,7 +2763,7 @@
      "range_min": 0.5,
      "range_max": 0.8,
      "source": "TDA Research, ICES-2020-151: 0.91 kW heating/cooling for 1.51 kg CO2/hr module",
-     "source_url": "https://ttu-ir.tdl.org/server/api/core/bitstreams/93f2e845-bcf6-4817-a30b-7129eec234d0/content",
+     "source_url": "sources/tda_ices_2020_151.pdf",
      "confidence": "medium",
      "notes": "MOF sorbent, 4500 thermal-swing cycles demonstrated in lab; energy is heat and can be supplied by Sabatier waste heat. | reference (research campaign)"
     },
@@ -2775,7 +2775,7 @@
      "range_min": 0.7,
      "range_max": 1.5,
      "source": "Estimate: desublimation + sensible load ~620 kJ/kg at 150 K divided by COP 0.21 (20% of Carnot, per Berg TFAWS-2018 Stirling hardware, NTRS 20190000481); KSC MACDOF and Kleinhenz & Paz baseline",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20190000481/downloads/20190000481.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20190000481",
      "confidence": "low",
      "notes": "Delivers pure CO2 (Ar/N2 rejected inherently) at high pressure on re-vaporization; NASA EMC baseline method. | reference (research campaign)"
     },
@@ -2787,7 +2787,7 @@
      "range_min": 0.15,
      "range_max": 1.7,
      "source": "Estimate: ideal isothermal 0.7->100 kPa is 0.055 kWh/kg; 35% single-stage efficiency measured (Acta Astronautica 2024); MOXIE scroll ~1.7 kWh/kg at gram scale",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0094576524007690",
+     "source_url": "https://doi.org/10.1016/j.actaastro.2024.12.020",
      "confidence": "low",
      "notes": "Continuous and simple but passes ~4-5% Ar/N2 inerts downstream; strong scale dependence. | reference (research campaign)"
     },
@@ -2799,7 +2799,7 @@
      "range_min": 0.9,
      "range_max": 0.99,
      "source": "NASA Sabatier System Design Study, ICES-2018 / NTRS 20180004697; PNNL microchannel reactors",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20180004697/downloads/20180004697.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20180004697",
      "confidence": "high",
      "notes": "Ru/Al2O3 catalyst, 350-400 C, 55-520 kPa; >99% effective with recycle over H2:CO2 = 1.8-5 (ISS-heritage reactors). | reference (research campaign)"
     },
@@ -2847,7 +2847,7 @@
      "range_min": 0.55,
      "range_max": 2.4,
      "source": "NASA CryoFILL (NTRS 20210023574): 2.2 kg/hr O2 requires 1.2-4 kW input; iScience 25:104323 (2022): 7.3 kW for 3 kg/hr incl. heat leaks at 10% cryocooler efficiency",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210023574/downloads/SCW_CryoFILL_Presentation_v4.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210023574",
      "confidence": "medium",
      "notes": "Depends on cryocooler second-law efficiency (10-20%) and radiator reject temperature; night operation cheaper. | reference (research campaign)"
     },
@@ -2859,7 +2859,7 @@
      "range_min": 0.8,
      "range_max": 2.5,
      "source": "Estimate: h_fg 511 kJ/kg + sensible, 90 K-class cryocooler at 10-20% of Carnot; same cooler class as O2 (CryoFILL philosophy)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210023574/downloads/SCW_CryoFILL_Presentation_v4.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210023574",
      "confidence": "low",
      "notes": "Latent heat 2.4x O2 but warmer storage temperature; CH4 is only ~22% of propellant mass so O2 liquefaction dominates plant load. | reference (research campaign)"
     },
@@ -2871,7 +2871,7 @@
      "range_min": 33,
      "range_max": 100,
      "source": "NASA CryoFILL (NTRS 20210023574): 0.3 kg/hr H2 requires 10-30 kW input incl. para-ortho conversion",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210023574/downloads/SCW_CryoFILL_Presentation_v4.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210023574",
      "confidence": "medium",
      "notes": "Terrestrial large plants reach 10-13 kWh/kg; space-scale 20 K systems are far worse. Central cost of bring-your-own-H2 architecture. | reference (research campaign)"
     },
@@ -2883,7 +2883,7 @@
      "range_min": 5,
      "range_max": 23,
      "source": "Derived from CryoFILL input-power data (5-16 W/W), iScience 2022 10%-of-Carnot assumption (23 W/W at 300 K reject), Creare 90 K/500 W reverse turbo-Brayton (NTRS 20170009150, 20180004709)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20170009150/downloads/20170009150.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20170009150",
      "confidence": "medium",
      "notes": "Carnot floor 2.33 W/W at 90 K/300 K; Mars diurnal reject temperature swing makes night operation 20-40% cheaper. | reference (research campaign)"
     },
@@ -2895,7 +2895,7 @@
      "range_min": 0.1,
      "range_max": 0.5,
      "source": "NASA ZBO literature (NTRS 20170006481; cryogenic fluid management reviews)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20170006481/downloads/20170006481.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20170006481",
      "confidence": "medium",
      "notes": "30-70% loss over a 180-300 day transit+wait without zero-boiloff cryocoolers; the reason Earth-H2 import is disfavored at human scale. | reference (research campaign)"
     },
@@ -3009,7 +3009,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Thermo model ((1-y)/y*c_reg*dT + c_ice*dT + L_sub) bracketed by NASA ISRU studies (Kleinhenz NTRS 20180005542 program targets; Hoffman JSC assessment); lower bound assumes partial heat recuperation \u2014 thermal extraction + cleanup + excavation/transport",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20180005542",
      "confidence": "medium",
      "notes": null
     },
@@ -3021,7 +3021,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Dundas et al. 2018 (massive, dust-poor scarp ice); Bramson et al. 2015 (bulk dielectric ~2.5, mostly clean ice); M-WIP 2016 reference Case A assumes 90% ice / 10% sand \u2014 excess-ice deposit, derated for overburden mixing",
-     "source_url": null,
+     "source_url": "https://doi.org/10.1126/science.aao1619",
      "confidence": "medium",
      "notes": null
     },
@@ -3070,7 +3070,7 @@
      "range_max": null,
      "confidence": "high",
      "source": "Stoichiometry (2x18.02/172.17); dehydration at 100-150 C confirmed in M-WIP 2016",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Releases water at benign 100-150 C (vs 300 C for smectite) - lowest-energy regolith route. Gypsum/polyhydrated-sulfate deposits mapped from orbit (e.g., north polar erg, Valles Marineris, Gale). | reference (research campaign)"
     },
     {
@@ -3082,7 +3082,7 @@
      "range_max": 0.09,
      "confidence": "medium",
      "source": "M-WIP 2016 reference Case B: 40% gypsum + minor hydrates -> 186 t ore per 16 t H2O at 425 K",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Hypothetical reserve description, +/-30% heterogeneity assumed; no gypsum deposit has been ground-truthed at mining scale. | reference (research campaign)"
     },
     {
@@ -3094,7 +3094,7 @@
      "range_max": 0.07,
      "confidence": "medium",
      "source": "M-WIP 2016 reference Case C: 40% smectite (avg 4 wt% water; Na-smectite ~2, Ca-smectite ~7) -> 584 t ore per 16 t H2O at 575 K",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Requires ~300 C process temperature. Phyllosilicates widely mapped by CRISM/OMEGA (3-8 wt% in enriched terrains per hydrated-silicate surveys). | reference (research campaign)"
     },
     {
@@ -3118,7 +3118,7 @@
      "range_max": 2200,
      "confidence": "medium",
      "source": "M-WIP 2016 heuristics: undisturbed granular ~2.0 +/-10% t/m3 (35% porosity); disturbed/excavated ~1.5 +/-10% t/m3 (50% porosity)",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Use 1500 kg/m3 for hauled (disturbed) material volume sizing; 920 kg/m3 for pure ice. | reference (research campaign)"
     },
     {
@@ -3190,7 +3190,7 @@
      "range_max": 0.5,
      "confidence": "high",
      "source": "M-WIP 2016 RASSOR key characteristics (25 cm/s)",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Drives trips/sol = f(haul distance); at 1 km one-way a round trip is ~2.2 h + load/dump. | reference (research campaign)"
     },
     {
@@ -3202,7 +3202,7 @@
      "range_max": 3000,
      "confidence": "medium",
      "source": "M-WIP 2016 excavation/travel analysis: gypsum case feasible to ~3 km with 2 RASSOR-class excavators in 480-sol campaign; typical regolith excavator-limited even at 100 m",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Design rule: co-locate plant and mine; haul or pump water, not low-grade ore. | reference (research campaign)"
     },
     {
@@ -3226,7 +3226,7 @@
      "range_max": 0.14,
      "confidence": "high",
      "source": "Thermodynamics: cp_ice ~1.9 kJ/kg.K avg x 80 K + 334 kJ/kg fusion = ~486 kJ/kg; NASA JSC ice drilling assessment chart ~140 kWh per 1000 kg for -80 C ice",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/06/mars_ice_drilling_assessment_v6_for_public_release.pdf",
+     "source_url": "sources/mars_ice_drilling_assessment_2015.pdf",
      "notes": "Lower bound of all routes. -20 C ice: ~0.10 kWh/kg. Rodwell practice runs 3-5x this due to conductive losses into surrounding ice and evaporative losses at the pool surface. | reference (research campaign)"
     },
     {
@@ -3298,7 +3298,7 @@
      "range_max": 2.5,
      "confidence": "medium",
      "source": "M-WIP 2016 Case B: ~2 kW for 33 kg H2O/sol; theory floor ~1.15 kWh/kg (matrix heating + dehydration enthalpy)",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Cheapest regolith route and lowest process temperature (100-150 C) - also lowest corrosion risk (no HCl/H2S evolution below ~400 C). | reference (research campaign)"
     },
     {
@@ -3310,7 +3310,7 @@
      "range_max": 5.0,
      "confidence": "medium",
      "source": "M-WIP 2016 Case C: ~5 kW for 33 kg H2O/sol; theory floor ~3.1 kWh/kg",
-     "source_url": "https://mepag.jpl.nasa.gov/reports/Mars_Water_ISRU_Study.pdf",
+     "source_url": "sources/mwip_2016_mars_water_isru.pdf",
      "notes": "Dominated by heating 36 kg of matrix per kg of water to 300 C; recuperator effectiveness is the key design lever. | reference (research campaign)"
     },
     {
@@ -3399,7 +3399,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Wikipedia SpaceX Raptor (3.6:1); Heldmann et al. 2022 use ~3.5",
-     "source_url": null,
+     "source_url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
      "confidence": "high",
      "notes": null
     },
@@ -3411,7 +3411,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Heldmann et al. 2022 New Space ('on order of 1,100 m3 forward space'); SpaceX historical claim 1,000 m3",
-     "source_url": null,
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
      "confidence": "medium",
      "notes": null
     },
@@ -3423,7 +3423,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Heldmann et al. 2022: full V1-class refill 1200 t = 933 t LOX + 267 t CH4; Rapp 2024: ~920 t for stripped ship; rocket-equation minimum ~780 t (125 t dry + 20 t payload, 6.9 km/s, Isp 375 s)",
-     "source_url": null,
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
      "confidence": "low",
      "notes": null
     },
@@ -3435,7 +3435,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (ship: 1,550 t propellant, 52.1 m, ~1,600 tf, six engines)",
-     "source_url": null,
+     "source_url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
      "confidence": "medium",
      "notes": null
     },
@@ -3447,7 +3447,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: scaled from Liu 2017 (NTRS 20170011674) Mars worst-case heat flux 15.4-18.1 W/m2 through 22 mm LCI (k=2 mW/m-K) over ~900 m2 tank area => 3.6-6.5 t/day on LOX (h_fg 213 kJ/kg); Handmer 2025: 20-layer MLI cuts heat ~99%, <1 t/day",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20170011674",
      "confidence": "speculative",
      "notes": null
     },
@@ -3459,7 +3459,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: scaled from Liu 2017 (8.3-11.5 kW_e reverse turbo-Brayton per 3.5-3.7 kW heat lift at ~162-186 m2 insulated tank area, cryocooler eff. 70% of Carnot) to ~900 m2 Starship tank area \u2014 40 kW per full 1600 t ship",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20170011674",
      "confidence": "speculative",
      "notes": null
     },
@@ -3796,7 +3796,7 @@
      "range_max": 180,
      "confidence": "medium",
      "source": "SpaceX claim (Musk 2025-05-29: 80-150 days, avg ~115); Ataee & Elvander Sci Rep 2025 find 90-104 d feasible with 15 tankers/crewed ship",
-     "source_url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+     "source_url": "https://www.nature.com/articles/s41598-025-00565-7",
      "notes": "~112 sols at 115 days. Slower ~180-210 d Hohmann-like transfers reduce TMI propellant and entry velocity (7.5 km/s entry cited for nominal). | reference (research campaign)"
     },
     {
@@ -3825,7 +3825,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Estimate: battery bouts 2.5-4 h + 1-3 h charge cycles (Agility Digit 2:1 work:charge company claim, 2024-2025), night cold/power limits, tasking gaps",
-     "source_url": null,
+     "source_url": "https://www.agilityrobotics.com/content/gxo-signs-industry-first-multi-year-agreement-with-agility-robotics",
      "confidence": "low",
      "notes": null
     },
@@ -3837,7 +3837,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Derived: A = MTBF/(MTBF + MTTR_effective) with MTTR_eff including diagnosis, spares wait, repair queue; consistent with terrestrial robot-cell availability ~88% (The Robot Report)",
-     "source_url": null,
+     "source_url": "https://www.therobotreport.com/the-fake-news-about-robots-and-their-reliability/",
      "confidence": "low",
      "notes": null
     },
@@ -3849,7 +3849,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Derived: 400-500 W claimed working draw (Tesla AI Day 2022) / 0.9 charge efficiency + 50-150 W thermal overhead; upper bound Valkyrie-class measured ~1.8 kW (NASA R5 fact sheet)",
-     "source_url": null,
+     "source_url": "https://www.nasa.gov/technology/r5/",
      "confidence": "low",
      "notes": null
     },
@@ -3861,7 +3861,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Tesla Optimus Gen 2 unveil, 2023-12-12 (company claim, hardware shown); carried into Gen 3/V3 statements through 2026",
-     "source_url": null,
+     "source_url": "https://electrek.co/2023/12/12/tesla-unveils-optimus-gen-2-next-generation-humanoid-robot/",
      "confidence": "medium",
      "notes": null
     },
@@ -3873,7 +3873,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.2 (structured outdoor task)",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": null
     },
@@ -3885,7 +3885,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.0 (semi-structured assembly)",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": null
     },
@@ -3897,7 +3897,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.2 (warehouse-analog work)",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": null
     },
@@ -3909,7 +3909,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 0.8 (delicate manipulation)",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": null
     },
@@ -3921,7 +3921,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 0.5 (diagnosis-heavy, human-led)",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": null
     },
@@ -3933,7 +3933,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.0 (monitoring rounds)",
-     "source_url": null,
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": null
     },
@@ -3945,7 +3945,7 @@
      "range_min": 55,
      "range_max": 65,
      "source": "Tesla Optimus Gen 2 unveil, 2023-12-12 (company claim, hardware shown); carried into Gen 3/V3 statements through 2026",
-     "source_url": "https://en.wikipedia.org/wiki/Optimus_(robot)",
+     "source_url": "https://electrek.co/2023/12/12/tesla-unveils-optimus-gen-2-next-generation-humanoid-robot/",
      "confidence": "medium",
      "notes": "125 lb / 173 cm. V3 mass not separately stated as of 2026-07; range allows growth for mass-production body. Company claim, not independently weighed. | reference (research campaign)"
     },
@@ -4029,7 +4029,7 @@
      "range_min": 300,
      "range_max": 1800,
      "source": "Tesla AI Day 2022 claim: ~500 W brisk walking; upper bound = NASA Valkyrie measured class (1.8 kWh / ~1 h runtime = ~1.8 kW)",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2023/06/r5-fact-sheet.pdf",
+     "source_url": "https://www.nasa.gov/technology/r5/",
      "confidence": "low",
      "notes": "Heavy manipulation/carry likely 600-900 W on Optimus-class actuators. Use 500 W nominal, 1.8 kW conservative for space-hardened variants. | reference (research campaign)"
     },
@@ -4041,7 +4041,7 @@
      "range_min": 3.03,
      "range_max": 22.3,
      "source": "Orbital geometry; ESA Mars Express blog (2012); NASA ASCEND crewed-Mars comm-delay paper NTRS 20220013418",
-     "source_url": "https://blogs.esa.int/mex/2012/08/05/time-delay-between-mars-and-earth/",
+     "source_url": "https://ntrs.nasa.gov/citations/20220013418",
      "confidence": "high",
      "notes": "Round trip 6-45 min plus DSN scheduling and relay store-and-forward; plus ~2-week conjunction blackout each synod. Rules out Earth-based direct teleoperation of manipulation entirely. | reference (research campaign)"
     },
@@ -4089,7 +4089,7 @@
      "range_min": 1,
      "range_max": 10,
      "source": "Estimate: warehouse AMR/humanoid pilot staffing analogies; Optimus factory ops 2025-2026 still teleop-heavy (Tesla Q4-2025 earnings call, 2026-01-28)",
-     "source_url": null,
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/",
      "confidence": "speculative",
      "notes": "Ramp toward 10:1 over 2-3 synods as autonomy matures. Binding constraint on unstructured work: teleop slots, not robot count. Pre-crew phase: supervision only from Earth at sol-scale - apply q_rover_science_legacy to unstructured tasks. | reference (research campaign)"
     },
@@ -4113,7 +4113,7 @@
      "range_min": 0.3,
      "range_max": 0.9,
      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025)",
-     "source_url": "https://arxiv.org/pdf/2505.04572",
+     "source_url": "https://arxiv.org/abs/2505.04572",
      "confidence": "low",
      "notes": "Best-evidenced ratio class in the domain. Applies to robot-adapted, repetitive tasks with local supervision available. Add EVA leverage x1.5-3 when the robot-hour substitutes crew EVA time. | reference (research campaign)"
     },
@@ -4137,7 +4137,7 @@
      "range_min": 0.0005,
      "range_max": 0.002,
      "source": "Squyres (MER PI) 2005, repeated 2022: what a rover does in a perfect sol, a human field geologist does in ~30-45 s; Crawford, Astron. & Geophys. 2012 (arXiv:1203.6250)",
-     "source_url": "https://arxiv.org/pdf/1203.6250",
+     "source_url": "https://arxiv.org/abs/1203.6250",
      "confidence": "medium",
      "notes": "Computed as ~45 s human / (9 h rover active sol). Documented expert estimate, not a measurement. Governs pre-crew unstructured work under Earth-only supervision; the 350x gap to q_structured quantifies the value of local supervision + structured tasking. | reference (research campaign)"
     },
@@ -4149,7 +4149,7 @@
      "range_min": 42,
      "range_max": 174,
      "source": "IPEx mission spec: 10,000 kg at 42 kg/h over 11-day lunar demo (Schuler et al., ASCEND 2024, NASA KSC); RASSOR 2.0 implied continuous rate 66 kg / 0.38 = ~174 kg/h (NTRS 20210011366)",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2024/08/ascend24-ipex-trl-5-design-overview.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20240008162",
      "confidence": "medium",
      "notes": "TRL-5 design values, not flight data. Per ~30-66 kg robot. Lunar-designed; Mars gravity (2.3x lunar) improves traction/dig force, duricrust may resist. Scale linearly with robot mass at ~0.38 kg vehicle mass per kg/h (RASSOR 2.0 figure of merit). | reference (research campaign)"
     },
@@ -4185,7 +4185,7 @@
      "range_min": 100,
      "range_max": 2000,
      "source": "Estimate: bounded by FANUC factory-arm vendor claim (~80,000 h MTBF, benign environment) above and IPEx TRL-5 dusty wheel-actuator life test (~1x 11-day mission, bearing failure mode found; Schuler ASCEND 2024) below",
-     "source_url": "https://www.therobotreport.com/the-fake-news-about-robots-and-their-reliability/",
+     "source_url": "https://ntrs.nasa.gov/citations/20240008162",
      "confidence": "speculative",
      "notes": "50-actuator humanoid in abrasive dust and -80C nights will sit far below factory-arm MTBF; practitioner data shows ~88% availability even for terrestrial cells. Least-supported number in the domain - carry the full 100-2000 h range in trade studies. Weibull shape 1.5-2 recommended for L1/L2. | reference (research campaign)"
     },
@@ -4209,7 +4209,7 @@
      "range_min": 0.05,
      "range_max": 0.25,
      "source": "Anchored on ISS supportability: ~10 t/yr spares upmass (NTRS 20150003005); Owens & de Weck Mars-One analysis (MIT 2014): spares -> 64% of resupply mass by year 10",
-     "source_url": "https://news.mit.edu/2014/technical-feasibility-mars-one-1014",
+     "source_url": "https://ntrs.nasa.gov/citations/20150003005",
      "confidence": "low",
      "notes": "Per 26-month synod carry >= 2.2 yr + reserve: 25-30% of fleet mass per window. Cannibalization of failed units recovers ~50% of spares demand at cost of fleet size. High-wear items: hands, hip/knee actuators, batteries (batteries ~500-1000 cycles = 1-2 Mars years at 1 cycle/sol). | reference (research campaign)"
     },
@@ -4233,7 +4233,7 @@
      "range_min": 0.3,
      "range_max": 1.8,
      "source": "Derived: 400-500 W claimed working draw (Tesla AI Day 2022) / 0.9 charge efficiency + 50-150 W thermal overhead; upper bound Valkyrie-class measured ~1.8 kW (NASA R5 fact sheet)",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2023/06/r5-fact-sheet.pdf",
+     "source_url": "https://www.nasa.gov/technology/r5/",
      "confidence": "low",
      "notes": "~7 kWh/sol/robot at 12 h/sol + ~1-3 kWh/night survival heating -> ~9 kWh/sol/robot budget. 100-robot fleet ~ 0.9 MWh/sol ~ 25-40 kW continuous - first-order load for the power domain. | reference (research campaign)"
     },
@@ -4257,7 +4257,7 @@
      "range_min": 300,
      "range_max": 450,
      "source": "JPL Robotics ATHLETE program: Gen 1 850 kg vehicle / 300 kg payload; Gen 2 (Tri-ATHLETE) 450 kg payload at Earth g, ~10 km/h max speed",
-     "source_url": "https://robotics.jpl.nasa.gov/how-we-do-it/systems/the-athlete-rover/",
+     "source_url": "https://www-robotics.jpl.nasa.gov/how-we-do-it/systems/the-athlete-rover/",
      "confidence": "high",
      "notes": "High confidence as prototype spec (never flown). At Mars 0.379 g the same limbs handle ~2.6x mass -> ~1.2 t class. Template for the 'heavy logistics/cargo' robot category (Starship unloading, module relocation). | reference (research campaign)"
     },
@@ -4281,7 +4281,7 @@
      "range_min": 1.0,
      "range_max": 2.0,
      "source": "NASA JSC R5/Valkyrie fact sheet; Radford et al., J. Field Robotics 2015: 125 kg, 44 DoF, 1.8 kWh battery, ~1 h runtime",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2023/06/r5-fact-sheet.pdf",
+     "source_url": "https://www.nasa.gov/technology/r5/",
      "confidence": "medium",
      "notes": "The only NASA-built humanoid power datum. 3-4x the Tesla claim - use as the conservative bound for space-hardened humanoid energy modeling. | reference (research campaign)"
     },
@@ -4293,7 +4293,7 @@
      "range_min": 9.0,
      "range_max": 70.5,
      "source": "Stromgren et al., 'Assessment of Crew Time for Maintenance and Repair Activities for Lunar Surface Missions', IEEE Aerospace 2021, NTRS 20210026843, Table 3 (expected value; 50th pct 9.0 h, 99th pct 70.5 h)",
-     "source_url": "https://ntrs.nasa.gov/api/citations/20210026843/downloads/IEEE%20Assessment%20of%20Crew%20Time%20for%20Maintenance%20and%20Repairs%20Activities%20for%20Lunar%20Surface%20Missions.pdf",
+     "source_url": "https://ntrs.nasa.gov/citations/20210026843",
      "confidence": "medium",
      "notes": "ISS-data-derived, 2-crew 28-day lunar surface habitat. EVA overhead is 12.52 of the 24.7 h - the component robots most credibly replace. Sizes the 'inspection/maintenance' task-category demand that robot-hours bid against; scale with habitat complexity. | reference (research campaign)"
     }
@@ -4311,7 +4311,7 @@
      "range_min": null,
      "range_max": null,
      "source": "Jones, ICES-2019-14 (four UPA ORUs at 7.5-22x; seven other ORUs at 1.9-6.3x) \u2014 design point: ISS ECLSS ORUs failed above prediction (70% of ORUs, up to 22x); 2.0 is a conservative central multiplier",
-     "source_url": null,
+     "source_url": "https://ntrs.nasa.gov/citations/20190027319",
      "confidence": "medium",
      "notes": null
     },
@@ -4347,7 +4347,7 @@
      "range_min": 0.2,
      "range_max": 0.5,
      "source": "Estimate: based on Russell & Klaus 2007 ISS Increments 4-8 category breakdown (35.3% of ECLSS maintenance time on air/waste repair) and ISS ops practice",
-     "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0951832006001050",
+     "source_url": "https://doi.org/10.1016/j.ress.2006.04.020",
      "confidence": "low",
      "notes": "No clean modern public split; ISS planning emphasizes preventive. Treat corrective portion as stochastic (scales with realized failures), preventive as deterministic clock. | reference (research campaign)"
     },
@@ -4563,7 +4563,7 @@
      "range_min": 0.4,
      "range_max": 0.7,
      "source": "Do et al., Acta Astronautica 120 (2016) (Mars One assessment, ISS-derived failure rates, crews added every 26 months)",
-     "source_url": "https://dspace.mit.edu/handle/1721.1/103973",
+     "source_url": "https://doi.org/10.1016/j.actaastro.2015.11.025",
      "confidence": "high",
      "notes": "Spares come to dominate settlement logistics; range reflects sensitivity to commonality/shared-spares (Jones ICES-2015-044: sharing could cut required spares ~50%). | reference (research campaign)"
     },
@@ -4575,7 +4575,7 @@
      "range_min": 0.33,
      "range_max": 0.5,
      "source": "Siddiqi & de Weck, J. Spacecraft & Rockets 44(1) 2007 (Mars surface mission case study; quoted in Jones ICES-2015-044)",
-     "source_url": "https://ntrs.nasa.gov/citations/20160001251",
+     "source_url": "https://doi.org/10.2514/1.21847",
      "confidence": "medium",
      "notes": "Same availability with 33-50% fewer spares. Caveat: commonality concentrates common-cause/design-defect exposure for unproven designs (Jones ICES-2017-83). | reference (research campaign)"
     },
@@ -4623,7 +4623,7 @@
      "range_min": 1.2,
      "range_max": 3.0,
      "source": "Estimate: generic rotating-machinery reliability practice (Ebeling, Introduction to Reliability & Maintainability Engineering; OREDA-class industrial data); consistent with ISS pump wear-out history",
-     "source_url": null,
+     "source_url": "https://www.waveland.com/browse.php?t=392",
      "confidence": "low",
      "notes": "Scale eta set so distribution mean matches MTBF/K. ISS program itself assumes exponential (CFR) - use beta=1 at L0/L1, Weibull at L2. | reference (research campaign)"
     },
@@ -4671,7 +4671,7 @@
      "range_min": 0.01,
      "range_max": 0.1,
      "source": "Estimate: generic PRA beta-factor values (NUREG/CR-5485 class); documented ECLSS CCF chains (OGA cell stack, CDRA dust, UPA urine chemistry) per Jones ICES-2019-14",
-     "source_url": "https://ntrs.nasa.gov/citations/20190027319",
+     "source_url": "sources/nureg_cr_5485_ccf.pdf",
      "confidence": "speculative",
      "notes": "Fraction of failures that defeat identical spares/redundancy. This is the term POS math ignores; dissimilar redundancy is the mitigation. | reference (research campaign)"
     }
@@ -4809,7 +4809,7 @@
      "range_min": 150,
      "range_max": 210,
      "source": "NASA-SP-2009-566 (DRA 5.0): 174 d outbound / 201 d inbound for 2037 NTR all-propulsive case; class characterized as 'less than 180 to 210 days'",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Transits minimized to limit crew GCR/SPE exposure and zero-g deconditioning. | reference (research campaign)"
     },
@@ -4821,7 +4821,7 @@
      "range_min": 80,
      "range_max": 150,
      "source": "Company claim: Musk IAC 2016/2017 (New Space 2017/2018); '80-150 days depending on window, average ~115 d'",
-     "source_url": "https://www.liebertpub.com/doi/10.1089/space.2017.29009.emu",
+     "source_url": "https://doi.org/10.1089/space.2017.29009.emu",
      "confidence": "medium",
      "notes": "Claim is well documented; achievability depends on refilled Starship delta-v (~4-4.6 km/s) and unproven high-speed Mars entry (7.5+ km/s). | reference (research campaign)"
     },
@@ -4845,7 +4845,7 @@
      "range_min": 450,
      "range_max": 620,
      "source": "NASA-SP-2009-566 (DRA 5.0): 539 days = 525 sols; class defined as '500 days or more'",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Stay is set by Earth-return window phasing (t_stay ~ synodic - TOF_out - TOF_back), not logistics. Fast 90-104 d transits stretch stay to ~595 sols (Kingdon). Missing the return window costs +759 sols (one synodic period) - key contingency sizing case. | reference (research campaign)"
     },
@@ -4857,7 +4857,7 @@
      "range_min": 850,
      "range_max": 1100,
      "source": "NASA-SP-2009-566 (DRA 5.0), 2037 reference mission: 174 + 539 + 201 = 914 d; class ~900-950 d",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Upper range covers fast-transit variants with longer stays and window slack. | reference (research campaign)"
     },
@@ -4869,7 +4869,7 @@
      "range_min": 30,
      "range_max": 90,
      "source": "NASA-SP-2009-566 (DRA 5.0) section 6.2: 'short surface stay times at Mars (typically 30 to 90 days)', total mission 500-650 d",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Requires Venus swing-by or deep-space maneuver, perihelion pass <=0.7 AU, much higher total energy. Rejected by DRA 5.0 and incompatible with ISRU-refill Starship return; include in sim only as a high-energy abort/architecture variant. | reference (research campaign)"
     },
@@ -4893,7 +4893,7 @@
      "range_min": 75,
      "range_max": 150,
      "source": "Company claim (Musk IAC 2017, New Space 2018; SpaceX statements 2016-2025: '100 t class, up to 150 t with full refill')",
-     "source_url": "https://www.liebertpub.com/doi/10.1089/space.2018.29013.emu",
+     "source_url": "https://doi.org/10.1089/space.2018.29013.emu",
      "confidence": "low",
      "notes": "Disputed: Maiwald et al. (Sci Rep 2024) could not reproduce the mass model and find the return leg infeasible without near-full ISRU reload. Sim should include a downside toggle to ~50 t. | reference (research campaign)"
     },
@@ -4905,7 +4905,7 @@
      "range_min": 600,
      "range_max": 1500,
      "source": "Derived from SpaceX propellant capacity claims (933 t LOX + 267 t LCH4; V3 ~1500 t) and Maiwald et al. 2024 minimum Mars-surface-to-Earth return delta-v of 7.12 km/s",
-     "source_url": "https://www.nature.com/articles/s41598-024-54012-0",
+     "source_url": "https://doi.org/10.1038/s41598-024-54012-0",
      "confidence": "low",
      "notes": "LOX:LCH4 ~ 3.5:1. Scale gap: MOXIE produced ~122 g O2 total (2021-2023) vs ~600-900 t O2 needed per ship; power O(0.6-1+ MWe) continuous. Lower bound ~600 t if direct-return with partial load proves possible. | reference (research campaign)"
     },
@@ -4917,7 +4917,7 @@
      "range_min": 5.7,
      "range_max": 9.7,
      "source": "Company claim: Musk IAC 2017 ('entering very quickly, going seven and a half kilometers a second'); cross-checked v_entry = sqrt(vinf^2 + 5.03^2)",
-     "source_url": "https://www.liebertpub.com/doi/10.1089/space.2018.29013.emu",
+     "source_url": "https://doi.org/10.1089/space.2018.29013.emu",
      "confidence": "medium",
      "notes": "Min-energy arrivals: 5.7-6.2 km/s (MSL was 5.8). 90-d transits: 8.5-9.7 km/s unless a pre-entry deceleration burn is made (Kingdon: burn to 6.87 km/s, peak 3.5 g). Starship TPS entry-corridor limit at Mars is not publicly established. Direct entry from interplanetary (no aerocapture-to-orbit), lifting entry L/D ~0.3, terminal propulsive burn ~0.5 km/s. | reference (research campaign)"
     },
@@ -4941,7 +4941,7 @@
      "range_min": 30,
      "range_max": 45,
      "source": "Golombek et al., 'SpaceX Starship Landing Sites on Mars', 52nd LPSC #2420 (2021): latitude <40 deg for solar power and thermal management",
-     "source_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+     "source_url": "sources/lpsc_2021_2420.pdf",
      "confidence": "high",
      "notes": "Tension: shallow ice becomes more abundant poleward; Arcadia Planitia (~38-44N) is the sweet spot with ice consistency ~0.6-0.7 at ~40N. Seven candidate sites: AP-1/8/9 (Arcadia), EM-15/16 (Erebus Montes), PM-1/7 (Phlegra Montes); AP-8 rates best on combined ice+safety (SWIM) scores. | reference (research campaign)"
     },
@@ -4953,7 +4953,7 @@
      "range_min": -4,
      "range_max": -1,
      "source": "Golombek et al., 52nd LPSC #2420 (2021): below -2 km required, <= -3 km preferred, for EDL deceleration timeline of heavy landers",
-     "source_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+     "source_url": "sources/lpsc_2021_2420.pdf",
      "confidence": "high",
      "notes": "Additional criteria: slopes <5 deg over 10 m; probability of rocks >0.5 m below 5%; radar-reflective load-bearing surface; no dense expanded secondary craters. | reference (research campaign)"
     },
@@ -4977,7 +4977,7 @@
      "range_min": 40,
      "range_max": 64,
      "source": "NASA-SP-2009-566 Table 4-3 (EDL System Characteristics)",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Entry mass 109.7 t, 10x30 m triconic aeroshell, ballistic coefficient 471 kg/m2, descent dv 595 m/s, ignition 1350 m / Mach 2.29, peak heating 131 W/cm2. Landed/entry ratio ~0.52. Two such landers (MAV+ISRU+reactor; SHAB) pre-deployed per crew-of-6 mission, one window ahead; MAV verified fully fueled before crew departs Earth. | reference (research campaign)"
     },
@@ -4989,7 +4989,7 @@
      "range_min": 848.7,
      "range_max": 1251.8,
      "source": "NASA-SP-2009-566 section 4: NTR option 848.7 t (9 Ares V launches); chemical/aerocapture option 1251.8 t (12 Ares V)",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Per mission = 2 cargo vehicles (246.2 t IMLEO each, delivering 103 t payload elements) + crew MTV (356.4 t). Useful cross-check: ~850-1250 t IMLEO buys ~110-120 t landed + crew round trip for 6. | reference (research campaign)"
     },
@@ -5001,7 +5001,7 @@
      "range_min": 25,
      "range_max": 40,
      "source": "NASA-SP-2009-566 section 5.4: 30-kWe version of 40-kWe lunar fission design; deployed 1 km from lander, 30-40 sols to emplace",
-     "source_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+     "source_url": "sources/nasa_sp_2009_566.pdf",
      "confidence": "high",
      "notes": "Load breakdown: ISRU O2 production 25 kWe continuous (dominant), habitat 12 kWe day/night. ISRU makes ascent-stage LOX only (CH4 from Earth; 400 kg H2 seed for water). SpaceX-scale full-propellant ISRU needs ~20-40x this power. | reference (research campaign)"
     },

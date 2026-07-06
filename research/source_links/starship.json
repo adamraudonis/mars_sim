@@ -1,0 +1,253 @@
+{
+  "domain": "starship",
+  "sources": [
+    {
+      "source": "Wikipedia SpaceX Raptor (3.6:1); Heldmann et al. 2022 use ~3.5",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary reference is the Wikipedia SpaceX Raptor article, which lists mixture ratio 3.6 (78% O2 / 22% CH4). Page fetched and confirmed. Heldmann et al. 2022 (New Space, DOI 10.1089/space.2020.0058, PMC9527650) is the secondary source using ~3.5."
+    },
+    {
+      "source": "Heldmann et al. 2022 New Space ('on order of 1,100 m3 forward space'); SpaceX historical claim 1,000 m3",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Replaced the generic Wikipedia URL with the actual named document: Heldmann et al. 2022, 'Mission Architecture Using the SpaceX Starship Vehicle to Enable a Sustained Human Presence on Mars', New Space 10(3):259-273. Fetched PMC open-access landing page; title/authors confirmed. DOI 10.1089/space.2020.0058."
+    },
+    {
+      "source": "Heldmann et al. 2022: full V1-class refill 1200 t = 933 t LOX + 267 t CH4; Rapp 2024: ~920 t for stripped ship; rocket-equation minimum ~780 t (125 t dry + 20 t payload, 6.9 km/s, Isp 375 s)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named document is Heldmann et al. 2022 (New Space), verified at this PMC landing page. The Rapp 2024 figure refers to Rapp's IgMin Research 2024 paper (https://www.igminresearch.com/articles/html/igmin232); the rocket-equation minimum is an internal derivation. Existing source_url was already this PMC link and resolves correctly."
+    },
+    {
+      "source": "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (ship: 1,550 t propellant, 52.1 m, ~1,600 tf, six engines)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX/Musk 'The Road to Making Life Multiplanetary' presentation (2025-05-29). SpaceX has not posted a stable archived spec page for this talk; the SpaceX Starship Wikipedia article (fetched, confirmed) documents these Block 3 ship figures (52.1 m ship, ~1,550 t propellant, six Raptors) with citations back to the presentation. Kept as best stable landing page."
+    },
+    {
+      "source": "Estimate: scaled from Liu 2017 (NTRS 20170011674) Mars worst-case heat flux 15.4-18.1 W/m2 through 22 mm LCI (k=2 mW/m-K) over ~900 m2 tank area => 3.6-6.5 t/day on LOX (h_fg 213 kJ/kg); Handmer 2025: 20-layer MLI cuts heat ~99%, <1 t/day",
+      "url": "https://ntrs.nasa.gov/citations/20170011674",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Although prefixed 'Estimate:', the string names a real document: Liu 2017, NTRS 20170011674 ('Long-Term Cryogenic Propellant Storage on Mars with Hercules Propellant Storage Facility'). NTRS permalink fetched and confirmed. The scaling and Handmer 2025 note are internal computation."
+    },
+    {
+      "source": "Estimate: scaled from Liu 2017 (8.3-11.5 kW_e reverse turbo-Brayton per 3.5-3.7 kW heat lift at ~162-186 m2 insulated tank area, cryocooler eff. 70% of Carnot) to ~900 m2 Starship tank area — 40 kW per full 1600 t ship",
+      "url": "https://ntrs.nasa.gov/citations/20170011674",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "String names Liu 2017 (NTRS document ID 20170011674). Linked and verified the NTRS permalink. This source had no source_url originally; added the correct NTRS landing page. Scaling to Starship is internal computation."
+    },
+    {
+      "source": "SpaceX claim (Musk presentation 2025-05-29); Flight 12 vehicle (2026-05-22)",
+      "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX claim from Musk's 2025-05-29 presentation, applied to the Flight 12 (2026-05-22) vehicle. Existing rocketlaunch.org Starship V3 spec page fetched and confirmed to carry V3 specification data. Kept as best stable landing page for the company claim."
+    },
+    {
+      "source": "Derived: 124.4 m stack minus 72.3 m booster; one Wikipedia table lists 61 m (likely V4 conflation)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "type": "derived",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Pure internal derivation (124.4 m stack minus 72.3 m Super Heavy). Kept type=derived per rules, but the underlying stack/booster dimensions come from the SpaceX Starship Wikipedia article (fetched; confirms 124.4 m Block 3 stack and 72.3 m booster), which remains a valid supporting URL."
+    },
+    {
+      "source": "SpaceX, all orbital-class Starships",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "General SpaceX design fact (9 m diameter, common to all orbital-class Starships). No single official spec page; SpaceX Starship Wikipedia article fetched and confirmed as the documenting landing page."
+    },
+    {
+      "source": "SpaceX claim (Musk, 2025-05-29 presentation: '100+ t'; SpaceX materials up to 150 t)",
+      "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX payload claim ('100+ t', up to 150 t) from Musk's 2025-05-29 presentation. rocketlaunch.org Starship V3 spec page fetched and confirmed (lists 100,000 kg payload to LEO). Kept as stable landing page."
+    },
+    {
+      "source": "SpaceX/Musk claims 2024-2025 (company claim)",
+      "url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Generic SpaceX/Musk 2024-2025 claim. Existing New Space Economy 'Detailed Review of Starship V3' (2026-04-16) article fetched and confirmed; it aggregates and documents these SpaceX company claims. Resolves correctly."
+    },
+    {
+      "source": "SpaceX claim (2017-2026, incl. Musk 2025-05-29 presentation): 100 t class to Mars surface (corroborated by Heldmann et al. 2022)",
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX claim of ~100 t to Mars surface. Existing Aerospace America (AIAA) article 'A Closer Look at SpaceX's Mars Plan' by Jon Kelvey fetched and confirmed; discusses the 100 t Mars payload and cites Donald Rapp. Heldmann et al. 2022 (PMC9527650) is the corroborating academic source. Kept AIAA landing page."
+    },
+    {
+      "source": "Estimate: midpoint between demonstrated V2 LEO capability (~35 t) and claim; bounded by Maiwald et al. 2024 optimistic max 114.4 t and their finding of infeasibility at realistic (210 t) dry mass",
+      "url": "https://www.nature.com/articles/s41598-024-54012-0",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Prefixed 'Estimate:' but names Maiwald et al. 2024. Linked that document: Maiwald, Bauerfeind, Falker, Westphal & Bach, 'About feasibility of SpaceX's human exploration Mars mission scenario with Starship', Scientific Reports 14:11804 (2024), DOI 10.1038/s41598-024-54012-0. Existing Nature URL is correct; Nature redirects unauthenticated fetches to an IDP page, but existence/title/authors confirmed via DOI resolution (302 back to this URL) plus PubMed 38782962 and publisher metadata. verified=true."
+    },
+    {
+      "source": "Wikipedia (SpaceX Starship spacecraft page, from Users Guide-era data)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names the Wikipedia 'SpaceX Starship (spacecraft)' article (the upper-stage page). Fetched and confirmed it is the second-stage-specific article. Existing URL resolves correctly."
+    },
+    {
+      "source": "Estimate: Musk 2021 stated ~100 t (Block 1); Maiwald et al. 2024 bottom-up crewed estimate 210.5 t incl. 20% margin; no official V3 figure",
+      "url": "https://www.nature.com/articles/s41598-024-54012-0",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Prefixed 'Estimate:' but names Maiwald et al. 2024 (the 210.5 t bottom-up dry-mass estimate). Linked that Scientific Reports 2024 paper (DOI 10.1038/s41598-024-54012-0). Existing Nature URL confirmed correct via DOI/PubMed metadata (Nature blocks unauthenticated direct fetch). verified=true."
+    },
+    {
+      "source": "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (3,650 t; growth to ~3,700-4,000 t mentioned); Wikipedia 'SpaceX Super Heavy' Block 3 (3,650 t, 72.3 m); Tesla Oracle 2026-03-12 B19 load report (3,650 t)",
+      "url": "https://www.teslaoracle.com/2026/03/12/starship-flight-12-v3-booster-19-shows-boosted-propellant-load-speeds-static-fire-next/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX/Musk Super Heavy propellant claim (3,650 t). Existing Tesla Oracle article (2026-03-12) fetched and confirmed reporting the 3,650 t Booster 19 propellant load. Resolves correctly. (Corroborating sources: Musk 2025-05-29 presentation and the SpaceX Super Heavy Wikipedia article.)"
+    },
+    {
+      "source": "Derived: ~5,200 t propellant (1,550 t ship + 3,650 t booster, May 2025 figures) + ~400-450 t stage dry masses",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "type": "derived",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Pure internal derivation (sum of ship + booster propellant and dry masses). type=derived per rules. Kept the SpaceX Starship Wikipedia URL as supporting reference for the component figures (5,250 t launch mass confirmed on the article and on rocketlaunch.org V3 page)."
+    },
+    {
+      "source": "SpaceX claim (X post 2024-08-04: 280 tf); flown at ~250 tf nominal on early V3 flights per Wikipedia",
+      "url": "https://x.com/SpaceX/status/1819772716339339664",
+      "type": "company_claim",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Official SpaceX X/Twitter post (status 1819772716339339664, 2024-08-04) announcing Raptor 3 sea-level thrust 280 tf. X.com blocks unauthenticated WebFetch (HTTP 402), so the fetch could not confirm it directly; however the post's existence and 280 tf content are independently corroborated by NextBigFuture (2024-08) and NASASpaceflight coverage. URL kept as the primary company source; verified=false only because the fetch was paywall-blocked, not because the link is dead."
+    },
+    {
+      "source": "SpaceX claim (X post 2024-08-04)",
+      "url": "https://x.com/SpaceX/status/1819772716339339664",
+      "type": "company_claim",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Same official SpaceX X/Twitter post (2024-08-04, status 1819772716339339664) with Raptor 3 specifications. X.com returns HTTP 402 to unauthenticated WebFetch so it could not be directly verified; content independently corroborated via NextBigFuture 2024-08 coverage. verified=false due to fetch block only."
+    },
+    {
+      "source": "SpaceX claim/target (2024); Maiwald et al. 2024 use 378 s",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX Raptor Isp claim/target. The Wikipedia SpaceX Raptor article (fetched; lists vacuum Isp 350 s / vac-optimized 380 s) is the stable landing page. Maiwald et al. 2024 (Scientific Reports, DOI 10.1038/s41598-024-54012-0) is the cited academic value of 378 s. Existing URL correct."
+    },
+    {
+      "source": "Musk presentation 2025-05-29 ('six engines now, nine on a future version'); Starship Flight 12 flew S39 with six Raptors (splashdown on 2 of 3 center engines)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX/Musk claim (2025-05-29) about ship engine count. SpaceX Starship Wikipedia article fetched and confirmed (documents 6 Raptors on the upper stage and Flight 12 details). Kept as stable landing page."
+    },
+    {
+      "source": "Flight-demonstrated (Flight 12, 2026-05-22: all 33 Raptor 3 lit)",
+      "url": "https://www.nasaspaceflight.com/2026/05/starship-flight-12-block-3-pad-2/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NASASpaceflight.com article 'Starship Flight 12: Block 3 Impresses on First Flight' documenting Flight 12 (2026-05-22) with all 33 Raptor 3 engines. Direct WebFetch returned HTTP 403 (anti-bot block), but the exact URL, title, and content (all 33 Raptor 3 units on Booster 19) were confirmed via search result metadata. The URL resolves to the correct document; verified=true (403 is a bot header, not a missing page)."
+    },
+    {
+      "source": "rocketlaunch.org (80,806 kN, i.e. ~250 tf/engine); 33 x 280 tf rated = 90.6 MN; SpaceX '10,000 tf' aspiration with Raptor 3.x",
+      "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names rocketlaunch.org as the source of the 80,806 kN figure. The rocketlaunch.org Starship V3 spec page was fetched and confirms 'Thrust: 80,806 kN'. Existing URL correct and resolves."
+    },
+    {
+      "source": "Range across sources: Rapp 2024 uses 100 t; New Space Economy 2026 claims ~200 t for dedicated V3 tankers; no flight demonstration yet",
+      "url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names the New Space Economy 2026 review (the ~200 t tanker figure). Existing New Space Economy 'Detailed Review of Starship V3' (2026-04-16) fetched and confirmed it states ~200 t of transferable propellant per dedicated tanker. Rapp 2024's 100 t figure is in his IgMin paper (igmin232). Existing URL correct."
+    },
+    {
+      "source": "Rapp (Aerospace America 2026): 12 at 100 t/flight for 1200 t; SpaceX claims 8-10 (HLS-era); GAO/NASA 16-19 incl. boiloff",
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names 'Rapp (Aerospace America 2026)'. The Aerospace America (AIAA) article 'A Closer Look at SpaceX's Mars Plan' by Jon Kelvey (in which Donald Rapp is the quoted expert on tanker/refueling logistics) was fetched and confirmed; discusses tanker flight counts. Existing URL correct and resolves."
+    },
+    {
+      "source": "Composed from Wooster et al. 2007-heritage values quoted by Rapp/IgMin: surface->500 km LMO 4.3 km/s, surface->1-sol orbit 5.6 km/s (incl. losses), + TEI 1.3-2.0 km/s",
+      "url": "https://www.igminresearch.com/articles/html/igmin232",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Rapp's IgMin paper as the quoting source. Fetched igmin232: Donald Rapp, 'Mars Ascent Propellants and Life Support Resources - Take it or Make it?', IgMin Research (2024-07-29); confirmed it gives 4.3 km/s (to circular orbit) and 5.6 km/s (to elliptical orbit). Existing URL correct. Underlying Wooster et al. 2007 values are quoted therein."
+    },
+    {
+      "source": "Estimate: scaled from Liu 2017 (8.3-11.5 kW_e reverse turbo-Brayton per 3.5-3.7 kW heat lift at ~162-186 m2 insulated tank area, cryocooler eff. 70% of Carnot) to ~900 m2 Starship tank area",
+      "url": "https://ntrs.nasa.gov/citations/20170011674",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Prefixed 'Estimate:' but names Liu 2017 (NTRS 20170011674). NTRS permalink fetched and confirmed ('Long-Term Cryogenic Propellant Storage on Mars...', Gavin Liu, 2017). Existing URL correct. Scaling to Starship is internal computation."
+    },
+    {
+      "source": "Estimate: Earth tower catches (2024-2025) show dm-class precision with GNSS; Mars requires terrain-relative navigation (Perseverance TRN ~5 m map-relative, 2021); powered descent + TRN plausibly 10-100 m CEP, first landings up to km-class",
+      "url": "https://www.astronomy.com/space-exploration/spacex-achieves-historic-booster-catch-during-starship-test/",
+      "type": "derived",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primarily an internal estimate (landing-precision extrapolation). The only concrete named external reference is the Earth tower-catch demonstration; the existing Astronomy.com article on SpaceX's historic booster catch (Flight 5, 2024-10-13) was fetched and confirmed. type=derived because the parameter value itself is an internal estimate, with this article as the supporting demonstration reference."
+    },
+    {
+      "source": "Howard et al., AIAA ASCEND 2023 (NTRS 20220010430): lowering a 90-t habitat 'from the upper section of Starship (~33.5 m high)'",
+      "url": "https://ntrs.nasa.gov/citations/20220010430",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Howard et al., AIAA ASCEND 2023, NTRS 20220010430. NTRS permalink fetched and confirmed: Robert L. Howard, A. Scott Howe, Joshua Kivijarv, Joseph Yao, 'Options for Offloading a 90-Ton Common Habitat from its Lander on the Surface of Mars', ASCEND 2023. Existing URL correct."
+    },
+    {
+      "source": "SpaceX claim (Musk 2025-05-29: 80-150 days, avg ~115); Ataee & Elvander Sci Rep 2025 find 90-104 d feasible with 15 tankers/crewed ship",
+      "url": "https://www.nature.com/articles/s41598-025-00565-7",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "The named academic paper (Scientific Reports 2025, 90-104 day transit, 15 tankers per crewed ship) is '3 months transit time to Mars for human missions using SpaceX Starship' by Jack Kingdon (UC Santa Barbara), Scientific Reports 15:17764 (2025), DOI 10.1038/s41598-025-00565-7. NOTE: the DB attributes it to 'Ataee & Elvander' but the actual author is Jack Kingdon (single author); the 90-104 d / 15-tanker findings match Kingdon exactly. Verified via PMC12099006 (fetched; title/author/findings confirmed). Author-name string in the DB appears to be an error and should be corrected to Kingdon 2025."
+    },
+    {
+      "source": "SpaceX claim (Musk 2025-05-29 presentation: 5 uncrewed V3 ships carrying Optimus robots, 50% probability of making window; ramp 20 -> 100 -> 500 in later windows)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX/Musk claim (2025-05-29) about fleet ramp (20 -> 100 -> 500 missions per window). SpaceX Mars colonization program Wikipedia article fetched and confirmed (documents the 20/100/500 ramp figures with citations to the presentation). Kept as stable landing page."
+    }
+  ]
+}

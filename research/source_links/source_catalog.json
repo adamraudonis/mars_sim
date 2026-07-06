@@ -1,0 +1,2246 @@
+{
+ "sources": {
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-1 nominal; Table 3-31 gives 0.895": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-1 (nominal 1.08); Table 3-31 CO2 load 1.085; RQ 0.86": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-20": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30) \u2014 urine + humidity condensate": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-1; NASA exploration atmosphere studies": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-1; Norcross 2013; NASA-STD-3001": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA-STD-3001 Vol 2 Rev D [V2 6004]; NASA OCHMO-TB-004": {
+   "url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived from ICES-2023-311 (46.9 A, ~1.7 V/cell, ~28 cells => 2.23 kW at 9.25 kg/day)": {
+   "url": "https://ntrs.nasa.gov/citations/20230008013",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500) \u2014 derived: 0.8 kW / (4.1 CM x 1.04 kg CO2/day)": {
+   "url": "https://ntrs.nasa.gov/citations/20150016500",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA water recovery milestone, 20 Jun 2023": {
+   "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA Sabatier System Design Study, ICES-2018 / NTRS 20180004697; PNNL microchannel reactors": {
+   "url": "https://ntrs.nasa.gov/citations/20180004697",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 3-31 (Ewert 2021 MetMan)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 3-31": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-20 (drinking 2.00 + food rehydration 0.50)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-21": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: total 101.3 - ppO2 21.2 - ppCO2 ~0.4 - pH2O ~1.6": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-1": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 4-1, Sec 4.1": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "ICES-2023-311, Status of the Advanced OGA (NTRS 20230008013)": {
+   "url": "https://ntrs.nasa.gov/citations/20230008013",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Knox & Stanley, ICES-2015-165, NTRS 20150016500, Sec. II & Table 3 (PW 3.17 kg/day @461 W; PF 3.49 kg/day @486 W at 20 SCFM / 2 torr)": {
+   "url": "https://ntrs.nasa.gov/citations/20150016500",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500)": {
+   "url": "https://ntrs.nasa.gov/citations/20150016500",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NTRS 20100033195 Sabatier CRA; NASA SCOR": {
+   "url": "https://ntrs.nasa.gov/citations/20100033195",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Sec 4.3.3 (Carter); Wikipedia ISS ECLSS": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Sec 4.3.3 (Carrasquillo 2005)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Rev2 Table 3-2": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: engineering ESM order-of-magnitude incl racks + spares": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2, Eq. 3-2 (EER) and Tables 4-57/4-61 (12.707 MJ/CM-d)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper) \u2014 derived: 3037 kcal / 1.83 kg": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06 \u2014 18.4 g dw/m2-day x 4 kcal/g": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80) \u2014 derived: (18.4 g/m2-d / 0.44 g/mol PAR) x 0.116 kWh/mol / 0.80 delivery": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-90 (0.70); Wheeler 2008 measured ~0.68; Tibbitts CELSS 0.80": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (3.96 avg condensed); BVAD Table 4-91 per-crop (lettuce 2.1 ... wheat 11.79)": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-88 (Drysdale 1999b); lower bound = structure+root-zone excl. HPS lamps/ballasts": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-47 (MSIS 1995) and Table 4-60 (Levri)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-40 (Ewert 2017); upper from 2.36 kg total with 17% packaging": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Sec. 4.5.1 (Cooper et al. 2011)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MELiSSA/Frontiers 2023 (avg of bread wheat, durum wheat, potato, soybean = 4000 kcal/kg dw)": {
+   "url": "https://doi.org/10.3389/fspas.2023.1198689",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80)": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 measured 11.3 (15.8 with VOC scrub to HI 0.40); BVAD Table 4-90 nominal 20.0": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (0.17 measured, 0.24 with VOC scrub, 0.30 potential); RUE_total 0.59": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-90 (0.40); Wheeler 2008 observed 0.29 (ethylene-depressed)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-90 (HI 0.60)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (6.0 measured, 6.9 with transplant); BVAD Table 4-90 nominal 4.54": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (0.16 measured, 0.19 transplant); RUE_total 0.43": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (7.1 measured, 11.8 with transplant, RUE 0.70); BVAD Table 4-90 6.57": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wheeler et al. 2008 (9.8 measured, 11.4 transplant); BVAD Table 4-90 10.43; RUE_edible 0.25": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Kusuma, Pattison & Bugbee 2020 (ceiling 3.4 white+red / 4.1 blue+red); industry 2023-24 fixtures 2.5-3.5": {
+   "url": "https://doi.org/10.1038/s41438-020-0283-7",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Table 4-86 (Sager 1999 low; Sager 2006 high)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 1/(efficacy x delivery); efficacy 3.0 umol/J, delivery 0.8 (range from 2.5-3.5 umol/J)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Derived: 1/(RUE_edible x efficacy x delivery x caloric_density); potato RUE 0.44, 3.0 umol/J, 0.8, 4.0 kcal/g": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Derived: wheat RUE_edible 0.17 (0.24 opt), efficacy 3.0 umol/J, delivery 0.8, 4.0 kcal/g": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Sec. 4.14 (Lunn et al. 2017), for 2500 kcal/person/day full diet": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived from Wheeler productivities (3037 kcal / 4 kcal/g / ~15 g edible dw/m2-d); consistent with CELSS/ICES literature": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 3037 kcal x ~0.10-0.17 kWh/kcal mix / 24.66 h x 1.25 overhead (LED 3.0 umol/J)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Derived (Sec. 8): Wheeler RUE/productivity; 27.1 m2 as-measured, 21.1 m2 optimized": {
+   "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived (Sec. 8): 135 kWh/sol optimized to 224 kWh/sol as-measured, incl. +25% overhead; LED 3.0 umol/J": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD Sec. 4.14.1.1 (Clawson 2006)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Spectrolab XTJ Prime datasheet 7/2016 (company claim, flight product): 30.7% production average; SolAero ZTJ 29.5%; MER-era 3J ~27.5%; Mars-spectrum-adapted ~32% (Landis NTRS 20070010752)": {
+   "url": "sources/spectrolab_xtj_prime.pdf",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+   "mirrored": true
+  },
+  "Computed from Spectrolab XTJ Prime datasheet coefficients (dVmp/dT=-6.5 mV/degC on 2.390 V; dJmp/dT=+8.9 uA/cm2/degC on 17.4 mA/cm2)": {
+   "url": "sources/spectrolab_xtj_prime.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+   "mirrored": true
+  },
+  "Pathfinder 0.28%/sol first 30 sols (NASA/TM-2004-213367); InSight 0.2%/sol observed, 0.28%/sol steady-state model (Lorenz et al. 2020, doi:10.1029/2019EA000992); MER long-term ~0.14%/sol; envelope 0.05-2%/sol (Lorenz et al. 2021 P&SS 105337)": {
+   "url": "https://doi.org/10.1029/2019EA000992",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Compact Telescoping Surface Array study (NTRS 20190000437): 1500 kg per 1000 m2 goal, blanket 0.5-1.0 kg/m2; Rucker 2016 UltraFlex-based point ~2.9 kg/m2": {
+   "url": "https://ntrs.nasa.gov/citations/20190000437",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "JPL D-101146 Energy Storage Technologies report (2017): flight state-of-practice packs <100 Wh/kg (Yardney MER/Phoenix/MSL heritage); development targets 150-250 Wh/kg; modern cells 240-270 Wh/kg imply near-term packs 150-180": {
+   "url": "sources/jpl_energy_storage_2017.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+   "mirrored": true
+  },
+  "Estimate: Li-ion cell-level 94-97% from terrestrial literature; Tesla Powerwall 92.5% DC round-trip (company claim); system studies 84-96%": {
+   "url": "https://www.tesla.com/powerwall",
+   "type": "company_claim",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions \u2014 1 - allowable DoD": {
+   "url": "sources/jpl_energy_storage_2017.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+   "mirrored": true
+  },
+  "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions": {
+   "url": "sources/jpl_energy_storage_2017.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+   "mirrored": true
+  },
+  "Computed from TSI 1361 W/m2 at 1.5236915 AU; Appelbaum & Flood NASA TM-102299 use 590 (S=1371). Range = aphelion..perihelion.": {
+   "url": "https://ntrs.nasa.gov/citations/19890018252",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA TM-102299 eq. (4): Gob = 590[1+e cos(Ls-248)]^2/(1-e^2)^2": {
+   "url": "https://ntrs.nasa.gov/citations/19890018252",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA TM-102299 eq. (4)": {
+   "url": "https://ntrs.nasa.gov/citations/19890018252",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA TM-102299 nomenclature (e = 0.093377); NSSDC Mars Fact Sheet 0.0935": {
+   "url": "https://ntrs.nasa.gov/citations/19890018252",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Modern ephemeris/NSSDC Mars Fact Sheet (251 deg); A&F TM-102299 used 248 deg": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NSSDC Mars Fact Sheet; A&F TM-102299 eq. (7) used 24.936 deg. sin(dec) = sin(obliquity) sin(Ls)": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "MER 5-Mars-year record (Lemmon et al. 2015, NTRS 20150008268): Spirit <0.3, Opportunity <0.5 in aphelion season; Viking 'typically about 0.5' (TM-102299); ICES-2019-181 (NTRS 20190027303) non-storm background tau ~0.4": {
+   "url": "https://ntrs.nasa.gov/citations/20150008268",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MER/MSL/Viking records: regional storms to tau 1.2-3.6 superposed (Lemmon et al. 2015; TM-102299 VL1 record max 3.25-3.6 in 1977 storms)": {
+   "url": "https://ntrs.nasa.gov/citations/20150008268",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "2018/MY34 GDS: MSL Mastcam tau=8.5 (Guzewich et al. 2019 GRL); Opportunity tau>10.7 lower limit (NTRS 20190027303)": {
+   "url": "https://ntrs.nasa.gov/citations/20190027303",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "3 GDS in MY25/28/34 over ~10 Mars years (NTRS 20190027303); historical ~1 per 3 Mars years, aperiodic with gaps up to 6 MY": {
+   "url": "https://ntrs.nasa.gov/citations/20190027303",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL MY34 record: exponential decay, e-folding 43 sols (NTRS 20190027303, citing Guzewich et al. 2019)": {
+   "url": "https://ntrs.nasa.gov/citations/20190027303",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Rucker et al., Solar vs. Fission Surface Power for Mars (NTRS 20160002628): 120-day storm at average optical depth 5": {
+   "url": "https://ntrs.nasa.gov/citations/20160002628",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MER flight history: 2014 Opportunity events boosted power ~70%, arrays imaged near-clean; frequency is site-specific - InSight saw no significant cleaning in 4 years (Lorenz et al. 2021)": {
+   "url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Landis & Hyatt, The Solar Spectrum on the Martian Surface and its Effect on Photovoltaic Performance (NTRS 20070010752): dust absorbs blue, top junction becomes current-limiting": {
+   "url": "https://ntrs.nasa.gov/citations/20070010752",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "CTSA study (NTRS 20190000437): 50-80 kW daytime from ~1500 kg, 1000 m2 (200 W/kg at 1 AU equivalent); UltraFlex flight wings 100-150 W/kg at 1 AU": {
+   "url": "https://ntrs.nasa.gov/citations/20190000437",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Rucker AIAA Space 2016 (NTRS 20160011275): 11,713 kg Jezero system for ~35 kW day / 26.8 kW night (12,679 kg Columbus); storm-hardened variant 9,800 kg for 22 kW keep-alive (NTRS 20160002628). Fission comparison: 4x10 kWe Kilopower = 9,154 kg (~230 kg/kW)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011275",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "JPL D-101146 human-lander target >500 Wh/kg; CTSA study baselines 10 kW RFC night power; no flight heritage": {
+   "url": "sources/jpl_energy_storage_2017.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+   "mirrored": true
+  },
+  "Integrated from A&F TM-103623 f-table (this work, 4.05 at equinox); matches TM-103623 Table V VL1 max 4.18 kWh/m2-sol at Ls 140": {
+   "url": "https://ntrs.nasa.gov/citations/19910005804",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Integrated from A&F TM-103623 f-table (this work); consistent with Lemmon et al. 2015 flight observation that tau>4 cuts surface insolation only by factor 2-3 due to forward scattering": {
+   "url": "https://ntrs.nasa.gov/citations/19910005804",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA TM-103623 Table V, VL2 (47.7 N) minimum 315 Wh/m2-day at Ls 280; VL1 (22.3 N) minimum 935 Wh/m2-day for comparison": {
+   "url": "https://ntrs.nasa.gov/citations/19910005804",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Computed from A&F model (this work): 7.44 h at tau 0.4, falling to 6.4 h at tau 5-6 (profile flattens as diffuse dominates)": {
+   "url": "https://ntrs.nasa.gov/citations/19910005804",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Montabone et al. (2015) Icarus 251 multiannual climatology (converted from 9.3 um CDOD); Lemmon et al. (2015) MER 5-Mars-year record": {
+   "url": "https://doi.org/10.1016/j.icarus.2014.12.034",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Montabone et al. (2015); Lemmon et al. (2015): MER record spans 0.3-4.7 over 5 Mars years": {
+   "url": "https://arxiv.org/abs/1403.4234",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Zurek & Martin (1993) JGR (NTRS 19930046754); 8-9 confirmed events 1956-2018 (1956, 1971, 1973, 1977a, 1977b, 2001, 2007, 2018)": {
+   "url": "https://ntrs.nasa.gov/citations/19930046754",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MY34/2018 event: tau ~8.5 measured at Gale (Guzewich et al. 2019 GRL; Viudez-Moreiras et al. 2019); >10.8 estimated at Meridiani (Opportunity, saturated)": {
+   "url": "https://doi.org/10.1029/2018GL080839",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MY34/2018: onset Ls 184.9, intense phase ~3 months, decay into Ls ~250+ (Guzewich et al. 2019; Viudez-Moreiras et al. 2019); MY25/2001 similar": {
+   "url": "https://doi.org/10.1029/2019JE005985",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Allison & McEwen (2000), Planet. Space Sci. 48; NASA GISS Mars24 algorithm": {
+   "url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Allison & McEwen (2000)": {
+   "url": "sources/allison_mcewen_2000.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "http://amsat-bda.org/files/2000_Allison_McEwen.pdf",
+   "mirrored": true
+  },
+  "NSSDC Mars Fact Sheet (NASA GSFC)": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NSSDC Mars Fact Sheet; Allison & McEwen (2000) use sin(25.19 deg)=0.42565 in declination formula": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NSSDC Mars Fact Sheet": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Appelbaum & Flood (1990), NASA TM-102299 (590/493/718 at TSI 1371) rescaled to TSI 1361: 586.2 mean, 490 aphelion, 713 perihelion": {
+   "url": "https://ntrs.nasa.gov/citations/19890018252",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL REMS: Harri et al. (2014) JGR Planets; Haberle et al. (2014); Martinez et al. (2017) SSR 212": {
+   "url": "https://doi.org/10.1002/2013JE004488",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL SAM QMS annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124; original Mahaffy et al. (2013) Science 341": {
+   "url": "https://ntrs.nasa.gov/citations/20170004958",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL SAM reevaluated annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124 (Mahaffy 2013 gave 0.0189; Viking gave 0.027)": {
+   "url": "https://ntrs.nasa.gov/citations/20170004958",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL SAM: Mahaffy et al. (2013) Science 341; confirmed by Franz et al. (2017)": {
+   "url": "https://doi.org/10.1126/science.1237966",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL REMS: Gomez-Elvira et al. (2014); Martinez et al. (2017) SSR": {
+   "url": "https://doi.org/10.1007/s11214-017-0360-x",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL REMS: Martinez et al. (2017); frost-event analyses": {
+   "url": "https://doi.org/10.1007/s11214-017-0360-x",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL REMS GTS (150-300 K instrument range): Hamilton et al. 2013; Martinez et al. (2017); NASA TFAWS 2024 MarsWRF worst-case hot 289.7 K": {
+   "url": "sources/tfaws_2024_mars_thermal.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+   "mirrored": true
+  },
+  "MSL REMS GTS; NASA TFAWS 2024 MarsWRF worst-case cold 129.5-139 K at -50 deg lat": {
+   "url": "sources/tfaws_2024_mars_thermal.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+   "mirrored": true
+  },
+  "NASA TFAWS 2024 (Popok, MSFC) MarsWRF-derived boundary conditions: ~160 K predawn / ~186 K midday at tau=1, equator; MARSTHERM: ~140 K predawn clear sky": {
+   "url": "sources/tfaws_2024_mars_thermal.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+   "mirrored": true
+  },
+  "Pathfinder 0.28%/sol (Landis & Jenkins); MER Spirit/Opportunity medians 0.16-0.18%/sol; InSight median 0.28%/sol; synthesis Lorenz et al. (2021) P&SS 207": {
+   "url": "https://doi.org/10.1016/j.pss.2021.105337",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jezero MEDA/RDS: 1.3-3.4 /km^2/sol (Toledo et al. 2023 JGR Planets); Pathfinder ~19; Spirit seasonal peak ~50; InSight: 502 vortex pressure drops >0.3 Pa in 151 sols": {
+   "url": "https://doi.org/10.1029/2022JE007494",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Viking 0-9.5 m/s; InSight 0-7.5 m/s; Perseverance 0-12 m/s (Martinez et al. 2017 review; Viking/InSight/MEDA records)": {
+   "url": "https://doi.org/10.1007/s11214-017-0360-x",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Bickel et al. (2025), Sci. Adv. 11, eadw5170 (orbital dust-devil migration, supports 20-40 m/s near-surface winds); for in-situ MEDA gusts cite Hueso et al. (2023) JGR Planets / MEDA storm papers": {
+   "url": "https://doi.org/10.1126/sciadv.adw5170",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "MSL REMS UV 10+ Mars-year record: total 26.9-42.3 W/m^2 (UVA 21.4-33.7, UVB 4.21-6.45, UVC 1.39-2.21), PNAS 2025": {
+   "url": "https://doi.org/10.1073/pnas.2426611122",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "InSight HP3 active heating experiment, 0.03-0.37 m depth: 0.039 +/- 0.002 W/m/K (Grott et al. 2021 JGR Planets)": {
+   "url": "https://doi.org/10.1029/2021JE006861",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "InSight HP3: 160-230 (Grott et al. 2021); MCD v6.1 engineering range 42-394 used in NASA TFAWS 2024 worst-case study": {
+   "url": "https://doi.org/10.1029/2021JE006861",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "InSight HP3 (Elysium, 4.5 N): 217.5 K mean at 0.1-0.2 m, seasonal +/-6.7 K, diurnal damped (Spohn et al. 2024 GRL); extrapolated to 1 m where diurnal wave vanishes": {
+   "url": "https://doi.org/10.1029/2024GL108600",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV \u2014 FSP class": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "FSP Phase 1 SOW DR-1 (2021/2022 contracts): 40 kWe for 10 years, no human intervention": {
+   "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "FSP SOW and all recent NASA concepts: crew habitat at 1 km within ~36-deg shielded cone": {
+   "url": "https://ntrs.nasa.gov/citations/20220004670",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Smith/Mason/Palac/Gibson, 'Kilopower: Small & Affordable Fission Power Systems for Space', NTRS 20180000691": {
+   "url": "https://ntrs.nasa.gov/citations/20180000691",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NTRS 20180000691; Gibson et al. IEEE Aerospace 2017; core 226 kg incl 43.7 kg U-235, 43.3 kWt": {
+   "url": "https://ntrs.nasa.gov/citations/20180000691",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Rucker, 'Solar vs. Fission Surface Power for Mars', AIAA 2016-5452 (COMPASS point design), incl. 15% MGA, shield sized <3 mR/hr at 500 m": {
+   "url": "https://ntrs.nasa.gov/citations/20160002628",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NTRS 20180000691 ('1 to 10 kW continuously for 10 years or more'); Rucker 2016 presentation, NTRS 20160011275 slide 18 ('12-year Kilopower service life')": {
+   "url": "https://ntrs.nasa.gov/citations/20160011275",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Gibson et al., KRUSTY Nuclear Ground Test Results, AIAA P&E 2018, NTRS 20180005435 (measured 30-34%, ~50% of Carnot)": {
+   "url": "https://ntrs.nasa.gov/citations/20180005435",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "KRUSTY test paper, NTRS 20180005435; equivalent to ~$0.02/yr excess reactivity to hold 800 degC setpoint": {
+   "url": "https://ntrs.nasa.gov/citations/20180005435",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason NETS 2025: 40 kWe net / 175 kWt (HP-Stirling); GC-Brayton 17% (40/230 kWt)": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "This work: least-squares fit to Mason NETS 2025 Table V (10/20/40/80/100 kWe = 2.7/4.1/6.8/10.7/12.6 t)": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "derived",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "This work: fit to Mason NETS 2025 Table V": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "derived",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason et al., NASA/TM-20210016968 (2022): 1.9 MWe HALEU SCO2-Brayton NEP <25 t incl reactor/shield/conversion/radiators/PMAD; HEU version 11 kg/kWe": {
+   "url": "https://ntrs.nasa.gov/citations/20210016968",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason NETS 2025 Table IV: LiH/B4C/W directional shield, 36-deg included angle covering 1-km-dia outpost at 1 km": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "FSP Phase 1 SOW DR-3 (<5 rem/yr at 1 km); same limit used in 2010 FSP and COMPASS studies; 100% occupancy assumed": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Fission Surface Power System Initial Concept Definition, NASA/TM-2010-216772: reactor in ~2 m excavation, regolith limits dose to <5 rem/yr at 100 m": {
+   "url": "https://ntrs.nasa.gov/citations/20100033102",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason NETS 2025 Table V: 40-351 m2 for 10-100 kWe (3.5-4.0 m2/kWe), two-sided vertical panels, eps 0.85 EOL": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason NETS 2025: HP-Stirling radiator 403-433 K (cold end 420 K); COMPASS 2022: 420 K inlet/370 K outlet": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mason NETS 2025: entire startup <8 h on 4 kWh battery + 1 kWe aux array; KRUSTY demonstrated 1.5 h bounding fast start": {
+   "url": "https://ntrs.nasa.gov/citations/20250000841",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "FSP SOW requirement: self-contained, no crew or robotic support for startup, operation, maintenance for 10 yr; deployment by robotic rover (COMPASS NETS 2022)": {
+   "url": "https://ntrs.nasa.gov/citations/20220004670",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: reactor output flat (constant-temperature core, rod-compensated burnup <1%/10 yr per FSP TRL data); residual term = Mars dust on radiators + converter aging": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "NASA/JPL MMRTG fact sheet; Curiosity/Perseverance flight units (design 125 We at fueling BOL, >=100 We at 14 yr)": {
+   "url": "sources/mmrtg_fact_sheet.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://mars.nasa.gov/internal_resources/788/",
+   "mirrored": true
+  },
+  "NASA/JPL MMRTG fact sheet; 64.2 cm dia x 66.8 cm": {
+   "url": "sources/mmrtg_fact_sheet.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://mars.nasa.gov/internal_resources/788/",
+   "mirrored": true
+  },
+  "NASA/JPL MMRTG fact sheet NF-2020-05-619-HQ (BOL 110 We, est. 72 We at 17-yr design life => ~2.5%/yr compounded); MSL flight analyses ~3-4.8%/yr early-mission": {
+   "url": "sources/mmrtg_fact_sheet.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://mars.nasa.gov/internal_resources/788/",
+   "mirrored": true
+  },
+  "Rucker, Solar vs. Fission Surface Power for Mars, AIAA 2016-5452 / NTRS 20160002628: 22 kWe keep-alive through 120-sol tau=5 dust storm, 35 kWe clear-sky peak": {
+   "url": "https://ntrs.nasa.gov/citations/20160002628",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Rucker AIAA 2016-5452 abstract (4 units, 35 kWe continuous); presentation MEL: 9154 kg incl 5th spare unit + MGA + Stirling PMAD": {
+   "url": "https://ntrs.nasa.gov/citations/20160002628",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Rucker AIAA 2016-5452 study assumption: one 120-sol storm, optical depth tau=5, max wind 20 m/s": {
+   "url": "https://ntrs.nasa.gov/citations/20160002628",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Oleson et al., COMPASS 40 kWe FSP, NETS 2022: mass-optimal at +/-2800 VDC; 3 km cable = 240 kg at 2800 V vs 3300 kg at 500 V": {
+   "url": "https://ntrs.nasa.gov/citations/20220004670",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA directive Aug 2025 (agency claim, ANS Nuclear Newswire 2 Sep 2025): 100 kWe-class closed-Brayton, <=15 t, launch-ready Q1 FY2030": {
+   "url": "https://www.ans.org/news/2025-09-02/article-7336/nuclear-power-on-the-moon-what-were-watching/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA: '3 years and $15M' project (NTRS 20180000691); ~$20M widely cited incl DOE/NNSA contributions; DUFF precursor <$1M": {
+   "url": "https://ntrs.nasa.gov/citations/20180000691",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Hassler et al. 2014, Science 343:1244797 (MSL RAD); solar-cycle range per Guo et al. 2021, Astron. Astrophys. Rev. 29:8": {
+   "url": "https://doi.org/10.1126/science.1244797",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA-STD-3001 Vol 1 Rev B (2022), per 2021 NAS review; universal all ages/sexes, 3% mean REID basis": {
+   "url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_1",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B//2022-01-05-NASA-STD-3001-Vol1-Rev-B-Final-Draft-Signature-010522.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28; ISS standard workweek": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (Langston 2005, ISS)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (1.0 h per meal x 3)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (DPC 0.5 + plan review/report 1.0 + work prep 0.5)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (2.0 h on each of 2 weekend days)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-29 and sect. 3.2.5": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Shuttle experience 45-90 min/d for crew of 6)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Hunter model; LMLSTP Phase III measured 4.6 CM-h/d for crew of 4)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "Russell & Klaus 2007, Reliab. Eng. Syst. Saf. 92:808-820 (ISS/Mir-derived)": {
+   "url": "https://doi.org/10.1016/j.ress.2006.04.020",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stromgren et al. 2021, IEEE Aerospace, NTRS 20210026843 (lunar Surface Habitat, ISS component data: expected 24.7 h per 28-day 2-crew mission; 50th pct 9.0 h, 99th pct 70.5 h)": {
+   "url": "https://ntrs.nasa.gov/citations/20210026843",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210026843/downloads/IEEE%20Assessment%20of%20Crew%20Time%20for%20Maintenance%20and%20Repairs%20Activities%20for%20Lunar%20Surface%20Missions.pdf"
+  },
+  "NASA HAT EVA team constraint, in Stromgren et al. 2015, NTRS 20150009469": {
+   "url": "https://ntrs.nasa.gov/citations/20150009469",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20150009469/downloads/20150009469.pdf"
+  },
+  "NASA EVA-EXP-0031 figures cited in Griffin, AIAA 2020-4170 (58.25 h prep + 15.83 h post, typically 2-person EVA)": {
+   "url": "https://doi.org/10.2514/6.2020-4170",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: exploration atmosphere 56.5 kPa/34% O2 gives ~15-min prebreathe (Abercromby et al. 2015, Acta Astronautica 109:76-87) + don/doff, checkout, dust mitigation, amortized suit servicing": {
+   "url": "https://doi.org/10.1016/j.actaastro.2014.11.039",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (lunar surface EVA values)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (polar 0.25-0.5; equatorial 0.46-0.76)": {
+   "url": "https://ntrs.nasa.gov/citations/20210024855",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+  },
+  "Whitmire et al. 2015, NASA/TM-2015-218564 (SME consensus, NTRS 20140016951); consistent with NASA-STD-3001 Vol 2 task-based NHV requirement": {
+   "url": "https://ntrs.nasa.gov/citations/20140016951",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf"
+  },
+  "Whitmire et al. 2015 consensus report (5.4 m3 allocation); ISS USOS CQ flight actual 2.1 m3 (Broyan et al., 08ICES-0222)": {
+   "url": "https://ntrs.nasa.gov/citations/20140016951",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf"
+  },
+  "Zeitlin et al. 2013, Science 340:1080-1084 (MSL RAD cruise, 2011-12)": {
+   "url": "https://doi.org/10.1126/science.1235989",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA-STD-3001 Vol 1 Rev B [V1 4031], per OCHMO-TB-020 Rev E (12/2022); legacy 30-day BFO 250 mGy-Eq limit is NCRP-132/pre-Rev-B and Townsend et al. 2018": {
+   "url": "sources/ochmo_radiation_brief_2022.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+   "mirrored": true
+  },
+  "Guo et al. 2021, Astron. Astrophys. Rev. 29:8; Ralha et al. 2024, arXiv:2409.02001": {
+   "url": "https://doi.org/10.1007/s00159-021-00136-5",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "R\u00f6stel et al. 2020, JGR Planets 125:e2019JE006246 (GEANT4/AtRIS, RAD-validated): equivalent dose peaks at 30-40 cm (88-102 g/cm2) and only drops below surface value beyond ~200 g/cm2 (0.7-0.9 m dry rock)": {
+   "url": "https://doi.org/10.1029/2019JE006246",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "R\u00f6stel et al. 2020, Table 3: 1.26 m andesite (rho=2.8 g/cm3, ~350 g/cm2) reduces water-sphere equivalent dose to 200 mSv/yr, <=half the dry-surface value; sandstone 1.64 m": {
+   "url": "https://doi.org/10.1029/2019JE006246",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "R\u00f6stel et al. 2020 (0.8-2.5 m depending on composition; hydrated less); Zhang et al. 2022 JGR Planets: 1-1.6 m at representative sites": {
+   "url": "https://doi.org/10.1029/2019JE006246",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Townsend et al. 2018, Life Sci. Space Res. 17:32-39 (PMID 29753411); Kim et al. 2006: 5 g/cm2 Al insufficient for BFO in Aug-1972-class event; ~10 g/cm2 meets 30-day BFO limits; 20+ g/cm2 (hydrogenous) for extreme events": {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29753411/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Crucian et al. 2016, Int. J. Gen. Med. 9:383-391 (ISS incidence; skin rash 1.12/py, upper-respiratory 0.97/py leading; infections ~0.6/py)": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098747/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived estimate from Antonsen et al. 2022 Fig. 4 (EVAC 0.3-1% per <42-d mission, 4 crew, unlimited ISS capability); not a stated IMM rate": {
+   "url": "https://doi.org/10.1038/s41526-022-00193-9",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "TDA Research, ICES-2020-151: 0.91 kW heating/cooling for 1.51 kg CO2/hr module": {
+   "url": "sources/tda_ices_2020_151.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://ttu-ir.tdl.org/server/api/core/bitstreams/93f2e845-bcf6-4817-a30b-7129eec234d0/content",
+   "mirrored": true
+  },
+  "Derived: 55 kWh/kg H2 / 9 kg H2O per kg H2": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Estimate: h_fg 511 kJ/kg + sensible, 90 K-class cryocooler at 10-20% of Carnot; same cooler class as O2 (CryoFILL philosophy)": {
+   "url": "https://ntrs.nasa.gov/citations/20210023574",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA CryoFILL (NTRS 20210023574): 2.2 kg/hr O2 requires 1.2-4 kW input; iScience 25:104323 (2022): 7.3 kW for 3 kg/hr incl. heat leaks at 10% cryocooler efficiency": {
+   "url": "https://ntrs.nasa.gov/citations/20210023574",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 25-30 kW / 2-3 kg/hr (Hoffman 2023); cross-check Kleinhenz & Paz O2-only case 34 kW / 1.97 kg/hr = 17 kWh/kg": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Kleinhenz & Paz, AIAA 2017-0423: 1.7 t hardware for 73 kg/day product (Case 2); O2-only 0.9 t for 47 kg/day = 19 \u2014 converted from per kg/day": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived from research chain values: 6.1 kWh/kg electrolysis + CO2 acq + liquefaction (cf. isru_atmosphere.plant_specific_energy = 20.2 kWh/kg for the SOXE-heavy architecture)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Hoffman et al. 2022, Science Advances 8(35) eabp8636; Hecht et al. 2021, Space Sci. Rev. 217:9": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9432831/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/JPL end-of-mission release, 2023-09-06": {
+   "url": "https://www.nasa.gov/missions/mars-2020-perseverance/perseverance-rover/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Hoffman et al. 2023, Acta Astronautica 210:547-553; NASA/JPL 2023": {
+   "url": "https://doi.org/10.1016/j.actaastro.2023.04.045",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Hecht et al. 2021, Space Sci. Rev. 217:9; NASA Mars 2020 fact sheet": {
+   "url": "https://doi.org/10.1007/s11214-020-00782-8",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 300 W / 6-12 g/hr (Hecht 2021; NASA/JPL 2023)": {
+   "url": "https://doi.org/10.1007/s11214-020-00782-8",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: MOXIE SOXE stack ~115 W (Hecht et al. 2021, Space Sci. Rev. 217:9) at 6-12 g/hr flight rates; cf. Shahid et al. 2023, AIChE J 69(5) e18010 (benchmarks MOXIE at ~0.8 g O2/W/day system-level)": {
+   "url": "https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.18010",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Hoffman et al. 2023, Acta Astronautica 210 (scaled several-hundred-x MOXIE); OxEon manned-mission stack development (4 stacks > 2.3 kg/hr)": {
+   "url": "https://doi.org/10.1016/j.actaastro.2023.04.045",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Thermochemistry: dH = 566 kJ per mol O2 (2CO2 -> 2CO + O2)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Estimate: desublimation + sensible load ~620 kJ/kg at 150 K divided by COP 0.21 (20% of Carnot, per Berg TFAWS-2018 Stirling hardware, NTRS 20190000481); KSC MACDOF and Kleinhenz & Paz baseline": {
+   "url": "https://ntrs.nasa.gov/citations/20190000481",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: ideal isothermal 0.7->100 kPa is 0.055 kWh/kg; 35% single-stage efficiency measured (Acta Astronautica 2024); MOXIE scroll ~1.7 kWh/kg at gram scale": {
+   "url": "https://doi.org/10.1016/j.actaastro.2024.12.020",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Thermochemistry: dH = -165.4 kJ/mol CH4": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Commercial PEM/alkaline electrolyzer literature (theoretical HHV 39.4; best systems 48 kWh_AC/kg); Giner cathode-feed stack used in NASA EMC model": {
+   "url": "https://www.mdpi.com/2071-1050/15/24/16917",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA CryoFILL (NTRS 20210023574): 0.3 kg/hr H2 requires 10-30 kW input incl. para-ortho conversion": {
+   "url": "https://ntrs.nasa.gov/citations/20210023574",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived from CryoFILL input-power data (5-16 W/W), iScience 2022 10%-of-Carnot assumption (23 W/W at 300 K reject), Creare 90 K/500 W reverse turbo-Brayton (NTRS 20170009150, 20180004709)": {
+   "url": "https://ntrs.nasa.gov/citations/20170009150",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA ZBO literature (NTRS 20170006481; cryogenic fluid management reviews)": {
+   "url": "https://ntrs.nasa.gov/citations/20170006481",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stoichiometry: CO2 + 4H2 -> CH4 + 2H2O (0.5 kg H2 per kg CH4)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Stoichiometry (verified); Zubrin Mars Direct: 6 t H2 -> ~107 t methalox (18:1), The Case for Mars": {
+   "url": "https://en.wikipedia.org/wiki/Mars_Direct",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Kleinhenz & Paz, AIAA 2017-0423 / NTRS 20170001421: 52 kW for 29.7 t propellant in 480 days (Case 2, 1.3 wt% regolith water)": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Kleinhenz & Paz, AIAA 2017-0423: 1.7 t hardware for 73 kg/day product (Case 2); O2-only 0.9 t for 47 kg/day = 19": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX Starship V2/Block 2 spec: 1,170 t LOX + 330 t LCH4 (company claim; en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft), accessed 2026-07). Range spans retired V1 through announced V3.": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX company claim (Raptor design mixture ratio; 1170/330 t split implies 3.55)": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 1.5e6 kg x 20.2 kWh/kg (Kleinhenz & Paz specific energy scaled); range from 15-25 kWh/kg on the 1,500 t V2 load": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 24.2e6 kWh / (500 sols x 24.6597 h)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Thermo model ((1-y)/y*c_reg*dT + c_ice*dT + L_sub) bracketed by NASA ISRU studies (Kleinhenz NTRS 20180005542 program targets; Hoffman JSC assessment); lower bound assumes partial heat recuperation \u2014 thermal extraction + cleanup + excavation/transport": {
+   "url": "https://ntrs.nasa.gov/citations/20180005542",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Dundas et al. 2018 (massive, dust-poor scarp ice); Bramson et al. 2015 (bulk dielectric ~2.5, mostly clean ice); M-WIP 2016 reference Case A assumes 90% ice / 10% sand \u2014 excess-ice deposit, derated for overburden mixing": {
+   "url": "https://doi.org/10.1126/science.aao1619",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SWIM refined maps (Morgan et al. 2025, PSJ 6:37) 0-1 m consistency band; Dundas et al. 2018 Science 359:199 scarps show ice 1-2 m below surface": {
+   "url": "https://doi.org/10.3847/PSJ/ad9b24",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Bramson et al. 2015 GRL 42:6566 (SHARAD + crater morphology): depth-to-base mode 42 m, mean 51 +/- 18 m; Dundas 2018 scarps expose >100 m in places": {
+   "url": "https://doi.org/10.1002/2015GL064844",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Dundas et al. 2018 (massive, dust-poor scarp ice); Bramson et al. 2015 (bulk dielectric ~2.5, mostly clean ice); M-WIP 2016 reference Case A assumes 90% ice / 10% sand": {
+   "url": "https://doi.org/10.1126/science.aao1619",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stoichiometry (2x18.02/172.17); dehydration at 100-150 C confirmed in M-WIP 2016": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "M-WIP 2016 reference Case B: 40% gypsum + minor hydrates -> 186 t ore per 16 t H2O at 425 K": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "M-WIP 2016 reference Case C: 40% smectite (avg 4 wt% water; Na-smectite ~2, Ca-smectite ~7) -> 584 t ore per 16 t H2O at 575 K": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "MSL DAN/SAM (Gale): 1.5-3 wt% total; Kleinhenz & Paz AIAA 2017-0423: 1.3 wt% recoverable at 300 C; M-WIP Case D": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "M-WIP 2016 heuristics: undisturbed granular ~2.0 +/-10% t/m3 (35% porosity); disturbed/excavated ~1.5 +/-10% t/m3 (50% porosity)": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "Hecht et al. 2009, Science 325:64 (Phoenix WCL, 0.4-0.6 wt%); corroborated by MSL SAM at Gale": {
+   "url": "https://doi.org/10.1126/science.1172466",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mueller et al., RASSOR 2.0, ASCE Earth & Space 2016, NTRS 20210011366": {
+   "url": "https://ntrs.nasa.gov/citations/20210011366",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mueller et al., RASSOR 2.0, ASCE 2016, NTRS 20210011366 (2 x 40 kg drums)": {
+   "url": "https://ntrs.nasa.gov/citations/20210011366",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mueller et al. ASCE 2016: >=2.7 t per 24 h day (=2,770 kg/sol); 0.38 kg vehicle mass per (kg/h) rate": {
+   "url": "https://ntrs.nasa.gov/citations/20210011366",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Mueller et al. ASCE 2016: 4 W per (kg/h) excavation rate = 4 Wh/kg": {
+   "url": "https://ntrs.nasa.gov/citations/20210011366",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "M-WIP 2016 RASSOR key characteristics (25 cm/s)": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "M-WIP 2016 excavation/travel analysis: gypsum case feasible to ~3 km with 2 RASSOR-class excavators in 480-sol campaign; typical regolith excavator-limited even at 100 m": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "Estimate: rolling resistance physics, Crr 0.15-0.25 loose regolith, g=3.71 m/s2, drivetrain efficiency ~0.5; consistent with M-WIP RASSOR traverse assumptions": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Thermodynamics: cp_ice ~1.9 kJ/kg.K avg x 80 K + 334 kJ/kg fusion = ~486 kJ/kg; NASA JSC ice drilling assessment chart ~140 kWh per 1000 kg for -80 C ice": {
+   "url": "sources/mars_ice_drilling_assessment_2015.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/06/mars_ice_drilling_assessment_v6_for_public_release.pdf",
+   "mirrored": true
+  },
+  "Thermodynamics: L_sub = 2838 kJ/kg + sensible heat from ~210 K = ~2940 kJ/kg": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Thermo model ((1-y)/y*c_reg*dT + c_ice*dT + L_sub) bracketed by NASA ISRU studies (Kleinhenz NTRS 20180005542 program targets; Hoffman JSC assessment); lower bound assumes partial heat recuperation": {
+   "url": "https://ntrs.nasa.gov/citations/20180005542",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Hoffman et al.: CRREL Mars sims 120-400 L/day at 2-10 kW(th); 100 gal/day (379 kg/day) balances at ~10 kW. NASA/TP-20205011353 & JSC ice drilling assessment": {
+   "url": "https://ntrs.nasa.gov/citations/20205011353",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived from Hoffman/CRREL simulation points: 2 kW/120 L/day = 0.40; 10 kW/379-400 L/day = 0.60-0.63 kWh/kg (NASA/TP-20205011353; JSC ice-mining assessment 2016)": {
+   "url": "https://ntrs.nasa.gov/citations/20205011353",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "RedWater design envelope: drill through up to ~20-25 m overburden (Mellerowicz et al. 2022, New Space, doi:10.1089/space.2021.0057); pool cavity forms 2.5-5 m tall, 5-10 m dia below that (Hoffman CRREL sims)": {
+   "url": "https://doi.org/10.1089/space.2021.0057",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "M-WIP 2016 Case B: ~2 kW for 33 kg H2O/sol; theory floor ~1.15 kWh/kg (matrix heating + dehydration enthalpy)": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "M-WIP 2016 Case C: ~5 kW for 33 kg H2O/sol; theory floor ~3.1 kWh/kg": {
+   "url": "sources/mwip_2016_mars_water_isru.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+   "mirrored": true
+  },
+  "Range spans M-WIP Case D2 (~8 kW/33 kg/sol = 5.9) and Kleinhenz & Paz AIAA 2017-0423 (17 kW thermal for 1.36 kg/h = 12.5); disagreement from recuperation and yield assumptions": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Honeybee Robotics/NASA (VIPER, PRIME-1): <20 kg, rotary and percussive actuators 200 W each, 200 N max weight-on-bit (Zacny et al., PSJ doi:10.3847/PSJ/ae0b51; Glass et al. 2024, NTRS 20240000585)": {
+   "url": "https://ntrs.nasa.gov/citations/20240000585",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: TRIDENT actuator power (~100-400 W draw) at field penetration rates - loose soil ~1+ m/h, massive ice-cemented material as slow as 0.16 m/h (7 cm/27 min, Haughton Crater, Glass et al. 2024, NTRS 20240000585)": {
+   "url": "https://ntrs.nasa.gov/citations/20240000585",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: terrestrial ion-exchange/biocatalytic perchlorate removal is <0.01 kWh/kg but consumable-limited; vapor-compression distillation bounds the robust route at ~0.1-0.2 kWh/kg": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Stoichiometry: net 2 H2O + CO2 -> CH4 + 2 O2; 2x18.02/16.04 = 2.246. Cross-check: Kleinhenz & Paz require 15,701 kg H2O for 6,978 kg CH4 (ratio 2.25)": {
+   "url": "https://ntrs.nasa.gov/citations/20170001421",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX Starship Block 2/V3 specs: ~1,500-1,600 t ship propellant, ~330-350 t CH4 (en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft); payloadspace.com/what-to-expect-from-starship-v3) x 2.246 kg H2O/kg CH4": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wikipedia SpaceX Raptor (3.6:1); Heldmann et al. 2022 use ~3.5": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Heldmann et al. 2022 New Space ('on order of 1,100 m3 forward space'); SpaceX historical claim 1,000 m3": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Heldmann et al. 2022: full V1-class refill 1200 t = 933 t LOX + 267 t CH4; Rapp 2024: ~920 t for stripped ship; rocket-equation minimum ~780 t (125 t dry + 20 t payload, 6.9 km/s, Isp 375 s)": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9527650/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (ship: 1,550 t propellant, 52.1 m, ~1,600 tf, six engines)": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: scaled from Liu 2017 (NTRS 20170011674) Mars worst-case heat flux 15.4-18.1 W/m2 through 22 mm LCI (k=2 mW/m-K) over ~900 m2 tank area => 3.6-6.5 t/day on LOX (h_fg 213 kJ/kg); Handmer 2025: 20-layer MLI cuts heat ~99%, <1 t/day": {
+   "url": "https://ntrs.nasa.gov/citations/20170011674",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: scaled from Liu 2017 (8.3-11.5 kW_e reverse turbo-Brayton per 3.5-3.7 kW heat lift at ~162-186 m2 insulated tank area, cryocooler eff. 70% of Carnot) to ~900 m2 Starship tank area \u2014 40 kW per full 1600 t ship": {
+   "url": "https://ntrs.nasa.gov/citations/20170011674",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (Musk presentation 2025-05-29); Flight 12 vehicle (2026-05-22)": {
+   "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 124.4 m stack minus 72.3 m booster; one Wikipedia table lists 61 m (likely V4 conflation)": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+   "type": "derived",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX, all orbital-class Starships": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (Musk, 2025-05-29 presentation: '100+ t'; SpaceX materials up to 150 t)": {
+   "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX/Musk claims 2024-2025 (company claim)": {
+   "url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (2017-2026, incl. Musk 2025-05-29 presentation): 100 t class to Mars surface (corroborated by Heldmann et al. 2022)": {
+   "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: midpoint between demonstrated V2 LEO capability (~35 t) and claim; bounded by Maiwald et al. 2024 optimistic max 114.4 t and their finding of infeasibility at realistic (210 t) dry mass": {
+   "url": "https://www.nature.com/articles/s41598-024-54012-0",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Wikipedia (SpaceX Starship spacecraft page, from Users Guide-era data)": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: Musk 2021 stated ~100 t (Block 1); Maiwald et al. 2024 bottom-up crewed estimate 210.5 t incl. 20% margin; no official V3 figure": {
+   "url": "https://www.nature.com/articles/s41598-024-54012-0",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Musk 'Road to Making Life Multiplanetary' 2025-05-29 (3,650 t; growth to ~3,700-4,000 t mentioned); Wikipedia 'SpaceX Super Heavy' Block 3 (3,650 t, 72.3 m); Tesla Oracle 2026-03-12 B19 load report (3,650 t)": {
+   "url": "https://www.teslaoracle.com/2026/03/12/starship-flight-12-v3-booster-19-shows-boosted-propellant-load-speeds-static-fire-next/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: ~5,200 t propellant (1,550 t ship + 3,650 t booster, May 2025 figures) + ~400-450 t stage dry masses": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+   "type": "derived",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (X post 2024-08-04: 280 tf); flown at ~250 tf nominal on early V3 flights per Wikipedia": {
+   "url": "https://x.com/SpaceX/status/1819772716339339664",
+   "type": "company_claim",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (X post 2024-08-04)": {
+   "url": "https://x.com/SpaceX/status/1819772716339339664",
+   "type": "company_claim",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim/target (2024); Maiwald et al. 2024 use 378 s": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Musk presentation 2025-05-29 ('six engines now, nine on a future version'); Starship Flight 12 flew S39 with six Raptors (splashdown on 2 of 3 center engines)": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Flight-demonstrated (Flight 12, 2026-05-22: all 33 Raptor 3 lit)": {
+   "url": "https://www.nasaspaceflight.com/2026/05/starship-flight-12-block-3-pad-2/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "rocketlaunch.org (80,806 kN, i.e. ~250 tf/engine); 33 x 280 tf rated = 90.6 MN; SpaceX '10,000 tf' aspiration with Raptor 3.x": {
+   "url": "https://rocketlaunch.org/launch-providers/spacex/starship-v3",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Range across sources: Rapp 2024 uses 100 t; New Space Economy 2026 claims ~200 t for dedicated V3 tankers; no flight demonstration yet": {
+   "url": "https://newspaceeconomy.ca/2026/04/16/detailed-review-of-starship-v3/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Rapp (Aerospace America 2026): 12 at 100 t/flight for 1200 t; SpaceX claims 8-10 (HLS-era); GAO/NASA 16-19 incl. boiloff": {
+   "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Composed from Wooster et al. 2007-heritage values quoted by Rapp/IgMin: surface->500 km LMO 4.3 km/s, surface->1-sol orbit 5.6 km/s (incl. losses), + TEI 1.3-2.0 km/s": {
+   "url": "https://www.igminresearch.com/articles/html/igmin232",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: scaled from Liu 2017 (8.3-11.5 kW_e reverse turbo-Brayton per 3.5-3.7 kW heat lift at ~162-186 m2 insulated tank area, cryocooler eff. 70% of Carnot) to ~900 m2 Starship tank area": {
+   "url": "https://ntrs.nasa.gov/citations/20170011674",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: Earth tower catches (2024-2025) show dm-class precision with GNSS; Mars requires terrain-relative navigation (Perseverance TRN ~5 m map-relative, 2021); powered descent + TRN plausibly 10-100 m CEP, first landings up to km-class": {
+   "url": "https://www.astronomy.com/space-exploration/spacex-achieves-historic-booster-catch-during-starship-test/",
+   "type": "derived",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Howard et al., AIAA ASCEND 2023 (NTRS 20220010430): lowering a 90-t habitat 'from the upper section of Starship (~33.5 m high)'": {
+   "url": "https://ntrs.nasa.gov/citations/20220010430",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (Musk 2025-05-29: 80-150 days, avg ~115); Ataee & Elvander Sci Rep 2025 find 90-104 d feasible with 15 tankers/crewed ship": {
+   "url": "https://www.nature.com/articles/s41598-025-00565-7",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "SpaceX claim (Musk 2025-05-29 presentation: 5 uncrewed V3 ships carrying Optimus robots, 50% probability of making window; ramp 20 -> 100 -> 500 in later windows)": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: battery bouts 2.5-4 h + 1-3 h charge cycles (Agility Digit 2:1 work:charge company claim, 2024-2025), night cold/power limits, tasking gaps": {
+   "url": "https://www.agilityrobotics.com/content/gxo-signs-industry-first-multi-year-agreement-with-agility-robotics",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: A = MTBF/(MTBF + MTTR_effective) with MTTR_eff including diagnosis, spares wait, repair queue; consistent with terrestrial robot-cell availability ~88% (The Robot Report)": {
+   "url": "https://www.therobotreport.com/the-fake-news-about-robots-and-their-reliability/",
+   "type": "derived",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 400-500 W claimed working draw (Tesla AI Day 2022) / 0.9 charge efficiency + 50-150 W thermal overhead; upper bound Valkyrie-class measured ~1.8 kW (NASA R5 fact sheet)": {
+   "url": "https://www.nasa.gov/technology/r5/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Tesla Optimus Gen 2 unveil, 2023-12-12 (company claim, hardware shown); carried into Gen 3/V3 statements through 2026": {
+   "url": "https://electrek.co/2023/12/12/tesla-unveils-optimus-gen-2-next-generation-humanoid-robot/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.2 (structured outdoor task)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.0 (semi-structured assembly)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.2 (warehouse-analog work)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 0.8 (delicate manipulation)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 0.5 (diagnosis-heavy, human-led)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) \u2014 q_structured x 1.0 (monitoring rounds)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Tesla AI Day, 2022-09-30 (company claim): 2.3 kWh, 52 V pack": {
+   "url": "https://www.forbes.com/sites/jamesmorris/2022/10/01/tesla-ai-day-2022-musk-promises-optimus-humanoid-robot-for-under-20000/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Tesla claim ('full work day' ~8 h, light tasks, AI Day 2022 + later); independent humanoid-deployment surveys show 2.5-4 h under sustained load": {
+   "url": "https://www.robotwale.com/article/humanoid-robot-battery-runtime-reality-check",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Tesla AI Day 2022 + subsequent statements: ~20 kg (45 lb) carry; ~68 kg (150 lb) deadlift claim repeated for Gen 3": {
+   "url": "https://en.wikipedia.org/wiki/Optimus_(robot)",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Gen 2 video 2023-12-12 (~0.6 m/s, '30% faster'); V3 claim 5 mph = 2.2 m/s (Musk statements 2025-2026, company claim)": {
+   "url": "https://electrek.co/2023/12/12/tesla-unveils-optimus-gen-2-next-generation-humanoid-robot/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Gen 3 hand claim: 22 DoF hand/forearm, tactile fingertips (We,Robot 2024-10-10 and later Musk statements); Gen 2 demonstrated 11 DoF (2023-12-12)": {
+   "url": "https://en.wikipedia.org/wiki/Optimus_(robot)",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Tesla AI Day, 2022-09-30 (company claim): ~100 W sitting": {
+   "url": "https://www.forbes.com/sites/johnkoetsier/2022/10/01/tesla-bot-optimus-everything-we-know-so-far/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Tesla AI Day 2022 claim: ~500 W brisk walking; upper bound = NASA Valkyrie measured class (1.8 kWh / ~1 h runtime = ~1.8 kW)": {
+   "url": "https://www.nasa.gov/technology/r5/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Orbital geometry; ESA Mars Express blog (2012); NASA ASCEND crewed-Mars comm-delay paper NTRS 20220013418": {
+   "url": "https://ntrs.nasa.gov/citations/20220013418",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Telerobotics literature: degradation onset ~300 ms RTT, near-collapse of direct control by ~0.7-1 s (Frontiers Robotics & AI 2020 survey; vision-teleop latency studies)": {
+   "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2020.578805/full",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: 2.3 kWh pack at ~1C charging with thermal management margin; no Tesla statement found as of 2026-07": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Estimate: warehouse AMR/humanoid pilot staffing analogies; Optimus factory ops 2025-2026 still teleop-heavy (Tesla Q4-2025 earnings call, 2026-01-28)": {
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: warehouse humanoid deployments run largely autonomous with exception intervention (Agility/GXO 100k-tote milestone, company release 2025-11); Optimus autonomy 'still R&D' per Musk 2026-01-28": {
+   "url": "https://www.agilityrobotics.com/content/digit-moves-over-100k-totes",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025)": {
+   "url": "https://arxiv.org/abs/2505.04572",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: no deployed evidence exists; bounded above by structured-task ratios and below by rover field experience; consistent with 2026 state of humanoid autonomy (teleop-dependent for novel manipulation)": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Squyres (MER PI) 2005, repeated 2022: what a rover does in a perfect sol, a human field geologist does in ~30-45 s; Crawford, Astron. & Geophys. 2012 (arXiv:1203.6250)": {
+   "url": "https://arxiv.org/abs/1203.6250",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "IPEx mission spec: 10,000 kg at 42 kg/h over 11-day lunar demo (Schuler et al., ASCEND 2024, NASA KSC); RASSOR 2.0 implied continuous rate 66 kg / 0.38 = ~174 kg/h (NTRS 20210011366)": {
+   "url": "https://ntrs.nasa.gov/citations/20240008162",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "RASSOR 2.0 paper: 4 W per (kg/h) excavation rate = 4 Wh/kg digging-only (NTRS 20210011366); upper range = x2-3 total-system overhead estimate": {
+   "url": "https://ntrs.nasa.gov/citations/20210011366",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Terrestrial analogy, company claims: FBR Hadrian X 200-300 blocks/h (2023 test records) vs human mason 300-500 bricks/day": {
+   "url": "https://newatlas.com/robotics/hadrian-x-bricklaying-robot/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: bounded by FANUC factory-arm vendor claim (~80,000 h MTBF, benign environment) above and IPEx TRL-5 dusty wheel-actuator life test (~1x 11-day mission, bearing failure mode found; Schuler ASCEND 2024) below": {
+   "url": "https://ntrs.nasa.gov/citations/20240008162",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: MTBF 500 h x MTTR ~4-8 h + preventive (dust cleaning, lube, inspection) ~1-2 h/100 h; consistent with industrial-robot PM schedules (~every 3,000-10,000 h) heavily derated for dust": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Anchored on ISS supportability: ~10 t/yr spares upmass (NTRS 20150003005); Owens & de Weck Mars-One analysis (MIT 2014): spares -> 64% of resupply mass by year 10": {
+   "url": "https://ntrs.nasa.gov/citations/20150003005",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA KSC RASSOR 2.0 (NTRS 20210011366): 66 kg robot, 'minimum 2.7 metric tons per day'; 4.2 t/day implied continuous at 174 kg/h": {
+   "url": "https://ntrs.nasa.gov/citations/20210011366",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "JPL Robotics ATHLETE program: Gen 1 850 kg vehicle / 300 kg payload; Gen 2 (Tri-ATHLETE) 450 kg payload at Earth g, ~10 km/h max speed": {
+   "url": "https://www-robotics.jpl.nasa.gov/how-we-do-it/systems/the-athlete-rover/",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Rankin et al., 'Driving Curiosity: Mars Rover Mobility Trends During the First Seven Years', IEEE Aerospace 2020, NTRS 20220000780; lifetime 36.9 km / 4942 sols = 7.5 m/sol all-sol average (JPL, as of mid-2026)": {
+   "url": "https://ntrs.nasa.gov/citations/20220000780",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA JSC R5/Valkyrie fact sheet; Radford et al., J. Field Robotics 2015: 125 kg, 44 DoF, 1.8 kWh battery, ~1 h runtime": {
+   "url": "https://www.nasa.gov/technology/r5/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stromgren et al., 'Assessment of Crew Time for Maintenance and Repair Activities for Lunar Surface Missions', IEEE Aerospace 2021, NTRS 20210026843, Table 3 (expected value; 50th pct 9.0 h, 99th pct 70.5 h)": {
+   "url": "https://ntrs.nasa.gov/citations/20210026843",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jones, ICES-2019-14 (four UPA ORUs at 7.5-22x; seven other ORUs at 1.9-6.3x) \u2014 design point: ISS ECLSS ORUs failed above prediction (70% of ORUs, up to 22x); 2.0 is a conservative central multiplier": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Lynch et al., ICES-2024-132, Table 4 (OPTimIS dataset, Oct 2017-Dec 2023)": {
+   "url": "https://ntrs.nasa.gov/citations/20240005648",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Owens et al., AIAA 2017-5124, citing Bagdigian et al., ICES-2015-094; design documents predicted ~1 h/week": {
+   "url": "https://ntrs.nasa.gov/citations/20170009115",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: based on Russell & Klaus 2007 ISS Increments 4-8 category breakdown (35.3% of ECLSS maintenance time on air/waste repair) and ISS ops practice": {
+   "url": "https://doi.org/10.1016/j.ress.2006.04.020",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jones, ICES-2019-14 (14 of 20 ECLSS ORUs with changed estimates were worse; MADS vs ~8 yr flight data)": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stromgren et al., AIAA 2016-5307 (MADS updates through June 2016; ~3% ended at <=0.25x initial MTBF; ~85% improved, 14% of those >=10x)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011578",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jones, ICES-2019-14 (four UPA ORUs at 7.5-22x; seven other ORUs at 1.9-6.3x)": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Chen, ICES-2025-127, Appendix Tables 2-11 (ISS MADS-derived; e.g., WPA pump/separator 3.26, avionics air assy 3.2, most items 1.0-1.4)": {
+   "url": "https://ntrs.nasa.gov/citations/20250003955",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: EF definition per Anderson et al. AIAA 2012-5320; magnitude anchored to Jones ICES-2019-14 flight ratios (1.9-22x) and Stromgren 2016 MTBF-change distribution": {
+   "url": "https://ntrs.nasa.gov/citations/20120014060",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stromgren et al., AIAA 2016-5307 (3x for 95% confidence, ~5x for 99%)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011578",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jones, ICES-2019-14, Table 3 (flight data; MADS pre-flight estimate was 22,759 h). ICES-2025-127 MADS now lists 22,759 h post-redesign": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jones, ICES-2019-14, Table 3 (MADS estimate 41,376 h; CaSO4 precipitation from microgravity bone-loss urine chemistry was root cause)": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Jones, ICES-2019-14, Table 2 (MADS estimate 189,433 h -> flight 35,000 h, 5.4x worse)": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Review: 'Toward sustainable living in space' (2025), summarizing ISS heritage: CDRA valves and heaters 800-1,500 h; sorbent dust/check-valve damage per Jones ICES-2019-14": {
+   "url": "https://www.sciencedirect.com/science/article/pii/S2950616625000452",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Chen, Rivas & Rangel, ICES-2025-127, Appendix Tables 2-11 (full ORU population; ~1.3e5 h if restricted to active process ORUs with MTBF <= 1e6 h)": {
+   "url": "https://ntrs.nasa.gov/citations/20250003955",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Chen, ICES-2025-127, Table 1 (R&R times: most 2-5 h; OGA hydrogen dome 14 h; WPA gas separator group 19.25 h) and MTTR columns (0.3-17.7 h)": {
+   "url": "https://ntrs.nasa.gov/citations/20250003955",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "EMC practice: Stromgren AIAA 2016-5307 (0.99 DSH reliability spares case), Owens/NASA POS framing ICES-2024-95; ISS historical POS/confidence targets 85-99.5% (Anderson AIAA 2012-5320)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011578",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Owens & de Weck, AIAA 2016-5394 (>13,000 kg on orbit; ~18,000 kg staged on ground; >95% of corrective spares expected never used)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011570",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stromgren et al., AIAA 2016-5307 (EMAT, EMC deep-space habitat critical systems incl. ECLSS, TCS, EPS, C&DH, comm, water recovery)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011578",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Stromgren et al., AIAA 2016-5307 (>12,000 kg low-uncertainty bound, >17,000 kg high-uncertainty); Owens & de Weck AIAA 2016-5394 (17,232 kg for median P(LoC contrib)=1e-3, +4,124 kg per further 10x risk reduction)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011570",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived: 5,984 kg (deterministic) to 17,232 kg (with uncertainty) per AIAA 2016-5307/5394, over 1,100 d against ~20,000 kg habitat dry mass (ICES-2015-288 typical)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011578",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Do et al., Acta Astronautica 120 (2016) (Mars One assessment, ISS-derived failure rates, crews added every 26 months)": {
+   "url": "https://doi.org/10.1016/j.actaastro.2015.11.025",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Siddiqi & de Weck, J. Spacecraft & Rockets 44(1) 2007 (Mars surface mission case study; quoted in Jones ICES-2015-044)": {
+   "url": "https://doi.org/10.2514/1.21847",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: ORU-level replacement discards items with useful life (AIAA 2017-5124); shared/cold-spare pooling across co-located elements halves spares in Jones ICES-2015-044 worked example; no flight-quantified value": {
+   "url": "https://ntrs.nasa.gov/citations/20170009115",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Owens & de Weck, AIAA 2016-5394 (plumbing, ducting, fans, heat exchangers, tanks, valves ~33% of Master Equipment List; 50% used as growth sensitivity)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011570",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Owens & de Weck, AIAA 2016-5394 (17,232 -> 12,323 kg at P(LoC contrib)=1e-3; 0.34 with feedstock recycling -> 11,254 kg; covered items alone: -78.3%, -97.7% with recycling)": {
+   "url": "https://ntrs.nasa.gov/citations/20160011570",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: generic rotating-machinery reliability practice (Ebeling, Introduction to Reliability & Maintainability Engineering; OREDA-class industrial data); consistent with ISS pump wear-out history": {
+   "url": "https://www.waveland.com/browse.php?t=392",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Chen, ICES-2025-127 (ISS program assumes constant failure rate / exponential, memoryless)": {
+   "url": "https://ntrs.nasa.gov/citations/20250003955",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: mixed random/wear behavior; CDRA check-valve dust-abrasion wear (Jones ICES-2019-14) supports beta>1 for particulate-exposed valves": {
+   "url": "https://ntrs.nasa.gov/citations/20190027319",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: bathtub-curve early phase (Ebeling; simplified bathtub in ICES-2025-127); 'first model year' effect discussed in Stromgren AIAA 2016-5307": {
+   "url": "https://ntrs.nasa.gov/citations/20250003955",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: generic PRA beta-factor values (NUREG/CR-5485 class); documented ECLSS CCF chains (OGA cell stack, CDRA dust, UPA urine chemistry) per Jones ICES-2019-14": {
+   "url": "sources/nureg_cr_5485_ccf.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://nrcoe.inl.gov/publicdocs/CCF/NUREGCR-5485_Guidelines%20on%20Modeling%20Common-Cause%20Failures%20in%20PRA.pdf",
+   "mirrored": true
+  },
+  "Computed from NASA Mars Fact Sheet orbital periods (365.256 d / 686.980 d); standard value used throughout NASA/TM-2010-216764": {
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+   "type": "document",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Allison & McEwen (2000), Planet. Space Sci. 48; NASA GISS Mars24": {
+   "url": "https://www.giss.nasa.gov/tools/mars24/help/notes.html",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 Tables 1-2 (Burke, Falck, McGuire 2010)": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 Tables 1,3": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 Tables 1,4": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 Tables 1,5": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 Tables 1,6": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 Tables 1,7": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: C3 penalty of a few km2/s2 buys ~+/-2-3 weeks around optimum (TM-2010-216764 contours); robotic missions hold ~3-week periods; SpaceX stated 'Nov-Dec 2026' (~45 d)": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA/TM-2010-216764 (Type I/II min-energy TOFs 178-412 d across 2026-2039); DRA 5.0 cargo legs 202-350 d": {
+   "url": "https://ntrs.nasa.gov/citations/20100037210",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA-SP-2009-566 (DRA 5.0): 174 d outbound / 201 d inbound for 2037 NTR all-propulsive case; class characterized as 'less than 180 to 210 days'": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "Company claim: Musk IAC 2016/2017 (New Space 2017/2018); '80-150 days depending on window, average ~115 d'": {
+   "url": "https://doi.org/10.1089/space.2017.29009.emu",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Kingdon, Scientific Reports 15:17764 (2025), doi:10.1038/s41598-025-00565-7": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12099006/",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA-SP-2009-566 (DRA 5.0): 539 days = 525 sols; class defined as '500 days or more'": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "NASA-SP-2009-566 (DRA 5.0), 2037 reference mission: 174 + 539 + 201 = 914 d; class ~900-950 d": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "NASA-SP-2009-566 (DRA 5.0) section 6.2: 'short surface stay times at Mars (typically 30 to 90 days)', total mission 500-650 d": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "Company claim + NASA statements: ~1200 t propellant load at ~100-150 t/tanker; NASA HLS 'high teens' (L. Hawkins, Nov 2023); Aerospace America (2025) analysis: 12/ship, 60 launches for the 5-ship wave; Kingdon 2025: 15 (crew)/4 (cargo)": {
+   "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Company claim (Musk IAC 2017, New Space 2018; SpaceX statements 2016-2025: '100 t class, up to 150 t with full refill')": {
+   "url": "https://doi.org/10.1089/space.2018.29013.emu",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Derived from SpaceX propellant capacity claims (933 t LOX + 267 t LCH4; V3 ~1500 t) and Maiwald et al. 2024 minimum Mars-surface-to-Earth return delta-v of 7.12 km/s": {
+   "url": "https://doi.org/10.1038/s41598-024-54012-0",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Company claim: Musk IAC 2017 ('entering very quickly, going seven and a half kilometers a second'); cross-checked v_entry = sqrt(vinf^2 + 5.03^2)": {
+   "url": "https://doi.org/10.1089/space.2018.29013.emu",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Estimate: extrapolation from Starship meter-class propulsive precision on Earth (tower catches 2024-25) and Mars state of the art (Perseverance TRN, ~1-2 km from ellipse center in 7.7x6.6 km ellipse); no SpaceX figure published": {
+   "url": null,
+   "type": "derived",
+   "verified": false,
+   "mirror_pdf_url": null
+  },
+  "Golombek et al., 'SpaceX Starship Landing Sites on Mars', 52nd LPSC #2420 (2021): latitude <40 deg for solar power and thermal management": {
+   "url": "sources/lpsc_2021_2420.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+   "mirrored": true
+  },
+  "Golombek et al., 52nd LPSC #2420 (2021): below -2 km required, <= -3 km preferred, for EDL deceleration timeline of heavy landers": {
+   "url": "sources/lpsc_2021_2420.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+   "mirrored": true
+  },
+  "NASA NTRS 20220013418 (ASCEND 2022): Sun-Earth-Mars angle <2 deg criterion gives ~11-14 d (mean 11.8 d); <3 deg up to ~3 weeks; <1 deg under a week": {
+   "url": "https://ntrs.nasa.gov/citations/20220013418",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "NASA-SP-2009-566 Table 4-3 (EDL System Characteristics)": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "NASA-SP-2009-566 section 4: NTR option 848.7 t (9 Ares V launches); chemical/aerocapture option 1251.8 t (12 Ares V)": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "NASA-SP-2009-566 section 5.4: 30-kWe version of 40-kWe lunar fission design; deployed 1 km from lander, 30-40 sols to emplace": {
+   "url": "sources/nasa_sp_2009_566.pdf",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+   "mirrored": true
+  },
+  "Zubrin & Baker (1991), Mars Direct; Ares HLV: 47 t trans-Mars injection (121 t to 300 km LEO); via Encyclopedia Astronautica": {
+   "url": "http://www.astronautix.com/m/marsdirect.html",
+   "type": "document",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Company claim (Musk, Starbase talk, May 29, 2025): 5 ships 2026/27 -> ~20 in 2028/29 -> ~100 in 2030/31 -> ~500 by 2033; long-term 1000-2000/window": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Company claim: Sep 7, 2024 target of 5 ships at Nov-Dec 2026 window was abandoned Feb 9, 2026 (Musk: Mars delayed 'about five to seven years' to focus on lunar missions); first attempt now the 2028/29 window": {
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+   "type": "company_claim",
+   "verified": true,
+   "mirror_pdf_url": null
+  },
+  "Company claims: Musk Mar 15, 2025 ('as soon as 2029, although 2031 is more likely'); Feb 9, 2026 delay statement pushes credible first crew to ~2031-2033": {
+   "url": "https://x.com/elonmusk/status/1900774290682683612",
+   "type": "company_claim",
+   "verified": false,
+   "mirror_pdf_url": null
+  }
+ }
+}

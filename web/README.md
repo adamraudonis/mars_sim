@@ -14,13 +14,28 @@ bun run baseline   # headless 2,200-sol mission validation with vitals table
 ## Layout
 
 ```
-src/sim/       pure-TS simulation core (no DOM): kernel, 16 modules, scenario, distiller
-src/three/     Three.js base view: procedural terrain, structures, sky, reconciler
-src/ui/        React mission-control HUD: charts (canvas), systems, parameters, log
-public/data/   parameters_master.json (415 sourced parameters) + scenarios/*.json
-scripts/       headless runners
+src/sim/       pure-TS simulation core (no DOM): kernel, 16 modules, scenario, distiller, recorder
+src/three/     Three.js base view: procedural terrain, structures, sky, frame-driven reconciler
+src/ui/        React mission-control HUD: charts (canvas), systems, parameters, log, timeline
+public/data/   parameters_master.json (sourced parameters) + scenarios/*.json
+public/data/cache/  precomputed mission recordings (one per preset) — instant scrubbing
+scripts/       headless runners, cache precompute, favicon generator
 tests/         bun test suite (physics anchors, conservation, determinism, smoke)
 ```
+
+## Cached playback (instant scrubbing)
+
+The app is a **player over a precomputed mission Recording**, not a live stepper. Each
+preset ships a cached recording (`public/data/cache/*.json`, ~155 KB gzipped) capturing
+per-sol series, display frames, and events for the whole mission — so you can **scrub
+straight to year 5** (or any moment) instantly, with the charts always showing the full
+multi-year arc and a moving playhead. The timeline at the bottom has year quick-jumps and
+event markers. `bun run precompute` regenerates the cache (also runs inside `bun run
+build`). Editing a parameter (or a fidelity level) flips a **RE-RUN** button that
+regenerates the recording client-side in ~1 s — so custom what-ifs stay live.
+
+Every parameter's citation is a **clickable link** in the Parameters tab (sourced from the
+research campaign; fetch-verified). Purely-derived quantities show their derivation instead.
 
 ## Performance notes
 

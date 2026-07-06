@@ -1,0 +1,253 @@
+{
+  "domain": "power_nuclear",
+  "sources": [
+    {
+      "source": "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV — FSP class",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS permalink 20250000841. Confirmed via WebFetch: 'Key Design Trades for a Near-term Lunar Fission Surface Power System', Mason/Kaldon/Corbisiero/Rao, NETS 2025 (Huntsville, May 2025). Full-text PDF also live at https://ntrs.nasa.gov/api/citations/20250000841/downloads/Mason%20NETS%20paper%202025c.pdf (the source_url currently in the DB)."
+    },
+    {
+      "source": "Mason et al., 'Key Design Trades for a Near-term Lunar FSP System', NETS 2025, NTRS 20250000841, Table IV",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same document as above (NTRS 20250000841). Existing DB source_url is the direct download PDF, which returns HTTP 200; replaced with the stable citation permalink."
+    },
+    {
+      "source": "FSP Phase 1 SOW DR-1 (2021/2022 contracts): 40 kWe for 10 years, no human intervention",
+      "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "The FSP Phase 1 Statement of Work (SOW) is not publicly posted as a standalone document; the official NASA Fission Surface Power project page is the canonical public source for the 40 kWe / 10-year, no-crew-intervention requirement. Existing DB source_url confirmed live (WebFetch) and states 'at least 40 kilowatts... for ten years.'"
+    },
+    {
+      "source": "FSP SOW and all recent NASA concepts: crew habitat at 1 km within ~36-deg shielded cone",
+      "url": "https://ntrs.nasa.gov/citations/20220004670",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Best public document for the FSP shield geometry (1-km keep-out within a ~36-deg shielded cone) is the COMPASS 'A Deployable 40 kWe Lunar Fission Surface Power Concept', Oleson et al., NETS-2022 (NTRS 20220004670). Confirmed via WebFetch. Existing DB source_url was the direct download PDF (live); replaced with the stable citation permalink."
+    },
+    {
+      "source": "Smith/Mason/Palac/Gibson, 'Kilopower: Small & Affordable Fission Power Systems for Space', NTRS 20180000691",
+      "url": "https://ntrs.nasa.gov/citations/20180000691",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS permalink 20180000691. Confirmed via WebFetch: 'Kilopower: Small and Affordable Fission Power Systems for Space', IAC 2017 (Adelaide). NTRS lists authors Mason, Palac, Gibson (source string also credits Smith). Direct-download PDF also live (2.9 MB, HTTP 200)."
+    },
+    {
+      "source": "NTRS 20180000691; Gibson et al. IEEE Aerospace 2017; core 226 kg incl 43.7 kg U-235, 43.3 kWt",
+      "url": "https://ntrs.nasa.gov/citations/20180000691",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named document is NTRS 20180000691 (Kilopower, confirmed via WebFetch). Also references Gibson et al. IEEE Aerospace 2017 ('Development of NASA's Small Fission Power System for Science and Human Exploration', DOI 10.1109/AERO.2017.7943970), not separately linked here."
+    },
+    {
+      "source": "Rucker, 'Solar vs. Fission Surface Power for Mars', AIAA 2016-5452 (COMPASS point design), incl. 15% MGA, shield sized <3 mR/hr at 500 m",
+      "url": "https://ntrs.nasa.gov/citations/20160002628",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Rucker 'Solar vs. Fission Surface Power for Mars', AIAA SPACE 2016-5452. NTRS 20160002628 is the paper record (confirmed via WebFetch, 14 authors incl. Rucker/Oleson/Landis). Existing DB source_url pointed to the presentation record (20160011275); replaced with the paper (20160002628). AIAA DOI: https://doi.org/10.2514/6.2016-5452 (paywalled AIAA landing) — NTRS chosen as the open, verified canonical."
+    },
+    {
+      "source": "NTRS 20180000691 ('1 to 10 kW continuously for 10 years or more'); Rucker 2016 presentation, NTRS 20160011275 slide 18 ('12-year Kilopower service life')",
+      "url": "https://ntrs.nasa.gov/citations/20160011275",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names two documents. The specific 'slide 18' claim is from the Rucker 2016 presentation, NTRS 20160011275 (confirmed via WebFetch as 'Solar vs. Fission Surface Power for Mars', Rucker, SPACE 2016). Linked to that presentation record; the co-cited Kilopower doc is NTRS 20180000691."
+    },
+    {
+      "source": "Gibson et al., KRUSTY Nuclear Ground Test Results, AIAA P&E 2018, NTRS 20180005435 (measured 30-34%, ~50% of Carnot)",
+      "url": "https://ntrs.nasa.gov/citations/20180005435",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS permalink 20180005435. Confirmed via WebFetch: 'The Kilopower Reactor Using Stirling TechnologY (KRUSTY) Nuclear Ground Test Results and Lessons Learned', Gibson et al., IECEC/AIAA P&E 2018. Existing DB source_url already the citation permalink; retained."
+    },
+    {
+      "source": "KRUSTY test paper, NTRS 20180005435; equivalent to ~$0.02/yr excess reactivity to hold 800 degC setpoint",
+      "url": "https://ntrs.nasa.gov/citations/20180005435",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same KRUSTY test paper (NTRS 20180005435), confirmed. The reactivity figure is the DB author's derived commentary on that paper."
+    },
+    {
+      "source": "Mason NETS 2025: 40 kWe net / 175 kWt (HP-Stirling); GC-Brayton 17% (40/230 kWt)",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Mason NETS 2025 (NTRS 20250000841), confirmed. Existing DB source_url was the direct download PDF (live); replaced with stable citation permalink."
+    },
+    {
+      "source": "This work: least-squares fit to Mason NETS 2025 Table V (10/20/40/80/100 kWe = 2.7/4.1/6.8/10.7/12.6 t)",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "derived",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Internal least-squares fit ('This work'), but it names the underlying document Mason NETS 2025 Table V (NTRS 20250000841, confirmed). Linked to that source document; the fit itself is the DB author's derivation."
+    },
+    {
+      "source": "This work: fit to Mason NETS 2025 Table V",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "derived",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Internal fit ('This work') derived from the named document Mason NETS 2025 Table V (NTRS 20250000841, confirmed)."
+    },
+    {
+      "source": "Mason et al., NASA/TM-20210016968 (2022): 1.9 MWe HALEU SCO2-Brayton NEP <25 t incl reactor/shield/conversion/radiators/PMAD; HEU version 11 kg/kWe",
+      "url": "https://ntrs.nasa.gov/citations/20210016968",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS permalink 20210016968. Confirmed via WebFetch: NASA/TM-20210016968 'Nuclear Power Concepts and Development Strategies for High-Power Electric Propulsion Missions to Mars', Mason/Oleson/Jacobson et al. (pub. Mar 2022). Existing DB source_url was direct download PDF (5.3 MB, live); replaced with stable citation permalink."
+    },
+    {
+      "source": "Mason NETS 2025 Table IV: LiH/B4C/W directional shield, 36-deg included angle covering 1-km-dia outpost at 1 km",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Mason NETS 2025 Table IV (NTRS 20250000841), confirmed. Existing DB source_url was direct download PDF; replaced with citation permalink."
+    },
+    {
+      "source": "FSP Phase 1 SOW DR-3 (<5 rem/yr at 1 km); same limit used in 2010 FSP and COMPASS studies; 100% occupancy assumed",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "FSP SOW DR-3 dose limit is not public standalone; the same <5 rem/yr limit is documented in the linked FSP concept papers. DB source_url pointed to Mason NETS 2025 (NTRS 20250000841, confirmed live), which reports the dose design limit; retained as citation permalink. The co-referenced 2010 FSP study is NTRS 20100033102."
+    },
+    {
+      "source": "Fission Surface Power System Initial Concept Definition, NASA/TM-2010-216772: reactor in ~2 m excavation, regolith limits dose to <5 rem/yr at 100 m",
+      "url": "https://ntrs.nasa.gov/citations/20100033102",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS permalink 20100033102. Confirmed via WebFetch: 'Fission Surface Power System Initial Concept Definition', NASA/TM-2010-216772 (Aug 2010, Glenn Research Center). Existing DB source_url was direct download PDF (4.6 MB, live); replaced with stable citation permalink."
+    },
+    {
+      "source": "Mason NETS 2025 Table V: 40-351 m2 for 10-100 kWe (3.5-4.0 m2/kWe), two-sided vertical panels, eps 0.85 EOL",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Mason NETS 2025 Table V (NTRS 20250000841), confirmed. DB source_url was direct download PDF; replaced with citation permalink."
+    },
+    {
+      "source": "Mason NETS 2025: HP-Stirling radiator 403-433 K (cold end 420 K); COMPASS 2022: 420 K inlet/370 K outlet",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary document Mason NETS 2025 (NTRS 20250000841), confirmed. Co-referenced COMPASS 2022 is NTRS 20220004670. DB source_url was direct download PDF; replaced with citation permalink."
+    },
+    {
+      "source": "Mason NETS 2025: entire startup <8 h on 4 kWh battery + 1 kWe aux array; KRUSTY demonstrated 1.5 h bounding fast start",
+      "url": "https://ntrs.nasa.gov/citations/20250000841",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary document Mason NETS 2025 (NTRS 20250000841), confirmed. KRUSTY fast-start figure traces to NTRS 20180005435. DB source_url was direct download PDF; replaced with citation permalink."
+    },
+    {
+      "source": "FSP SOW requirement: self-contained, no crew or robotic support for startup, operation, maintenance for 10 yr; deployment by robotic rover (COMPASS NETS 2022)",
+      "url": "https://ntrs.nasa.gov/citations/20220004670",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names COMPASS NETS 2022 = 'A Deployable 40 kWe Lunar Fission Surface Power Concept', Oleson et al. (NTRS 20220004670, confirmed via WebFetch). DB source_url was direct download PDF (live); replaced with citation permalink."
+    },
+    {
+      "source": "Estimate: reactor output flat (constant-temperature core, rod-compensated burnup <1%/10 yr per FSP TRL data); residual term = Mars dust on radiators + converter aging",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal engineering estimate ('Estimate:'). No specific external document named (only general 'FSP TRL data'); no URL. type=derived."
+    },
+    {
+      "source": "NASA/JPL MMRTG fact sheet; Curiosity/Perseverance flight units (design 125 We at fueling BOL, >=100 We at 14 yr)",
+      "url": "https://mars.nasa.gov/internal_resources/788/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://mars.nasa.gov/internal_resources/788/",
+      "note": "NASA/JPL MMRTG fact sheet. The existing DB source_url is a fragile direct PDF (mars.nasa.gov/internal_resources/788/, 992 KB, HTTP 200) with no stable landing page; verified by reading the PDF text ('Multi-Mission Radioisotope Thermoelectric Generator (MMRTG)... about 110 watts at launch... minimum lifetime of 14 years'). mirror_pdf_url set to the same PDF for hosting a copy."
+    },
+    {
+      "source": "NASA/JPL MMRTG fact sheet; 64.2 cm dia x 66.8 cm",
+      "url": "https://mars.nasa.gov/internal_resources/788/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://mars.nasa.gov/internal_resources/788/",
+      "note": "Same NASA/JPL MMRTG fact sheet (fragile direct PDF, verified via PDF text extraction). mirror_pdf_url set for hosting."
+    },
+    {
+      "source": "NASA/JPL MMRTG fact sheet NF-2020-05-619-HQ (BOL 110 We, est. 72 We at 17-yr design life => ~2.5%/yr compounded); MSL flight analyses ~3-4.8%/yr early-mission",
+      "url": "https://mars.nasa.gov/internal_resources/788/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://mars.nasa.gov/internal_resources/788/",
+      "note": "Names MMRTG fact sheet NF-2020-05-619-HQ. The DB source_url (mars.nasa.gov/internal_resources/788/) is the current NASA/DOE MMRTG fact sheet PDF, verified via PDF text ('about 110 watts at launch'). This is the fragile direct-PDF home; mirror_pdf_url set. An older 2019 fact-sheet variant is also public at https://discovery.larc.nasa.gov/PDF_FILES/26_MMRTG_Fact_Sheet_update_5-7-19-Mission_Planner.pdf (HTTP 200, verified genuine)."
+    },
+    {
+      "source": "Rucker, Solar vs. Fission Surface Power for Mars, AIAA 2016-5452 / NTRS 20160002628: 22 kWe keep-alive through 120-sol tau=5 dust storm, 35 kWe clear-sky peak",
+      "url": "https://ntrs.nasa.gov/citations/20160002628",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS permalink 20160002628 (Rucker, 'Solar vs. Fission Surface Power for Mars', AIAA SPACE 2016-5452), confirmed via WebFetch. Existing DB source_url already this citation permalink; retained. AIAA DOI: https://doi.org/10.2514/6.2016-5452 (paywalled)."
+    },
+    {
+      "source": "Rucker AIAA 2016-5452 abstract (4 units, 35 kWe continuous); presentation MEL: 9154 kg incl 5th spare unit + MGA + Stirling PMAD",
+      "url": "https://ntrs.nasa.gov/citations/20160002628",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Rucker AIAA 2016-5452 paper (NTRS 20160002628, confirmed). The MEL figure is from the companion presentation (NTRS 20160011275). DB source_url already this citation permalink; retained."
+    },
+    {
+      "source": "Rucker AIAA 2016-5452 study assumption: one 120-sol storm, optical depth tau=5, max wind 20 m/s",
+      "url": "https://ntrs.nasa.gov/citations/20160002628",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Rucker AIAA 2016-5452 study (NTRS 20160002628, confirmed). Existing DB source_url pointed to the presentation download PDF (20160011275); replaced with the paper citation permalink (20160002628)."
+    },
+    {
+      "source": "Oleson et al., COMPASS 40 kWe FSP, NETS 2022: mass-optimal at +/-2800 VDC; 3 km cable = 240 kg at 2800 V vs 3300 kg at 500 V",
+      "url": "https://ntrs.nasa.gov/citations/20220004670",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Oleson et al. COMPASS 40 kWe FSP, NETS 2022 = 'A Deployable 40 kWe Lunar Fission Surface Power Concept' (NTRS 20220004670, confirmed). DB source_url was direct download PDF (live); replaced with citation permalink."
+    },
+    {
+      "source": "NASA directive Aug 2025 (agency claim, ANS Nuclear Newswire 2 Sep 2025): 100 kWe-class closed-Brayton, <=15 t, launch-ready Q1 FY2030",
+      "url": "https://www.ans.org/news/2025-09-02/article-7336/nuclear-power-on-the-moon-what-were-watching/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NASA agency directive (Aug 4, 2025) as reported by ANS Nuclear Newswire (2 Sep 2025). Confirmed via WebFetch: article states the directive requires '100-kWe output using a closed Brayton cycle', a lander carrying 'up to 15 metric tons', and 'launch by the first quarter of fiscal year 2030'. type=company_claim (agency claim). Existing DB source_url retained."
+    },
+    {
+      "source": "NASA: '3 years and $15M' project (NTRS 20180000691); ~$20M widely cited incl DOE/NNSA contributions; DUFF precursor <$1M",
+      "url": "https://ntrs.nasa.gov/citations/20180000691",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Named document is NTRS 20180000691 (Kilopower, confirmed via WebFetch). The '3 years and $15M' and DUFF-precursor figures are attributed to that paper / general NASA reporting. DB source_url was the direct download PDF; replaced with the citation permalink."
+    }
+  ]
+}

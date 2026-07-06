@@ -1,0 +1,253 @@
+{
+  "domain": "reliability",
+  "sources": [
+    {
+      "source": "Jones, ICES-2019-14 (four UPA ORUs at 7.5-22x; seven other ORUs at 1.9-6.3x) — design point: ISS ECLSS ORUs failed above prediction (70% of ORUs, up to 22x); 2.0 is a conservative central multiplier",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Harry W. Jones, 'High Reliability Requires More than Providing Spares', ICES-2019-14 (49th ICES, Boston, 2019). NTRS permalink confirmed."
+    },
+    {
+      "source": "Lynch et al., ICES-2024-132, Table 4 (OPTimIS dataset, Oct 2017-Dec 2023)",
+      "url": "https://ntrs.nasa.gov/citations/20240005648",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Lynch, Owens, Piontek, Cirillo et al., 'A Historical Review of Logistics Mass and Crew Time Demands for ISS Operations', ICES-2024-132 (53rd ICES, Louisville, 2024). NTRS permalink confirmed."
+    },
+    {
+      "source": "Owens et al., AIAA 2017-5124, citing Bagdigian et al., ICES-2015-094; design documents predicted ~1 h/week",
+      "url": "https://ntrs.nasa.gov/citations/20170009115",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Owens, de Weck, Stromgren, Cirillo, Goodliff, 'Supportability Challenges, Metrics, and Key Decisions for Future Human Spaceflight' (AIAA SPACE 2017-5124). NTRS permalink confirmed. Primary named doc is the Owens AIAA paper (Bagdigian ICES-2015-094 is a secondary citation within it)."
+    },
+    {
+      "source": "Estimate: based on Russell & Klaus 2007 ISS Increments 4-8 category breakdown (35.3% of ECLSS maintenance time on air/waste repair) and ISS ops practice",
+      "url": "https://doi.org/10.1016/j.ress.2006.04.020",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate that names a real document: Russell & Klaus, 'Maintenance, reliability and policies for orbital space station life support systems', Reliability Engineering & System Safety 92(6), 2007. DOI resolves (302) to Elsevier; replaces the raw ScienceDirect abstract URL with the stable DOI."
+    },
+    {
+      "source": "Jones, ICES-2019-14 (14 of 20 ECLSS ORUs with changed estimates were worse; MADS vs ~8 yr flight data)",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Jones, 'High Reliability Requires More than Providing Spares', ICES-2019-14. NTRS permalink confirmed."
+    },
+    {
+      "source": "Stromgren et al., AIAA 2016-5307 (MADS updates through June 2016; ~3% ended at <=0.25x initial MTBF; ~85% improved, 14% of those >=10x)",
+      "url": "https://ntrs.nasa.gov/citations/20160011578",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Stromgren, Goodliff, Cirillo, Owens, 'The Threat of Uncertainty: Why Using Traditional Approaches for Evaluating Spacecraft Reliability are Insufficient for Future Human Mars Missions' (AIAA SPACE 2016-5307). NTRS permalink confirmed."
+    },
+    {
+      "source": "Jones, ICES-2019-14 (four UPA ORUs at 7.5-22x; seven other ORUs at 1.9-6.3x)",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Jones, 'High Reliability Requires More than Providing Spares', ICES-2019-14. NTRS permalink confirmed."
+    },
+    {
+      "source": "Chen, ICES-2025-127, Appendix Tables 2-11 (ISS MADS-derived; e.g., WPA pump/separator 3.26, avionics air assy 3.2, most items 1.0-1.4)",
+      "url": "https://ntrs.nasa.gov/citations/20250003955",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Chen, Rivas & Rangel, 'Advancing ECLSS Reliability Modeling: Integrating ISS Data for Sustainable Long-Duration Mission Planning', ICES-2025-127 (54th ICES, Prague, 2025). NTRS permalink confirmed."
+    },
+    {
+      "source": "Estimate: EF definition per Anderson et al. AIAA 2012-5320; magnitude anchored to Jones ICES-2019-14 flight ratios (1.9-22x) and Stromgren 2016 MTBF-change distribution",
+      "url": "https://ntrs.nasa.gov/citations/20120014060",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate naming a real document: Anderson et al., 'Challenges of Sustaining the International Space Station through 2020 and Beyond: Including Epistemic Uncertainty in Reassessing Confidence Targets' (AIAA SPACE 2012-5320). NTRS permalink confirmed; matches the EF-definition primary citation."
+    },
+    {
+      "source": "Stromgren et al., AIAA 2016-5307 (3x for 95% confidence, ~5x for 99%)",
+      "url": "https://ntrs.nasa.gov/citations/20160011578",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Stromgren et al., 'The Threat of Uncertainty...' (AIAA SPACE 2016-5307). NTRS permalink confirmed."
+    },
+    {
+      "source": "Jones, ICES-2019-14, Table 3 (flight data; MADS pre-flight estimate was 22,759 h). ICES-2025-127 MADS now lists 22,759 h post-redesign",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc Jones ICES-2019-14; ICES-2025-127 is a secondary citation. NTRS permalink for Jones confirmed."
+    },
+    {
+      "source": "Jones, ICES-2019-14, Table 3 (MADS estimate 41,376 h; CaSO4 precipitation from microgravity bone-loss urine chemistry was root cause)",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Jones, 'High Reliability Requires More than Providing Spares', ICES-2019-14. NTRS permalink confirmed."
+    },
+    {
+      "source": "Jones, ICES-2019-14, Table 2 (MADS estimate 189,433 h -> flight 35,000 h, 5.4x worse)",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Jones, 'High Reliability Requires More than Providing Spares', ICES-2019-14. NTRS permalink confirmed."
+    },
+    {
+      "source": "Review: 'Toward sustainable living in space' (2025), summarizing ISS heritage: CDRA valves and heaters 800-1,500 h; sorbent dust/check-valve damage per Jones ICES-2019-14",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2950616625000452",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "'Toward sustainable living in space: A review of environmental control and life support system technologies' (ScienceDirect, 2025/2026). Canonical ScienceDirect article landing page (PII S2950616625000452); exact title and CDRA/ISS-heritage content confirmed via search. Direct fetch returned 403 (anti-bot), not a dead link."
+    },
+    {
+      "source": "Chen, Rivas & Rangel, ICES-2025-127, Appendix Tables 2-11 (full ORU population; ~1.3e5 h if restricted to active process ORUs with MTBF <= 1e6 h)",
+      "url": "https://ntrs.nasa.gov/citations/20250003955",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Chen, Rivas & Rangel, 'Advancing ECLSS Reliability Modeling...', ICES-2025-127. NTRS permalink confirmed."
+    },
+    {
+      "source": "Chen, ICES-2025-127, Table 1 (R&R times: most 2-5 h; OGA hydrogen dome 14 h; WPA gas separator group 19.25 h) and MTTR columns (0.3-17.7 h)",
+      "url": "https://ntrs.nasa.gov/citations/20250003955",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Chen, Rivas & Rangel, 'Advancing ECLSS Reliability Modeling...', ICES-2025-127. NTRS permalink confirmed."
+    },
+    {
+      "source": "EMC practice: Stromgren AIAA 2016-5307 (0.99 DSH reliability spares case), Owens/NASA POS framing ICES-2024-95; ISS historical POS/confidence targets 85-99.5% (Anderson AIAA 2012-5320)",
+      "url": "https://ntrs.nasa.gov/citations/20160011578",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Multiple named docs; existing/primary is Stromgren AIAA 2016-5307 (NTRS 20160011578, confirmed). Secondary citations: Owens ICES-2024-95 and Anderson AIAA 2012-5320 (the latter linked separately at NTRS 20120014060)."
+    },
+    {
+      "source": "Owens & de Weck, AIAA 2016-5394 (>13,000 kg on orbit; ~18,000 kg staged on ground; >95% of corrective spares expected never used)",
+      "url": "https://ntrs.nasa.gov/citations/20160011570",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Owens & de Weck, 'Systems Analysis of In-Space Manufacturing Applications for the ISS and the Evolvable Mars Campaign' (AIAA SPACE 2016-5394). NTRS permalink confirmed."
+    },
+    {
+      "source": "Stromgren et al., AIAA 2016-5307 (EMAT, EMC deep-space habitat critical systems incl. ECLSS, TCS, EPS, C&DH, comm, water recovery)",
+      "url": "https://ntrs.nasa.gov/citations/20160011578",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Stromgren et al., 'The Threat of Uncertainty...' (AIAA SPACE 2016-5307). NTRS permalink confirmed."
+    },
+    {
+      "source": "Stromgren et al., AIAA 2016-5307 (>12,000 kg low-uncertainty bound, >17,000 kg high-uncertainty); Owens & de Weck AIAA 2016-5394 (17,232 kg for median P(LoC contrib)=1e-3, +4,124 kg per further 10x risk reduction)",
+      "url": "https://ntrs.nasa.gov/citations/20160011570",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Two named docs. Existing URL points to Owens & de Weck AIAA 2016-5394 (NTRS 20160011570, confirmed). Companion Stromgren AIAA 2016-5307 is at NTRS 20160011578 (linked separately)."
+    },
+    {
+      "source": "Derived: 5,984 kg (deterministic) to 17,232 kg (with uncertainty) per AIAA 2016-5307/5394, over 1,100 d against ~20,000 kg habitat dry mass (ICES-2015-288 typical)",
+      "url": "https://ntrs.nasa.gov/citations/20160011578",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Although prefixed 'Derived:', it names real documents (AIAA 2016-5307 and 2016-5394). Existing URL resolves to Stromgren AIAA 2016-5307 (NTRS 20160011578, confirmed); companion Owens & de Weck 2016-5394 is at NTRS 20160011570."
+    },
+    {
+      "source": "Do et al., Acta Astronautica 120 (2016) (Mars One assessment, ISS-derived failure rates, crews added every 26 months)",
+      "url": "https://doi.org/10.1016/j.actaastro.2015.11.025",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Do, Owens, Ho, Schreiner & de Weck, 'An independent assessment of the technical feasibility of the Mars One mission plan – Updated analysis', Acta Astronautica 120 (2016) 192-228. DOI resolves (302) to Elsevier; more canonical than the existing MIT DSpace landing page (open-access copy also at https://dspace.mit.edu/handle/1721.1/103973)."
+    },
+    {
+      "source": "Siddiqi & de Weck, J. Spacecraft & Rockets 44(1) 2007 (Mars surface mission case study; quoted in Jones ICES-2015-044)",
+      "url": "https://doi.org/10.2514/1.21847",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc is Siddiqi & de Weck, 'Spare Parts Requirements for Space Missions with Reconfigurability and Commonality', J. Spacecraft & Rockets 44(1), 147-155, 2007. DOI 10.2514/1.21847 resolves (302) to the AIAA article page; replaces the existing NTRS link (20160001251), which is actually the Jones ICES-2015-044 paper that merely quotes it. Open-access PDF also at http://strategic.mit.edu/docs/2_15_JSR_44_1_147.pdf."
+    },
+    {
+      "source": "Estimate: ORU-level replacement discards items with useful life (AIAA 2017-5124); shared/cold-spare pooling across co-located elements halves spares in Jones ICES-2015-044 worked example; no flight-quantified value",
+      "url": "https://ntrs.nasa.gov/citations/20170009115",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate naming real docs. Existing/primary is Owens et al. AIAA 2017-5124 (NTRS 20170009115, confirmed: 'Supportability Challenges, Metrics, and Key Decisions...'). Secondary: Jones ICES-2015-044 (NTRS 20160001251)."
+    },
+    {
+      "source": "Owens & de Weck, AIAA 2016-5394 (plumbing, ducting, fans, heat exchangers, tanks, valves ~33% of Master Equipment List; 50% used as growth sensitivity)",
+      "url": "https://ntrs.nasa.gov/citations/20160011570",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Owens & de Weck, 'Systems Analysis of In-Space Manufacturing...' (AIAA SPACE 2016-5394). NTRS permalink confirmed."
+    },
+    {
+      "source": "Owens & de Weck, AIAA 2016-5394 (17,232 -> 12,323 kg at P(LoC contrib)=1e-3; 0.34 with feedstock recycling -> 11,254 kg; covered items alone: -78.3%, -97.7% with recycling)",
+      "url": "https://ntrs.nasa.gov/citations/20160011570",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Owens & de Weck, 'Systems Analysis of In-Space Manufacturing...' (AIAA SPACE 2016-5394). NTRS permalink confirmed."
+    },
+    {
+      "source": "Estimate: generic rotating-machinery reliability practice (Ebeling, Introduction to Reliability & Maintainability Engineering; OREDA-class industrial data); consistent with ISS pump wear-out history",
+      "url": "https://www.waveland.com/browse.php?t=392",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate naming a real book: Charles E. Ebeling, 'An Introduction to Reliability and Maintainability Engineering' (Waveland Press; 3rd ed. 2019, ISBN 978-1-4786-3734-9). Official publisher page confirmed. 'OREDA-class industrial data' is a generic reference (OREDA handbook), not a single citable document."
+    },
+    {
+      "source": "Chen, ICES-2025-127 (ISS program assumes constant failure rate / exponential, memoryless)",
+      "url": "https://ntrs.nasa.gov/citations/20250003955",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Chen, Rivas & Rangel, 'Advancing ECLSS Reliability Modeling...', ICES-2025-127. NTRS permalink confirmed."
+    },
+    {
+      "source": "Estimate: mixed random/wear behavior; CDRA check-valve dust-abrasion wear (Jones ICES-2019-14) supports beta>1 for particulate-exposed valves",
+      "url": "https://ntrs.nasa.gov/citations/20190027319",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate naming a real doc: Jones ICES-2019-14 (NTRS 20190027319, confirmed)."
+    },
+    {
+      "source": "Estimate: bathtub-curve early phase (Ebeling; simplified bathtub in ICES-2025-127); 'first model year' effect discussed in Stromgren AIAA 2016-5307",
+      "url": "https://ntrs.nasa.gov/citations/20250003955",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate naming real docs. Existing URL resolves to Chen ICES-2025-127 (NTRS 20250003955, confirmed). Also names Ebeling textbook (Waveland page, linked separately) and Stromgren AIAA 2016-5307 (NTRS 20160011578)."
+    },
+    {
+      "source": "Estimate: generic PRA beta-factor values (NUREG/CR-5485 class); documented ECLSS CCF chains (OGA cell stack, CDRA dust, UPA urine chemistry) per Jones ICES-2019-14",
+      "url": "https://nrcoe.inl.gov/publicdocs/CCF/NUREGCR-5485_Guidelines%20on%20Modeling%20Common-Cause%20Failures%20in%20PRA.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://nrcoe.inl.gov/publicdocs/CCF/NUREGCR-5485_Guidelines%20on%20Modeling%20Common-Cause%20Failures%20in%20PRA.pdf",
+      "note": "Estimate naming a real doc: NUREG/CR-5485 (INEEL/EXT-97-01327), Mosleh et al., 'Guidelines on Modeling Common-Cause Failures in Probabilistic Risk Assessment', US NRC, Nov 1998. Official NRC/INL-hosted PDF (nrcoe.inl.gov) fetched successfully (9.6MB scanned PDF, no clean HTML landing page), so mirror_pdf_url set to the same direct PDF. Secondary named doc: Jones ICES-2019-14 (NTRS 20190027319)."
+    }
+  ]
+}

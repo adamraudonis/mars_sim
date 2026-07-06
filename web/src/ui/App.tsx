@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { AppRunner, SPEED_PRESETS } from '../runner';
 import { SceneView } from '../three/sceneView';
+import { SimClock } from '../sim/clock';
+import { Units } from '../sim/units';
 import { LogPanel, ParamsPanel, SystemsPanel, TelemetryPanel, useTick } from './panels';
 import { severityColor } from './format';
 
+// Earth year in sols (matches the Earth-date clock; "5 years" reads naturally).
+const YEAR_SOLS = 365.25 / 1.02749;
+
 function TopBar({
-  runner, orbit, setOrbit, hidden, setHidden, dayNight, setDayNight, onScenario,
+  runner, orbit, setOrbit, hidden, setHidden, dayNight, setDayNight, onScenario, onRerun,
 }: {
   runner: AppRunner;
   orbit: boolean;
@@ -15,12 +20,15 @@ function TopBar({
   dayNight: boolean;
   setDayNight: (v: boolean) => void;
   onScenario: () => void;
+  onRerun: () => void;
 }) {
   useTick(120);
   const [, force] = useState(0);
-  const clock = runner.engine?.clock;
-  const earth = clock ? new Date(clock.earthUtcMs) : null;
-  const lst = clock ? clock.localSolarHours : 0;
+  const sol = runner.playheadSol;
+  const earth = new Date(runner.scenario.epochUtcMs + sol * Units.solSeconds * 1000);
+  const j2000 = (runner.scenario.epochUtcMs - Date.UTC(2000, 0, 1, 12, 0, 0)) / 86400000;
+  const ls = SimClock.computeLs(j2000 + sol * (Units.solSeconds / Units.earthDaySeconds));
+  const lst = (sol - Math.floor(sol)) * Units.solHours;
 
   const speedIndex = runner.paused
     ? 0
@@ -40,11 +48,11 @@ function TopBar({
       <div className="clock">
         <div className="block">
           <span className="cap">EARTH</span>
-          <span className="val">{earth ? earth.toISOString().slice(0, 10) : '—'}</span>
+          <span className="val">{earth.toISOString().slice(0, 10)}</span>
         </div>
         <div className="block">
           <span className="cap">SOL</span>
-          <span className="val">{clock ? clock.solNumber.toLocaleString('en-US').replace(/,/g, ' ') : '—'}</span>
+          <span className="val">{Math.floor(sol).toLocaleString('en-US').replace(/,/g, ' ')}</span>
         </div>
         <div className="block">
           <span className="cap">LTST</span>
@@ -54,7 +62,7 @@ function TopBar({
         </div>
         <div className="block">
           <span className="cap">SEASON Ls</span>
-          <span className="val">{clock ? `${clock.ls.toFixed(0)}°` : '—'}</span>
+          <span className="val">{ls.toFixed(0)}°</span>
         </div>
       </div>
 
@@ -76,48 +84,104 @@ function TopBar({
           </button>
         ))}
       </div>
-      <span className="caption faint" style={{ fontSize: 8, letterSpacing: 1 }}>
-        SOLS/S
-      </span>
+      <span className="caption faint" style={{ fontSize: 8, letterSpacing: 1 }}>SOLS/S</span>
 
-      <button
-        className={`ghost${dayNight ? ' active' : ''}`}
-        onClick={() => setDayNight(!dayNight)}
-        title="Render the real day/night cycle (off = steady daylight; simulation physics keep the true cycle either way)"
-      >
+      {runner.dirty && (
+        <button className="ghost rerun" onClick={onRerun} title="Parameters changed — re-simulate the mission">
+          ⟲ RE-RUN
+        </button>
+      )}
+      <button className={`ghost${dayNight ? ' active' : ''}`} onClick={() => setDayNight(!dayNight)}
+        title="Render the real day/night cycle (off = steady daylight; physics keep the true cycle either way)">
         DAY/NIGHT
       </button>
       <button className={`ghost${orbit ? ' active' : ''}`} onClick={() => setOrbit(!orbit)} title="Slow auto-orbit">
         ORBIT
       </button>
-      <button
-        className={`ghost${hidden ? ' active' : ''}`}
-        onClick={() => setHidden(!hidden)}
-        title="Hide panels for a clean timelapse (Tab)"
-      >
+      <button className={`ghost${hidden ? ' active' : ''}`} onClick={() => setHidden(!hidden)}
+        title="Hide panels for a clean timelapse (Tab)">
         HIDE
-      </button>
-      <button className="ghost" onClick={() => runner.rebuild()}>
-        RESET
       </button>
     </div>
   );
 }
 
-function Ticker({ runner }: { runner: AppRunner }) {
-  useTick(250);
-  const events = runner.engine?.events.events;
-  const last = events && events.length > 0 ? events[events.length - 1] : null;
+/** Bottom timeline: scrubber with year gridlines + event markers, quick-jump chips, ticker. */
+function Timeline({ runner }: { runner: AppRunner }) {
+  useTick(120);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [, force] = useState(0);
+  const duration = runner.durationSols;
+  const rec = runner.recording;
+  const frac = Math.max(0, Math.min(1, runner.playheadSol / duration));
+
+  const seekFromClientX = (clientX: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    runner.seek(((clientX - r.left) / r.width) * duration);
+    force((v) => v + 1);
+  };
+
+  const onDown = (e: React.PointerEvent) => {
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    runner.paused = true;
+    seekFromClientX(e.clientX);
+  };
+  const onMove = (e: React.PointerEvent) => {
+    if (e.buttons) seekFromClientX(e.clientX);
+  };
+
+  const years = Math.floor(duration / YEAR_SOLS);
+  const jumps: Array<[string, number]> = [['Start', 0]];
+  for (let y = 1; y <= years; y++) jumps.push([`${y} yr`, y * YEAR_SOLS]);
+  jumps.push(['End', duration]);
+
+  // Event markers: milestones + criticals (cap for perf).
+  const markers = (rec?.events ?? [])
+    .filter((e) => e.severity === 'milestone' || e.severity === 'critical')
+    .slice(0, 400);
+
+  const last = rec ? runner.eventsUpTo().at(-1) : null;
+
   return (
-    <div className="panel ticker">
-      <span
-        className="bar"
-        style={{ width: 3, height: 16, borderRadius: 2, background: last ? severityColor(last.severity) : '#444' }}
-      />
-      <span className="mono caption">{last ? `SOL ${last.sol.toFixed(1)}` : ''}</span>
-      <span style={{ fontSize: 11, overflow: 'hidden', textOverflow: 'ellipsis' }}>
-        {last ? `${last.source} — ${last.message}` : '—'}
-      </span>
+    <div className="panel dock-bottom">
+      <div className="tl-row">
+        <div className="tl-track" ref={trackRef} onPointerDown={onDown} onPointerMove={onMove}>
+          {Array.from({ length: years }, (_, i) => (
+            <div key={i} className="tl-year" style={{ left: `${((i + 1) * YEAR_SOLS) / duration * 100}%` }} />
+          ))}
+          {markers.map((e, i) => (
+            <div
+              key={i}
+              className="tl-marker"
+              style={{ left: `${(e.sol / duration) * 100}%`, background: severityColor(e.severity) }}
+              title={`Sol ${e.sol.toFixed(0)} — ${e.message}`}
+            />
+          ))}
+          <div className="tl-fill" style={{ width: `${frac * 100}%` }} />
+          <div className="tl-head" style={{ left: `${frac * 100}%` }} />
+        </div>
+        <div className="tl-jumps">
+          {jumps.map(([label, s]) => (
+            <button
+              key={label}
+              className="ghost jump"
+              onClick={() => {
+                runner.seek(s);
+                force((v) => v + 1);
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="tl-ticker">
+        <span className="bar" style={{ background: last ? severityColor(last.severity) : '#444' }} />
+        <span className="mono caption">{last ? `SOL ${last.sol.toFixed(1)}` : ''}</span>
+        <span className="tl-msg">{last ? `${last.source} — ${last.message}` : '—'}</span>
+      </div>
     </div>
   );
 }
@@ -148,30 +212,33 @@ export function App({ runner }: { runner: AppRunner }) {
   const viewRef = useRef<SceneView | null>(null);
   const [tab, setTab] = useState(0);
   const [orbit, setOrbit] = useState(false);
-  const [dayNight, setDayNight] = useState(false); // off by default: no strobing at high timelapse
+  const [dayNight, setDayNight] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [scenarioOpen, setScenarioOpen] = useState(false);
+  const [recomputing, setRecomputing] = useState(false);
   const [, force] = useState(0);
 
-  // Three.js world + main loop.
   useEffect(() => {
     const canvas = canvasRef.current!;
     const view = new SceneView(canvas);
     viewRef.current = view;
-    view.setEngine(runner.engine);
-    // Debug/console handle (harmless in production; handy for tooling).
     (window as unknown as Record<string, unknown>).__mars = { runner, view };
+
+    const applyRecording = () => {
+      if (runner.recording) view.setShips(runner.recording.ships);
+    };
+    applyRecording();
     const offRebuild = runner.onRebuild(() => {
-      view.setEngine(runner.engine);
+      applyRecording();
       force((v) => v + 1);
     });
+    const offDirty = runner.onDirtyChange(() => force((v) => v + 1));
 
     const resize = () => view.resize(window.innerWidth, window.innerHeight);
     resize();
     window.addEventListener('resize', resize);
 
-    // Sim advances on a steady interval (keeps ticking in background/unfocused tabs,
-    // where rAF is throttled); rendering stays on rAF.
+    // Playhead advances on a steady interval (background-tab safe); render on rAF.
     let lastSim = performance.now();
     const simTimer = setInterval(() => {
       const now = performance.now();
@@ -185,7 +252,7 @@ export function App({ runner }: { runner: AppRunner }) {
       raf = requestAnimationFrame(loop);
       const dt = Math.min(0.1, (t - lastT) / 1000);
       lastT = t;
-      view.render(dt);
+      view.render(dt, runner.frame, runner.playheadSol);
     };
     raf = requestAnimationFrame(loop);
 
@@ -194,6 +261,7 @@ export function App({ runner }: { runner: AppRunner }) {
       cancelAnimationFrame(raf);
       window.removeEventListener('resize', resize);
       offRebuild();
+      offDirty();
       view.renderer.dispose();
     };
   }, [runner]);
@@ -201,11 +269,9 @@ export function App({ runner }: { runner: AppRunner }) {
   useEffect(() => {
     viewRef.current?.setAutoOrbit(orbit);
   }, [orbit]);
-
   useEffect(() => {
     if (viewRef.current) viewRef.current.dayNightCycle = dayNight;
   }, [dayNight]);
-
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -217,18 +283,28 @@ export function App({ runner }: { runner: AppRunner }) {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  // Re-run: paint the overlay first, then run the (blocking) recompute on the next frame.
+  const doRerun = () => {
+    setRecomputing(true);
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        runner.recomputeLive();
+        setRecomputing(false);
+        force((v) => v + 1);
+      }),
+    );
+  };
+
   return (
     <>
       <canvas ref={canvasRef} className="world" />
       <TopBar
         runner={runner}
-        orbit={orbit}
-        setOrbit={setOrbit}
-        hidden={hidden}
-        setHidden={setHidden}
-        dayNight={dayNight}
-        setDayNight={setDayNight}
+        orbit={orbit} setOrbit={setOrbit}
+        hidden={hidden} setHidden={setHidden}
+        dayNight={dayNight} setDayNight={setDayNight}
         onScenario={() => setScenarioOpen((v) => !v)}
+        onRerun={doRerun}
       />
       {scenarioOpen && <ScenarioPopup runner={runner} onClose={() => setScenarioOpen(false)} />}
       {!hidden && (
@@ -250,7 +326,13 @@ export function App({ runner }: { runner: AppRunner }) {
           {tab === 2 && <LogPanel runner={runner} />}
         </div>
       )}
-      <Ticker runner={runner} />
+      <Timeline runner={runner} />
+      {recomputing && (
+        <div className="recompute-overlay">
+          <div className="mark" />
+          <div>SIMULATING MISSION…</div>
+        </div>
+      )}
     </>
   );
 }

@@ -1,0 +1,237 @@
+{
+  "domain": "power_solar",
+  "sources": [
+    {
+      "source": "Spectrolab XTJ Prime datasheet 7/2016 (company claim, flight product): 30.7% production average; SolAero ZTJ 29.5%; MER-era 3J ~27.5%; Mars-spectrum-adapted ~32% (Landis NTRS 20070010752)",
+      "url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+      "note": "Fetched the PDF and confirmed content: 'XTJ PRIME 30.7% Triple Junction Space Grade Solar Cell', in full production, AM0 28C 30.7% production average. This is the primary company-claim datasheet cited. It is a fragile direct PDF on spectrolab.com with no stable landing page, so mirror_pdf_url is set to the same file for hosting a copy. The embedded secondary citation (Landis NTRS 20070010752) is linked separately via its own source string."
+    },
+    {
+      "source": "Computed from Spectrolab XTJ Prime datasheet coefficients (dVmp/dT=-6.5 mV/degC on 2.390 V; dJmp/dT=+8.9 uA/cm2/degC on 17.4 mA/cm2)",
+      "url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.spectrolab.com/DataSheets/cells/XTJ_Prime_Data_Sheet_7-28-2016.pdf",
+      "note": "Computation, but it names a real document (the Spectrolab XTJ Prime datasheet) that supplies the input coefficients. Fetched the PDF and confirmed it contains a 'Temperature Coefficients (15C-75C)' table with dVoc/dT, dJsc/dT, dVmp/dT (mV/C) and dJmp/dT (uA/cm2/C) rows, matching the cited coefficients. Fragile direct PDF with no landing page, so mirror_pdf_url is the same file."
+    },
+    {
+      "source": "Pathfinder 0.28%/sol first 30 sols (NASA/TM-2004-213367); InSight 0.2%/sol observed, 0.28%/sol steady-state model (Lorenz et al. 2020, doi:10.1029/2019EA000992); MER long-term ~0.14%/sol; envelope 0.05-2%/sol (Lorenz et al. 2021 P&SS 105337)",
+      "url": "https://doi.org/10.1029/2019EA000992",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary linkable document is Lorenz et al. 2020, 'Scientific Observations With the InSight Solar Arrays: Dust, Clouds, and Eclipses on Mars', Earth and Space Science. DOI 10.1029/2019EA000992 resolves (302) to the Wiley landing page agupubs.onlinelibrary.wiley.com/doi/10.1029/2019EA000992; confirmed via search. Open-access full text also at PMC7375148. The string also names NASA/TM-2004-213367 (Pathfinder) and Lorenz et al. 2021 P&SS 105337, which are linked via other source strings."
+    },
+    {
+      "source": "Compact Telescoping Surface Array study (NTRS 20190000437): 1500 kg per 1000 m2 goal, blanket 0.5-1.0 kg/m2; Rucker 2016 UltraFlex-based point ~2.9 kg/m2",
+      "url": "https://ntrs.nasa.gov/citations/20190000437",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Pappa et al., 'Compact Telescoping Surface Array for Mars Solar Power' (NASA Langley). NTRS permalink /citations/20190000437 verified (HTTP 200; WebFetch confirmed title/authors and 50-80 kW, ~1500 kg / 1000 m2 content). Replaced the prior /api/.../downloads/ direct-PDF link with the stable citations permalink. Full-text PDF available at ntrs.nasa.gov/api/citations/20190000437/downloads/20190000437.pdf (HTTP 200, 2.3MB)."
+    },
+    {
+      "source": "JPL D-101146 Energy Storage Technologies report (2017): flight state-of-practice packs <100 Wh/kg (Yardney MER/Phoenix/MSL heritage); development targets 150-250 Wh/kg; modern cells 240-270 Wh/kg imply near-term packs 150-180",
+      "url": "https://science.nasa.gov/resource/energy-storage-technologies-for-future-planetary-science-missions/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+      "note": "JPL D-101146, 'Energy Storage Technologies for Future Planetary Science Missions', December 2017 (Surampudi et al., JPL/Caltech). Fetched the direct PDF and confirmed the title page ('...December 2017 ... JPL D-101146'). Replaced the prior fragile solarsystem.nasa.gov direct-PDF link with the stable science.nasa.gov landing page (verified: it describes the report and links the 1.41 MB PDF). mirror_pdf_url set to the direct PDF (still resolves HTTP 200, on the deprecated solarsystem.nasa.gov domain) so a copy can be hosted."
+    },
+    {
+      "source": "Estimate: Li-ion cell-level 94-97% from terrestrial literature; Tesla Powerwall 92.5% DC round-trip (company claim); system studies 84-96%",
+      "url": "https://www.tesla.com/powerwall",
+      "type": "company_claim",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Prefixed 'Estimate:' but names a real company claim (Tesla Powerwall 92.5% round-trip efficiency). The 90-92.5% round-trip figure is the published Tesla Powerwall spec; the official Powerwall product page (tesla.com/powerwall) and its datasheet carry this claim. Not fetched-and-confirmed for the exact 92.5% number on a stable spec URL in this session, so verified=false; url points to the official Tesla Powerwall product page as the best canonical company source. The remaining figures (cell-level 94-97%, system studies 84-96%) are literature estimates with no single external document."
+    },
+    {
+      "source": "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions — 1 - allowable DoD",
+      "url": "https://science.nasa.gov/resource/energy-storage-technologies-for-future-planetary-science-missions/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+      "note": "Prefixed 'Estimate:' but names JPL D-101146 (Energy Storage Technologies report, 2017) as the source for the DOD requirement. Linked to that report's stable science.nasa.gov landing page (verified). Direct PDF mirror provided. The Li-ion cycle-life curve portion is a generic literature estimate with no single document."
+    },
+    {
+      "source": "Estimate: Li-ion cycle-life curves for >2000 cycles (3+ Mars years of daily cycling); JPL D-101146 mission requirements cite 100% DOD only for short missions",
+      "url": "https://science.nasa.gov/resource/energy-storage-technologies-for-future-planetary-science-missions/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+      "note": "Distinct source string from the near-identical one ending '... 1 - allowable DoD'. Prefixed 'Estimate:' but names JPL D-101146 (Energy Storage Technologies report, 2017) for the DOD requirement. Linked to that report's stable science.nasa.gov landing page (verified). Direct PDF mirror provided. The Li-ion cycle-life curve portion is a generic literature estimate with no single document."
+    },
+    {
+      "source": "Computed from TSI 1361 W/m2 at 1.5236915 AU; Appelbaum & Flood NASA TM-102299 use 590 (S=1371). Range = aphelion..perihelion.",
+      "url": "https://ntrs.nasa.gov/citations/19890018252",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Computation, but it names Appelbaum & Flood NASA TM-102299. NTRS permalink /citations/19890018252 verified via WebFetch: 'Solar radiation on Mars', Appelbaum & Flood, NASA-TM-102299, Aug 1989. Existing URL confirmed correct."
+    },
+    {
+      "source": "NASA TM-102299 eq. (4): Gob = 590[1+e cos(Ls-248)]^2/(1-e^2)^2",
+      "url": "https://ntrs.nasa.gov/citations/19890018252",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NASA TM-102299 (Appelbaum & Flood, 'Solar radiation on Mars'). NTRS permalink /citations/19890018252 verified via WebFetch. Existing URL confirmed correct."
+    },
+    {
+      "source": "NASA TM-102299 eq. (4)",
+      "url": "https://ntrs.nasa.gov/citations/19890018252",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NASA TM-102299 (Appelbaum & Flood, 'Solar radiation on Mars'). NTRS permalink /citations/19890018252 verified via WebFetch. Existing URL confirmed correct."
+    },
+    {
+      "source": "NASA TM-102299 nomenclature (e = 0.093377); NSSDC Mars Fact Sheet 0.0935",
+      "url": "https://ntrs.nasa.gov/citations/19890018252",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NASA TM-102299 (Appelbaum & Flood) for the eccentricity value; also references the NSSDC Mars Fact Sheet. Linked to the TM-102299 NTRS permalink (verified). The existing URL on the parameter was this same NTRS ID, confirmed correct. NSSDC Mars Fact Sheet is linked via its own source strings."
+    },
+    {
+      "source": "Modern ephemeris/NSSDC Mars Fact Sheet (251 deg); A&F TM-102299 used 248 deg",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Names the NSSDC Mars Fact Sheet. The canonical permalink nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html is the standard, long-standing NASA reference URL and appears as the live page in current search results, but as of this session (July 2026) it 307-redirects site-wide to nasa.gov/nssdc/ (a maintenance/migration state) and does not currently serve the fact-sheet content, so verified=false. Kept the canonical URL rather than inventing an alternative; A&F TM-102299 (for the 248 deg value) is linked via its own source strings."
+    },
+    {
+      "source": "NSSDC Mars Fact Sheet; A&F TM-102299 eq. (7) used 24.936 deg. sin(dec) = sin(obliquity) sin(Ls)",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Names the NSSDC Mars Fact Sheet (obliquity ~25.19 deg). Canonical permalink kept; as of this session it 307-redirects site-wide to nasa.gov/nssdc/ (maintenance state) and does not serve fact-sheet content, so verified=false. A&F TM-102299 (24.936 deg value) is linked via its own source strings."
+    },
+    {
+      "source": "MER 5-Mars-year record (Lemmon et al. 2015, NTRS 20150008268): Spirit <0.3, Opportunity <0.5 in aphelion season; Viking 'typically about 0.5' (TM-102299); ICES-2019-181 (NTRS 20190027303) non-storm background tau ~0.4",
+      "url": "https://ntrs.nasa.gov/citations/20150008268",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary doc: Lemmon et al., 'Dust Aerosol, Clouds, and the Atmospheric Optical Depth Record over 5 Mars Years of the Mars Exploration Rover Mission' (Icarus 2015). NTRS permalink /citations/20150008268 verified via WebFetch (title/authors match). Existing URL confirmed correct. Also names TM-102299 and NTRS 20190027303, linked via other source strings."
+    },
+    {
+      "source": "MER/MSL/Viking records: regional storms to tau 1.2-3.6 superposed (Lemmon et al. 2015; TM-102299 VL1 record max 3.25-3.6 in 1977 storms)",
+      "url": "https://ntrs.nasa.gov/citations/20150008268",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Lemmon et al. 2015 (MER 5-Mars-year optical depth record) and TM-102299. Linked to the Lemmon et al. 2015 NTRS permalink (verified via WebFetch). Existing URL confirmed correct. TM-102299 linked via its own source strings."
+    },
+    {
+      "source": "2018/MY34 GDS: MSL Mastcam tau=8.5 (Guzewich et al. 2019 GRL); Opportunity tau>10.7 lower limit (NTRS 20190027303)",
+      "url": "https://ntrs.nasa.gov/citations/20190027303",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20190027303 = Smith & Guzewich, 'The Mars Global Dust Storm of 2018' (ICES 2019 conference paper). NTRS permalink /citations/20190027303 verified via WebFetch (title/authors match; covers the 2018 MY34 GDS optical depth). Existing URL confirmed correct. The string labels it 'ICES-2019-181' which is the ICES paper number for this same NTRS record. Guzewich et al. 2019 GRL is a separate journal reference not individually linked here."
+    },
+    {
+      "source": "3 GDS in MY25/28/34 over ~10 Mars years (NTRS 20190027303); historical ~1 per 3 Mars years, aperiodic with gaps up to 6 MY",
+      "url": "https://ntrs.nasa.gov/citations/20190027303",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20190027303 (Smith & Guzewich, 'The Mars Global Dust Storm of 2018', ICES 2019). NTRS permalink verified via WebFetch. Existing URL confirmed correct."
+    },
+    {
+      "source": "MSL MY34 record: exponential decay, e-folding 43 sols (NTRS 20190027303, citing Guzewich et al. 2019)",
+      "url": "https://ntrs.nasa.gov/citations/20190027303",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20190027303 (Smith & Guzewich, 'The Mars Global Dust Storm of 2018', ICES 2019). NTRS permalink verified via WebFetch. Existing URL confirmed correct."
+    },
+    {
+      "source": "Rucker et al., Solar vs. Fission Surface Power for Mars (NTRS 20160002628): 120-day storm at average optical depth 5",
+      "url": "https://ntrs.nasa.gov/citations/20160002628",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Rucker et al., 'Solar vs. Fission Surface Power for Mars' (SPACE 2016). NTRS permalink /citations/20160002628 verified via WebFetch (title 'Solar vs. Fission Surface Power for Mars', lead author Michelle A. Rucker, JSC). Existing URL confirmed correct."
+    },
+    {
+      "source": "MER flight history: 2014 Opportunity events boosted power ~70%, arrays imaged near-clean; frequency is site-specific - InSight saw no significant cleaning in 4 years (Lorenz et al. 2021)",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0032063321001768",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Lorenz et al. 2021, 'Lander and rover histories of dust accumulation on and removal from solar arrays on Mars', Planetary and Space Science 207:105337 (DOI 10.1016/j.pss.2021.105337). Confirmed via WebSearch (title/authors/journal match, discusses InSight seeing no large cleaning events). ScienceDirect landing page (pii S0032063321001768) returns 403 to automated fetch (publisher paywall/bot block) but is the correct canonical article URL; identity verified through search. Existing URL confirmed correct."
+    },
+    {
+      "source": "Landis & Hyatt, The Solar Spectrum on the Martian Surface and its Effect on Photovoltaic Performance (NTRS 20070010752): dust absorbs blue, top junction becomes current-limiting",
+      "url": "https://ntrs.nasa.gov/citations/20070010752",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Landis & Hyatt, 'The Solar Spectrum on the Martian Surface and its Effect on Photovoltaic Performance' (NASA Glenn). NTRS permalink /citations/20070010752 verified via WebFetch (title/authors match). Existing URL confirmed correct."
+    },
+    {
+      "source": "CTSA study (NTRS 20190000437): 50-80 kW daytime from ~1500 kg, 1000 m2 (200 W/kg at 1 AU equivalent); UltraFlex flight wings 100-150 W/kg at 1 AU",
+      "url": "https://ntrs.nasa.gov/citations/20190000437",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "CTSA study = Pappa et al., 'Compact Telescoping Surface Array for Mars Solar Power' (NTRS 20190000437). Verified via WebFetch (50-80 kW daytime, ~1500 kg / 1000 m2 content matches). Replaced the prior /api/.../downloads/ direct-PDF link with the stable citations permalink."
+    },
+    {
+      "source": "Rucker AIAA Space 2016 (NTRS 20160011275): 11,713 kg Jezero system for ~35 kW day / 26.8 kW night (12,679 kg Columbus); storm-hardened variant 9,800 kg for 22 kW keep-alive (NTRS 20160002628). Fission comparison: 4x10 kWe Kilopower = 9,154 kg (~230 kg/kW)",
+      "url": "https://ntrs.nasa.gov/citations/20160011275",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Rucker, 'Solar vs. Fission Surface Power for Mars', AIAA SPACE 2016 (Long Beach, Sep 13-15 2016). NTRS permalink /citations/20160011275 verified via WebFetch (title/author/conference match; this is the AIAA conference-paper NTRS record, companion to 20160002628). Replaced the prior /api/.../downloads/ direct-PDF link with the stable citations permalink. NTRS 20160002628 (storm-hardened variant) linked via its own source string."
+    },
+    {
+      "source": "JPL D-101146 human-lander target >500 Wh/kg; CTSA study baselines 10 kW RFC night power; no flight heritage",
+      "url": "https://science.nasa.gov/resource/energy-storage-technologies-for-future-planetary-science-missions/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://solarsystem.nasa.gov/system/downloadable_items/716_Energy_Storage_Tech_Report_FINAL.PDF",
+      "note": "Names JPL D-101146 (Energy Storage Technologies report, 2017) for the >500 Wh/kg RFC target, and the CTSA study. Linked to the JPL report's stable science.nasa.gov landing page (verified); direct PDF mirror provided. The CTSA study is linked separately via its own source strings (NTRS 20190000437)."
+    },
+    {
+      "source": "Integrated from A&F TM-103623 f-table (this work, 4.05 at equinox); matches TM-103623 Table V VL1 max 4.18 kWh/m2-sol at Ls 140",
+      "url": "https://ntrs.nasa.gov/citations/19910005804",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "'This work' integration, but it names Appelbaum & Flood NASA TM-103623 as the underlying f-table/Table V source. NTRS permalink /citations/19910005804 verified via WebFetch: 'Solar radiation on Mars: Update 1990', Appelbaum & Flood, NASA-TM-103623. Existing URL confirmed correct."
+    },
+    {
+      "source": "Integrated from A&F TM-103623 f-table (this work); consistent with Lemmon et al. 2015 flight observation that tau>4 cuts surface insolation only by factor 2-3 due to forward scattering",
+      "url": "https://ntrs.nasa.gov/citations/19910005804",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names A&F TM-103623 ('Solar radiation on Mars: Update 1990') as the f-table source; NTRS permalink /citations/19910005804 verified via WebFetch. Existing URL confirmed correct. Lemmon et al. 2015 linked via its own source strings (NTRS 20150008268)."
+    },
+    {
+      "source": "NASA TM-103623 Table V, VL2 (47.7 N) minimum 315 Wh/m2-day at Ls 280; VL1 (22.3 N) minimum 935 Wh/m2-day for comparison",
+      "url": "https://ntrs.nasa.gov/citations/19910005804",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NASA TM-103623 ('Solar radiation on Mars: Update 1990', Appelbaum & Flood). NTRS permalink /citations/19910005804 verified via WebFetch. Existing URL confirmed correct."
+    },
+    {
+      "source": "Computed from A&F model (this work): 7.44 h at tau 0.4, falling to 6.4 h at tau 5-6 (profile flattens as diffuse dominates)",
+      "url": "https://ntrs.nasa.gov/citations/19910005804",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "'This work' computation from the Appelbaum & Flood model. The best-matching cited document is A&F NASA TM-103623 ('Solar radiation on Mars: Update 1990'), which supplies the insolation model; NTRS permalink /citations/19910005804 verified via WebFetch. Existing URL on the parameter was this same NTRS ID, confirmed correct."
+    }
+  ]
+}

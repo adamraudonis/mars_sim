@@ -9,9 +9,9 @@ export interface SeriesSpec {
 }
 
 /**
- * Multi-series telemetry chart (canvas, x = mission sol): translucent area fills, sol
- * gridlines at round intervals, inset min/max labels, live-value legend chips. Draws
- * imperatively on a timer — React never re-renders at chart rate.
+ * Multi-series telemetry chart (canvas, x = mission sol). Draws the FULL mission arc always
+ * — so you see the whole multi-year story at a glance — with a moving playhead line and a
+ * dot per series at the current sol. Reads from the cached Recording, never the engine.
  */
 export function Chart({ runner, title, series }: { runner: AppRunner; title: string; series: SeriesSpec[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -24,11 +24,11 @@ export function Chart({ runner, title, series }: { runner: AppRunner; title: str
     let last = 0;
     const draw = (t: number) => {
       raf = requestAnimationFrame(draw);
-      if (t - last < 300) return; // ~3 Hz refresh
+      if (t - last < 120) return; // ~8 Hz (cheap; playhead should feel live)
       last = t;
       const canvas = canvasRef.current;
-      const engine = runner.engine;
-      if (!canvas || !engine) return;
+      const reader = runner.reader;
+      if (!canvas || !reader) return;
 
       const dpr = Math.min(window.devicePixelRatio, 2);
       const w = canvas.clientWidth;
@@ -42,23 +42,27 @@ export function Chart({ runner, title, series }: { runner: AppRunner; title: str
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, w, h);
 
-      // Range across series.
+      const frames = reader.frameCount;
+      const duration = runner.durationSols;
+      const playIdx = reader.solToIndex(runner.playheadSol);
+
       let mn = Infinity;
       let mx = -Infinity;
-      let maxCount = 0;
       let anyData = false;
       let unitFound = '';
+      const arrays: Array<{ values: number[]; color: string; label: string }> = [];
       const legendNext: Array<{ label: string; value: string; color: string }> = [];
       for (const s of series) {
-        const ts = engine.history.get(s.id);
-        if (ts && ts.count > 1) {
+        const ser = reader.series(s.id);
+        if (ser && ser.values.length > 1) {
           anyData = true;
-          maxCount = Math.max(maxCount, ts.count);
-          const [a, b] = ts.range(0, ts.count);
-          mn = Math.min(mn, a);
-          mx = Math.max(mx, b);
-          if (!unitFound && ts.unit) unitFound = ts.unit;
-          legendNext.push({ label: s.label ?? ts.displayName, value: compact(ts.latest), color: s.color });
+          for (const v of ser.values) {
+            if (v < mn) mn = v;
+            if (v > mx) mx = v;
+          }
+          if (!unitFound && ser.unit) unitFound = ser.unit;
+          arrays.push({ values: ser.values, color: s.color, label: s.label ?? ser.name });
+          legendNext.push({ label: s.label ?? ser.name, value: compact(ser.values[playIdx] ?? 0), color: s.color });
         } else {
           legendNext.push({ label: s.label ?? s.id, value: '', color: s.color });
         }
@@ -78,9 +82,9 @@ export function Chart({ runner, title, series }: { runner: AppRunner; title: str
         mx = 1;
       }
       if (mx - mn < 1e-9) {
-        const pad0 = Math.abs(mx) * 0.1 + 0.5;
-        mn -= pad0;
-        mx += pad0;
+        const p0 = Math.abs(mx) * 0.1 + 0.5;
+        mn -= p0;
+        mx += p0;
       }
       const pad = (mx - mn) * 0.07;
       mn -= pad;
@@ -92,6 +96,8 @@ export function Chart({ runner, title, series }: { runner: AppRunner; title: str
       const padB = 8;
       const pw = w - padL - padR;
       const ph = h - padT - padB;
+      const xAt = (i: number) => padL + (frames > 1 ? i / (frames - 1) : 0) * pw;
+      const yAt = (v: number) => padT + ph - ((v - mn) / (mx - mn)) * ph;
 
       // Grid.
       ctx.strokeStyle = 'rgba(255,255,255,0.045)';
@@ -103,63 +109,52 @@ export function Chart({ runner, title, series }: { runner: AppRunner; title: str
         ctx.lineTo(padL + pw, y);
         ctx.stroke();
       }
-      const lastSol = engine.clock.sol;
-      if (lastSol > 1) {
-        const raw = lastSol / 4;
-        const mag = Math.pow(10, Math.floor(Math.log10(Math.max(1e-6, raw))));
-        const norm = raw / mag;
-        const step = (norm < 1.5 ? 1 : norm < 3.5 ? 2 : norm < 7.5 ? 5 : 10) * mag;
-        for (let sol = step; sol < lastSol; sol += step) {
-          const x = padL + (sol / lastSol) * pw;
-          ctx.beginPath();
-          ctx.moveTo(x, padT);
-          ctx.lineTo(x, padT + ph);
-          ctx.stroke();
-        }
+      // Year gridlines (Earth years, matching the timeline + clock).
+      const yearSols = 365.25 / 1.02749;
+      for (let yr = 1; yr * yearSols < duration; yr++) {
+        const x = xAt(reader.solToIndex(yr * yearSols));
+        ctx.beginPath();
+        ctx.moveTo(x, padT);
+        ctx.lineTo(x, padT + ph);
+        ctx.stroke();
       }
 
-      // Series (first drawn last, on top).
-      for (let si = series.length - 1; si >= 0; si--) {
-        const s = series[si];
-        const ts = engine.history.get(s.id);
-        if (!ts || ts.count < 2) continue;
-        const stride = Math.max(1, Math.floor(ts.count / Math.max(64, pw)));
-        const pts: Array<[number, number]> = [];
-        for (let i = 0; i < ts.count; i += stride) {
-          let v = ts.at(i);
-          const end = Math.min(ts.count, i + stride);
-          for (let k = i + 1; k < end; k++) if (Math.abs(ts.at(k) - mn) > Math.abs(v - mn)) v = ts.at(k);
-          const x = padL + (i / (maxCount - 1)) * pw;
-          const y = padT + ph - ((v - mn) / (mx - mn)) * ph;
-          pts.push([x, Math.max(padT, Math.min(padT + ph, y))]);
-        }
-        if (pts.length < 2) continue;
-
+      const stride = Math.max(1, Math.floor(frames / Math.max(64, pw)));
+      for (let si = arrays.length - 1; si >= 0; si--) {
+        const a = arrays[si];
         // Area fill.
         ctx.beginPath();
-        ctx.moveTo(pts[0][0], padT + ph);
-        for (const [x, y] of pts) ctx.lineTo(x, y);
-        ctx.lineTo(pts[pts.length - 1][0], padT + ph);
+        ctx.moveTo(xAt(0), padT + ph);
+        for (let i = 0; i < frames; i += stride) ctx.lineTo(xAt(i), yAt(a.values[i]));
+        ctx.lineTo(xAt(frames - 1), yAt(a.values[frames - 1]));
+        ctx.lineTo(xAt(frames - 1), padT + ph);
         ctx.closePath();
-        ctx.fillStyle = s.color + '1a';
+        ctx.fillStyle = a.color + '14';
         ctx.fill();
-
         // Line.
         ctx.beginPath();
-        ctx.moveTo(pts[0][0], pts[0][1]);
-        for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
-        ctx.strokeStyle = s.color;
-        ctx.lineWidth = 1.7;
+        ctx.moveTo(xAt(0), yAt(a.values[0]));
+        for (let i = stride; i < frames; i += stride) ctx.lineTo(xAt(i), yAt(a.values[i]));
+        ctx.lineTo(xAt(frames - 1), yAt(a.values[frames - 1]));
+        ctx.strokeStyle = a.color;
+        ctx.lineWidth = 1.6;
         ctx.lineJoin = 'round';
         ctx.stroke();
-
-        if (si === 0) {
-          ctx.beginPath();
-          ctx.arc(pts[pts.length - 1][0], pts[pts.length - 1][1], 2.4, 0, Math.PI * 2);
-          ctx.fillStyle = s.color;
-          ctx.fill();
-        }
+        // Playhead dot.
+        ctx.beginPath();
+        ctx.arc(xAt(playIdx), yAt(a.values[playIdx] ?? a.values[0]), 2.6, 0, Math.PI * 2);
+        ctx.fillStyle = a.color;
+        ctx.fill();
       }
+
+      // Playhead line.
+      const px = xAt(playIdx);
+      ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(px, padT);
+      ctx.lineTo(px, padT + ph);
+      ctx.stroke();
 
       // Inset labels.
       ctx.font = '9px Menlo, monospace';
@@ -168,7 +163,7 @@ export function Chart({ runner, title, series }: { runner: AppRunner; title: str
       ctx.fillText(compact(mx), padL, padT + 6);
       ctx.fillText(compact(mn), padL, padT + ph - 1);
       ctx.textAlign = 'right';
-      ctx.fillText(`SOL ${lastSol.toFixed(0)}`, padL + pw, padT + ph - 1);
+      ctx.fillText(`SOL ${runner.playheadSol.toFixed(0)}`, padL + pw, padT + ph - 1);
     };
     raf = requestAnimationFrame(draw);
     return () => cancelAnimationFrame(raf);

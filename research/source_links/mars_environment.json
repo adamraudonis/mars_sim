@@ -1,0 +1,229 @@
+{
+  "domain": "mars_environment",
+  "sources": [
+    {
+      "source": "Montabone et al. (2015) Icarus 251 multiannual climatology (converted from 9.3 um CDOD); Lemmon et al. (2015) MER 5-Mars-year record",
+      "url": "https://doi.org/10.1016/j.icarus.2014.12.034",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Montabone et al. 'Eight-year Climatology of Dust Optical Depth on Mars', Icarus 251 (2015). DOI resolves to Elsevier landing page (confirmed via CrossRef + doi.org 200). Existing DB url (arxiv.org/abs/1409.4841) is the valid open-access preprint of the same paper and also works; DOI preferred as canonical. Lemmon et al. 2015 MER record is a second named anchor (see arXiv 1403.4234)."
+    },
+    {
+      "source": "Montabone et al. (2015); Lemmon et al. (2015): MER record spans 0.3-4.7 over 5 Mars years",
+      "url": "https://arxiv.org/abs/1403.4234",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Lemmon et al. 'Dust aerosol, clouds, and the atmospheric optical depth record over 5 Mars years of the Mars Exploration Rover mission' (arXiv preprint, published Icarus 251, 2015). Existing DB arXiv url confirmed to be this paper via WebFetch."
+    },
+    {
+      "source": "Zurek & Martin (1993) JGR (NTRS 19930046754); 8-9 confirmed events 1956-2018 (1956, 1971, 1973, 1977a, 1977b, 2001, 2007, 2018)",
+      "url": "https://ntrs.nasa.gov/citations/19930046754",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Zurek & Martin, 'Interannual variability of planet-encircling dust storms on Mars', JGR 98(E2), 1993. Confirmed via WebFetch of NTRS permalink. Replaced legacy search.jsp url with modern /citations/ permalink."
+    },
+    {
+      "source": "MY34/2018 event: tau ~8.5 measured at Gale (Guzewich et al. 2019 GRL; Viudez-Moreiras et al. 2019); >10.8 estimated at Meridiani (Opportunity, saturated)",
+      "url": "https://doi.org/10.1029/2018GL080839",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Guzewich et al. 'Mars Science Laboratory Observations of the 2018/Mars Year 34 Global Dust Storm', GRL 2019. Confirmed via CrossRef (exact title/author/year). Wiley page returns HTTP 402 to automated fetch (anti-bot) but DOI is registered and resolves. Existing DB url is the same paper."
+    },
+    {
+      "source": "MY34/2018: onset Ls 184.9, intense phase ~3 months, decay into Ls ~250+ (Guzewich et al. 2019; Viudez-Moreiras et al. 2019); MY25/2001 similar",
+      "url": "https://doi.org/10.1029/2019JE005985",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Viudez-Moreiras et al. 'Effects of the MY34/2018 Global Dust Storm as Measured by MSL REMS in Gale Crater', JGR Planets 2019. Confirmed via CrossRef (exact title/author/year). Existing DB url matches; DOI form used as canonical."
+    },
+    {
+      "source": "Allison & McEwen (2000), Planet. Space Sci. 48; NASA GISS Mars24 algorithm",
+      "url": "https://www.giss.nasa.gov/tools/mars24/help/algorithm.html",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Source names two anchors: the NASA GISS Mars24 algorithm page (kept as primary; confirmed via WebFetch to be the official Mars24 Sunclock algorithm doc that cites Allison & McEwen 2000) and Allison & McEwen (2000) PSS 48 itself (DOI 10.1016/s0032-0633(99)00092-6, see next entries)."
+    },
+    {
+      "source": "Allison & McEwen (2000)",
+      "url": "https://doi.org/10.1016/S0032-0633(99)00092-6",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "http://amsat-bda.org/files/2000_Allison_McEwen.pdf",
+      "note": "Allison & McEwen, 'A post-Pathfinder evaluation of areocentric solar coordinates with improved timing recipes for Mars seasonal/diurnal climate studies', PSS 48 (2000) 215-235. DOI confirmed via CrossRef. Elsevier landing is paywalled; the amsat-bda.org PDF is a working full-text copy (verified locally: correct title/authors/abstract) provided as mirror. One of the DB's two existing urls (the amsat PDF) is thus retained as mirror; DOI preferred as canonical landing."
+    },
+    {
+      "source": "NSSDC Mars Fact Sheet (NASA GSFC)",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Canonical NASA NSSDCA Mars Fact Sheet (curated by D.R. Williams, GSFC). As of mid-2026 the whole nssdc.gsfc.nasa.gov/planetary/factsheet/ path is temporarily 307-redirecting to a generic nasa.gov/nssdc/ landing page (NASA infrastructure migration; NSSDC main page noted offline for maintenance since Dec 2025), so the live canonical url does NOT currently serve the fact-sheet content -> verified=false. The correct content (obliquity 25.19 deg, solar irradiance 586.2 W/m^2, eccentricity 0.09341) is confirmed on the Wayback mirror http://web.archive.org/web/20250820142225/https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html (verified via curl). Canonical url kept as it is the correct stable home and outage is temporary."
+    },
+    {
+      "source": "NSSDC Mars Fact Sheet; Allison & McEwen (2000) use sin(25.19 deg)=0.42565 in declination formula",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Same NASA NSSDCA Mars Fact Sheet as above (primary anchor for the 25.19 deg obliquity value). Live canonical url currently 307-redirects to nasa.gov/nssdc/ during NASA maintenance -> verified=false. Content confirmed on Wayback snapshot 20250820142225. Second named anchor Allison & McEwen (2000) = DOI 10.1016/S0032-0633(99)00092-6 (verified true separately)."
+    },
+    {
+      "source": "NSSDC Mars Fact Sheet",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "NASA NSSDCA Mars Fact Sheet. Live canonical url currently 307-redirects to nasa.gov/nssdc/ during NASA maintenance (whole factsheet path affected mid-2026) -> verified=false. Authentic content confirmed on Wayback mirror http://web.archive.org/web/20250820142225/https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html. Canonical url retained as the correct stable home."
+    },
+    {
+      "source": "Appelbaum & Flood (1990), NASA TM-102299 (590/493/718 at TSI 1371) rescaled to TSI 1361: 586.2 mean, 490 aphelion, 713 perihelion",
+      "url": "https://ntrs.nasa.gov/citations/19890018252",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Appelbaum & Flood, 'Solar Radiation on Mars', NASA-TM-102299 (NASA Lewis Research Center). Confirmed via WebFetch of NTRS permalink. Existing DB url correct. (Report is dated 1989 in NTRS; often cited as 1990 for the SolEnergy journal version - same content.)"
+    },
+    {
+      "source": "MSL REMS: Harri et al. (2014) JGR Planets; Haberle et al. (2014); Martinez et al. (2017) SSR 212",
+      "url": "https://doi.org/10.1002/2013JE004488",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Multi-citation string. Existing DB url resolves (via CrossRef) to Haberle et al. 'Preliminary interpretation of the REMS pressure data from the first 100 sols of the MSL mission', JGR Planets 2014 (10.1002/2013JE004488) - a valid named anchor. Martinez et al. 2017 SSR is separately linkable at DOI 10.1007/s11214-017-0360-x. DOI form used as canonical for the Haberle anchor."
+    },
+    {
+      "source": "MSL SAM QMS annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124; original Mahaffy et al. (2013) Science 341",
+      "url": "https://ntrs.nasa.gov/citations/20170004958",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Franz et al. 'Initial SAM calibration gas experiments on Mars: Quadrupole mass spectrometer results and implications' is the MSL SAM QMS atmospheric paper (DOI 10.1016/j.pss.2017.01.014; actual cite is PSS vol 138, pp 44-54 - the DB's 'vol 149, 169-175' appears to be a citation error). Stable NTRS permalink 20170004958 confirmed via WebFetch (matches title/authors). NOTE: the DB's existing source_url (sciencedirect pii S0032063317300545) is WRONG - it resolves to Krasnopolsky 2017 PSS 144, 71-73, a different paper. Companion anchors: Trainer et al. 2019 = DOI 10.1029/2019JE006175; Mahaffy et al. 2013 = DOI 10.1126/science.1237966."
+    },
+    {
+      "source": "MSL SAM reevaluated annual mean: Franz et al. (2017), Planet. Space Sci. 149, 169-175; Trainer et al. (2019) JGR Planets 124 (Mahaffy 2013 gave 0.0189; Viking gave 0.027)",
+      "url": "https://ntrs.nasa.gov/citations/20170004958",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same Franz et al. (2017) SAM QMS paper as the row above (NTRS permalink 20170004958; DOI 10.1016/j.pss.2017.01.014). DB existing url (sciencedirect pii S0032063317300545) is WRONG - it is Krasnopolsky 2017 PSS 144, not Franz. Companion Trainer et al. 2019 = DOI 10.1029/2019JE006175 (confirmed via CrossRef)."
+    },
+    {
+      "source": "MSL SAM: Mahaffy et al. (2013) Science 341; confirmed by Franz et al. (2017)",
+      "url": "https://doi.org/10.1126/science.1237966",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Mahaffy et al. 'Abundance and Isotopic Composition of Gases in the Martian Atmosphere from the Curiosity Rover', Science 341 (2013). Confirmed via CrossRef (exact title/author/year); doi.org 302-redirects to science.org (paywalled/bot-blocked to direct fetch but DOI registered and resolving). Existing DB url matches; DOI form used as canonical."
+    },
+    {
+      "source": "MSL REMS: Gomez-Elvira et al. (2014); Martinez et al. (2017) SSR",
+      "url": "https://doi.org/10.1007/s11214-017-0360-x",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing DB url resolves (via CrossRef) to Martinez et al. 'The Modern Near-Surface Martian Climate: A Review of In-situ Meteorological Data from Viking to Curiosity', Space Science Reviews 212 (2017) - a valid named anchor. DOI form used as canonical Springer landing. (Gomez-Elvira et al. 2014 REMS paper is the second named anchor but the review paper is the linked one.)"
+    },
+    {
+      "source": "MSL REMS: Martinez et al. (2017); frost-event analyses",
+      "url": "https://doi.org/10.1007/s11214-017-0360-x",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Martinez et al. 2017 Space Science Reviews 212 review (10.1007/s11214-017-0360-x). Confirmed via CrossRef. Existing DB url matches; DOI form used as canonical."
+    },
+    {
+      "source": "MSL REMS GTS (150-300 K instrument range): Hamilton et al. 2013; Martinez et al. (2017); NASA TFAWS 2024 MarsWRF worst-case hot 289.7 K",
+      "url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "note": "NASA TFAWS 2024 presentation 'Modeling Martian Surface Thermal Environments in Thermal Desktop', Dan Popok (MSFC/ESSCA), TFAWS 2024, NASA Glenn. Verified locally (pdftotext) - correct title/author, covers MarsWRF-derived thermal boundary conditions and worst-case hot/cold cases. No stable landing page found (direct PDF on tfaws.nasa.gov is the only home) -> mirror_pdf_url set. Companion anchors Martinez 2017 (DOI 10.1007/s11214-017-0360-x) and Hamilton et al. 2013 are separate."
+    },
+    {
+      "source": "MSL REMS GTS; NASA TFAWS 2024 MarsWRF worst-case cold 129.5-139 K at -50 deg lat",
+      "url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "note": "Same NASA TFAWS 2024 Popok presentation (verified locally). Fragile direct PDF with no stable landing page -> url set to the PDF and mirror_pdf_url to same."
+    },
+    {
+      "source": "NASA TFAWS 2024 (Popok, MSFC) MarsWRF-derived boundary conditions: ~160 K predawn / ~186 K midday at tau=1, equator; MARSTHERM: ~140 K predawn clear sky",
+      "url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf",
+      "note": "NASA TFAWS 2024 Popok (MSFC/ESSCA) presentation, 'Modeling Martian Surface Thermal Environments in Thermal Desktop'. Verified locally via pdftotext (author Dan Popok, MSFC/ESSCA, TFAWS 2024). Fragile direct PDF, no stable landing page -> mirror_pdf_url set to same PDF."
+    },
+    {
+      "source": "Pathfinder 0.28%/sol (Landis & Jenkins); MER Spirit/Opportunity medians 0.16-0.18%/sol; InSight median 0.28%/sol; synthesis Lorenz et al. (2021) P&SS 207",
+      "url": "https://doi.org/10.1016/j.pss.2021.105337",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Lorenz et al. 'Lander and rover histories of dust accumulation on and removal from solar arrays on Mars', Planetary and Space Science 207 (2021) 105337. DOI confirmed via CrossRef and resolves to the exact pii (S0032063321001768) that the DB's existing url points to. DOI form used as canonical."
+    },
+    {
+      "source": "Jezero MEDA/RDS: 1.3-3.4 /km^2/sol (Toledo et al. 2023 JGR Planets); Pathfinder ~19; Spirit seasonal peak ~50; InSight: 502 vortex pressure drops >0.3 Pa in 151 sols",
+      "url": "https://doi.org/10.1029/2022JE007494",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Toledo et al. 'Dust Devil Frequency of Occurrence and Radiative Effects at Jezero Crater, Mars, as Measured by MEDA Radiation and Dust Sensor (RDS)', JGR Planets 2023. Confirmed via CrossRef (exact title/author/year). Existing DB url matches; DOI form used as canonical."
+    },
+    {
+      "source": "Viking 0-9.5 m/s; InSight 0-7.5 m/s; Perseverance 0-12 m/s (Martinez et al. 2017 review; Viking/InSight/MEDA records)",
+      "url": "https://doi.org/10.1007/s11214-017-0360-x",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Named anchor is Martinez et al. 2017 Space Science Reviews 212 review (10.1007/s11214-017-0360-x), confirmed via CrossRef. Existing DB url matches; DOI form used as canonical."
+    },
+    {
+      "source": "Bickel et al. (2025), Sci. Adv. 11, eadw5170 (orbital dust-devil migration, supports 20-40 m/s near-surface winds); for in-situ MEDA gusts cite Hueso et al. (2023) JGR Planets / MEDA storm papers",
+      "url": "https://doi.org/10.1126/sciadv.adw5170",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Bickel et al. 'Dust devil migration patterns reveal strong near-surface winds across Mars', Science Advances 11, eadw5170 (2025). Confirmed via CrossRef (exact title/author/year); it is open-access. Existing DB url matches; DOI form used as canonical. (Hueso et al. 2023 is a secondary named anchor, not the primary link.)"
+    },
+    {
+      "source": "MSL REMS UV 10+ Mars-year record: total 26.9-42.3 W/m^2 (UVA 21.4-33.7, UVB 4.21-6.45, UVC 1.39-2.21), PNAS 2025",
+      "url": "https://doi.org/10.1073/pnas.2426611122",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Viudez-Moreiras et al. 'Ultraviolet and biological effective dose observations at Gale Crater, Mars', PNAS 2025 (10.1073/pnas.2426611122). Confirmed via CrossRef (exact title/year). pnas.org returns 403 to automated fetch (anti-bot) but DOI is registered and resolving; PNAS is open-access. Existing DB url matches."
+    },
+    {
+      "source": "InSight HP3 active heating experiment, 0.03-0.37 m depth: 0.039 +/- 0.002 W/m/K (Grott et al. 2021 JGR Planets)",
+      "url": "https://doi.org/10.1029/2021JE006861",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Grott et al. 'Thermal Conductivity of the Martian Soil at the InSight Landing Site From HP3 Active Heating Experiments', JGR Planets 2021. Confirmed via CrossRef (exact title/author/year). Existing DB url matches; DOI form used as canonical."
+    },
+    {
+      "source": "InSight HP3: 160-230 (Grott et al. 2021); MCD v6.1 engineering range 42-394 used in NASA TFAWS 2024 worst-case study",
+      "url": "https://doi.org/10.1029/2021JE006861",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named anchor Grott et al. 2021 JGR Planets (10.1029/2021JE006861), confirmed via CrossRef. Existing DB url matches; DOI form used as canonical. (MCD v6.1 and TFAWS 2024 are secondary references; TFAWS 2024 = tfaws.nasa.gov/wp-content/uploads/TFAWS2024-PT-2.pdf.)"
+    },
+    {
+      "source": "InSight HP3 (Elysium, 4.5 N): 217.5 K mean at 0.1-0.2 m, seasonal +/-6.7 K, diurnal damped (Spohn et al. 2024 GRL); extrapolated to 1 m where diurnal wave vanishes",
+      "url": "https://doi.org/10.1029/2024GL108600",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Spohn et al. 'Mars Soil Temperature and Thermal Properties From InSight HP3 Data', Geophysical Research Letters 2024. Confirmed via CrossRef (exact title/author/year). Existing DB url matches; DOI form used as canonical."
+    }
+  ]
+}

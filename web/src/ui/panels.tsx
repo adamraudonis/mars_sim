@@ -2,12 +2,11 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { AppRunner } from '../runner';
 import { Fidelity } from '../sim/module';
 import type { Param } from '../sim/params';
-import type { SimEvent } from '../sim/events';
 import { Distiller } from '../sim/distiller';
 import { Chart } from './Chart';
 import { CHART_PALETTE as P, COLOR, compact, severityColor } from './format';
 
-/** Re-render at a slow tick so panels track the sim without chart-rate churn. */
+/** Re-render on a slow tick so panels track playback without chart-rate churn. */
 export function useTick(ms: number): number {
   const [n, setN] = useState(0);
   useEffect(() => {
@@ -25,44 +24,48 @@ const healthColor: Record<string, string> = {
 };
 
 export function SystemsPanel({ runner }: { runner: AppRunner }) {
-  useTick(350);
-  const engine = runner.engine;
-  if (!engine) return null;
+  useTick(200);
+  const rec = runner.recording;
+  const frame = runner.frame;
+  if (!rec || !frame) return null;
   return (
     <>
       <div className="section-header">Systems</div>
       <div className="scroll">
-        {engine.modules.map((m) => (
-          <div className="card" key={m.id}>
-            <div className="head">
-              <span className="dot" style={{ background: healthColor[m.health] }} />
-              <span className="name">{m.displayName}</span>
-              {m.maxFidelity > Fidelity.L0 && (
-                <span className="segmented">
-                  {Array.from({ length: m.maxFidelity + 1 }, (_, f) => (
-                    <button
-                      key={f}
-                      className={m.effectiveFidelity === f ? 'active' : ''}
-                      onClick={() => {
-                        m.fidelity = f as Fidelity;
-                      }}
-                    >
-                      L{f}
-                    </button>
-                  ))}
-                </span>
-              )}
-            </div>
-            <div className="status">{m.statusLine}</div>
-            {m.keyFigures.map(([label, value, unit], i) => (
-              <div className="kv" key={i}>
-                <span className="k">{label}</span>
-                <span className="v">{compact(value)}</span>
-                <span className="u">{unit}</span>
+        {rec.moduleMeta.map((meta, i) => {
+          const st = frame.modules[i];
+          if (!st) return null;
+          const fid = runner.currentFidelity(meta.id, Fidelity.L1);
+          return (
+            <div className="card" key={meta.id}>
+              <div className="head">
+                <span className="dot" style={{ background: healthColor[st.health] }} />
+                <span className="name">{meta.name}</span>
+                {meta.maxFidelity > Fidelity.L0 && (
+                  <span className="segmented">
+                    {Array.from({ length: meta.maxFidelity + 1 }, (_, f) => (
+                      <button
+                        key={f}
+                        className={fid === f ? 'active' : ''}
+                        onClick={() => runner.setFidelity(meta.id, f as Fidelity)}
+                      >
+                        L{f}
+                      </button>
+                    ))}
+                  </span>
+                )}
               </div>
-            ))}
-          </div>
-        ))}
+              <div className="status">{st.status}</div>
+              {meta.figures.map(([label, unit], j) => (
+                <div className="kv" key={j}>
+                  <span className="k">{label}</span>
+                  <span className="v">{compact(st.values[j] ?? 0)}</span>
+                  <span className="u">{unit}</span>
+                </div>
+              ))}
+            </div>
+          );
+        })}
       </div>
     </>
   );
@@ -126,7 +129,13 @@ function ParamRow({ runner, p }: { runner: AppRunner; p: Param }) {
             OVERRIDE
           </span>
         )}
-        <span className="src">{p.source}</span>
+        {p.sourceUrl ? (
+          <a className="src src-link" href={p.sourceUrl} target="_blank" rel="noopener noreferrer" title={p.sourceUrl}>
+            {p.source} ↗
+          </a>
+        ) : (
+          <span className="src">{p.source}</span>
+        )}
       </div>
     </div>
   );
@@ -134,7 +143,7 @@ function ParamRow({ runner, p }: { runner: AppRunner; p: Param }) {
 
 export function ParamsPanel({ runner }: { runner: AppRunner }) {
   const [filter, setFilter] = useState('');
-  const tick = useTick(2000);
+  const tick = useTick(1500);
   const matches = useMemo(() => {
     const f = filter.toLowerCase();
     return runner.params.all.filter(
@@ -151,7 +160,7 @@ export function ParamsPanel({ runner }: { runner: AppRunner }) {
     <>
       <div className="section-header">Parameters</div>
       <div className="caption" style={{ marginBottom: 6 }}>
-        Every value is sourced. Edit to override — the simulation applies it live.
+        Every value is sourced (click a citation to open it). Edit to override, then Re-run.
       </div>
       <input
         className="search"
@@ -173,10 +182,9 @@ export function ParamsPanel({ runner }: { runner: AppRunner }) {
 }
 
 export function LogPanel({ runner }: { runner: AppRunner }) {
-  useTick(500);
+  useTick(300);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const events = runner.engine?.events.events ?? [];
-  const shown = events.slice(-250);
+  const shown = runner.eventsUpTo().slice(-250);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -187,8 +195,8 @@ export function LogPanel({ runner }: { runner: AppRunner }) {
     <>
       <div className="section-header">Mission log</div>
       <div className="scroll" ref={scrollRef}>
-        {shown.map((e: SimEvent, i) => (
-          <div className="log-row" key={events.length - shown.length + i}>
+        {shown.map((e, i) => (
+          <div className="log-row" key={i}>
             <span className="bar" style={{ background: severityColor(e.severity) }} />
             <span className="sol">{e.sol.toFixed(1)}</span>
             <span className={`msg${e.severity === 'info' ? ' info' : ''}`}>
@@ -253,7 +261,7 @@ export function TelemetryPanel({ runner }: { runner: AppRunner }) {
           </div>
           <div className="caption">
             Run a subsystem at max fidelity in isolation, fit the averaged coefficients, and install them as
-            overrides for fast campaign-scale runs.
+            overrides. Then Re-run to see the campaign with the distilled model.
           </div>
           <div className="row">
             <button

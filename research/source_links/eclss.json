@@ -1,0 +1,221 @@
+{
+  "domain": "eclss",
+  "sources": [
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-1 nominal; Table 3-31 gives 0.895",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev2 (Ewert, Chen, Powell, Feb 2022). NTRS 20210024855. Direct PDF: https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf"
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-1 (nominal 1.08); Table 3-31 CO2 load 1.085; RQ 0.86",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-20",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30) — urine + humidity condensate",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-1; NASA exploration atmosphere studies",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc is BVAD Rev2 (NTRS 20210024855). 'Exploration atmosphere studies' is a general reference; BVAD is the canonical source for Table 4-1."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-1; Norcross 2013; NASA-STD-3001",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary source is BVAD Rev2 Table 4-1 (NTRS 20210024855). Also names Norcross 2013 (NASA/TP-2013-217377, 'Space Physiology / Exploration Atmospheres', NTRS 20140012830) and NASA-STD-3001 (https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2)."
+    },
+    {
+      "source": "NASA-STD-3001 Vol 2 Rev D [V2 6004]; NASA OCHMO-TB-004",
+      "url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary standard NASA-STD-3001 Vol 2 (canonical landing page; current rev E, Rev D historical PDF at https://standards.nasa.gov/sites/default/files/standards/NASA/D/nasa-std-3001-vol-2-rev-d-signature.pdf). Requirement [V2 6004] is the ppCO2 limit. OCHMO-TB-004 Carbon Dioxide technical brief landing page: https://www.nasa.gov/ochmo-tb-004-carbon-dioxide-2/"
+    },
+    {
+      "source": "Derived from ICES-2023-311 (46.9 A, ~1.7 V/cell, ~28 cells => 2.23 kW at 9.25 kg/day)",
+      "url": "https://ntrs.nasa.gov/citations/20230008013",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Computation derived from named doc ICES-2023-311 'Status of the Advanced Oxygen Generation Assembly' (NTRS 20230008013)."
+    },
+    {
+      "source": "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500) — derived: 0.8 kW / (4.1 CM x 1.04 kg CO2/day)",
+      "url": "https://ntrs.nasa.gov/citations/20150016500",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate whose named underlying doc is NTRS 20150016500 (Knox & Stanley, ICES-2015-165, CDRA optimization). Linking that document."
+    },
+    {
+      "source": "NASA water recovery milestone, 20 Jun 2023",
+      "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NASA press release 'NASA Achieves Water Recovery Milestone on International Space Station', published 20 Jun 2023 (98% water recovery)."
+    },
+    {
+      "source": "NASA Sabatier System Design Study, ICES-2018 / NTRS 20180004697; PNNL microchannel reactors",
+      "url": "https://ntrs.nasa.gov/citations/20180004697",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NASA Sabatier System Design Study, ICES-2018 (NTRS 20180004697, Hintze et al., 'Sabatier System Design Study for a Mars ISRU Propellant Production Plant'). PNNL microchannel reactors is a supplementary general reference."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 3-31 (Ewert 2021 MetMan)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855), Table 3-31 metabolic man (Ewert)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 3-31",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-20 (drinking 2.00 + food rehydration 0.50)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-21 (ISS: urine 1.20 + flush 0.30)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-21",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "Derived: total 101.3 - ppO2 21.2 - ppCO2 ~0.4 - pH2O ~1.6",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal computation (Dalton partial-pressure balance for ppN2). No external document."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-1",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 4-1, Sec 4.1",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "ICES-2023-311, Status of the Advanced OGA (NTRS 20230008013)",
+      "url": "https://ntrs.nasa.gov/citations/20230008013",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "ICES-2023-311, 'Status of the Advanced Oxygen Generation Assembly' (NTRS 20230008013)."
+    },
+    {
+      "source": "Knox & Stanley, ICES-2015-165, NTRS 20150016500, Sec. II & Table 3 (PW 3.17 kg/day @461 W; PF 3.49 kg/day @486 W at 20 SCFM / 2 torr)",
+      "url": "https://ntrs.nasa.gov/citations/20150016500",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Knox & Stanley, ICES-2015-165 'Optimization of the CDRA-4EU' (NTRS 20150016500)."
+    },
+    {
+      "source": "Estimate: heaters + blower + valves; +200 W heater at high-flow config (NTRS 20150016500)",
+      "url": "https://ntrs.nasa.gov/citations/20150016500",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate whose named underlying doc is NTRS 20150016500 (Knox & Stanley, ICES-2015-165)."
+    },
+    {
+      "source": "NTRS 20100033195 Sabatier CRA; NASA SCOR",
+      "url": "https://ntrs.nasa.gov/citations/20100033195",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NTRS 20100033195 'Sabatier Carbon Dioxide Reduction Assembly Development for Closed Loop Water Recovery' (Smith, Perry, Murdoch, Goldblatt)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Sec 4.3.3 (Carter); Wikipedia ISS ECLSS",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary source BVAD Rev2 Sec 4.3.3 (NTRS 20210024855). Wikipedia ISS ECLSS is a secondary/general reference, not a primary document."
+    },
+    {
+      "source": "NASA BVAD Rev2 Sec 4.3.3 (Carrasquillo 2005)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD Rev2 Table 3-2",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "BVAD Rev2 (NTRS 20210024855)."
+    },
+    {
+      "source": "Estimate: engineering ESM order-of-magnitude incl racks + spares",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure engineering estimate (Equivalent System Mass order-of-magnitude). No specific external document named."
+    }
+  ]
+}

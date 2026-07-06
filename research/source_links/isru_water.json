@@ -1,0 +1,261 @@
+{
+  "domain": "isru_water",
+  "sources": [
+    {
+      "source": "Thermo model ((1-y)/y*c_reg*dT + c_ice*dT + L_sub) bracketed by NASA ISRU studies (Kleinhenz NTRS 20180005542 program targets; Hoffman JSC assessment); lower bound assumes partial heat recuperation — thermal extraction + cleanup + excavation/transport",
+      "url": "https://ntrs.nasa.gov/citations/20180005542",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "String is a derived thermo model but explicitly names the Kleinhenz NTRS 20180005542 ISRU water-extraction program-targets document (verified: 'ISRU Technology Development for Extraction of Water from the Mars Surface', Kleinhenz et al. 2018, GRC-E-DAA-TN57431). The 'Hoffman JSC assessment' is the JSC 'Mining Water Ice on Mars' report (see the -80C melt-energy entry)."
+    },
+    {
+      "source": "Dundas et al. 2018 (massive, dust-poor scarp ice); Bramson et al. 2015 (bulk dielectric ~2.5, mostly clean ice); M-WIP 2016 reference Case A assumes 90% ice / 10% sand — excess-ice deposit, derated for overburden mixing",
+      "url": "https://doi.org/10.1126/science.aao1619",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Multi-reference string; primary named document linked is Dundas et al. 2018 Science 'Exposed subsurface ice sheets in the Martian mid-latitudes' (DOI resolves 302 to science.org). Also cites Bramson et al. 2015 GRL (doi.org/10.1002/2015GL064844) and M-WIP 2016 Case A (LPI mirror: https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf)."
+    },
+    {
+      "source": "SWIM refined maps (Morgan et al. 2025, PSJ 6:37) 0-1 m consistency band; Dundas et al. 2018 Science 359:199 scarps show ice 1-2 m below surface",
+      "url": "https://doi.org/10.3847/PSJ/ad9b24",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: DOI 10.3847/PSJ/ad9b24 resolves 302 to iopscience.iop.org (Planetary Science Journal, SWIM refined ice maps, Morgan et al. 2025). Also cites Dundas et al. 2018 Science (doi.org/10.1126/science.aao1619)."
+    },
+    {
+      "source": "Bramson et al. 2015 GRL 42:6566 (SHARAD + crater morphology): depth-to-base mode 42 m, mean 51 +/- 18 m; Dundas 2018 scarps expose >100 m in places",
+      "url": "https://doi.org/10.1002/2015GL064844",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: DOI 10.1002/2015GL064844 resolves 302 to agupubs.onlinelibrary.wiley.com (Bramson et al. 2015, Geophysical Research Letters, widespread excess ice in Arcadia Planitia). Wiley page returns 402 to bots but the DOI is the stable canonical link."
+    },
+    {
+      "source": "Dundas et al. 2018 (massive, dust-poor scarp ice); Bramson et al. 2015 (bulk dielectric ~2.5, mostly clean ice); M-WIP 2016 reference Case A assumes 90% ice / 10% sand",
+      "url": "https://doi.org/10.1126/science.aao1619",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: DOI 10.1126/science.aao1619 resolves 302 to science.org (Dundas et al. 2018, 'Exposed subsurface ice sheets in the Martian mid-latitudes'). Science page returns 403 to bots but the DOI is the stable canonical link. Also cites Bramson et al. 2015 and M-WIP 2016."
+    },
+    {
+      "source": "Stoichiometry (2x18.02/172.17); dehydration at 100-150 C confirmed in M-WIP 2016",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "String is stoichiometry but names M-WIP 2016 (Abbud-Madrid et al., Report of the Mars Water ISRU Planning Study, 90 p). Original source_url mepag.jpl.nasa.gov has a broken TLS cert (hostname not in cert altnames; curl exit 60). Replaced with LPI/USRA official mirror (HTTP 200, application/pdf, 4,688,921 bytes; content verified: correct title, authors, Cases A-D). Direct PDF with no working landing page, so mirror_pdf_url set to same."
+    },
+    {
+      "source": "M-WIP 2016 reference Case B: 40% gypsum + minor hydrates -> 186 t ore per 16 t H2O at 425 K",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) Case B. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, 4,688,921-byte PDF, content verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "M-WIP 2016 reference Case C: 40% smectite (avg 4 wt% water; Na-smectite ~2, Ca-smectite ~7) -> 584 t ore per 16 t H2O at 575 K",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) Case C. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "MSL DAN/SAM (Gale): 1.5-3 wt% total; Kleinhenz & Paz AIAA 2017-0423: 1.3 wt% recoverable at 300 C; M-WIP Case D",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20170001421 = Kleinhenz & Paz, 'An ISRU Propellant Production System to Fully Fuel a Mars Ascent Vehicle', AIAA SciTech 2017 (AIAA 2017-0423). Also cites M-WIP 2016 Case D (LPI mirror)."
+    },
+    {
+      "source": "M-WIP 2016 heuristics: undisturbed granular ~2.0 +/-10% t/m3 (35% porosity); disturbed/excavated ~1.5 +/-10% t/m3 (50% porosity)",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) regolith bulk-density heuristics. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "Hecht et al. 2009, Science 325:64 (Phoenix WCL, 0.4-0.6 wt%); corroborated by MSL SAM at Gale",
+      "url": "https://doi.org/10.1126/science.1172466",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: DOI 10.1126/science.1172466 resolves 302 to science.org (Hecht et al. 2009, 'Detection of Perchlorate and the Soluble Chemistry of Martian Soil at the Phoenix Lander Site', Science 325:64). Science page returns 403 to bots but the DOI is the stable canonical link."
+    },
+    {
+      "source": "Mueller et al., RASSOR 2.0, ASCE Earth & Space 2016, NTRS 20210011366",
+      "url": "https://ntrs.nasa.gov/citations/20210011366",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20210011366 = Mueller et al., 'Design of an Excavation Robot: Regolith Advanced Surface Systems Operations Robot (RASSOR) 2.0', ASCE Earth & Space 2016."
+    },
+    {
+      "source": "Mueller et al., RASSOR 2.0, ASCE 2016, NTRS 20210011366 (2 x 40 kg drums)",
+      "url": "https://ntrs.nasa.gov/citations/20210011366",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20210011366 = Mueller et al. RASSOR 2.0 (ASCE Earth & Space 2016)."
+    },
+    {
+      "source": "Mueller et al. ASCE 2016: >=2.7 t per 24 h day (=2,770 kg/sol); 0.38 kg vehicle mass per (kg/h) rate",
+      "url": "https://ntrs.nasa.gov/citations/20210011366",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Mueller et al. ASCE 2016 (RASSOR 2.0) = NTRS 20210011366 (verified). Record states RASSOR 2.0 excavates a minimum of 2.7 metric tons of regolith per day."
+    },
+    {
+      "source": "Mueller et al. ASCE 2016: 4 W per (kg/h) excavation rate = 4 Wh/kg",
+      "url": "https://ntrs.nasa.gov/citations/20210011366",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Mueller et al. ASCE 2016 (RASSOR 2.0) = NTRS 20210011366 (verified)."
+    },
+    {
+      "source": "M-WIP 2016 RASSOR key characteristics (25 cm/s)",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) RASSOR characteristics table. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "M-WIP 2016 excavation/travel analysis: gypsum case feasible to ~3 km with 2 RASSOR-class excavators in 480-sol campaign; typical regolith excavator-limited even at 100 m",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) excavation/travel analysis. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "Estimate: rolling resistance physics, Crr 0.15-0.25 loose regolith, g=3.71 m/s2, drivetrain efficiency ~0.5; consistent with M-WIP RASSOR traverse assumptions",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal computation (rolling-resistance physics estimate). The M-WIP reference it mentions for cross-check is at https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf, but the parameter value itself is derived, not sourced to a specific document figure."
+    },
+    {
+      "source": "Thermodynamics: cp_ice ~1.9 kJ/kg.K avg x 80 K + 334 kJ/kg fusion = ~486 kJ/kg; NASA JSC ice drilling assessment chart ~140 kWh per 1000 kg for -80 C ice",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/06/mars_ice_drilling_assessment_v6_for_public_release.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/06/mars_ice_drilling_assessment_v6_for_public_release.pdf",
+      "note": "String is a thermo calc but names the NASA JSC ice drilling assessment chart. Existing source_url confirmed loading (NASA-hosted PDF, 4MB/86 pp); web search confirms it is Hoffman/Andrews/Watts, '\"Mining\" Water Ice on Mars: an assessment of ISRU options in support of future human missions'. Direct NASA.gov PDF, no separate landing page, so mirror_pdf_url set to same."
+    },
+    {
+      "source": "Thermodynamics: L_sub = 2838 kJ/kg + sensible heat from ~210 K = ~2940 kJ/kg",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure thermodynamic computation (latent heat of sublimation plus sensible heat); no external document named."
+    },
+    {
+      "source": "Thermo model ((1-y)/y*c_reg*dT + c_ice*dT + L_sub) bracketed by NASA ISRU studies (Kleinhenz NTRS 20180005542 program targets; Hoffman JSC assessment); lower bound assumes partial heat recuperation",
+      "url": "https://ntrs.nasa.gov/citations/20180005542",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20180005542 = Kleinhenz et al. 2018, 'ISRU Technology Development for Extraction of Water from the Mars Surface' (GRC-E-DAA-TN57431). Also references the 'Hoffman JSC assessment' (NASA 'Mining Water Ice on Mars' PDF)."
+    },
+    {
+      "source": "Hoffman et al.: CRREL Mars sims 120-400 L/day at 2-10 kW(th); 100 gal/day (379 kg/day) balances at ~10 kW. NASA/TP-20205011353 & JSC ice drilling assessment",
+      "url": "https://ntrs.nasa.gov/citations/20205011353",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20205011353 = Hoffman, Lever, Andrews, Watts, 'Mars Rodwell Experiment Final Report' (NASA/TP-20205011353, Oct 2020). Also cites the JSC ice drilling assessment PDF."
+    },
+    {
+      "source": "Derived from Hoffman/CRREL simulation points: 2 kW/120 L/day = 0.40; 10 kW/379-400 L/day = 0.60-0.63 kWh/kg (NASA/TP-20205011353; JSC ice-mining assessment 2016)",
+      "url": "https://ntrs.nasa.gov/citations/20205011353",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "String is a derived ratio but names NASA/TP-20205011353 (Hoffman et al. Mars Rodwell Experiment Final Report), confirmed at NTRS 20205011353. Also cites the JSC ice-mining assessment 2016 PDF."
+    },
+    {
+      "source": "RedWater design envelope: drill through up to ~20-25 m overburden (Mellerowicz et al. 2022, New Space, doi:10.1089/space.2021.0057); pool cavity forms 2.5-5 m tall, 5-10 m dia below that (Hoffman CRREL sims)",
+      "url": "https://doi.org/10.1089/space.2021.0057",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: DOI 10.1089/space.2021.0057 resolves 302 to journals.sagepub.com (Mellerowicz et al. 2022, New Space, RedWater Mars Rodwell drilling). Also references Hoffman CRREL sims (NASA/TP-20205011353)."
+    },
+    {
+      "source": "M-WIP 2016 Case B: ~2 kW for 33 kg H2O/sol; theory floor ~1.15 kWh/kg (matrix heating + dehydration enthalpy)",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) Case B thermal power. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "M-WIP 2016 Case C: ~5 kW for 33 kg H2O/sol; theory floor ~3.1 kWh/kg",
+      "url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf",
+      "note": "M-WIP 2016 (Abbud-Madrid et al.) Case C thermal power. Original mepag.jpl.nasa.gov URL has broken TLS cert; replaced with LPI/USRA mirror (HTTP 200, verified). Direct PDF, no working landing page."
+    },
+    {
+      "source": "Range spans M-WIP Case D2 (~8 kW/33 kg/sol = 5.9) and Kleinhenz & Paz AIAA 2017-0423 (17 kW thermal for 1.36 kg/h = 12.5); disagreement from recuperation and yield assumptions",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20170001421 = Kleinhenz & Paz, AIAA 2017-0423. Also cites M-WIP 2016 Case D2 (LPI mirror: https://www.lpi.usra.edu/mepag/reports/reports/Mars_Water_ISRU_Study.pdf)."
+    },
+    {
+      "source": "Honeybee Robotics/NASA (VIPER, PRIME-1): <20 kg, rotary and percussive actuators 200 W each, 200 N max weight-on-bit (Zacny et al., PSJ doi:10.3847/PSJ/ae0b51; Glass et al. 2024, NTRS 20240000585)",
+      "url": "https://ntrs.nasa.gov/citations/20240000585",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url confirmed: NTRS 20240000585 = Glass et al. 2024, 'TRIDENT Drill Validation at Mars and Lunar Analog Field Sites' (55th LPSC). Also names Zacny et al. PSJ doi:10.3847/PSJ/ae0b51 (verified: resolves 302 to iopscience.iop.org, Planetary Science Journal)."
+    },
+    {
+      "source": "Estimate: TRIDENT actuator power (~100-400 W draw) at field penetration rates - loose soil ~1+ m/h, massive ice-cemented material as slow as 0.16 m/h (7 cm/27 min, Haughton Crater, Glass et al. 2024, NTRS 20240000585)",
+      "url": "https://ntrs.nasa.gov/citations/20240000585",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "String is an estimate but names Glass et al. 2024 (Haughton Crater field data) = NTRS 20240000585 (verified: 'TRIDENT Drill Validation at Mars and Lunar Analog Field Sites')."
+    },
+    {
+      "source": "Estimate: terrestrial ion-exchange/biocatalytic perchlorate removal is <0.01 kWh/kg but consumable-limited; vapor-compression distillation bounds the robust route at ~0.1-0.2 kWh/kg",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Internal engineering estimate bounding water-cleanup energy from terrestrial process analogues; no specific external document named."
+    },
+    {
+      "source": "Stoichiometry: net 2 H2O + CO2 -> CH4 + 2 O2; 2x18.02/16.04 = 2.246. Cross-check: Kleinhenz & Paz require 15,701 kg H2O for 6,978 kg CH4 (ratio 2.25)",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "String is stoichiometry but cross-checks against a named document, Kleinhenz & Paz (AIAA 2017-0423) = NTRS 20170001421 (verified)."
+    },
+    {
+      "source": "SpaceX Starship Block 2/V3 specs: ~1,500-1,600 t ship propellant, ~330-350 t CH4 (en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft); payloadspace.com/what-to-expect-from-starship-v3) x 2.246 kg H2O/kg CH4",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX vehicle spec claim. Existing source_url confirmed: en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft) states Block 2 tanks hold 1,500 t propellant = 1,170 t LOX + 330 t CH4, matching the source figures. The secondary cite payloadspace.com/what-to-expect-from-starship-v3 also resolves (HTTP 200) but gives no specific propellant-mass numbers; SpaceX has published no official V3 propellant-mass spec sheet, so the Wikipedia page carrying the actual figures is the best working link."
+    }
+  ]
+}

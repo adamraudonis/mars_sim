@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && bun run precompute && vite build",
+    "precompute": "bun run scripts/precompute-cache.ts",
+    "favicon": "bun run scripts/make-favicon.ts",
     "preview": "vite preview",
     "test": "bun test",
     "baseline": "bun run scripts/run-baseline.ts"

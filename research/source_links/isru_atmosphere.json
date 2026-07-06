@@ -1,0 +1,253 @@
+{
+  "domain": "isru_atmosphere",
+  "sources": [
+    {
+      "source": "TDA Research, ICES-2020-151: 0.91 kW heating/cooling for 1.51 kg CO2/hr module",
+      "url": "https://ttu-ir.tdl.org/items/f88bf41d-2957-4317-b695-c491c81a7193",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ttu-ir.tdl.org/server/api/core/bitstreams/93f2e845-bcf6-4817-a30b-7129eec234d0/content",
+      "note": "ICES-2020-151 'Demonstration of Advanced Mars ISRU CO2 Recovery System', Alptekin et al. (TDA Research). Upgraded from the raw bitstream PDF (previously stored as source_url) to the stable TTU-IR item landing page; mirror_pdf_url is the direct PDF for hosting a copy."
+    },
+    {
+      "source": "Derived: 55 kWh/kg H2 / 9 kg H2O per kg H2",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal derivation (unit conversion from per-kg-H2 electrolysis energy to per-kg-H2O). No external document named."
+    },
+    {
+      "source": "Estimate: h_fg 511 kJ/kg + sensible, 90 K-class cryocooler at 10-20% of Carnot; same cooler class as O2 (CryoFILL philosophy)",
+      "url": "https://ntrs.nasa.gov/citations/20210023574",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate string that names the NASA CryoFILL activity. Linked to CryoFILL NTRS 20210023574 ('Liquefaction of Cryogenic Fluids for Production and Storage of Commodities on Extra-Terrestrial Surfaces', Johnson et al.). Upgraded from the /api downloads PDF to the stable /citations landing page."
+    },
+    {
+      "source": "NASA CryoFILL (NTRS 20210023574): 2.2 kg/hr O2 requires 1.2-4 kW input; iScience 25:104323 (2022): 7.3 kW for 3 kg/hr incl. heat leaks at 10% cryocooler efficiency",
+      "url": "https://ntrs.nasa.gov/citations/20210023574",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20210023574 explicitly (verified: CryoFILL cryogenic liquefaction, Johnson et al.). Upgraded to stable /citations landing page. Also cites iScience 25:104323 (2022) as a secondary cross-check (DOI 10.1016/j.isci.2022.104323), not linked as the primary."
+    },
+    {
+      "source": "Derived: 25-30 kW / 2-3 kg/hr (Hoffman 2023); cross-check Kleinhenz & Paz O2-only case 34 kW / 1.97 kg/hr = 17 kWh/kg",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Derived value that names Kleinhenz & Paz (NTRS 20170001421, 'An ISRU Propellant Production System to Fully Fuel a Mars Ascent Vehicle', AIAA 2017-0423) as the cross-check anchor. Existing source_url confirmed to resolve. Hoffman 2023 (Acta Astronautica 210) is the other named doc, linked under its own source entries."
+    },
+    {
+      "source": "Kleinhenz & Paz, AIAA 2017-0423: 1.7 t hardware for 73 kg/day product (Case 2); O2-only 0.9 t for 47 kg/day = 19 — converted from per kg/day",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Kleinhenz & Paz, AIAA 2017-0423, on NTRS as 20170001421 ('An ISRU Propellant Production System to Fully Fuel a Mars Ascent Vehicle', Kleinhenz GRC & Paz JSC). Verified via NTRS citation page."
+    },
+    {
+      "source": "Derived from research chain values: 6.1 kWh/kg electrolysis + CO2 acq + liquefaction (cf. isru_atmosphere.plant_specific_energy = 20.2 kWh/kg for the SOXE-heavy architecture)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal derivation summing other in-database parameter values; the only reference is another parameter id (isru_atmosphere.plant_specific_energy). No external document named."
+    },
+    {
+      "source": "Hoffman et al. 2022, Science Advances 8(35) eabp8636; Hecht et al. 2021, Space Sci. Rev. 217:9",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9432831/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Hoffman et al. 2022, 'Mars Oxygen ISRU Experiment (MOXIE) - Preparing for human Mars exploration', Science Advances 8(35) eabp8636. Existing PMC open-access URL verified. Journal DOI: 10.1126/sciadv.abp8636. Also cites Hecht et al. 2021 (Space Sci Rev 217:9, DOI 10.1007/s11214-020-00782-8)."
+    },
+    {
+      "source": "NASA/JPL end-of-mission release, 2023-09-06",
+      "url": "https://www.nasa.gov/missions/mars-2020-perseverance/perseverance-rover/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "NASA MOXIE end-of-mission press release (published 2023-09-06); confirms 122 g total O2 and 12 g/hr peak rate. Existing source_url verified to resolve and match."
+    },
+    {
+      "source": "Hoffman et al. 2023, Acta Astronautica 210:547-553; NASA/JPL 2023",
+      "url": "https://doi.org/10.1016/j.actaastro.2023.04.045",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Hoffman et al. 2023, '18 Months of MOXIE operations on the surface of Mars', Acta Astronautica 210:547-553. DOI 10.1016/j.actaastro.2023.04.045 verified to resolve to the correct Elsevier/ScienceDirect PII S0094576523002187. Replaced the paywalled ScienceDirect abstract URL with the stable DOI."
+    },
+    {
+      "source": "Hecht et al. 2021, Space Sci. Rev. 217:9; NASA Mars 2020 fact sheet",
+      "url": "https://doi.org/10.1007/s11214-020-00782-8",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Hecht et al. 2021, 'Mars Oxygen ISRU Experiment (MOXIE)', Space Science Reviews 217, article 9. Replaced the previous Wikipedia source_url with the canonical Springer DOI (10.1007/s11214-020-00782-8), verified to resolve to Springer article."
+    },
+    {
+      "source": "Derived: 300 W / 6-12 g/hr (Hecht 2021; NASA/JPL 2023)",
+      "url": "https://doi.org/10.1007/s11214-020-00782-8",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Derived specific-energy value that names Hecht 2021 (Space Sci Rev 217:9) for the 300 W system power. Linked to the canonical Hecht et al. 2021 Springer DOI. Previous source_url pointed at the Hoffman 2022 PMC article, which does not carry the 300 W figure as cleanly as the named Hecht paper."
+    },
+    {
+      "source": "Derived: MOXIE SOXE stack ~115 W (Hecht et al. 2021, Space Sci. Rev. 217:9) at 6-12 g/hr flight rates; cf. Shahid et al. 2023, AIChE J 69(5) e18010 (benchmarks MOXIE at ~0.8 g O2/W/day system-level)",
+      "url": "https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.18010",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names two docs: Hecht et al. 2021 (Space Sci Rev 217:9, DOI 10.1007/s11214-020-00782-8) and Shahid et al. 2023, 'Methane and oxygen from energy-efficient, low temperature in situ resource utilization enables missions to Mars', AIChE Journal 69(5) e18010 (DOI 10.1002/aic.18010). Linked to the Shahid AIChE publisher landing page (matches the previous arXiv preprint source_url 2404.00800, which is the same paper's preprint)."
+    },
+    {
+      "source": "Hoffman et al. 2023, Acta Astronautica 210 (scaled several-hundred-x MOXIE); OxEon manned-mission stack development (4 stacks > 2.3 kg/hr)",
+      "url": "https://doi.org/10.1016/j.actaastro.2023.04.045",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Hoffman et al. 2023, '18 Months of MOXIE operations', Acta Astronautica 210. Replaced paywalled ScienceDirect abstract URL with the stable DOI (10.1016/j.actaastro.2023.04.045), verified to resolve to the correct paper. OxEon stack development is mentioned as supporting context, no separate stable public doc."
+    },
+    {
+      "source": "Thermochemistry: dH = 566 kJ per mol O2 (2CO2 -> 2CO + O2)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Standalone thermochemistry (standard enthalpy of CO2 dissociation). No external document named."
+    },
+    {
+      "source": "Estimate: desublimation + sensible load ~620 kJ/kg at 150 K divided by COP 0.21 (20% of Carnot, per Berg TFAWS-2018 Stirling hardware, NTRS 20190000481); KSC MACDOF and Kleinhenz & Paz baseline",
+      "url": "https://ntrs.nasa.gov/citations/20190000481",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate that names NTRS 20190000481 explicitly: 'CO2 Cryofreezer Coldhead and Cycle Design Insights for Mars ISRU', Berg & Shah, TFAWS 2018. Upgraded from the /api downloads PDF to the stable /citations landing page (verified)."
+    },
+    {
+      "source": "Estimate: ideal isothermal 0.7->100 kPa is 0.055 kWh/kg; 35% single-stage efficiency measured (Acta Astronautica 2024); MOXIE scroll ~1.7 kWh/kg at gram scale",
+      "url": "https://doi.org/10.1016/j.actaastro.2024.12.020",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate that names the 'Acta Astronautica 2024' single-stage compression paper: 'Evaluation of low-pressure mechanical compression for Martian atmospheric CO2 capture', Acta Astronautica (DOI 10.1016/j.actaastro.2024.12.020, PII S0094576524007690). DOI verified to resolve to the correct paper. Replaced the paywalled ScienceDirect abstract URL with the stable DOI."
+    },
+    {
+      "source": "NASA Sabatier System Design Study, ICES-2018 / NTRS 20180004697; PNNL microchannel reactors",
+      "url": "https://ntrs.nasa.gov/citations/20180004697",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20180004697: 'Sabatier System Design Study for a Mars ISRU Propellant Production Plant', Hintze/Meier/Shah/DeVor, ICES 2018. Upgraded from the /api downloads PDF to the stable /citations landing page (verified)."
+    },
+    {
+      "source": "Thermochemistry: dH = -165.4 kJ/mol CH4",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Standalone thermochemistry (standard enthalpy of the Sabatier reaction). No external document named."
+    },
+    {
+      "source": "Commercial PEM/alkaline electrolyzer literature (theoretical HHV 39.4; best systems 48 kWh_AC/kg); Giner cathode-feed stack used in NASA EMC model",
+      "url": "https://www.mdpi.com/2071-1050/15/24/16917",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing source_url is the MDPI open-access review 'Recent and Future Advances in Water Electrolysis for Green Hydrogen Generation' (Sustainability 2023, 15(24), 16917), which supports the PEM/alkaline electrolyzer energy figures. Confirmed to exist and match via search (direct WebFetch blocked by MDPI anti-bot 403, but URL is the canonical publisher landing page)."
+    },
+    {
+      "source": "NASA CryoFILL (NTRS 20210023574): 0.3 kg/hr H2 requires 10-30 kW input incl. para-ortho conversion",
+      "url": "https://ntrs.nasa.gov/citations/20210023574",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20210023574 (CryoFILL cryogenic liquefaction, Johnson et al.) explicitly. Upgraded from the /api downloads PDF to the stable /citations landing page (verified)."
+    },
+    {
+      "source": "Derived from CryoFILL input-power data (5-16 W/W), iScience 2022 10%-of-Carnot assumption (23 W/W at 300 K reject), Creare 90 K/500 W reverse turbo-Brayton (NTRS 20170009150, 20180004709)",
+      "url": "https://ntrs.nasa.gov/citations/20170009150",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Derived value naming NTRS 20170009150: 'Mars Propellant Liquefaction and Storage Performance Modeling using Thermal Desktop with an Integrated Cryocooler Model' (Desai/Hauser/Sutherlin), which models the reverse turbo-Brayton cryocooler. Upgraded to stable /citations landing page (verified). Also names NTRS 20180004709 (secondary) and iScience 2022 (DOI 10.1016/j.isci.2022.104323)."
+    },
+    {
+      "source": "NASA ZBO literature (NTRS 20170006481; cryogenic fluid management reviews)",
+      "url": "https://ntrs.nasa.gov/citations/20170006481",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20170006481: 'Zero Boil-Off Methods for Large Scale Liquid Hydrogen Tanks Using Integrated Refrigeration and Storage' (Notardonato et al.). Upgraded from the /api downloads PDF to the stable /citations landing page (verified)."
+    },
+    {
+      "source": "Stoichiometry: CO2 + 4H2 -> CH4 + 2H2O (0.5 kg H2 per kg CH4)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Standalone reaction stoichiometry (Sabatier). No external document named."
+    },
+    {
+      "source": "Stoichiometry (verified); Zubrin Mars Direct: 6 t H2 -> ~107 t methalox (18:1), The Case for Mars",
+      "url": "https://en.wikipedia.org/wiki/Mars_Direct",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Stoichiometry cross-checked against Zubrin's Mars Direct plan / 'The Case for Mars'. Existing Wikipedia source_url verified: describes carrying H2 to Mars to make ~112 t methane+oxygen via ISRU. The primary-source book 'The Case for Mars' (Zubrin) has no free canonical online document; Wikipedia is the best stable public landing page for the Mars Direct concept."
+    },
+    {
+      "source": "Kleinhenz & Paz, AIAA 2017-0423 / NTRS 20170001421: 52 kW for 29.7 t propellant in 480 days (Case 2, 1.3 wt% regolith water)",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20170001421 (Kleinhenz & Paz, AIAA 2017-0423) explicitly. Existing source_url verified via NTRS citation page."
+    },
+    {
+      "source": "Kleinhenz & Paz, AIAA 2017-0423: 1.7 t hardware for 73 kg/day product (Case 2); O2-only 0.9 t for 47 kg/day = 19",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Kleinhenz & Paz, AIAA 2017-0423, NTRS 20170001421. Existing source_url verified."
+    },
+    {
+      "source": "SpaceX Starship V2/Block 2 spec: 1,170 t LOX + 330 t LCH4 (company claim; en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft), accessed 2026-07). Range spans retired V1 through announced V3.",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "SpaceX propellant-load claim as reported on Wikipedia (article self-referenced in the source string). Verified: article states tanks hold 1,500 t propellant = 1,170 t LOX + 330 t liquid methane (Block 2). SpaceX has no single official public spec sheet page giving this split; Wikipedia is the stable landing page cited by the parameter author."
+    },
+    {
+      "source": "SpaceX company claim (Raptor design mixture ratio; 1170/330 t split implies 3.55)",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Raptor",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Raptor engine oxidizer-to-fuel mixture ratio (methalox). Existing Wikipedia Raptor source_url verified: gives O/F ~3.6-3.8. No single official SpaceX spec page publishes the exact mixture ratio; Wikipedia is the best stable public landing page."
+    },
+    {
+      "source": "Derived: 1.5e6 kg x 20.2 kWh/kg (Kleinhenz & Paz specific energy scaled); range from 15-25 kWh/kg on the 1,500 t V2 load",
+      "url": "https://ntrs.nasa.gov/citations/20170001421",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Derived total-energy figure that scales the Kleinhenz & Paz specific energy (NTRS 20170001421, AIAA 2017-0423). Existing source_url verified. The 20.2 kWh/kg anchor traces to that named document."
+    },
+    {
+      "source": "Derived: 24.2e6 kWh / (500 sols x 24.6597 h)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal derivation (total refuel energy divided by mission duration in Mars hours). No external document named."
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "domain": "human_factors",
+  "sources": [
+    {
+      "source": "Hassler et al. 2014, Science 343:1244797 (MSL RAD); solar-cycle range per Guo et al. 2021, Astron. Astrophys. Rev. 29:8",
+      "url": "https://doi.org/10.1126/science.1244797",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc is Hassler et al. 2014, Science 343:1244797 -> DOI 10.1126/science.1244797 (title 'Mars' Surface Radiation Environment Measured with the Mars Science Laboratory's Curiosity Rover'), confirmed valid via Crossref. Publisher landing (science.org) is paywalled/403 to bots but is the canonical DOI target. The secondary Guo et al. 2021 review is linked separately under its own source string (DOI 10.1007/s00159-021-00136-5)."
+    },
+    {
+      "source": "NASA-STD-3001 Vol 1 Rev B (2022), per 2021 NAS review; universal all ages/sexes, 3% mean REID basis",
+      "url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_1",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B//2022-01-05-NASA-STD-3001-Vol1-Rev-B-Final-Draft-Signature-010522.pdf",
+      "note": "Official standards.nasa.gov landing page for NASA-STD-3001 Volume 1 (Crew Health); confirmed live. Page now lists Rev C as current active revision; Rev B (2022) is the cited revision and its signed PDF is available under the standard's /B/ path (set as mirror_pdf_url)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28; ISS standard workweek",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Life Support Baseline Values and Assumptions Document (BVAD), NTRS 20210024855, published 2022-02-01 (BVAD_2.15.22-final.pdf). NTRS citation permalink confirmed live; direct PDF set as mirror."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (Langston 2005, ISS)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855). Replaced prior source_url (the /api/.../downloads/ PDF) with the stable citation permalink; PDF kept as mirror."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855). Citation permalink used as stable landing page."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (1.0 h per meal x 3)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (DPC 0.5 + plan review/report 1.0 + work prep 0.5)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-28 (2.0 h on each of 2 weekend days)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 3-29 and sect. 3.2.5",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Shuttle experience 45-90 min/d for crew of 6)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), sect. 4.5.3 (Hunter model; LMLSTP Phase III measured 4.6 CM-h/d for crew of 4)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "Russell & Klaus 2007, Reliab. Eng. Syst. Saf. 92:808-820 (ISS/Mir-derived)",
+      "url": "https://doi.org/10.1016/j.ress.2006.04.020",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Russell & Klaus 2007, 'Maintenance, reliability and policies for orbital space station life support systems', Reliability Engineering & System Safety 92(6):808-820. DOI 10.1016/j.ress.2006.04.020 confirmed valid via Crossref. Replaced prior ScienceDirect abstract-PII url with the canonical DOI (Elsevier full text is paywalled)."
+    },
+    {
+      "source": "Stromgren et al. 2021, IEEE Aerospace, NTRS 20210026843 (lunar Surface Habitat, ISS component data: expected 24.7 h per 28-day 2-crew mission; 50th pct 9.0 h, 99th pct 70.5 h)",
+      "url": "https://ntrs.nasa.gov/citations/20210026843",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210026843/downloads/IEEE%20Assessment%20of%20Crew%20Time%20for%20Maintenance%20and%20Repairs%20Activities%20for%20Lunar%20Surface%20Missions.pdf",
+      "note": "Stromgren et al., 'Assessment of Crew Time for Maintenance and Repair Activities for Lunar Surface Missions' (IEEE Aerospace), NTRS 20210026843. Citation permalink confirmed live; used as stable landing, prior /api download PDF kept as mirror."
+    },
+    {
+      "source": "NASA HAT EVA team constraint, in Stromgren et al. 2015, NTRS 20150009469",
+      "url": "https://ntrs.nasa.gov/citations/20150009469",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20150009469/downloads/20150009469.pdf",
+      "note": "NTRS 20150009469, 'Developing a Crew Time Model for Human Exploration Missions to Mars' (Battfeld, Stromgren, Shyface, Cirillo, Goodliff, 2015). Citation permalink confirmed live; prior /api download PDF kept as mirror."
+    },
+    {
+      "source": "NASA EVA-EXP-0031 figures cited in Griffin, AIAA 2020-4170 (58.25 h prep + 15.83 h post, typically 2-person EVA)",
+      "url": "https://doi.org/10.2514/6.2020-4170",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Named doc is Griffin, AIAA 2020-4170, 'The Wait-less EVA Solution: Single-Person Spacecraft' (Brand N. Griffin, ASCEND 2020). AIAA DOI 10.2514/6.2020-4170 confirmed valid via Crossref. NOTE: prior source_url http://spacearchitect.org/pubs/AIAA-2020-4170.pdf is DEAD (DNS SERVFAIL / ENOTFOUND) - replaced with the stable AIAA DOI landing page (arc.aiaa.org is paywalled/403 to bots but is the canonical target)."
+    },
+    {
+      "source": "Estimate: exploration atmosphere 56.5 kPa/34% O2 gives ~15-min prebreathe (Abercromby et al. 2015, Acta Astronautica 109:76-87) + don/doff, checkout, dust mitigation, amortized suit servicing",
+      "url": "https://doi.org/10.1016/j.actaastro.2014.11.039",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Named doc inside an 'Estimate:' string -> Abercromby, Conkin & Gernhardt 2015, 'Modeling a 15-min extravehicular activity prebreathe protocol using NASA's exploration atmosphere (56.5 kPa/34% O2)', Acta Astronautica 109:76-87. Correct DOI is 10.1016/j.actaastro.2014.11.039 (confirmed via Crossref; NOT .12.009). Prior source_url was the ScienceDirect abstract-PII page (S0094576514004937, same paper, paywalled); replaced with canonical DOI."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (lunar surface EVA values)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2 (2022), Table 4-69 (polar 0.25-0.5; equatorial 0.46-0.76)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20210024855/downloads/BVAD_2.15.22-final.pdf",
+      "note": "Same BVAD document (NTRS 20210024855)."
+    },
+    {
+      "source": "Whitmire et al. 2015, NASA/TM-2015-218564 (SME consensus, NTRS 20140016951); consistent with NASA-STD-3001 Vol 2 task-based NHV requirement",
+      "url": "https://ntrs.nasa.gov/citations/20140016951",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf",
+      "note": "NTRS 20140016951, Whitmire et al., 'Minimum Acceptable Net Habitable Volume for Long-Duration Exploration Missions SME Consensus Session Report' (report JSC-CN-32284). Citation permalink confirmed live; PDF available at /api/.../20140016951.pdf (mirror)."
+    },
+    {
+      "source": "Whitmire et al. 2015 consensus report (5.4 m3 allocation); ISS USOS CQ flight actual 2.1 m3 (Broyan et al., 08ICES-0222)",
+      "url": "https://ntrs.nasa.gov/citations/20140016951",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf",
+      "note": "Primary named doc is the same Whitmire et al. 2015 NHV consensus report (NTRS 20140016951, confirmed live). Secondary Broyan et al. 08ICES-0222 is a conference paper not separately linked; the NHV consensus report is the citable landing page."
+    },
+    {
+      "source": "Zeitlin et al. 2013, Science 340:1080-1084 (MSL RAD cruise, 2011-12)",
+      "url": "https://doi.org/10.1126/science.1235989",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Zeitlin et al. 2013, 'Measurements of Energetic Particle Radiation in Transit to Mars on the Mars Science Laboratory', Science 340:1080-1084. DOI 10.1126/science.1235989 confirmed valid via Crossref. Prior source_url (science.org) is paywalled/403 to bots but is canonical DOI target."
+    },
+    {
+      "source": "NASA-STD-3001 Vol 1 Rev B [V1 4031], per OCHMO-TB-020 Rev E (12/2022); legacy 30-day BFO 250 mGy-Eq limit is NCRP-132/pre-Rev-B and Townsend et al. 2018",
+      "url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2023/03/radiation-protection-technical-brief-ochmo.pdf",
+      "note": "Named doc OCHMO-TB-020 Rev E: NASA-STD-3001 Technical Brief 'Design for Ionizing Radiation Protection', OCHMO-TB-020 Rev E. Verified by reading the PDF (title page confirms OCHMO-TB-020 Rev E, references [V1 4031] Short-Term Radiation Limits - Solar Particle Events). NASA-hosted direct PDF with no separate landing page; set as both url and mirror_pdf_url."
+    },
+    {
+      "source": "Guo et al. 2021, Astron. Astrophys. Rev. 29:8; Ralha et al. 2024, arXiv:2409.02001",
+      "url": "https://doi.org/10.1007/s00159-021-00136-5",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc Guo et al. 2021, 'Radiation environment for future human exploration on the surface of Mars: the current understanding based on MSL/RAD dose measurements', Astronomy & Astrophysics Review 29:8. DOI 10.1007/s00159-021-00136-5 confirmed valid via Crossref (open access on SpringerLink). The prior source_url pointed to the secondary Ralha et al. 2024 (arXiv:2409.02001, 'Effective dose equivalent estimation for humans on Mars', confirmed live); replaced with the primary Guo review DOI."
+    },
+    {
+      "source": "Röstel et al. 2020, JGR Planets 125:e2019JE006246 (GEANT4/AtRIS, RAD-validated): equivalent dose peaks at 30-40 cm (88-102 g/cm2) and only drops below surface value beyond ~200 g/cm2 (0.7-0.9 m dry rock)",
+      "url": "https://doi.org/10.1029/2019JE006246",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Röstel, Guo, Banjac, Wimmer-Schweingruber & Heber 2020, 'Subsurface Radiation Environment of Mars and Its Implication for Shielding Protection of Future Habitats', JGR Planets 125:e2019JE006246. DOI 10.1029/2019JE006246 confirmed valid via Crossref. Prior source_url (agupubs wiley) is paywalled (402) to bots but is canonical DOI target."
+    },
+    {
+      "source": "Röstel et al. 2020, Table 3: 1.26 m andesite (rho=2.8 g/cm3, ~350 g/cm2) reduces water-sphere equivalent dose to 200 mSv/yr, <=half the dry-surface value; sandstone 1.64 m",
+      "url": "https://doi.org/10.1029/2019JE006246",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same Röstel et al. 2020 JGR Planets paper, DOI 10.1029/2019JE006246 (confirmed via Crossref). Canonical DOI used in place of paywalled agupubs page."
+    },
+    {
+      "source": "Röstel et al. 2020 (0.8-2.5 m depending on composition; hydrated less); Zhang et al. 2022 JGR Planets: 1-1.6 m at representative sites",
+      "url": "https://doi.org/10.1029/2019JE006246",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc is Röstel et al. 2020 JGR Planets, DOI 10.1029/2019JE006246 (confirmed via Crossref). Secondary Zhang et al. 2022 JGR Planets is not separately linked here; Röstel is the primary citable landing page."
+    },
+    {
+      "source": "Townsend et al. 2018, Life Sci. Space Res. 17:32-39 (PMID 29753411); Kim et al. 2006: 5 g/cm2 Al insufficient for BFO in Aug-1972-class event; ~10 g/cm2 meets 30-day BFO limits; 20+ g/cm2 (hydrogenous) for extreme events",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29753411/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Primary named doc Townsend et al. 2018, 'Solar particle event storm shelter requirements for missions beyond low Earth orbit', Life Sciences in Space Research 17:32-39 (PMID 29753411). PubMed landing page confirmed live (matches title/authors/pages). DOI is 10.1016/j.lssr.2018.02.002; PubMed permalink kept as the stable landing already present and verified."
+    },
+    {
+      "source": "Crucian et al. 2016, Int. J. Gen. Med. 9:383-391 (ISS incidence; skin rash 1.12/py, upper-respiratory 0.97/py leading; infections ~0.6/py)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5098747/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Crucian et al. 2016, 'Incidence of clinical symptoms during long-duration orbital spaceflight', Int. J. Gen. Med. 9:383-391. PMC5098747 open-access landing page confirmed live (matches title/authors/pages)."
+    },
+    {
+      "source": "Derived estimate from Antonsen et al. 2022 Fig. 4 (EVAC 0.3-1% per <42-d mission, 4 crew, unlimited ISS capability); not a stated IMM rate",
+      "url": "https://doi.org/10.1038/s41526-022-00193-9",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Although phrased 'Derived estimate', the string NAMES a real doc: Antonsen et al. 2022, 'Estimating medical risk in human spaceflight', npj Microgravity 8:8. DOI 10.1038/s41526-022-00193-9 confirmed valid via Crossref. Type=document. Prior source_url (nature.com article page) redirects through auth; canonical DOI used (open access on nature)."
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "domain": "food",
+  "sources": [
+    {
+      "source": "NASA BVAD NASA/TP-2015-218570 Rev2, Eq. 3-2 (EER) and Tables 4-57/4-61 (12.707 MJ/CM-d)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper) \u2014 derived: 3037 kcal / 1.83 kg",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06 \u2014 18.4 g dw/m2-day x 4 kcal/g",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80) \u2014 derived: (18.4 g/m2-d / 0.44 g/mol PAR) x 0.116 kWh/mol / 0.80 delivery",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-90 (0.70); Wheeler 2008 measured ~0.68; Tibbitts CELSS 0.80",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (3.96 avg condensed); BVAD Table 4-91 per-crop (lettuce 2.1 ... wheat 11.79)",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-88 (Drysdale 1999b); lower bound = structure+root-zone excl. HPS lamps/ballasts",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-47 (Perchonok 2002 lower; Douglas 2017 max 6-month rate upper)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-47 (MSIS 1995) and Table 4-60 (Levri)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-40 (Ewert 2017); upper from 2.36 kg total with 17% packaging",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Sec. 4.5.1 (Cooper et al. 2011)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "MELiSSA/Frontiers 2023 (avg of bread wheat, durum wheat, potato, soybean = 4000 kcal/kg dw)",
+      "url": "https://doi.org/10.3389/fspas.2023.1198689",
+      "type": "document",
+      "verified": true,
+      "note": "Vermeulen, Papic, Nikolic & Brazier 2023, 'Stoichiometric model of a fully closed bioregenerative life support system...', Frontiers in Astronomy and Space Sciences 10:1198689. DOI verified; the 4000 kcal/kg dw higher-plant caloric value is confirmed in the article.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 best BPC (18.4; 20.8 with transplant); U. Wisconsin >30; BVAD Table 4-90 nominal 21.06",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (0.44 measured, 0.50 with transplant; U. Wisconsin >0.80)",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 measured 11.3 (15.8 with VOC scrub to HI 0.40); BVAD Table 4-90 nominal 20.0",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (0.17 measured, 0.24 with VOC scrub, 0.30 potential); RUE_total 0.59",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-90 (0.40); Wheeler 2008 observed 0.29 (ethylene-depressed)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-90 (HI 0.60)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (6.0 measured, 6.9 with transplant); BVAD Table 4-90 nominal 4.54",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (0.16 measured, 0.19 transplant); RUE_total 0.43",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (7.1 measured, 11.8 with transplant, RUE 0.70); BVAD Table 4-90 6.57",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Wheeler et al. 2008 (9.8 measured, 11.4 transplant); BVAD Table 4-90 10.43; RUE_edible 0.25",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Kusuma, Pattison & Bugbee 2020 (ceiling 3.4 white+red / 4.1 blue+red); industry 2023-24 fixtures 2.5-3.5",
+      "url": "https://doi.org/10.1038/s41438-020-0283-7",
+      "type": "document",
+      "verified": true,
+      "note": "Kusuma, Pattison & Bugbee 2020, 'From physics to fixtures to food: current and potential LED efficacy', Horticulture Research 7:56. DOI verified; open-access copy at PMC7105460. Confirms 3.4/4.1 umol/J efficacy ceilings.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Table 4-86 (Sager 1999 low; Sager 2006 high)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived: 1/(efficacy x delivery); efficacy 3.0 umol/J, delivery 0.8 (range from 2.5-3.5 umol/J)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "note": "Pure internal computation (stoichiometry/energy balance) with no external document named; url intentionally null.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived: 1/(RUE_edible x efficacy x delivery x caloric_density); potato RUE 0.44, 3.0 umol/J, 0.8, 4.0 kcal/g",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "note": "Pure internal computation (stoichiometry/energy balance) with no external document named; url intentionally null.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived: wheat RUE_edible 0.17 (0.24 opt), efficacy 3.0 umol/J, delivery 0.8, 4.0 kcal/g",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "note": "Pure internal computation (stoichiometry/energy balance) with no external document named; url intentionally null.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Sec. 4.14 (Lunn et al. 2017), for 2500 kcal/person/day full diet",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived from Wheeler productivities (3037 kcal / 4 kcal/g / ~15 g edible dw/m2-d); consistent with CELSS/ICES literature",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Internal derivation, but explicitly built on Wheeler et al. 2008 productivities/RUE. Linked to that named source document. Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived: 3037 kcal x ~0.10-0.17 kWh/kcal mix / 24.66 h x 1.25 overhead (LED 3.0 umol/J)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "note": "Pure internal computation (stoichiometry/energy balance) with no external document named; url intentionally null.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived (Sec. 8): Wheeler RUE/productivity; 27.1 m2 as-measured, 21.1 m2 optimized",
+      "url": "https://doi.org/10.1016/j.asr.2007.06.059",
+      "type": "document",
+      "verified": true,
+      "note": "Internal derivation, but explicitly built on Wheeler et al. 2008 productivities/RUE. Linked to that named source document. Wheeler et al. 2008, 'Crop productivities and radiation use efficiencies for bioregenerative life support', Advances in Space Research 41(5):706-713. DOI resolves to the Elsevier landing page; content verified against the freely-hosted PDF (bigidea.nianet.org).",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "Derived (Sec. 8): 135 kWh/sol optimized to 224 kWh/sol as-measured, incl. +25% overhead; LED 3.0 umol/J",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "note": "Pure internal computation (stoichiometry/energy balance) with no external document named; url intentionally null.",
+      "mirror_pdf_url": null
+    },
+    {
+      "source": "NASA BVAD Sec. 4.14.1.1 (Clawson 2006)",
+      "url": "https://ntrs.nasa.gov/citations/20210024855",
+      "type": "document",
+      "verified": true,
+      "note": "NASA Life Support Baseline Values and Assumptions Document (BVAD), NASA/TP-2015-218570 Rev 2 (Ewert, Chen & Powell, Feb 2022). Canonical NTRS landing page substituted for the raw-PDF source_url; NTRS ID 20210024855. Verified as the BVAD.",
+      "mirror_pdf_url": null
+    }
+  ]
+}

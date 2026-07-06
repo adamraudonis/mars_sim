@@ -1,0 +1,293 @@
+{
+  "domain": "robots",
+  "sources": [
+    {
+      "source": "Estimate: battery bouts 2.5-4 h + 1-3 h charge cycles (Agility Digit 2:1 work:charge company claim, 2024-2025), night cold/power limits, tasking gaps",
+      "url": "https://www.agilityrobotics.com/content/gxo-signs-industry-first-multi-year-agreement-with-agility-robotics",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate string, but the load-bearing external anchor is Agility's Digit @ GXO deployment (company claim). Official Agility Robotics press page confirmed (first commercial humanoid RaaS deployment at GXO). The '2:1 work:charge' figure is a company characterization; this page is the closest official statement."
+    },
+    {
+      "source": "Derived: A = MTBF/(MTBF + MTTR_effective) with MTTR_eff including diagnosis, spares wait, repair queue; consistent with terrestrial robot-cell availability ~88% (The Robot Report)",
+      "url": "https://www.therobotreport.com/the-fake-news-about-robots-and-their-reliability/",
+      "type": "derived",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Derived availability formula (internal computation), but cross-checked against The Robot Report article, which was fetched and explicitly states average robot-cell reliability is 88%. Kept type=derived since the core is the formula; the external article merely corroborates the ~88% anchor."
+    },
+    {
+      "source": "Derived: 400-500 W claimed working draw (Tesla AI Day 2022) / 0.9 charge efficiency + 50-150 W thermal overhead; upper bound Valkyrie-class measured ~1.8 kW (NASA R5 fact sheet)",
+      "url": "https://www.nasa.gov/technology/r5/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Derived string but names a real document (NASA R5 fact sheet). Replaced the fragile wp-content PDF (https://www.nasa.gov/wp-content/uploads/2023/06/r5-fact-sheet.pdf) with NASA's stable R5 landing page, which was fetched and confirms 44 DoF, 1.8 kWh battery, ~1 h runtime (=~1.8 kW draw)."
+    },
+    {
+      "source": "Tesla Optimus Gen 2 unveil, 2023-12-12 (company claim, hardware shown); carried into Gen 3/V3 statements through 2026",
+      "url": "https://electrek.co/2023/12/12/tesla-unveils-optimus-gen-2-next-generation-humanoid-robot/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Tesla's Gen 2 unveil (2023-12-12) has no standalone Tesla press-release page; Electrek's same-day coverage of the official reveal was fetched and confirms the date, actuators/sensors, and 30%-faster walking. Existing DB url was the Wikipedia Optimus article (also valid); chose the primary reveal coverage for the specific unveil date."
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) — q_structured x 1.2 (structured outdoor task)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names arXiv:2505.04572 ('Stow: Robotic Packing of Items into Fabric Pods', Hudson et al., Amazon, 2025). arXiv abstract page fetched and confirmed; the parenthetical 'q_structured x 1.2' is an internal scaling factor applied on top of this source."
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) — q_structured x 1.0 (semi-structured assembly)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same named document arXiv:2505.04572 (Amazon Stow paper), confirmed. Suffix is an internal q_structured scaling factor (x1.0, semi-structured assembly)."
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) — q_structured x 1.2 (warehouse-analog work)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same named document arXiv:2505.04572 (Amazon Stow paper), confirmed. Suffix is an internal q_structured scaling factor (x1.2, warehouse-analog work)."
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) — q_structured x 0.8 (delicate manipulation)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same named document arXiv:2505.04572 (Amazon Stow paper), confirmed. Suffix is an internal q_structured scaling factor (x0.8, delicate manipulation)."
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) — q_structured x 0.5 (diagnosis-heavy, human-led)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same named document arXiv:2505.04572 (Amazon Stow paper), confirmed. Suffix is an internal q_structured scaling factor (x0.5, diagnosis-heavy, human-led)."
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025) — q_structured x 1.0 (monitoring rounds)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Same named document arXiv:2505.04572 (Amazon Stow paper), confirmed. Suffix is an internal q_structured scaling factor (x1.0, monitoring rounds)."
+    },
+    {
+      "source": "Tesla AI Day, 2022-09-30 (company claim): 2.3 kWh, 52 V pack",
+      "url": "https://www.forbes.com/sites/jamesmorris/2022/10/01/tesla-ai-day-2022-musk-promises-optimus-humanoid-robot-for-under-20000/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Tesla AI Day 2022 claim. Forbes coverage of the event fetched and confirms the 2.3 kWh / 52 V pack figure verbatim. Existing DB url retained."
+    },
+    {
+      "source": "Tesla claim ('full work day' ~8 h, light tasks, AI Day 2022 + later); independent humanoid-deployment surveys show 2.5-4 h under sustained load",
+      "url": "https://www.robotwale.com/article/humanoid-robot-battery-runtime-reality-check",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "The named/linkable anchor is the independent deployment survey (Robotwale humanoid battery runtime reality-check), fetched and confirms 4 h claims dropping to ~2.5 h under heavy load. Existing DB url retained."
+    },
+    {
+      "source": "Tesla AI Day 2022 + subsequent statements: ~20 kg (45 lb) carry; ~68 kg (150 lb) deadlift claim repeated for Gen 3",
+      "url": "https://en.wikipedia.org/wiki/Optimus_(robot)",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Tesla carry/deadlift claims across AI Day 2022 and Gen 3. Wikipedia Optimus article fetched and confirms the 20 kg (45 lb) carry capacity; it aggregates the multi-event claims better than any single Tesla page. Existing DB url retained."
+    },
+    {
+      "source": "Gen 2 video 2023-12-12 (~0.6 m/s, '30% faster'); V3 claim 5 mph = 2.2 m/s (Musk statements 2025-2026, company claim)",
+      "url": "https://electrek.co/2023/12/12/tesla-unveils-optimus-gen-2-next-generation-humanoid-robot/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Gen 2 speed claim. Electrek coverage of the 2023-12-12 Gen 2 reveal fetched and confirms the '30% faster' walking claim (exact m/s not stated by Tesla). Existing DB url retained."
+    },
+    {
+      "source": "Gen 3 hand claim: 22 DoF hand/forearm, tactile fingertips (We,Robot 2024-10-10 and later Musk statements); Gen 2 demonstrated 11 DoF (2023-12-12)",
+      "url": "https://en.wikipedia.org/wiki/Optimus_(robot)",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Hand DoF claims. Wikipedia Optimus article fetched and confirms Gen 2 = 11 DoF (2023) and Gen 3 = 22 DoF (2024) hands. No single official Tesla page consolidates this; Wikipedia is the best citable aggregate. Existing DB url retained."
+    },
+    {
+      "source": "Tesla AI Day, 2022-09-30 (company claim): ~100 W sitting",
+      "url": "https://www.forbes.com/sites/johnkoetsier/2022/10/01/tesla-bot-optimus-everything-we-know-so-far/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Tesla AI Day 2022 power figure. Forbes (Koetsier) coverage fetched and confirms '100 watts while sitting, 500 watts while walking'. Existing DB url retained."
+    },
+    {
+      "source": "Tesla AI Day 2022 claim: ~500 W brisk walking; upper bound = NASA Valkyrie measured class (1.8 kWh / ~1 h runtime = ~1.8 kW)",
+      "url": "https://www.nasa.gov/technology/r5/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "The Tesla 500 W figure is a company claim (see Forbes/Koetsier), but the linkable named document here is the NASA Valkyrie/R5 fact sheet used for the upper bound. Replaced the fragile wp-content PDF with NASA's stable R5 landing page, which confirms 1.8 kWh / ~1 h runtime."
+    },
+    {
+      "source": "Orbital geometry; ESA Mars Express blog (2012); NASA ASCEND crewed-Mars comm-delay paper NTRS 20220013418",
+      "url": "https://ntrs.nasa.gov/citations/20220013418",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20220013418. Fetched and confirmed: 'Communication Delays, Disruptions, and Blackouts for Crewed Mars Missions' (McBrayer, Chai, Judd; LaRC; ASCEND 2022) — states 0-22 min delay peaking at Mars. Chosen as the primary link (NTRS permalink) over the ESA blog (existing DB url), which also loaded and corroborates the delay figures."
+    },
+    {
+      "source": "Telerobotics literature: degradation onset ~300 ms RTT, near-collapse of direct control by ~0.7-1 s (Frontiers Robotics & AI 2020 survey; vision-teleop latency studies)",
+      "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2020.578805/full",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names the Frontiers Robotics & AI 2020 telerobotics survey. Fetched and confirmed: 'A Brief Survey of Telerobotic Time Delay Mitigation' (Farajiparvar, Ying, Pandya; Front. Robot. AI 2020; DOI 10.3389/frobt.2020.578805). Existing DB url retained."
+    },
+    {
+      "source": "Estimate: 2.3 kWh pack at ~1C charging with thermal management margin; no Tesla statement found as of 2026-07",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal estimate (1C charging assumption on the 2.3 kWh pack). The source itself states no Tesla statement exists; no external document to link."
+    },
+    {
+      "source": "Estimate: warehouse AMR/humanoid pilot staffing analogies; Optimus factory ops 2025-2026 still teleop-heavy (Tesla Q4-2025 earnings call, 2026-01-28)",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate string, but names the Tesla Q4-2025 earnings call (2026-01-28). Motley Fool transcript fetched and confirmed as the authentic Q4 2025 call (dated 2026-01-28), discussing Optimus still in early R&D / limited factory deployment. Tesla does not publish a standalone transcript page; Motley Fool is the standard public transcript of record."
+    },
+    {
+      "source": "Estimate: warehouse humanoid deployments run largely autonomous with exception intervention (Agility/GXO 100k-tote milestone, company release 2025-11); Optimus autonomy 'still R&D' per Musk 2026-01-28",
+      "url": "https://www.agilityrobotics.com/content/digit-moves-over-100k-totes",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate string, but names the Agility/GXO 100k-tote milestone company release. Official Agility page fetched and confirms 'Digit has moved over 100,000 totes at GXO's Flowery Branch facility'. Existing DB url retained. (The Musk 2026-01-28 clause is covered by the Tesla Q4-2025 transcript in a sibling source.)"
+    },
+    {
+      "source": "Agility Digit @ GXO implied 60-75% of human picker throughput (press analyses of company ROI claims, 2024-2025); Amazon purpose-built stow robot measured 224 vs human 243 units/h (arXiv:2505.04572, 2025)",
+      "url": "https://arxiv.org/abs/2505.04572",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Base (unsuffixed) form of the Agility/Amazon throughput source. Names arXiv:2505.04572 (Amazon Stow paper), confirmed. Existing DB url was the arXiv PDF (https://arxiv.org/pdf/2505.04572); switched to the stable abs/ landing page."
+    },
+    {
+      "source": "Estimate: no deployed evidence exists; bounded above by structured-task ratios and below by rover field experience; consistent with 2026 state of humanoid autonomy (teleop-dependent for novel manipulation)",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal estimate/bounding argument; the source explicitly states no deployed evidence exists and names no specific external document."
+    },
+    {
+      "source": "Squyres (MER PI) 2005, repeated 2022: what a rover does in a perfect sol, a human field geologist does in ~30-45 s; Crawford, Astron. & Geophys. 2012 (arXiv:1203.6250)",
+      "url": "https://arxiv.org/abs/1203.6250",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Crawford, Astronomy & Geophysics 2012 (arXiv:1203.6250). Fetched and confirmed: 'Dispelling the myth of robotic efficiency...' by Ian A. Crawford (A&G vol 53, 2012), which discusses the rover-sol vs human-geologist comparison. Existing DB url was the arXiv PDF; switched to the abs/ landing page. (The Squyres 2005 quote is discussed within this literature.)"
+    },
+    {
+      "source": "IPEx mission spec: 10,000 kg at 42 kg/h over 11-day lunar demo (Schuler et al., ASCEND 2024, NASA KSC); RASSOR 2.0 implied continuous rate 66 kg / 0.38 = ~174 kg/h (NTRS 20210011366)",
+      "url": "https://ntrs.nasa.gov/citations/20240008162",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names Schuler et al. ASCEND 2024 (IPEx) and RASSOR 2.0 NTRS 20210011366. Primary link is the IPEx TRL-5 design overview NTRS permalink 20240008162 (Schuler, KSC, ASCEND 2024), fetched and confirmed. Replaces the fragile wp-content PDF (existing DB url). Also available: AIAA DOI 10.2514/6.2024-4890. RASSOR 20210011366 also verified (see other sources)."
+    },
+    {
+      "source": "RASSOR 2.0 paper: 4 W per (kg/h) excavation rate = 4 Wh/kg digging-only (NTRS 20210011366); upper range = x2-3 total-system overhead estimate",
+      "url": "https://ntrs.nasa.gov/citations/20210011366",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20210011366. Fetched and confirmed: 'Design of an Excavation Robot: Regolith Advanced Surface Systems Operations Robot (RASSOR) 2.0' (Mueller, KSC; ASCE Earth & Space 2016), 66 kg robot, min 2.7 t/day. Existing DB url (NTRS citation) retained. The x2-3 overhead is an internal estimate."
+    },
+    {
+      "source": "Terrestrial analogy, company claims: FBR Hadrian X 200-300 blocks/h (2023 test records) vs human mason 300-500 bricks/day",
+      "url": "https://newatlas.com/robotics/hadrian-x-bricklaying-robot/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "FBR Hadrian X company/test claims. New Atlas article fetched and confirms 'up to 300 large masonry blocks an hour' (rated 500/h). Existing DB url retained; treated as company_claim since it reports FBR's own test-record performance figures."
+    },
+    {
+      "source": "Estimate: bounded by FANUC factory-arm vendor claim (~80,000 h MTBF, benign environment) above and IPEx TRL-5 dusty wheel-actuator life test (~1x 11-day mission, bearing failure mode found; Schuler ASCEND 2024) below",
+      "url": "https://ntrs.nasa.gov/citations/20240008162",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Estimate string bounded by two references. The linkable named document is Schuler ASCEND 2024 (IPEx TRL-5), NTRS permalink 20240008162, fetched and confirmed. The FANUC ~80,000 h MTBF is a generic vendor marketing figure with no single stable canonical page, so it is not separately linked; existing DB url (The Robot Report) was a corroborating article, superseded here by the primary IPEx document."
+    },
+    {
+      "source": "Estimate: MTBF 500 h x MTTR ~4-8 h + preventive (dust cleaning, lube, inspection) ~1-2 h/100 h; consistent with industrial-robot PM schedules (~every 3,000-10,000 h) heavily derated for dust",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal estimate/maintenance model. Only a generic 'industrial-robot PM schedule' range is referenced, with no specific named document to link."
+    },
+    {
+      "source": "Anchored on ISS supportability: ~10 t/yr spares upmass (NTRS 20150003005); Owens & de Weck Mars-One analysis (MIT 2014): spares -> 64% of resupply mass by year 10",
+      "url": "https://ntrs.nasa.gov/citations/20150003005",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20150003005 and the Owens & de Weck Mars-One (MIT 2014) analysis. Primary link is NTRS 20150003005 'Logistics Needs for Potential Deep Space Mission Scenarios Post Asteroid Redirect Crewed Mission' (Lopez et al., 2015) — fetched and confirmed; it covers deep-space logistics/spares mass (the report is about logistics/consumables, not strictly ISS-only). The Owens & de Weck Mars-One analysis is documented at MIT News (https://news.mit.edu/2014/technical-feasibility-mars-one-1014), also fetched and confirms spares reaching ~62-64% of resupply mass; NTRS chosen as the primary permalink."
+    },
+    {
+      "source": "NASA KSC RASSOR 2.0 (NTRS 20210011366): 66 kg robot, 'minimum 2.7 metric tons per day'; 4.2 t/day implied continuous at 174 kg/h",
+      "url": "https://ntrs.nasa.gov/citations/20210011366",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20210011366. Fetched and confirmed: RASSOR 2.0 (Mueller, KSC), 66 kg robot, 'minimum 2.7 metric tons per day' regolith. Existing DB url (NTRS citation) retained. The 4.2 t/day is an internal continuous-rate extrapolation."
+    },
+    {
+      "source": "JPL Robotics ATHLETE program: Gen 1 850 kg vehicle / 300 kg payload; Gen 2 (Tri-ATHLETE) 450 kg payload at Earth g, ~10 km/h max speed",
+      "url": "https://www-robotics.jpl.nasa.gov/how-we-do-it/systems/the-athlete-rover/",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Official JPL Robotics ATHLETE program page. WebSearch confirmed the page exists and states Tri-ATHLETE payload capacity of 450 kg at Earth g, matching the source; however WebFetch returned HTTP 500 on both robotics.jpl.nasa.gov and the canonical www-robotics.jpl.nasa.gov host (JPL blocks automated fetch), so I could not directly confirm the fetched content. Canonical host www-robotics.jpl.nasa.gov used (the DB's robotics.jpl.nasa.gov redirects here). A JPL-hosted PDF fully documents the specs if a mirror is wanted: https://www-robotics.jpl.nasa.gov/media/documents/Heverly_2010_AMS_Tri-ATHLETE.pdf. Marked verified=false only because fetch was blocked, not because the page is wrong."
+    },
+    {
+      "source": "Rankin et al., 'Driving Curiosity: Mars Rover Mobility Trends During the First Seven Years', IEEE Aerospace 2020, NTRS 20220000780; lifetime 36.9 km / 4942 sols = 7.5 m/sol all-sol average (JPL, as of mid-2026)",
+      "url": "https://ntrs.nasa.gov/citations/20220000780",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20220000780. Fetched and confirmed: 'Driving Curiosity: Mars Rover Mobility Trends During the First Seven Years' (Rankin, Maimone, Biesiadecki, Patel, Levine, Toupet; 2020; IEEE Aerospace). Existing DB url (NTRS citation) retained."
+    },
+    {
+      "source": "NASA JSC R5/Valkyrie fact sheet; Radford et al., J. Field Robotics 2015: 125 kg, 44 DoF, 1.8 kWh battery, ~1 h runtime",
+      "url": "https://www.nasa.gov/technology/r5/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names both the NASA R5 fact sheet and Radford et al., J. Field Robotics 2015. Primary link is NASA's stable R5 landing page (fetched, confirms 44 DoF, 1.8 kWh, ~1 h runtime), replacing the fragile wp-content PDF (existing DB url). The Radford et al. journal paper is at DOI 10.1002/rob.21560 (Wiley; verified to exist via search but the DOI page returned HTTP 402 paywall, so not used as the primary link)."
+    },
+    {
+      "source": "Stromgren et al., 'Assessment of Crew Time for Maintenance and Repair Activities for Lunar Surface Missions', IEEE Aerospace 2021, NTRS 20210026843, Table 3 (expected value; 50th pct 9.0 h, 99th pct 70.5 h)",
+      "url": "https://ntrs.nasa.gov/citations/20210026843",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Names NTRS 20210026843. Fetched and confirmed: 'Assessment of Crew Time for Maintenance and Repair Activities for Lunar Surface Missions' (Stromgren, Lynch, Cho, Cirillo, Owens; IEEE Aerospace, presented March 2022). Replaced the fragile /api/citations/.../downloads/ PDF (existing DB url) with the stable NTRS citation permalink. (Source says 'IEEE Aerospace 2021'; the NTRS ID 2021... reflects acquisition year — the paper was presented at the 2022 conference; ID resolves correctly.)"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "domain": "mission_architecture",
+  "sources": [
+    {
+      "source": "Computed from NASA Mars Fact Sheet orbital periods (365.256 d / 686.980 d); standard value used throughout NASA/TM-2010-216764",
+      "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+      "type": "document",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Synodic period is DERIVED from the two orbital periods, but the source names two real documents. Primary named source is the NASA NSSDC Mars Fact Sheet, whose canonical URL is kept. That server is temporarily offline for maintenance today (307-redirects to https://www.nasa.gov/nssdc/), so live content could not be re-confirmed; web search confirms the sidereal periods cited (Earth 365.256 d, Mars 686.980 d) are exactly the fact-sheet values. NASA/TM-2010-216764 is at https://ntrs.nasa.gov/citations/20100037210 (verified)."
+    },
+    {
+      "source": "Allison & McEwen (2000), Planet. Space Sci. 48; NASA GISS Mars24",
+      "url": "https://www.giss.nasa.gov/tools/mars24/help/notes.html",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: NASA GISS Mars24 technical notes; page cites Allison & McEwen (2000) and gives sol = 24h39m35.244s. Allison & McEwen 2000 itself is Planet. Space Sci. 48:215-235, doi:10.1016/S0032-0633(99)00092-6."
+    },
+    {
+      "source": "NASA/TM-2010-216764 Tables 1-2 (Burke, Falck, McGuire 2010)",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: NTRS 20100037210 = NASA/TM-2010-216764 'Interplanetary Mission Design Handbook: Earth-to-Mars Mission Opportunities 2026 to 2045', Burke, Falck, McGuire (NASA Glenn)."
+    },
+    {
+      "source": "NASA/TM-2010-216764 Tables 1,3",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: same NASA/TM-2010-216764 NTRS landing page as above."
+    },
+    {
+      "source": "NASA/TM-2010-216764 Tables 1,4",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: same NASA/TM-2010-216764 NTRS landing page."
+    },
+    {
+      "source": "NASA/TM-2010-216764 Tables 1,5",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: same NASA/TM-2010-216764 NTRS landing page."
+    },
+    {
+      "source": "NASA/TM-2010-216764 Tables 1,6",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: same NASA/TM-2010-216764 NTRS landing page."
+    },
+    {
+      "source": "NASA/TM-2010-216764 Tables 1,7",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: same NASA/TM-2010-216764 NTRS landing page."
+    },
+    {
+      "source": "Estimate: C3 penalty of a few km2/s2 buys ~+/-2-3 weeks around optimum (TM-2010-216764 contours); robotic missions hold ~3-week periods; SpaceX stated 'Nov-Dec 2026' (~45 d)",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Framed as an Estimate, but the substantive named document is NASA/TM-2010-216764 (C3 contours), verified at NTRS 20100037210. Linked that document rather than treating as pure derived."
+    },
+    {
+      "source": "NASA/TM-2010-216764 (Type I/II min-energy TOFs 178-412 d across 2026-2039); DRA 5.0 cargo legs 202-350 d",
+      "url": "https://ntrs.nasa.gov/citations/20100037210",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Two named docs. Primary is NASA/TM-2010-216764 (verified, NTRS 20100037210); the TOF figures come from it. DRA 5.0 (NASA-SP-2009-566) is the secondary and is at https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf (verified live)."
+    },
+    {
+      "source": "NASA-SP-2009-566 (DRA 5.0): 174 d outbound / 201 d inbound for 2037 NTR all-propulsive case; class characterized as 'less than 180 to 210 days'",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified: PDF fetched (3.7 MB, %PDF-1.6) with XMP metadata title 'SP-2009-566-Mars-DRA5.doc' = Human Exploration of Mars Design Reference Architecture 5.0. Hosted on official nasa.gov; direct PDF with no separate NASA landing page, so mirror_pdf_url set to the same PDF."
+    },
+    {
+      "source": "Company claim: Musk IAC 2016/2017 (New Space 2017/2018); '80-150 days depending on window, average ~115 d'",
+      "url": "https://doi.org/10.1089/space.2017.29009.emu",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing URL is the New Space 2017 paper (Musk, 'Making Humans a Multi-Planetary Species', IAC 2016), doi:10.1089/space.2017.29009.emu - DOI verified valid (redirects to publisher, now SAGE). The specific '80-150 d' transit figure is from the 2017 IAC talk (New Space 2018, doi:10.1089/space.2018.29013.emu). Kept the existing DOI as the company-claim primary; both DOIs resolve. Publisher moved liebertpub -> journals.sagepub.com; doi.org form is stable."
+    },
+    {
+      "source": "Kingdon, Scientific Reports 15:17764 (2025), doi:10.1038/s41598-025-00565-7",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12099006/",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: PMC12099006 = Kingdon, '3 months transit time to Mars for human missions using SpaceX Starship', Sci Rep 15:17764 (2025), DOI 10.1038/s41598-025-00565-7. PMC open-access landing page kept (Nature site cookie-blocks bots); DOI https://doi.org/10.1038/s41598-025-00565-7 also valid."
+    },
+    {
+      "source": "NASA-SP-2009-566 (DRA 5.0): 539 days = 525 sols; class defined as '500 days or more'",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified DRA 5.0 PDF (metadata SP-2009-566-Mars-DRA5). Same official nasa.gov direct PDF; mirror set."
+    },
+    {
+      "source": "NASA-SP-2009-566 (DRA 5.0), 2037 reference mission: 174 + 539 + 201 = 914 d; class ~900-950 d",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified DRA 5.0 PDF. Same official nasa.gov direct PDF; mirror set."
+    },
+    {
+      "source": "NASA-SP-2009-566 (DRA 5.0) section 6.2: 'short surface stay times at Mars (typically 30 to 90 days)', total mission 500-650 d",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified DRA 5.0 PDF. Same official nasa.gov direct PDF; mirror set."
+    },
+    {
+      "source": "Company claim + NASA statements: ~1200 t propellant load at ~100-150 t/tanker; NASA HLS 'high teens' (L. Hawkins, Nov 2023); Aerospace America (2025) analysis: 12/ship, 60 launches for the 5-ship wave; Kingdon 2025: 15 (crew)/4 (cargo)",
+      "url": "https://aerospaceamerica.aiaa.org/aiaa-spacex/",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: Aerospace America (AIAA) SpaceX-Mars feature explicitly states ~1200 t propellant, ~12 tanker launches/ship, and 60 tanker launches for the five 2026 Starships - matching the source. Linked as the primary named analysis. (Kingdon 2025 figures are from PMC12099006 above.)"
+    },
+    {
+      "source": "Company claim (Musk IAC 2017, New Space 2018; SpaceX statements 2016-2025: '100 t class, up to 150 t with full refill')",
+      "url": "https://doi.org/10.1089/space.2018.29013.emu",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing URL is the New Space 2018 paper (Musk, 'Making Life Multi-Planetary', IAC 2017), doi:10.1089/space.2018.29013.emu - DOI verified valid via redirect chain. Publisher migrated liebertpub -> journals.sagepub.com (SAGE returns 403 to bots); the doi.org form is the stable canonical link and is kept."
+    },
+    {
+      "source": "Derived from SpaceX propellant capacity claims (933 t LOX + 267 t LCH4; V3 ~1500 t) and Maiwald et al. 2024 minimum Mars-surface-to-Earth return delta-v of 7.12 km/s",
+      "url": "https://doi.org/10.1038/s41598-024-54012-0",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Value is derived, but the source names a real document: Maiwald et al. 2024, 'About feasibility of SpaceX's human exploration Mars mission scenario with Starship', Sci Rep 14:11804, doi:10.1038/s41598-024-54012-0 - verified via PubMed PMID 38782962. DOI landing page kept (Nature cookie-blocks bots). Note: an Author Correction (doi:10.1038/s41598-024-71955-6) revised the return delta-v."
+    },
+    {
+      "source": "Company claim: Musk IAC 2017 ('entering very quickly, going seven and a half kilometers a second'); cross-checked v_entry = sqrt(vinf^2 + 5.03^2)",
+      "url": "https://doi.org/10.1089/space.2018.29013.emu",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "IAC 2017 talk = New Space 2018 paper (Musk, 'Making Life Multi-Planetary'), doi:10.1089/space.2018.29013.emu - DOI verified valid. Same stable doi.org link as param 17."
+    },
+    {
+      "source": "Estimate: extrapolation from Starship meter-class propulsive precision on Earth (tower catches 2024-25) and Mars state of the art (Perseverance TRN, ~1-2 km from ellipse center in 7.7x6.6 km ellipse); no SpaceX figure published",
+      "url": null,
+      "type": "derived",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Pure internal estimate/extrapolation; explicitly states 'no SpaceX figure published'. No single external document to link (mentions general Perseverance TRN and Starship tower catches, not a specific citable paper). url=null, type=derived."
+    },
+    {
+      "source": "Golombek et al., 'SpaceX Starship Landing Sites on Mars', 52nd LPSC #2420 (2021): latitude <40 deg for solar power and thermal management",
+      "url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "note": "Verified via search that this is the canonical LPSC 2021 abstract #2420, Golombek et al., 'SpaceX Starship Landing Sites on Mars' (JPL). Direct PDF is the citation location (USRA serves 403 to bots but the abstract exists); no separate per-abstract landing page, so mirror_pdf_url set to the same PDF."
+    },
+    {
+      "source": "Golombek et al., 52nd LPSC #2420 (2021): below -2 km required, <= -3 km preferred, for EDL deceleration timeline of heavy landers",
+      "url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2420.pdf",
+      "note": "Same Golombek et al. LPSC 2021 #2420 abstract as param 21. Direct PDF citation; mirror set."
+    },
+    {
+      "source": "NASA NTRS 20220013418 (ASCEND 2022): Sun-Earth-Mars angle <2 deg criterion gives ~11-14 d (mean 11.8 d); <3 deg up to ~3 weeks; <1 deg under a week",
+      "url": "https://ntrs.nasa.gov/citations/20220013418",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: NTRS 20220013418 = McBrayer, Chai, Judd (NASA Langley), 'Communication Delays, Disruptions, and Blackouts for Crewed Mars Missions', ASCEND 2022."
+    },
+    {
+      "source": "NASA-SP-2009-566 Table 4-3 (EDL System Characteristics)",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified DRA 5.0 PDF. Same official nasa.gov direct PDF; mirror set."
+    },
+    {
+      "source": "NASA-SP-2009-566 section 4: NTR option 848.7 t (9 Ares V launches); chemical/aerocapture option 1251.8 t (12 Ares V)",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified DRA 5.0 PDF. Same official nasa.gov direct PDF; mirror set."
+    },
+    {
+      "source": "NASA-SP-2009-566 section 5.4: 30-kWe version of 40-kWe lunar fission design; deployed 1 km from lander, 30-40 sols to emplace",
+      "url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": "https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf",
+      "note": "Verified DRA 5.0 PDF. Same official nasa.gov direct PDF; mirror set."
+    },
+    {
+      "source": "Zubrin & Baker (1991), Mars Direct; Ares HLV: 47 t trans-Mars injection (121 t to 300 km LEO); via Encyclopedia Astronautica",
+      "url": "http://www.astronautix.com/m/marsdirect.html",
+      "type": "document",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Existing Encyclopedia Astronautica URL verified LIVE via curl (HTTP 200; title 'Mars Direct'; describes Zubrin/Baker/Gwynne, Ares heavy-lift booster, trans-Mars trajectory). It is the source's explicitly cited home ('via Encyclopedia Astronautica'), kept as primary. The named primary document Zubrin, Baker & Gwynne (1991) 'Mars Direct', AIAA-91-0329, is at https://arc.aiaa.org/doi/10.2514/6.1991-329 (paywalled/bot-blocked); a verified full-text copy (AIAA-91-0328) is at https://marspapers.org/paper/Zubrin_1991.pdf."
+    },
+    {
+      "source": "Company claim (Musk, Starbase talk, May 29, 2025): 5 ships 2026/27 -> ~20 in 2028/29 -> ~100 in 2030/31 -> ~500 by 2033; long-term 1000-2000/window",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: Wikipedia 'SpaceX Mars colonization program' documents Musk's May 2025 Starbase talk ship-count ramp (5 -> ~20 -> ~100 -> ~500 by 2033). Existing URL kept; it is the best consolidated public reference for this claim (the primary is a livestreamed talk)."
+    },
+    {
+      "source": "Company claim: Sep 7, 2024 target of 5 ships at Nov-Dec 2026 window was abandoned Feb 9, 2026 (Musk: Mars delayed 'about five to seven years' to focus on lunar missions); first attempt now the 2028/29 window",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program",
+      "type": "company_claim",
+      "verified": true,
+      "mirror_pdf_url": null,
+      "note": "Verified: same Wikipedia page documents the 9 Feb 2026 statement that Mars was delayed 'about five to seven years' to focus on lunar missions. Existing URL kept."
+    },
+    {
+      "source": "Company claims: Musk Mar 15, 2025 ('as soon as 2029, although 2031 is more likely'); Feb 9, 2026 delay statement pushes credible first crew to ~2031-2033",
+      "url": "https://x.com/elonmusk/status/1900774290682683612",
+      "type": "company_claim",
+      "verified": false,
+      "mirror_pdf_url": null,
+      "note": "Existing URL is the primary source: Musk's own X/Twitter post (status 1900774290682683612, ~15 Mar 2025) containing the '2029 ... 2031 more likely' statement. x.com returns HTTP 402 to unauthenticated bots so live content could not be machine-verified, but the URL is the correct canonical primary post. The Feb 2026 delay context is corroborated on https://en.wikipedia.org/wiki/SpaceX_Mars_colonization_program (verified)."
+    }
+  ]
+}
