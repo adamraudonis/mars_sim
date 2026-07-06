@@ -5,6 +5,7 @@ import { SimClock } from '../sim/clock';
 import { Units } from '../sim/units';
 import { LogPanel, ParamsPanel, SystemsPanel, TelemetryPanel, useTick } from './panels';
 import { severityColor } from './format';
+import { PagesMenu } from '../pages/nav';
 
 // Earth year in sols (matches the Earth-date clock; "5 years" reads naturally).
 const YEAR_SOLS = 365.25 / 1.02749;
@@ -39,10 +40,9 @@ function speedIndexOf(runner: AppRunner): number {
 // ===================== Desktop =====================
 
 function TopBar({
-  runner, orbit, setOrbit, hidden, setHidden, dayNight, setDayNight, onScenario, onRerun,
+  runner, hidden, setHidden, dayNight, setDayNight, onScenario, onRerun,
 }: {
   runner: AppRunner;
-  orbit: boolean; setOrbit: (v: boolean) => void;
   hidden: boolean; setHidden: (v: boolean) => void;
   dayNight: boolean; setDayNight: (v: boolean) => void;
   onScenario: () => void; onRerun: () => void;
@@ -81,8 +81,8 @@ function TopBar({
       )}
       <button className={`ghost${dayNight ? ' active' : ''}`} onClick={() => setDayNight(!dayNight)}
         title="Render the real day/night cycle (off = steady daylight; physics keep the true cycle either way)">DAY/NIGHT</button>
-      <button className={`ghost${orbit ? ' active' : ''}`} onClick={() => setOrbit(!orbit)} title="Slow auto-orbit">ORBIT</button>
       <button className={`ghost${hidden ? ' active' : ''}`} onClick={() => setHidden(!hidden)} title="Hide panels for a clean timelapse (Tab)">HIDE</button>
+      <PagesMenu />
     </div>
   );
 }
@@ -155,10 +155,9 @@ function Timeline({ runner }: { runner: AppRunner }) {
 
 // ===================== Mobile =====================
 
-function MobileTop({ runner, dayNight, setDayNight, orbit, setOrbit, onScenario, onRerun }: {
+function MobileTop({ runner, dayNight, setDayNight, onScenario, onRerun }: {
   runner: AppRunner;
   dayNight: boolean; setDayNight: (v: boolean) => void;
-  orbit: boolean; setOrbit: (v: boolean) => void;
   onScenario: () => void; onRerun: () => void;
 }) {
   useTick(150);
@@ -173,7 +172,7 @@ function MobileTop({ runner, dayNight, setDayNight, orbit, setOrbit, onScenario,
       </div>
       {runner.dirty && <button className="ghost rerun m-icon" onClick={onRerun} title="Re-run">⟲</button>}
       <button className={`ghost m-icon${dayNight ? ' active' : ''}`} onClick={() => setDayNight(!dayNight)} title="Day/night">◐</button>
-      <button className={`ghost m-icon${orbit ? ' active' : ''}`} onClick={() => setOrbit(!orbit)} title="Auto-orbit">⟳</button>
+      <PagesMenu compact />
     </div>
   );
 }
@@ -253,7 +252,6 @@ export function App({ runner }: { runner: AppRunner }) {
   const viewRef = useRef<SceneView | null>(null);
   const [tab, setTab] = useState(0); // desktop right-dock tab
   const [mtab, setMtab] = useState('view'); // mobile bottom tab
-  const [orbit, setOrbit] = useState(false);
   const [dayNight, setDayNight] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [scenarioOpen, setScenarioOpen] = useState(false);
@@ -288,7 +286,9 @@ export function App({ runner }: { runner: AppRunner }) {
       raf = requestAnimationFrame(loop);
       const dt = Math.min(0.1, (t - lastT) / 1000);
       lastT = t;
-      view.render(dt, runner.frame, runner.playheadSol, !runner.paused);
+      const epochJ2000 = (runner.scenario.epochUtcMs - Date.UTC(2000, 0, 1, 12, 0, 0)) / 86400000;
+      const sun = { latitudeDeg: runner.recording?.latitudeDeg ?? 40, epochJ2000 };
+      view.render(dt, runner.frame, runner.playheadSol, !runner.paused, sun);
     };
     raf = requestAnimationFrame(loop);
 
@@ -302,7 +302,6 @@ export function App({ runner }: { runner: AppRunner }) {
     };
   }, [runner]);
 
-  useEffect(() => { viewRef.current?.setAutoOrbit(orbit); }, [orbit]);
   useEffect(() => { if (viewRef.current) viewRef.current.dayNightCycle = dayNight; }, [dayNight]);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Tab') { e.preventDefault(); setHidden((v) => !v); } };
@@ -335,7 +334,7 @@ export function App({ runner }: { runner: AppRunner }) {
 
       {isMobile ? (
         <div className="m-root">
-          <MobileTop runner={runner} dayNight={dayNight} setDayNight={setDayNight} orbit={orbit} setOrbit={setOrbit}
+          <MobileTop runner={runner} dayNight={dayNight} setDayNight={setDayNight}
             onScenario={() => setScenarioOpen((v) => !v)} onRerun={doRerun} />
           {mtab !== 'view' && <div className="panel m-panel">{panelFor(mtab)}</div>}
           <div className="m-bottom">
@@ -346,7 +345,7 @@ export function App({ runner }: { runner: AppRunner }) {
         </div>
       ) : (
         <>
-          <TopBar runner={runner} orbit={orbit} setOrbit={setOrbit} hidden={hidden} setHidden={setHidden}
+          <TopBar runner={runner} hidden={hidden} setHidden={setHidden}
             dayNight={dayNight} setDayNight={setDayNight} onScenario={() => setScenarioOpen((v) => !v)} onRerun={doRerun} />
           {scenarioOpen && <ScenarioPopup runner={runner} onClose={() => setScenarioOpen(false)} />}
           {!hidden && <div className="panel dock-left"><SystemsPanel runner={runner} /></div>}

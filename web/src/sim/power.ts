@@ -74,6 +74,8 @@ export class PowerBus {
   demandKw = 0;
   servedKw = 0;
   unmetKw = 0;
+  /** Unserved portion of Critical-priority (life-support) demand — the dangerous kind. */
+  unmetCriticalKw = 0;
   curtailedKw = 0;
   batteryFlowKw = 0; // + discharging, − charging
 
@@ -120,6 +122,7 @@ export class PowerBus {
     let servedTotal = 0;
     let genLeft = this.offeredKw;
     let battUsedKw = 0;
+    let unmetCriticalKw = 0;
     let i = 0;
     while (i < this.demands.length) {
       let j = i;
@@ -131,6 +134,7 @@ export class PowerBus {
       const battCapKw = this.demands[i].priority <= LoadPriority.High ? battFullKw : battLowPrioKw;
       const available = genLeft + Math.max(0, battCapKw - battUsedKw);
       const fraction = groupKw <= available ? 1 : groupKw > 0 ? available / groupKw : 0;
+      if (this.demands[i].priority === LoadPriority.Critical) unmetCriticalKw += groupKw * (1 - fraction);
       let servedGroup = 0;
       for (let k = i; k < j; k++) {
         const f = Math.max(0, Math.min(1, fraction));
@@ -148,6 +152,7 @@ export class PowerBus {
 
     this.servedKw = servedTotal;
     this.unmetKw = Math.max(0, totalDemand - servedTotal);
+    this.unmetCriticalKw = unmetCriticalKw;
 
     if (battUsedKw > 1e-12) {
       const discharged = this.battery.discharge(battUsedKw, dtHours);

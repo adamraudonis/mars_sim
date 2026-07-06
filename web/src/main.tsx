@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AppRunner } from './runner';
-import { App } from './ui/App';
+import { Root } from './pages/Root';
 import './ui/theme.css';
 
 const root = createRoot(document.getElementById('root')!);
@@ -15,7 +15,7 @@ root.render(
 AppRunner.create().then((runner) => {
   root.render(
     <StrictMode>
-      <App runner={runner} />
+      <Root runner={runner} />
     </StrictMode>,
   );
 });

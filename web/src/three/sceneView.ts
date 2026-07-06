@@ -3,6 +3,14 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import type { RecFrame, RecShip } from '../sim/recorder';
 import { SimRandom } from '../sim/rng';
+import { SimClock } from '../sim/clock';
+import { Units } from '../sim/units';
+
+/** Context for computing the sun position live (day/night cycle) from the playhead sol. */
+export interface SunContext {
+  latitudeDeg: number;
+  epochJ2000: number;
+}
 import { buildTerrain, terrainHeight } from './terrain';
 import {
   makeCrate, makeDepotTank, makeGreenhouse, makeHabModule, makeIsruPlant, makeMinePit,
@@ -53,6 +61,7 @@ export class SceneView {
   private dust: THREE.Points;
   private dustMat: THREE.PointsMaterial;
   private smoothedTau = 0.5;
+  private visualSunEl = 38; // live sun elevation used by glow / mover night logic
 
   private world = new THREE.Group();
   private ships: RecShip[] = [];
@@ -173,16 +182,12 @@ export class SceneView {
     this.camera.updateProjectionMatrix();
   }
 
-  setAutoOrbit(on: boolean): void {
-    this.controls.autoRotate = on;
-  }
-
-  render(dtReal: number, frame: RecFrame | null, currentSol: number, animate = true): void {
+  render(dtReal: number, frame: RecFrame | null, currentSol: number, animate = true, sun?: SunContext): void {
     // When paused, freeze the timelapse world (crew/robots walking, drifting dust) but keep
     // the camera fully interactive. worldDt = 0 holds every mover in place mid-stride.
     const worldDt = animate ? dtReal : 0;
     if (frame) {
-      this.syncSky(dtReal, worldDt, frame);
+      this.syncSky(dtReal, worldDt, frame, currentSol, sun);
       this.syncStructures(frame);
       this.syncShips(currentSol);
       this.syncMovers(worldDt, frame);
@@ -193,10 +198,21 @@ export class SceneView {
 
   // ---------------- Sky ----------------
 
-  private syncSky(dtReal: number, worldDt: number, frame: RecFrame): void {
+  private syncSky(dtReal: number, worldDt: number, frame: RecFrame, currentSol: number, sun?: SunContext): void {
     const env = frame.env;
-    const el = this.dayNightCycle ? env.sunEl : 38;
-    const az = this.dayNightCycle ? env.sunAz : 205;
+    // The recording samples every ~2 sols, which aliases away the within-sol day/night
+    // cycle. So when day/night is on, compute the sun LIVE from the (continuously advancing)
+    // fractional playhead sol — smooth and correct. Off = a fixed pleasant daylight.
+    let el = 38;
+    let az = 205;
+    if (this.dayNightCycle && sun) {
+      const days = sun.epochJ2000 + currentSol * (Units.solSeconds / Units.earthDaySeconds);
+      const ls = SimClock.computeLs(days);
+      const timeOfSol = currentSol - Math.floor(currentSol);
+      el = SimClock.sunElevationDeg(ls, sun.latitudeDeg, timeOfSol);
+      az = SimClock.sunAzimuthDeg(ls, sun.latitudeDeg, timeOfSol);
+    }
+    this.visualSunEl = el;
 
     const elR = (el * Math.PI) / 180;
     const azR = (az * Math.PI) / 180;
@@ -289,8 +305,7 @@ export class SceneView {
       this.world.remove(g.group);
     }
     // Grow-light glow: strongest at night, faint by day; off when unpowered.
-    const visualEl = this.dayNightCycle ? frame.env.sunEl : 38;
-    const darkness = Math.max(0, Math.min(1, (8 - visualEl) / 16));
+    const darkness = Math.max(0, Math.min(1, (8 - this.visualSunEl) / 16));
     const glowLevel = s.lightsKw > 1 ? 0.12 + 0.55 * darkness : 0;
     const glow = new THREE.Color(0.55 * glowLevel, 0.2 * glowLevel, 0.45 * glowLevel);
     for (const g of this.greenhouses) g.glass.emissive.copy(glow);
@@ -388,7 +403,7 @@ export class SceneView {
   // ---------------- Movers ----------------
 
   private syncMovers(dtReal: number, frame: RecFrame): void {
-    const night = this.dayNightCycle && frame.env.sunEl < -2;
+    const night = this.dayNightCycle && this.visualSunEl < -2;
     this.syncMoverList(this.crewMovers, Math.min(frame.scene.crew, 24));
     this.syncMoverList(this.robotMovers, Math.min(frame.scene.robots, 60));
     this.stepMovers(this.crewMovers, this.crewInst, dtReal, night);

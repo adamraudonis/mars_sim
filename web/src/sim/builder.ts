@@ -7,6 +7,7 @@ import { SolarFarm, NuclearPlant, BatteryBank } from './modules/power-modules';
 import { Greenhouse, IsruPropellantPlant, IceMine, PropellantDepot } from './modules/production';
 import { StarshipFleet, RobotFleet, LaunchCampaign } from './modules/logistics';
 import { MaintenanceSystem } from './modules/maintenance';
+import { MissionControl } from './modules/mission';
 
 /**
  * Assembles a ready-to-run engine from a scenario + parameter registry. The module set is
@@ -36,6 +37,7 @@ export function buildSimulation(scenario: Scenario, params: ParameterRegistry): 
   const fleet = engine.add(new StarshipFleet(), 'fleet');
   engine.add(new RobotFleet(), 'robots');
   engine.add(new MaintenanceSystem(), 'maintenance');
+  engine.add(new MissionControl(), 'mission');
   const campaign = engine.add(new LaunchCampaign(), 'campaign');
 
   campaign.loadFlights(scenario.flights);
