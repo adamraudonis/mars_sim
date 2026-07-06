@@ -23,6 +23,48 @@ const healthColor: Record<string, string> = {
   offline: COLOR.textFaint,
 };
 
+const FID = [
+  ['L0', 'Distilled', 'a single averaged number (fastest)'],
+  ['L1', 'Analytic', 'a daily / seasonal formula (default)'],
+  ['L2', 'Physics', 'resolved minute-by-minute — sun angle, dust, each storm (most detailed)'],
+];
+
+/** Explainer for the per-module L0/L1/L2 detail control (users found this opaque). */
+function FidelityInfo() {
+  const [open, setOpen] = useState(true);
+  return (
+    <div className="fid-info">
+      <button className="fid-info-head" onClick={() => setOpen((v) => !v)}>
+        <span className="chip" style={{ color: COLOR.accent2, background: COLOR.accent2 + '22' }}>
+          L0 · L1 · L2
+        </span>
+        <span>what the detail levels mean</span>
+        <span className="fid-caret">{open ? '▾' : '▸'}</span>
+      </button>
+      {open && (
+        <div className="fid-info-body">
+          <div className="caption" style={{ marginBottom: 6 }}>
+            Each subsystem can run at three levels of detail — higher is more realistic but
+            slower to compute. Pick per system, then <b>Re-run</b> to apply.
+          </div>
+          {FID.map(([tag, name, desc]) => (
+            <div className="fid-line" key={tag}>
+              <span className="chip fid-tag">{tag}</span>
+              <span>
+                <b style={{ color: COLOR.text }}>{name}</b> — {desc}
+              </span>
+            </div>
+          ))}
+          <div className="caption faint" style={{ marginTop: 6 }}>
+            Tip: explore at L2, then <b>Distill</b> (Telemetry tab) bakes it down to a fast L0
+            number so long runs stay quick.
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function SystemsPanel({ runner }: { runner: AppRunner }) {
   useTick(200);
   const rec = runner.recording;
@@ -32,6 +74,7 @@ export function SystemsPanel({ runner }: { runner: AppRunner }) {
     <>
       <div className="section-header">Systems</div>
       <div className="scroll">
+        <FidelityInfo />
         {rec.moduleMeta.map((meta, i) => {
           const st = frame.modules[i];
           if (!st) return null;
@@ -42,17 +85,21 @@ export function SystemsPanel({ runner }: { runner: AppRunner }) {
                 <span className="dot" style={{ background: healthColor[st.health] }} />
                 <span className="name">{meta.name}</span>
                 {meta.maxFidelity > Fidelity.L0 && (
-                  <span className="segmented">
-                    {Array.from({ length: meta.maxFidelity + 1 }, (_, f) => (
-                      <button
-                        key={f}
-                        className={fid === f ? 'active' : ''}
-                        onClick={() => runner.setFidelity(meta.id, f as Fidelity)}
-                      >
-                        L{f}
-                      </button>
-                    ))}
-                  </span>
+                  <>
+                    <span className="fid-label">detail</span>
+                    <span className="segmented">
+                      {Array.from({ length: meta.maxFidelity + 1 }, (_, f) => (
+                        <button
+                          key={f}
+                          className={fid === f ? 'active' : ''}
+                          title={`${FID[f][1]} — ${FID[f][2]}`}
+                          onClick={() => runner.setFidelity(meta.id, f as Fidelity)}
+                        >
+                          L{f}
+                        </button>
+                      ))}
+                    </span>
+                  </>
                 )}
               </div>
               <div className="status">{st.status}</div>
