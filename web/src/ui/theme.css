@@ -1024,4 +1024,7 @@ button {
   .doc-timebar { gap: 8px; padding: 7px 12px; }
   .doc-jumps { display: none; }
   .flow-wrap { height: 440px; }
+  /* Pages launcher must float above the bottom modal (params/controls sheets). */
+  .pages-scrim { z-index: 200; }
+  .pages-pop { position: fixed; top: 60px; right: 8px; left: auto; z-index: 201; width: min(280px, calc(100vw - 16px)); max-height: calc(100vh - 76px); overflow-y: auto; }
 }
