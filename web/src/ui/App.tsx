@@ -252,7 +252,8 @@ export function App({ runner }: { runner: AppRunner }) {
       raf = requestAnimationFrame(loop);
       const dt = Math.min(0.1, (t - lastT) / 1000);
       lastT = t;
-      view.render(dt, runner.frame, runner.playheadSol);
+      // Freeze the timelapse world (movers, dust) while paused; camera stays live.
+      view.render(dt, runner.frame, runner.playheadSol, !runner.paused);
     };
     raf = requestAnimationFrame(loop);
 

@@ -177,12 +177,15 @@ export class SceneView {
     this.controls.autoRotate = on;
   }
 
-  render(dtReal: number, frame: RecFrame | null, currentSol: number): void {
+  render(dtReal: number, frame: RecFrame | null, currentSol: number, animate = true): void {
+    // When paused, freeze the timelapse world (crew/robots walking, drifting dust) but keep
+    // the camera fully interactive. worldDt = 0 holds every mover in place mid-stride.
+    const worldDt = animate ? dtReal : 0;
     if (frame) {
-      this.syncSky(dtReal, frame);
+      this.syncSky(dtReal, worldDt, frame);
       this.syncStructures(frame);
       this.syncShips(currentSol);
-      this.syncMovers(dtReal, frame);
+      this.syncMovers(worldDt, frame);
     }
     this.controls.update();
     this.renderer.render(this.scene, this.camera);
@@ -190,7 +193,7 @@ export class SceneView {
 
   // ---------------- Sky ----------------
 
-  private syncSky(dtReal: number, frame: RecFrame): void {
+  private syncSky(dtReal: number, worldDt: number, frame: RecFrame): void {
     const env = frame.env;
     const el = this.dayNightCycle ? env.sunEl : 38;
     const az = this.dayNightCycle ? env.sunAz : 205;
@@ -232,13 +235,15 @@ export class SceneView {
     if (this.dust.visible) {
       this.dust.position.copy(this.camera.position);
       this.dust.position.y = Math.max(10, this.camera.position.y - 30);
-      const pos = this.dust.geometry.attributes.position as THREE.BufferAttribute;
-      for (let i = 0; i < pos.count; i++) {
-        let x = pos.getX(i) + dtReal * 42;
-        if (x > 350) x -= 700;
-        pos.setX(i, x);
+      if (worldDt > 0) {
+        const pos = this.dust.geometry.attributes.position as THREE.BufferAttribute;
+        for (let i = 0; i < pos.count; i++) {
+          let x = pos.getX(i) + worldDt * 42;
+          if (x > 350) x -= 700;
+          pos.setX(i, x);
+        }
+        pos.needsUpdate = true;
       }
-      pos.needsUpdate = true;
     }
   }
 
