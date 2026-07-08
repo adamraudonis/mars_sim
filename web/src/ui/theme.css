@@ -966,8 +966,10 @@ button {
 
 /* Pages launcher menu (sim top bar) */
 .pages-menu { position: relative; }
-.pages-scrim { position: fixed; inset: 0; z-index: 40; }
-.pages-pop { position: absolute; top: 110%; right: 0; z-index: 41; width: 260px; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+/* Popup is portaled onto document.body and anchored via inline top/right, so it escapes
+   the top bar's backdrop-filter stacking context and floats above every panel/sheet. */
+.pages-scrim { position: fixed; inset: 0; z-index: 300; }
+.pages-pop { position: fixed; z-index: 301; width: min(280px, calc(100vw - 16px)); max-height: calc(100vh - 80px); overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
 .pages-pop .section-header { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-faint); padding: 4px 8px; }
 .pages-pop button { text-align: left; background: none; border: 0; color: var(--text); padding: 8px 10px; border-radius: 7px; cursor: pointer; font-size: 12.5px; }
 .pages-pop button:hover { background: var(--card-bg); }
@@ -1024,7 +1026,4 @@ button {
   .doc-timebar { gap: 8px; padding: 7px 12px; }
   .doc-jumps { display: none; }
   .flow-wrap { height: 440px; }
-  /* Pages launcher must float above the bottom modal (params/controls sheets). */
-  .pages-scrim { z-index: 200; }
-  .pages-pop { position: fixed; top: 60px; right: 8px; left: auto; z-index: 201; width: min(280px, calc(100vw - 16px)); max-height: calc(100vh - 76px); overflow-y: auto; }
 }

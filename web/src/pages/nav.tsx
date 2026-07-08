@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 export type Route = 'sim' | 'assets' | 'systems' | 'logic' | 'trades';
 
@@ -34,32 +35,46 @@ export function navigate(route: Route): void {
 /** Compact page launcher used in the sim top bar (opens a small menu). */
 export function PagesMenu({ compact }: { compact?: boolean }) {
   const [open, setOpen] = useState(false);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const [pos, setPos] = useState<{ top: number; right: number }>({ top: 0, right: 0 });
+
+  // Anchor the popup to the button in viewport coordinates. The popup is rendered in a
+  // portal on document.body so it escapes the top bar's backdrop-filter stacking context
+  // (which otherwise traps a position:fixed child behind the bottom sheet on mobile).
+  useLayoutEffect(() => {
+    if (!open || !btnRef.current) return;
+    const r = btnRef.current.getBoundingClientRect();
+    setPos({ top: Math.round(r.bottom + 6), right: Math.round(window.innerWidth - r.right) });
+  }, [open]);
+
   return (
     <div className="pages-menu">
-      <button className={`ghost${compact ? ' m-icon' : ''}`} onClick={() => setOpen((v) => !v)} title="Pages">
+      <button ref={btnRef} className={`ghost${compact ? ' m-icon' : ''}`} onClick={() => setOpen((v) => !v)} title="Pages">
         {compact ? '▤' : '▤ PAGES'}
       </button>
-      {open && (
-        <>
-          <div className="pages-scrim" onClick={() => setOpen(false)} />
-          <div className="panel pages-pop">
-            <div className="section-header">Pages</div>
-            {PAGES.map((p) => (
-              <button
-                key={p.route}
-                className={routeFromHash() === p.route ? 'current' : ''}
-                onClick={() => {
-                  navigate(p.route);
-                  setOpen(false);
-                }}
-              >
-                {p.label}
-                <div className="desc">{p.blurb}</div>
-              </button>
-            ))}
-          </div>
-        </>
-      )}
+      {open &&
+        createPortal(
+          <>
+            <div className="pages-scrim" onClick={() => setOpen(false)} />
+            <div className="panel pages-pop" style={{ top: pos.top, right: pos.right }}>
+              <div className="section-header">Pages</div>
+              {PAGES.map((p) => (
+                <button
+                  key={p.route}
+                  className={routeFromHash() === p.route ? 'current' : ''}
+                  onClick={() => {
+                    navigate(p.route);
+                    setOpen(false);
+                  }}
+                >
+                  {p.label}
+                  <div className="desc">{p.blurb}</div>
+                </button>
+              ))}
+            </div>
+          </>,
+          document.body,
+        )}
     </div>
   );
 }
